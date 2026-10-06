@@ -69,19 +69,17 @@ export default function MapWorkspace({
     try {
       const map = new maplibregl.Map({
         container: mapContainerRef.current,
+        attributionControl: false,
         style: {
           version: 8,
           sources: {
-            'carto-dark': {
+            'esri-dark': {
               type: 'raster',
               tiles: [
-                'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-                'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-                'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-                'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
+                'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'
               ],
               tileSize: 256,
-              attribution: '&copy; CARTO &copy; OpenStreetMap'
+              maxzoom: 16
             }
           },
           layers: [
@@ -91,11 +89,11 @@ export default function MapWorkspace({
               paint: { 'background-color': '#0d1117' }
             },
             {
-              id: 'carto-dark-layer',
+              id: 'esri-dark-layer',
               type: 'raster',
-              source: 'carto-dark',
+              source: 'esri-dark',
               paint: {
-                'raster-opacity': 0.85
+                'raster-opacity': 0.92
               }
             }
           ]

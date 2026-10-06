@@ -1173,6 +1173,12 @@ a {
   filter: invert(0.85) !important;
 }
 
+/* Ocultar atribuição e ícone de informação na base do mapa */
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-attrib-button {
+  display: none !important;
+}
+
 /* Floating Hover Tooltip */
 .maplibre-hover-tooltip {
   position: absolute;
