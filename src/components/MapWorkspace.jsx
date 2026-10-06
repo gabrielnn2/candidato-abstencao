@@ -30,15 +30,13 @@ export default function MapWorkspace({
   // View Mode: 'estados' (default) or 'municipios'
   const [viewMode, setViewMode] = useState('estados');
 
-  // Hover Tooltip State
-  const [tooltip, setTooltip] = useState({
-    visible: false,
-    x: 0,
-    y: 0,
-    title: '',
-    taxa: '',
-    pos: ''
-  });
+  // Tooltip DOM refs & hover tracking for zero-latency mouseover without React re-renders
+  const tooltipRef = useRef(null);
+  const tooltipTitleRef = useRef(null);
+  const tooltipTaxaRef = useRef(null);
+  const tooltipPosRef = useRef(null);
+  const hoveredMunIdRef = useRef(null);
+  const hoveredUfRef = useRef(null);
 
   // Keep latest refs for MapLibre event handlers
   const currentCargoRef = useRef(currentCargo);
@@ -259,7 +257,7 @@ export default function MapWorkspace({
               'fill-color': '#ffffff',
               'fill-opacity': 0.32
             },
-            filter: ['==', ['to-number', ['get', 'id']], -1],
+            filter: ['==', 'id', -1],
             layout: {
               visibility: 'none'
             }
@@ -291,6 +289,31 @@ export default function MapWorkspace({
             }
           });
 
+          // Contornos das UFs sobrepostos ao mapa de municípios (Limites estaduais nítidos e claros)
+          if (map.getSource('estados')) {
+            map.addLayer({
+              id: 'estados-uf-contour-overlay',
+              type: 'line',
+              source: 'estados',
+              paint: {
+                'line-color': '#ffffff',
+                'line-width': [
+                  'interpolate', ['linear'], ['zoom'],
+                  3, 1.4,
+                  5, 2.0,
+                  8, 2.8,
+                  12, 3.8
+                ],
+                'line-opacity': 0.85
+              },
+              layout: {
+                visibility: 'visible',
+                'line-join': 'round',
+                'line-cap': 'round'
+              }
+            });
+          }
+
           // Município Hover Outline (Bright white stroke)
           map.addLayer({
             id: 'municipio-hover-line',
@@ -301,7 +324,7 @@ export default function MapWorkspace({
               'line-width': 3.0,
               'line-opacity': 1.0
             },
-            filter: ['==', ['to-number', ['get', 'id']], -1],
+            filter: ['==', 'id', -1],
             layout: {
               visibility: 'none'
             }
@@ -317,7 +340,7 @@ export default function MapWorkspace({
               'line-width': 3.2,
               'line-opacity': 1.0
             },
-            filter: ['==', ['to-number', ['get', 'id']], -1],
+            filter: ['==', 'id', -1],
             layout: {
               visibility: 'none'
             }
@@ -337,49 +360,61 @@ export default function MapWorkspace({
           if (viewModeRef.current !== 'estados') return;
           if (!e.features || e.features.length === 0) return;
           map.getCanvas().style.cursor = 'pointer';
+
+          // Fast direct DOM positioning (zero React render overhead)
+          if (tooltipRef.current) {
+            const mapWidth = map.getContainer().offsetWidth || 800;
+            const posX = e.point.x > mapWidth - 230 ? e.point.x - 210 : e.point.x + 14;
+            const posY = e.point.y + 14;
+            tooltipRef.current.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+            if (tooltipRef.current.style.display !== 'block') {
+              tooltipRef.current.style.display = 'block';
+            }
+          }
+
           const p = e.features[0].properties;
           const uf = p.uf;
 
-          if (map.getLayer('estado-hover-line')) {
-            map.setFilter('estado-hover-line', ['==', 'uf', uf]);
-          }
-          if (map.getLayer('estado-hover-fill')) {
-            map.setFilter('estado-hover-fill', ['==', 'uf', uf]);
-          }
+          if (hoveredUfRef.current !== uf) {
+            hoveredUfRef.current = uf;
 
-          const cargo = currentCargoRef.current;
-          let posDesc = '';
-          if (cargo === 'Governador') {
-            const status = getGovStatus(p.uf || p);
-            if (status === 'forcou_e_iria_2t') {
-              posDesc = '🟢 Forçaria e iria para o 2º turno';
-            } else if (status === 'forcou_2t_entre_dois') {
-              posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
-            } else if (status === 'iria_2t_no_lugar') {
-              posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
-            } else {
-              posDesc = '🛡️ Não alteraria';
+            if (map.getLayer('estado-hover-line')) {
+              map.setFilter('estado-hover-line', ['==', 'uf', uf]);
             }
-          } else {
-            const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
-            const pos = p[posProp] || 3;
-            if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-            else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-            else posDesc = '🥉 3º Lugar ou abaixo';
-          }
+            if (map.getLayer('estado-hover-fill')) {
+              map.setFilter('estado-hover-fill', ['==', 'uf', uf]);
+            }
 
-          setTooltip({
-            visible: true,
-            x: e.point.x,
-            y: e.point.y,
-            title: `${p.nome || p.name} (${p.uf})`,
-            taxa: `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`,
-            pos: posDesc
-          });
+            const cargo = currentCargoRef.current;
+            let posDesc = '';
+            if (cargo === 'Governador') {
+              const status = getGovStatus(p.uf || p);
+              if (status === 'forcou_e_iria_2t') {
+                posDesc = '🟢 Forçaria e iria para o 2º turno';
+              } else if (status === 'forcou_2t_entre_dois') {
+                posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
+              } else if (status === 'iria_2t_no_lugar') {
+                posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
+              } else {
+                posDesc = '🛡️ Não alteraria';
+              }
+            } else {
+              const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
+              const pos = p[posProp] || 3;
+              if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
+              else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+              else posDesc = '🥉 3º Lugar ou abaixo';
+            }
+
+            if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome || p.name} (${p.uf})`;
+            if (tooltipTaxaRef.current) tooltipTaxaRef.current.textContent = `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`;
+            if (tooltipPosRef.current) tooltipPosRef.current.textContent = posDesc;
+          }
         });
 
         map.on('mouseleave', 'estados-fill', () => {
           if (viewModeRef.current !== 'estados') return;
+          hoveredUfRef.current = null;
           map.getCanvas().style.cursor = '';
           if (map.getLayer('estado-hover-line')) {
             map.setFilter('estado-hover-line', ['==', 'uf', '']);
@@ -387,7 +422,9 @@ export default function MapWorkspace({
           if (map.getLayer('estado-hover-fill')) {
             map.setFilter('estado-hover-fill', ['==', 'uf', '']);
           }
-          setTooltip(t => ({ ...t, visible: false }));
+          if (tooltipRef.current) {
+            tooltipRef.current.style.display = 'none';
+          }
         });
 
         map.on('click', 'estados-fill', (e) => {
@@ -402,59 +439,86 @@ export default function MapWorkspace({
           if (viewModeRef.current !== 'municipios') return;
           if (!e.features || e.features.length === 0) return;
           map.getCanvas().style.cursor = 'pointer';
+
+          // Fast direct DOM positioning (zero React render overhead)
+          if (tooltipRef.current) {
+            const mapWidth = map.getContainer().offsetWidth || 800;
+            const posX = e.point.x > mapWidth - 230 ? e.point.x - 210 : e.point.x + 14;
+            const posY = e.point.y + 14;
+            tooltipRef.current.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+            if (tooltipRef.current.style.display !== 'block') {
+              tooltipRef.current.style.display = 'block';
+            }
+          }
+
           const feat = e.features[0];
           const p = feat.properties;
           const munId = Number(p.id || feat.id);
 
-          // Highlight hovered municipality with luminous outline & fill
-          if (map.getLayer('municipio-hover-line')) {
-            map.setFilter('municipio-hover-line', ['==', ['to-number', ['get', 'id']], munId]);
-          }
-          if (map.getLayer('municipio-hover-fill')) {
-            map.setFilter('municipio-hover-fill', ['==', ['to-number', ['get', 'id']], munId]);
-          }
+          // Only trigger setFilter and DOM text updates when moving to a different municipality!
+          if (hoveredMunIdRef.current !== munId) {
+            hoveredMunIdRef.current = munId;
 
-          const cargo = currentCargoRef.current;
-          let posDesc = '';
-          if (cargo === 'Governador') {
-            const status = getGovStatus(p.uf || p);
-            if (status === 'forcou_e_iria_2t') {
-              posDesc = '🟢 Forçaria e iria para o 2º turno';
-            } else if (status === 'forcou_2t_entre_dois') {
-              posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
-            } else if (status === 'iria_2t_no_lugar') {
-              posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
-            } else {
-              posDesc = '🛡️ Não alteraria';
+            if (map.getLayer('municipio-hover-line')) {
+              map.setFilter('municipio-hover-line', ['==', 'id', munId]);
             }
-          } else {
-            const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
-            const pos = p[posProp] || 3;
-            if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-            else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-            else posDesc = '🥉 3º Lugar ou abaixo';
-          }
+            if (map.getLayer('municipio-hover-fill')) {
+              map.setFilter('municipio-hover-fill', ['==', 'id', munId]);
+            }
 
-          setTooltip({
-            visible: true,
-            x: e.point.x,
-            y: e.point.y,
-            title: `${p.nome} (${p.uf})`,
-            taxa: `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`,
-            pos: posDesc
-          });
+            const cargo = currentCargoRef.current;
+            let posDesc = '';
+            if (cargo === 'Governador') {
+              const status = getGovStatus(p.uf || p);
+              if (status === 'forcou_e_iria_2t') {
+                posDesc = '🟢 Forçaria e iria para o 2º turno';
+              } else if (status === 'forcou_2t_entre_dois') {
+                posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
+              } else if (status === 'iria_2t_no_lugar') {
+                posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
+              } else {
+                posDesc = '🛡️ Não alteraria';
+              }
+            } else {
+              const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
+              const pos = p[posProp] || 3;
+              if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
+              else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+              else posDesc = '🥉 3º Lugar ou abaixo';
+            }
+
+            if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome} (${p.uf})`;
+            if (tooltipTaxaRef.current) tooltipTaxaRef.current.textContent = `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`;
+            if (tooltipPosRef.current) tooltipPosRef.current.textContent = posDesc;
+          }
         });
 
         map.on('mouseleave', 'municipios-fill', () => {
           if (viewModeRef.current !== 'municipios') return;
+          hoveredMunIdRef.current = null;
           map.getCanvas().style.cursor = '';
           if (map.getLayer('municipio-hover-line')) {
-            map.setFilter('municipio-hover-line', ['==', ['to-number', ['get', 'id']], -1]);
+            map.setFilter('municipio-hover-line', ['==', 'id', -1]);
           }
           if (map.getLayer('municipio-hover-fill')) {
-            map.setFilter('municipio-hover-fill', ['==', ['to-number', ['get', 'id']], -1]);
+            map.setFilter('municipio-hover-fill', ['==', 'id', -1]);
           }
-          setTooltip(t => ({ ...t, visible: false }));
+          if (tooltipRef.current) {
+            tooltipRef.current.style.display = 'none';
+          }
+        });
+
+        map.on('mouseout', () => {
+          hoveredMunIdRef.current = null;
+          hoveredUfRef.current = null;
+          map.getCanvas().style.cursor = '';
+          if (map.getLayer('municipio-hover-line')) map.setFilter('municipio-hover-line', ['==', 'id', -1]);
+          if (map.getLayer('municipio-hover-fill')) map.setFilter('municipio-hover-fill', ['==', 'id', -1]);
+          if (map.getLayer('estado-hover-line')) map.setFilter('estado-hover-line', ['==', 'uf', '']);
+          if (map.getLayer('estado-hover-fill')) map.setFilter('estado-hover-fill', ['==', 'uf', '']);
+          if (tooltipRef.current) {
+            tooltipRef.current.style.display = 'none';
+          }
         });
 
         map.on('click', 'municipios-fill', (e) => {
@@ -525,6 +589,7 @@ export default function MapWorkspace({
       // Show Estados layers
       if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'visible');
       if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
+      if (map.getLayer('estados-uf-contour-overlay')) map.setLayoutProperty('estados-uf-contour-overlay', 'visibility', 'visible');
       if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'visible');
       if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'visible');
       if (map.getLayer('estado-highlight')) map.setLayoutProperty('estado-highlight', 'visibility', 'visible');
@@ -537,9 +602,10 @@ export default function MapWorkspace({
       if (map.getLayer('municipio-highlight')) map.setLayoutProperty('municipio-highlight', 'visibility', 'none');
     } else {
       // Municípios view mode:
-      // Hide Estados fill (keep faint boundary)
+      // Hide Estados fill (keep faint boundary & strong UF contour overlay on top of municipalities)
       if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'none');
       if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
+      if (map.getLayer('estados-uf-contour-overlay')) map.setLayoutProperty('estados-uf-contour-overlay', 'visibility', 'visible');
       if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'none');
       if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'none');
 
@@ -567,13 +633,13 @@ export default function MapWorkspace({
       const munUf = currentScope.item.uf;
 
       if (map.getLayer('municipios-fill')) {
-        map.setFilter('municipios-fill', ['==', ['to-number', ['get', 'id']], targetId]);
+        map.setFilter('municipios-fill', ['==', 'id', targetId]);
       }
       if (map.getLayer('municipios-line')) {
-        map.setFilter('municipios-line', ['==', ['to-number', ['get', 'id']], targetId]);
+        map.setFilter('municipios-line', ['==', 'id', targetId]);
       }
       if (map.getLayer('municipio-highlight')) {
-        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], targetId]);
+        map.setFilter('municipio-highlight', ['==', 'id', targetId]);
       }
 
       if (map.getLayer('estados-fill')) {
@@ -581,6 +647,9 @@ export default function MapWorkspace({
       }
       if (map.getLayer('estados-line')) {
         map.setFilter('estados-line', ['==', 'uf', munUf]);
+      }
+      if (map.getLayer('estados-uf-contour-overlay')) {
+        map.setFilter('estados-uf-contour-overlay', ['==', 'uf', munUf]);
       }
       if (map.getLayer('estado-highlight')) {
         map.setFilter('estado-highlight', ['==', 'uf', munUf]);
@@ -617,6 +686,9 @@ export default function MapWorkspace({
       if (map.getLayer('estados-line')) {
         map.setFilter('estados-line', ['==', 'uf', targetUf]);
       }
+      if (map.getLayer('estados-uf-contour-overlay')) {
+        map.setFilter('estados-uf-contour-overlay', ['==', 'uf', targetUf]);
+      }
       if (map.getLayer('estado-highlight')) {
         map.setFilter('estado-highlight', ['==', 'uf', targetUf]);
       }
@@ -628,7 +700,7 @@ export default function MapWorkspace({
         map.setFilter('municipios-line', ['==', 'uf', targetUf]);
       }
       if (map.getLayer('municipio-highlight')) {
-        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+        map.setFilter('municipio-highlight', ['==', 'id', -1]);
       }
 
       // Auto-fit to isolated State only if scope changed
@@ -652,6 +724,9 @@ export default function MapWorkspace({
       if (map.getLayer('estados-line')) {
         map.setFilter('estados-line', ['in', 'uf', ...ufs]);
       }
+      if (map.getLayer('estados-uf-contour-overlay')) {
+        map.setFilter('estados-uf-contour-overlay', ['in', 'uf', ...ufs]);
+      }
       if (map.getLayer('estado-highlight')) {
         map.setFilter('estado-highlight', ['==', 'uf', '']);
       }
@@ -663,7 +738,7 @@ export default function MapWorkspace({
         map.setFilter('municipios-line', ['in', 'uf', ...ufs]);
       }
       if (map.getLayer('municipio-highlight')) {
-        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+        map.setFilter('municipio-highlight', ['==', 'id', -1]);
       }
 
       // Auto-fit to isolated Region only if scope changed
@@ -685,6 +760,9 @@ export default function MapWorkspace({
       if (map.getLayer('estados-line')) {
         map.setFilter('estados-line', null);
       }
+      if (map.getLayer('estados-uf-contour-overlay')) {
+        map.setFilter('estados-uf-contour-overlay', null);
+      }
       if (map.getLayer('estado-highlight')) {
         map.setFilter('estado-highlight', ['==', 'uf', '']);
       }
@@ -696,7 +774,7 @@ export default function MapWorkspace({
         map.setFilter('municipios-line', null);
       }
       if (map.getLayer('municipio-highlight')) {
-        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+        map.setFilter('municipio-highlight', ['==', 'id', -1]);
       }
 
       // Reframe Brazil only if scope changed
@@ -944,25 +1022,27 @@ export default function MapWorkspace({
       </div>
 
       {/* MapLibre WebGL Canvas Container */}
-      <div className="maplibre-container-wrap" id="mapWrapper">
+      <div className="maplibre-container-wrap" id="mapWrapper" style={{ position: 'relative' }}>
         <div ref={mapContainerRef} id="maplibreCanvas" style={{ width: '100%', height: '100%' }}></div>
 
-        {/* Floating Hover Tooltip */}
-        {tooltip.visible && (
-          <div
-            className="maplibre-hover-tooltip"
-            style={{
-              position: 'absolute',
-              left: `${tooltip.x + 14}px`,
-              top: `${tooltip.y + 14}px`,
-              pointerEvents: 'none'
-            }}
-          >
-            <div className="tooltip-title">{tooltip.title}</div>
-            <div className="tooltip-taxa">{tooltip.taxa}</div>
-            <div className="tooltip-pos">{tooltip.pos}</div>
-          </div>
-        )}
+        {/* Floating Hover Tooltip (Direct DOM manipulation for 0-latency cursor tracking) */}
+        <div
+          ref={tooltipRef}
+          className="maplibre-hover-tooltip"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            display: 'none',
+            pointerEvents: 'none',
+            zIndex: 100,
+            willChange: 'transform'
+          }}
+        >
+          <div ref={tooltipTitleRef} className="tooltip-title"></div>
+          <div ref={tooltipTaxaRef} className="tooltip-taxa"></div>
+          <div ref={tooltipPosRef} className="tooltip-pos"></div>
+        </div>
       </div>
 
       {/* Quick state reset button when zoomed in */}

@@ -75,15 +75,11 @@ export default function VerdictCard({
   } else if (isBrasil && currentCargo === 'Presidente') {
     headline = (
       <>
-        Se a Abstenção fosse candidata a Presidente no Brasil, ela conquistaria o{' '}
-        <span className="highlight-amber">3º Lugar</span> com mais de{' '}
-        <span className="highlight-white">33,4 milhões</span> de eleitores ausentes.
+        Se a Abstenção fosse candidata a Presidente, chegaria em{' '}
+        <span className="highlight-amber">3º lugar</span>
       </>
     );
-    subtext = 'O volume de eleitores ausentes (21,08%) supera com folga a soma de todas as terceiras vias e confirma o 2º Turno entre Flávio Bolsonaro (PL) e Lula (PT).';
-    badge1 = { icon: '🗳️', text: <>Iria para o 2º Turno? <strong>Não (Ficaria em 3º Lugar)</strong></> };
-    badge2 = { icon: '📉', text: <>Superou <strong>5 candidatos</strong> na apuração</> };
-    badge3 = { icon: '📊', text: <>Distância do 2º colocado: <strong>20.413.066 votos</strong></> };
+    subtext = 'Os 33,4 milhões de eleitores ausentes (21,08%) superam com folga a soma de todas as terceiras vias, mas não iria para 2º turno';
   } else if (targetData) {
     const pos = targetData.posicao || 3;
     const rankBadgeText = getRankBadge(pos);
@@ -204,72 +200,25 @@ export default function VerdictCard({
 
   return (
     <article className="verdict-card glass-panel" id="verdictCard">
-      <div className="verdict-header">
-        <div className="scope-indicator">
-          <span className="scope-tag" id="currentScopeTag">
-            {isBrasil ? '🇧🇷 BRASIL · NACIONAL' : `📍 ${locationTitle}`}
-          </span>
-          <span className="cargo-tag" id="currentCargoTag">
-            DISPUTA PARA {currentCargo.toUpperCase()}
-          </span>
-        </div>
-        <div className="verdict-controls">
-          {!isBrasil && (
-            <button type="button" className="btn-ghost" id="btnResetBrasil" title="Voltar para a visão do Brasil" onClick={onResetBrasil}>
-              🇧🇷 Ver Brasil Completo
-            </button>
-          )}
-          <button type="button" className="btn-share" id="btnShareCard" title="Compartilhar este veredito" onClick={onOpenShare}>
-            <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
-              <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-            </svg>
-            Compartilhar
-          </button>
-        </div>
-      </div>
-
       {/* Internal scrollable content area: Fixed height card, smooth inner scrolling */}
       <div className="verdict-body-scroll" id="verdictBodyScroll">
         {/* Provocative Newspaper Headline */}
-      <div className="headline-container">
-        <h2 className="verdict-headline" id="verdictHeadline">
-          {headline}
-        </h2>
-        <p className="verdict-subtext" id="verdictSubtext">
-          {subtext}
-        </p>
-      </div>
-
-      {/* Badges Row */}
-      <div className="badges-row" id="badgesRow">
-        {badge1 && (
-          <div className={`status-badge ${badge1.highlight ? 'highlight' : ''}`} id="badgeSegundoTurno">
-            <span className="badge-icon">{badge1.icon}</span>
-            <span className="badge-text">{badge1.text}</span>
-          </div>
-        )}
-        {badge2 && (
-          <div className="status-badge" id="badgeSuperados">
-            <span className="badge-icon">{badge2.icon}</span>
-            <span className="badge-text">{badge2.text}</span>
-          </div>
-        )}
-        {badge3 && (
-          <div className="status-badge" id="badgeMargem">
-            <span className="badge-icon">{badge3.icon}</span>
-            <span className="badge-text">{badge3.text}</span>
-          </div>
-        )}
-      </div>
-
-      {/* Electoral Podium and Candidate Comparison Bars */}
-      <section className="podium-section">
-        <div className="section-heading">
-          <h3 className="section-title">Ranking da Disputa com o Candidato "Abstenção"</h3>
-          <span className="section-caption">Simulação proporcional de votos nominais válidos + total de eleitores ausentes</span>
+        <div className="headline-container">
+          <h2 className="verdict-headline" id="verdictHeadline">
+            {headline}
+          </h2>
+          <p className="verdict-subtext" id="verdictSubtext">
+            {subtext}
+          </p>
         </div>
 
-        <div className="candidates-ranking-list" id="rankingList">
+        {/* Electoral Podium and Candidate Comparison Bars */}
+        <section className="podium-section">
+          <div className="section-heading">
+            <h3 className="section-title">Ranking simulação com o Candidato Abstenção</h3>
+          </div>
+
+          <div className="candidates-ranking-list" id="rankingList">
           {ranking.map((cand, idx) => {
             const isAbst = cand.is_abstencao;
             const pct = cand.percentual_simulado ?? cand.percentual ?? 0;

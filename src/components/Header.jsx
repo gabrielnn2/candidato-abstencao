@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Header({ currentCargo, onSelectCargo, onOpenSearch }) {
   const cargos = [
-    { id: 'Presidente', label: 'Presidente', icon: '🏛️' },
-    { id: 'Governador', label: 'Governador', icon: '🏢' },
-    { id: 'Senador', label: 'Senado (2 Vagas)', icon: '⚖️' }
+    { id: 'Presidente', label: 'Presidente' },
+    { id: 'Governador', label: 'Governador' },
+    { id: 'Senador', label: 'Senado' }
   ];
 
   return (
@@ -35,11 +35,12 @@ export default function Header({ currentCargo, onSelectCargo, onOpenSearch }) {
               onSelectCargo(c.id);
             }}
           >
-            <span className="cargo-icon">{c.icon}</span>
             <span className="cargo-label">{c.label}</span>
           </button>
         ))}
       </nav>
+
+      <div className="header-right-spacer" aria-hidden="true" />
     </header>
   );
 }
