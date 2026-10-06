@@ -3,6 +3,7 @@ import Header from './components/Header';
 import TelemetryBar from './components/TelemetryBar';
 import VerdictCard from './components/VerdictCard';
 import MapWorkspace from './components/MapWorkspace';
+import KeyFindingsSection from './components/KeyFindingsSection';
 import SearchModal from './components/SearchModal';
 import ShareModal from './components/ShareModal';
 import { REGION_STATES, synthesizeMunicipalCargos } from './utils/electoralMath';
@@ -212,6 +213,12 @@ export default function App() {
             estadosData={estadosData}
           />
         </div>
+
+        {/* Highlight Section: Achados Principais */}
+        <KeyFindingsSection
+          brasilData={brasilData}
+          estadosData={estadosData}
+        />
       </main>
 
       {/* Instant Search Modal (Cmd+K) */}
