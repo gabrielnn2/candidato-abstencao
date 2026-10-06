@@ -14,20 +14,6 @@ export default function VerdictCard({
   const isUf = currentScope.type === 'uf';
   const isMun = currentScope.type === 'municipio';
 
-  // 27 UFs matrix
-  const ufsList = [
-    'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO',
-    'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI',
-    'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
-  ];
-
-  // Helper to determine UF performance in current cargo
-  const getUfRank = (ufSigla) => {
-    if (!estadosData) return 3;
-    const ufItem = estadosData.find(u => u.uf === ufSigla);
-    if (!ufItem || !ufItem.cargos || !ufItem.cargos[currentCargo]) return 3;
-    return ufItem.cargos[currentCargo].posicao || 3;
-  };
 
   // Determine target data for ranking
   let targetData = null;
@@ -320,57 +306,6 @@ export default function VerdictCard({
           })}
         </div>
 
-        {/* 27 UFs Quick Matrix */}
-        <div style={{ marginTop: '24px', paddingTop: '18px', borderTop: '1px solid var(--line)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <span className="sub-label">Panorama Rápido nas 27 UFs (Clique para Filtrar)</span>
-          </div>
-          <div className="uf-strip" id="ufStrip">
-            {ufsList.map(ufSigla => {
-              const pos = getUfRank(ufSigla);
-              const isActive = (isUf && currentScope.id === ufSigla) || (isMun && currentScope.item?.uf === ufSigla);
-              const ufItem = estadosData?.find(u => u.uf === ufSigla);
-
-              let rankIndicator = pos === 1 ? '🥇 1º' : (pos === 2 ? '🥈 2º' : '3º');
-              let subClass = pos <= 2 ? 'gold' : '';
-              let tooltipText = `${ufSigla}: Abstenção ficaria em ${pos}º lugar`;
-
-              if (currentCargo === 'Governador' && ufItem) {
-                const govSt = getGovStatus(ufItem);
-                if (govSt === 'forcou_e_iria_2t') {
-                  rankIndicator = '🟢 2ºT';
-                  subClass = 'green';
-                  tooltipText = `${ufSigla}: Forçaria e iria para o 2º turno`;
-                } else if (govSt === 'forcou_2t_entre_dois') {
-                  rankIndicator = '🟠 2ºT';
-                  subClass = 'gold';
-                  tooltipText = `${ufSigla}: Forçaria um 2º turno entre os dois primeiros colocados`;
-                } else if (govSt === 'iria_2t_no_lugar') {
-                  rankIndicator = '🔵 2ºT';
-                  subClass = 'cyan';
-                  tooltipText = `${ufSigla}: Iria para o 2º turno no lugar de um dos dois primeiros candidatos`;
-                } else {
-                  rankIndicator = '—';
-                  subClass = 'slate';
-                  tooltipText = `${ufSigla}: Não alteraria`;
-                }
-              }
-
-              return (
-                <button
-                  key={ufSigla}
-                  type="button"
-                  className={`uf-tile ${isActive ? 'active' : ''}`}
-                  onClick={() => onSelectUf(ufSigla)}
-                  title={tooltipText}
-                >
-                  <span className="uf-sigla">{ufSigla}</span>
-                  <span className={`uf-sub ${subClass}`}>{rankIndicator}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
       </section>
       </div>
     </article>

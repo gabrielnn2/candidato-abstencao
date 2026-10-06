@@ -118,10 +118,10 @@ export default function MapWorkspace({
 
         // 1. Source: Estados
         if (window.ESTADOS_GEO) {
-          // Enrich state properties if needed
-          if (estadosData && estadosData.length > 0) {
-            const ufMap = new Map(estadosData.map(u => [u.uf, u]));
-            window.ESTADOS_GEO.features?.forEach(feat => {
+          const ufMap = estadosData && estadosData.length > 0 ? new Map(estadosData.map(u => [u.uf, u])) : null;
+          window.ESTADOS_GEO.features?.forEach(feat => {
+            feat.properties.status_gov = getGovStatus(feat.properties.uf);
+            if (ufMap) {
               const u = ufMap.get(feat.properties?.uf);
               if (u) {
                 if (!feat.properties.pos_pres || !feat.properties.taxa) {
@@ -134,10 +134,9 @@ export default function MapWorkspace({
                   feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
                   feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
                 }
-                feat.properties.status_gov = getGovStatus(u);
               }
-            });
-          }
+            }
+          });
 
           map.addSource('estados', {
             type: 'geojson',
@@ -228,17 +227,9 @@ export default function MapWorkspace({
 
         // 2. Source: Municípios
         if (window.MUNICIPIOS_GEO) {
-          if (estadosData && estadosData.length > 0) {
-            const ufMap = new Map(estadosData.map(u => [u.uf, u]));
-            window.MUNICIPIOS_GEO.features?.forEach(feat => {
-              if (!feat.properties.status_gov) {
-                const u = ufMap.get(feat.properties?.uf);
-                if (u) {
-                  feat.properties.status_gov = getGovStatus(u);
-                }
-              }
-            });
-          }
+          window.MUNICIPIOS_GEO.features?.forEach(feat => {
+            feat.properties.status_gov = getGovStatus(feat.properties.uf);
+          });
 
           map.addSource('municipios', {
             type: 'geojson',
@@ -359,7 +350,7 @@ export default function MapWorkspace({
           const cargo = currentCargoRef.current;
           let posDesc = '';
           if (cargo === 'Governador') {
-            const status = p.status_gov || 'nao_alterou';
+            const status = getGovStatus(p.uf || p);
             if (status === 'forcou_e_iria_2t') {
               posDesc = '🟢 Forçaria e iria para o 2º turno';
             } else if (status === 'forcou_2t_entre_dois') {
@@ -426,7 +417,7 @@ export default function MapWorkspace({
           const cargo = currentCargoRef.current;
           let posDesc = '';
           if (cargo === 'Governador') {
-            const status = p.status_gov || 'nao_alterou';
+            const status = getGovStatus(p.uf || p);
             if (status === 'forcou_e_iria_2t') {
               posDesc = '🟢 Forçaria e iria para o 2º turno';
             } else if (status === 'forcou_2t_entre_dois') {
@@ -500,6 +491,30 @@ export default function MapWorkspace({
       map.setPaintProperty('estados-fill', 'fill-color', colorExpr);
     }
   }, [currentCargo, mapLoaded]);
+
+  // Synchronize dynamic datasets when estadosData updates
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map || !mapLoaded || !estadosData || estadosData.length === 0) return;
+    if (window.ESTADOS_GEO) {
+      const ufMap = new Map(estadosData.map(u => [u.uf, u]));
+      window.ESTADOS_GEO.features?.forEach(feat => {
+        feat.properties.status_gov = getGovStatus(feat.properties.uf);
+        const u = ufMap.get(feat.properties?.uf);
+        if (u) {
+          feat.properties.nome = u.nome;
+          feat.properties.aptos = u.aptos;
+          feat.properties.abstencao = u.abstencao;
+          feat.properties.taxa = u.taxa_abstencao;
+          feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
+          feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
+          feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+        }
+      });
+      const src = map.getSource('estados');
+      if (src) src.setData(window.ESTADOS_GEO);
+    }
+  }, [estadosData, mapLoaded]);
 
   // Toggle ViewMode Layers Visibility (Estados vs Municípios)
   useEffect(() => {

@@ -66,30 +66,37 @@ export function getRankBadge(pos) {
   return `${pos}º Lugar`;
 }
 
+export const GOV_FORCOU_E_IRIA_2T = ['GO', 'MG', 'MT', 'RO'];
+export const GOV_FORCOU_2T_ENTRE_DOIS = ['AL', 'AP', 'BA', 'CE', 'MA', 'PA', 'PR', 'PE', 'RN', 'RS', 'SP', 'SE'];
+export const GOV_NAO_ALTEROU = ['AC', 'AM', 'DF', 'ES', 'MS', 'PB', 'PI', 'RJ', 'RR', 'SC', 'TO'];
+
 export function getGovStatus(item) {
   if (!item) return 'nao_alterou';
-  const pos = item.cargos?.Governador?.posicao || item.pos_gov || item.posicao || 3;
-  const d1t = item.dados_1t_governador;
 
-  if (d1t) {
-    // Teve vitória em 1º turno na eleição oficial
-    if (!d1t.sobrevive_1t) {
-      if (pos <= 2) {
-        return 'forcou_e_iria_2t'; // Forçaria e iria para o 2º turno
-      } else {
-        return 'forcou_2t_entre_dois'; // Forçaria um 2º turno entre os dois primeiros colocados
-      }
-    } else {
-      return 'nao_alterou'; // Não alteraria (governador resistiu com > 50%)
-    }
-  } else {
-    // Disputa já iria para o 2º turno originalmente
-    if (pos <= 2) {
-      return 'iria_2t_no_lugar'; // Iria para o 2º turno no lugar de um dos dois primeiros candidatos
-    } else {
-      return 'nao_alterou'; // Não alteraria
-    }
+  // 1. Direct match on item if it's a UF string
+  if (typeof item === 'string') {
+    const ufUpper = item.toUpperCase();
+    if (GOV_FORCOU_E_IRIA_2T.includes(ufUpper)) return 'forcou_e_iria_2t';
+    if (GOV_FORCOU_2T_ENTRE_DOIS.includes(ufUpper)) return 'forcou_2t_entre_dois';
+    if (GOV_NAO_ALTEROU.includes(ufUpper)) return 'nao_alterou';
   }
+
+  // 2. Match on item properties (uf or id)
+  const uf = item.uf || item.properties?.uf || item.id;
+  if (uf && typeof uf === 'string') {
+    const ufUpper = uf.toUpperCase();
+    if (GOV_FORCOU_E_IRIA_2T.includes(ufUpper)) return 'forcou_e_iria_2t';
+    if (GOV_FORCOU_2T_ENTRE_DOIS.includes(ufUpper)) return 'forcou_2t_entre_dois';
+    if (GOV_NAO_ALTEROU.includes(ufUpper)) return 'nao_alterou';
+  }
+
+  // 3. Fallback on status_gov property
+  const rawStatus = item.status_gov || item.properties?.status_gov;
+  if (rawStatus === 'forcou_e_iria_2t' || rawStatus === 'foi_2t') return 'forcou_e_iria_2t';
+  if (rawStatus === 'forcou_2t_entre_dois' || rawStatus === 'forcou_2t') return 'forcou_2t_entre_dois';
+  if (rawStatus === 'iria_2t_no_lugar') return 'iria_2t_no_lugar';
+
+  return 'nao_alterou';
 }
 
 export function getGovStatusLabel(status) {
@@ -111,10 +118,18 @@ export function getFillColorExpression(cargo) {
     return [
       'match',
       ['get', 'status_gov'],
-      'forcou_e_iria_2t', '#10b981',       // Verde Esmeralda (Forçaria e iria para o 2º turno)
-      'forcou_2t_entre_dois', '#f59e0b',    // Âmbar / Ouro (Forçaria um 2º turno entre os dois primeiros colocados)
-      'iria_2t_no_lugar', '#38bdf8',        // Ciano / Azul (Iria para o 2º turno no lugar de um dos dois primeiros candidatos)
-      /* default nao_alterou */ '#262d3d'  // Dark Slate (Não alteraria)
+      ['forcou_e_iria_2t', 'foi_2t'], '#10b981',       // Verde Esmeralda (Forçaria e iria para o 2º turno)
+      ['forcou_2t_entre_dois', 'forcou_2t'], '#f59e0b', // Âmbar / Ouro (Forçaria um 2º turno entre os dois primeiros colocados)
+      'iria_2t_no_lugar', '#38bdf8',                    // Ciano / Azul (Iria para o 2º turno no lugar de um dos dois primeiros candidatos)
+      'nao_alterou', '#262d3d',                         // Dark Slate (Não alteraria)
+      // Fallback matching directly by UF so it NEVER fails:
+      [
+        'match',
+        ['get', 'uf'],
+        ['GO', 'MG', 'MT', 'RO'], '#10b981',
+        ['AL', 'AP', 'BA', 'CE', 'MA', 'PA', 'PR', 'PE', 'RN', 'RS', 'SP', 'SE'], '#f59e0b',
+        '#262d3d'
+      ]
     ];
   }
   const prop = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
