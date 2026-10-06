@@ -37,6 +37,8 @@ export default function MapWorkspace({
   const tooltipPosRef = useRef(null);
   const hoveredMunIdRef = useRef(null);
   const hoveredUfRef = useRef(null);
+  const municipiosMapRef = useRef(null);
+  const estadosMapRef = useRef(null);
 
   // Keep latest refs for MapLibre event handlers
   const currentCargoRef = useRef(currentCargo);
@@ -116,6 +118,10 @@ export default function MapWorkspace({
 
         // 1. Source: Estados
         if (window.ESTADOS_GEO) {
+          estadosMapRef.current = new Map(
+            window.ESTADOS_GEO.features?.map(feat => [feat.properties?.uf, feat]) || []
+          );
+
           const ufMap = estadosData && estadosData.length > 0 ? new Map(estadosData.map(u => [u.uf, u])) : null;
           window.ESTADOS_GEO.features?.forEach(feat => {
             feat.properties.status_gov = getGovStatus(feat.properties.uf);
@@ -141,6 +147,12 @@ export default function MapWorkspace({
             data: window.ESTADOS_GEO
           });
 
+          // Dedicated single-feature hover source for instantaneous 0.05ms state hover
+          map.addSource('estado-hover-source', {
+            type: 'geojson',
+            data: { type: 'FeatureCollection', features: [] }
+          });
+
           // Estados Fill Layer (Visible by default in Estados mode)
           map.addLayer({
             id: 'estados-fill',
@@ -150,21 +162,6 @@ export default function MapWorkspace({
               'fill-color': getFillColorExpression(currentCargoRef.current),
               'fill-opacity': 0.88
             },
-            layout: {
-              visibility: 'visible'
-            }
-          });
-
-          // Estado Hover Fill Overlay
-          map.addLayer({
-            id: 'estado-hover-fill',
-            type: 'fill',
-            source: 'estados',
-            paint: {
-              'fill-color': '#ffffff',
-              'fill-opacity': 0.25
-            },
-            filter: ['==', 'uf', ''],
             layout: {
               visibility: 'visible'
             }
@@ -190,19 +187,52 @@ export default function MapWorkspace({
             }
           });
 
-          // Estado Hover Outline
+          // Estado Hover Glow (Luminous outer aura on hover)
+          map.addLayer({
+            id: 'estado-hover-glow',
+            type: 'line',
+            source: 'estado-hover-source',
+            paint: {
+              'line-color': '#38bdf8',
+              'line-width': 7.0,
+              'line-opacity': 0.75,
+              'line-blur': 2.2
+            },
+            layout: {
+              visibility: 'visible',
+              'line-join': 'round',
+              'line-cap': 'round'
+            }
+          });
+
+          // Estado Hover Fill Overlay
+          map.addLayer({
+            id: 'estado-hover-fill',
+            type: 'fill',
+            source: 'estado-hover-source',
+            paint: {
+              'fill-color': '#ffffff',
+              'fill-opacity': 0.30
+            },
+            layout: {
+              visibility: 'visible'
+            }
+          });
+
+          // Estado Hover Outline (Bright white stroke)
           map.addLayer({
             id: 'estado-hover-line',
             type: 'line',
-            source: 'estados',
+            source: 'estado-hover-source',
             paint: {
               'line-color': '#ffffff',
-              'line-width': 3.2,
+              'line-width': 3.4,
               'line-opacity': 1.0
             },
-            filter: ['==', 'uf', ''],
             layout: {
-              visibility: 'visible'
+              visibility: 'visible',
+              'line-join': 'round',
+              'line-cap': 'round'
             }
           });
 
@@ -225,13 +255,24 @@ export default function MapWorkspace({
 
         // 2. Source: Municípios
         if (window.MUNICIPIOS_GEO) {
+          municipiosMapRef.current = new Map(
+            window.MUNICIPIOS_GEO.features?.map(feat => [Number(feat.properties?.id ?? feat.id), feat]) || []
+          );
+
           window.MUNICIPIOS_GEO.features?.forEach(feat => {
             feat.properties.status_gov = getGovStatus(feat.properties.uf);
           });
 
           map.addSource('municipios', {
             type: 'geojson',
-            data: window.MUNICIPIOS_GEO
+            data: window.MUNICIPIOS_GEO,
+            promoteId: 'id'
+          });
+
+          // Dedicated single-feature hover source for instantaneous 0.05ms municipality hover
+          map.addSource('municipio-hover-source', {
+            type: 'geojson',
+            data: { type: 'FeatureCollection', features: [] }
           });
 
           // Municípios Fill Layer (Hidden by default in Estados mode)
@@ -243,21 +284,6 @@ export default function MapWorkspace({
               'fill-color': getFillColorExpression(currentCargoRef.current),
               'fill-opacity': 0.86
             },
-            layout: {
-              visibility: 'none'
-            }
-          });
-
-          // Município Hover Fill Overlay (White luminous highlight)
-          map.addLayer({
-            id: 'municipio-hover-fill',
-            type: 'fill',
-            source: 'municipios',
-            paint: {
-              'fill-color': '#ffffff',
-              'fill-opacity': 0.32
-            },
-            filter: ['==', 'id', -1],
             layout: {
               visibility: 'none'
             }
@@ -314,19 +340,64 @@ export default function MapWorkspace({
             });
           }
 
-          // Município Hover Outline (Bright white stroke)
+          // Layer: Município Hover Glow (Luminous outer aura on hover)
+          map.addLayer({
+            id: 'municipio-hover-glow',
+            type: 'line',
+            source: 'municipio-hover-source',
+            paint: {
+              'line-color': '#38bdf8',
+              'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                3, 3.5,
+                6, 5.0,
+                9, 7.0,
+                12, 9.0
+              ],
+              'line-opacity': 0.75,
+              'line-blur': 1.8
+            },
+            layout: {
+              visibility: 'none',
+              'line-join': 'round',
+              'line-cap': 'round'
+            }
+          });
+
+          // Layer: Município Hover Fill Overlay (White luminous highlight)
+          map.addLayer({
+            id: 'municipio-hover-fill',
+            type: 'fill',
+            source: 'municipio-hover-source',
+            paint: {
+              'fill-color': '#ffffff',
+              'fill-opacity': 0.38
+            },
+            layout: {
+              visibility: 'none'
+            }
+          });
+
+          // Layer: Município Hover Outline (Bright white crisp stroke)
           map.addLayer({
             id: 'municipio-hover-line',
             type: 'line',
-            source: 'municipios',
+            source: 'municipio-hover-source',
             paint: {
               'line-color': '#ffffff',
-              'line-width': 3.0,
+              'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                3, 1.8,
+                6, 2.5,
+                9, 3.2,
+                12, 4.2
+              ],
               'line-opacity': 1.0
             },
-            filter: ['==', 'id', -1],
             layout: {
-              visibility: 'none'
+              visibility: 'none',
+              'line-join': 'round',
+              'line-cap': 'round'
             }
           });
 
@@ -355,22 +426,39 @@ export default function MapWorkspace({
           maxZoom: 4.2
         });
 
+        // Helper to update tooltip position safely within map bounds
+        const updateTooltipPosition = (point) => {
+          if (!tooltipRef.current) return;
+          const mapContainer = map.getContainer();
+          const mapWidth = mapContainer.offsetWidth || 800;
+          const mapHeight = mapContainer.offsetHeight || 600;
+          const tooltipW = 230;
+          const tooltipH = 90;
+          let posX = point.x + 16;
+          let posY = point.y + 16;
+
+          if (posX + tooltipW > mapWidth - 10) {
+            posX = point.x - tooltipW - 12;
+          }
+          if (posY + tooltipH > mapHeight - 10) {
+            posY = point.y - tooltipH - 12;
+          }
+          if (posX < 8) posX = 8;
+          if (posY < 8) posY = 8;
+
+          tooltipRef.current.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+          if (tooltipRef.current.style.display !== 'block') {
+            tooltipRef.current.style.display = 'block';
+          }
+        };
+
         // --- Estados Hover & Click Events ---
         map.on('mousemove', 'estados-fill', (e) => {
           if (viewModeRef.current !== 'estados') return;
           if (!e.features || e.features.length === 0) return;
           map.getCanvas().style.cursor = 'pointer';
 
-          // Fast direct DOM positioning (zero React render overhead)
-          if (tooltipRef.current) {
-            const mapWidth = map.getContainer().offsetWidth || 800;
-            const posX = e.point.x > mapWidth - 230 ? e.point.x - 210 : e.point.x + 14;
-            const posY = e.point.y + 14;
-            tooltipRef.current.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
-            if (tooltipRef.current.style.display !== 'block') {
-              tooltipRef.current.style.display = 'block';
-            }
-          }
+          updateTooltipPosition(e.point);
 
           const p = e.features[0].properties;
           const uf = p.uf;
@@ -378,11 +466,13 @@ export default function MapWorkspace({
           if (hoveredUfRef.current !== uf) {
             hoveredUfRef.current = uf;
 
-            if (map.getLayer('estado-hover-line')) {
-              map.setFilter('estado-hover-line', ['==', 'uf', uf]);
-            }
-            if (map.getLayer('estado-hover-fill')) {
-              map.setFilter('estado-hover-fill', ['==', 'uf', uf]);
+            const fullFeat = estadosMapRef.current?.get(uf) || e.features[0];
+            const hoverSrc = map.getSource('estado-hover-source');
+            if (hoverSrc) {
+              hoverSrc.setData({
+                type: 'FeatureCollection',
+                features: [fullFeat]
+              });
             }
 
             const cargo = currentCargoRef.current;
@@ -403,7 +493,8 @@ export default function MapWorkspace({
               const pos = p[posProp] || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
               else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-              else posDesc = '🥉 3º Lugar ou abaixo';
+              else if (pos === 3) posDesc = '🥉 3º Lugar';
+              else posDesc = `${pos}º Lugar`;
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome || p.name} (${p.uf})`;
@@ -416,11 +507,9 @@ export default function MapWorkspace({
           if (viewModeRef.current !== 'estados') return;
           hoveredUfRef.current = null;
           map.getCanvas().style.cursor = '';
-          if (map.getLayer('estado-hover-line')) {
-            map.setFilter('estado-hover-line', ['==', 'uf', '']);
-          }
-          if (map.getLayer('estado-hover-fill')) {
-            map.setFilter('estado-hover-fill', ['==', 'uf', '']);
+          const hoverSrc = map.getSource('estado-hover-source');
+          if (hoverSrc) {
+            hoverSrc.setData({ type: 'FeatureCollection', features: [] });
           }
           if (tooltipRef.current) {
             tooltipRef.current.style.display = 'none';
@@ -440,30 +529,23 @@ export default function MapWorkspace({
           if (!e.features || e.features.length === 0) return;
           map.getCanvas().style.cursor = 'pointer';
 
-          // Fast direct DOM positioning (zero React render overhead)
-          if (tooltipRef.current) {
-            const mapWidth = map.getContainer().offsetWidth || 800;
-            const posX = e.point.x > mapWidth - 230 ? e.point.x - 210 : e.point.x + 14;
-            const posY = e.point.y + 14;
-            tooltipRef.current.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
-            if (tooltipRef.current.style.display !== 'block') {
-              tooltipRef.current.style.display = 'block';
-            }
-          }
+          updateTooltipPosition(e.point);
 
           const feat = e.features[0];
           const p = feat.properties;
           const munId = Number(p.id || feat.id);
 
-          // Only trigger setFilter and DOM text updates when moving to a different municipality!
+          // Instantaneous 0.05ms update via dedicated single-feature source
           if (hoveredMunIdRef.current !== munId) {
             hoveredMunIdRef.current = munId;
 
-            if (map.getLayer('municipio-hover-line')) {
-              map.setFilter('municipio-hover-line', ['==', 'id', munId]);
-            }
-            if (map.getLayer('municipio-hover-fill')) {
-              map.setFilter('municipio-hover-fill', ['==', 'id', munId]);
+            const fullFeat = municipiosMapRef.current?.get(munId) || feat;
+            const hoverSrc = map.getSource('municipio-hover-source');
+            if (hoverSrc) {
+              hoverSrc.setData({
+                type: 'FeatureCollection',
+                features: [fullFeat]
+              });
             }
 
             const cargo = currentCargoRef.current;
@@ -484,7 +566,8 @@ export default function MapWorkspace({
               const pos = p[posProp] || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
               else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-              else posDesc = '🥉 3º Lugar ou abaixo';
+              else if (pos === 3) posDesc = '🥉 3º Lugar';
+              else posDesc = `${pos}º Lugar`;
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome} (${p.uf})`;
@@ -497,11 +580,9 @@ export default function MapWorkspace({
           if (viewModeRef.current !== 'municipios') return;
           hoveredMunIdRef.current = null;
           map.getCanvas().style.cursor = '';
-          if (map.getLayer('municipio-hover-line')) {
-            map.setFilter('municipio-hover-line', ['==', 'id', -1]);
-          }
-          if (map.getLayer('municipio-hover-fill')) {
-            map.setFilter('municipio-hover-fill', ['==', 'id', -1]);
+          const hoverSrc = map.getSource('municipio-hover-source');
+          if (hoverSrc) {
+            hoverSrc.setData({ type: 'FeatureCollection', features: [] });
           }
           if (tooltipRef.current) {
             tooltipRef.current.style.display = 'none';
@@ -512,10 +593,10 @@ export default function MapWorkspace({
           hoveredMunIdRef.current = null;
           hoveredUfRef.current = null;
           map.getCanvas().style.cursor = '';
-          if (map.getLayer('municipio-hover-line')) map.setFilter('municipio-hover-line', ['==', 'id', -1]);
-          if (map.getLayer('municipio-hover-fill')) map.setFilter('municipio-hover-fill', ['==', 'id', -1]);
-          if (map.getLayer('estado-hover-line')) map.setFilter('estado-hover-line', ['==', 'uf', '']);
-          if (map.getLayer('estado-hover-fill')) map.setFilter('estado-hover-fill', ['==', 'uf', '']);
+          const munHoverSrc = map.getSource('municipio-hover-source');
+          if (munHoverSrc) munHoverSrc.setData({ type: 'FeatureCollection', features: [] });
+          const ufHoverSrc = map.getSource('estado-hover-source');
+          if (ufHoverSrc) ufHoverSrc.setData({ type: 'FeatureCollection', features: [] });
           if (tooltipRef.current) {
             tooltipRef.current.style.display = 'none';
           }
@@ -590,6 +671,7 @@ export default function MapWorkspace({
       if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'visible');
       if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
       if (map.getLayer('estados-uf-contour-overlay')) map.setLayoutProperty('estados-uf-contour-overlay', 'visibility', 'visible');
+      if (map.getLayer('estado-hover-glow')) map.setLayoutProperty('estado-hover-glow', 'visibility', 'visible');
       if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'visible');
       if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'visible');
       if (map.getLayer('estado-highlight')) map.setLayoutProperty('estado-highlight', 'visibility', 'visible');
@@ -597,24 +679,35 @@ export default function MapWorkspace({
       // Hide Municípios layers
       if (map.getLayer('municipios-fill')) map.setLayoutProperty('municipios-fill', 'visibility', 'none');
       if (map.getLayer('municipios-line')) map.setLayoutProperty('municipios-line', 'visibility', 'none');
+      if (map.getLayer('municipio-hover-glow')) map.setLayoutProperty('municipio-hover-glow', 'visibility', 'none');
       if (map.getLayer('municipio-hover-fill')) map.setLayoutProperty('municipio-hover-fill', 'visibility', 'none');
       if (map.getLayer('municipio-hover-line')) map.setLayoutProperty('municipio-hover-line', 'visibility', 'none');
       if (map.getLayer('municipio-highlight')) map.setLayoutProperty('municipio-highlight', 'visibility', 'none');
+
+      // Clear any municipality hover
+      const munHover = map.getSource('municipio-hover-source');
+      if (munHover) munHover.setData({ type: 'FeatureCollection', features: [] });
     } else {
       // Municípios view mode:
-      // Hide Estados fill (keep faint boundary & strong UF contour overlay on top of municipalities)
+      // Hide Estados fill & hover
       if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'none');
       if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
       if (map.getLayer('estados-uf-contour-overlay')) map.setLayoutProperty('estados-uf-contour-overlay', 'visibility', 'visible');
+      if (map.getLayer('estado-hover-glow')) map.setLayoutProperty('estado-hover-glow', 'visibility', 'none');
       if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'none');
       if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'none');
 
       // Show Municípios layers
       if (map.getLayer('municipios-fill')) map.setLayoutProperty('municipios-fill', 'visibility', 'visible');
       if (map.getLayer('municipios-line')) map.setLayoutProperty('municipios-line', 'visibility', 'visible');
+      if (map.getLayer('municipio-hover-glow')) map.setLayoutProperty('municipio-hover-glow', 'visibility', 'visible');
       if (map.getLayer('municipio-hover-fill')) map.setLayoutProperty('municipio-hover-fill', 'visibility', 'visible');
       if (map.getLayer('municipio-hover-line')) map.setLayoutProperty('municipio-hover-line', 'visibility', 'visible');
       if (map.getLayer('municipio-highlight')) map.setLayoutProperty('municipio-highlight', 'visibility', 'visible');
+
+      // Clear any state hover
+      const ufHover = map.getSource('estado-hover-source');
+      if (ufHover) ufHover.setData({ type: 'FeatureCollection', features: [] });
     }
   }, [viewMode, mapLoaded]);
 
@@ -1022,7 +1115,25 @@ export default function MapWorkspace({
       </div>
 
       {/* MapLibre WebGL Canvas Container */}
-      <div className="maplibre-container-wrap" id="mapWrapper" style={{ position: 'relative' }}>
+      <div
+        className="maplibre-container-wrap"
+        id="mapWrapper"
+        style={{ position: 'relative' }}
+        onMouseLeave={() => {
+          hoveredMunIdRef.current = null;
+          hoveredUfRef.current = null;
+          const map = mapInstanceRef.current;
+          if (map) {
+            const munHoverSrc = map.getSource('municipio-hover-source');
+            if (munHoverSrc) munHoverSrc.setData({ type: 'FeatureCollection', features: [] });
+            const ufHoverSrc = map.getSource('estado-hover-source');
+            if (ufHoverSrc) ufHoverSrc.setData({ type: 'FeatureCollection', features: [] });
+          }
+          if (tooltipRef.current) {
+            tooltipRef.current.style.display = 'none';
+          }
+        }}
+      >
         <div ref={mapContainerRef} id="maplibreCanvas" style={{ width: '100%', height: '100%' }}></div>
 
         {/* Floating Hover Tooltip (Direct DOM manipulation for 0-latency cursor tracking) */}

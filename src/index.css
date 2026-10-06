@@ -867,11 +867,13 @@ a {
 /* Floating MapLibre Hover Tooltip */
 .maplibre-hover-tooltip {
   position: absolute;
-  background: rgba(13, 17, 23, 0.94);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 12px rgba(56, 189, 248, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  top: 0;
+  left: 0;
+  background: rgba(13, 17, 23, 0.96);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 16px rgba(56, 189, 248, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 8px;
   padding: 10px 14px;
   color: #f1f5f9;
@@ -879,25 +881,33 @@ a {
   pointer-events: none;
   font-family: var(--font-sans, system-ui, sans-serif);
   min-width: 190px;
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  will-change: transform;
 }
 
 .maplibre-hover-tooltip .tooltip-title {
   font-weight: 700;
   font-size: 0.92rem;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  line-height: 1.25;
 }
 
 .maplibre-hover-tooltip .tooltip-taxa {
   font-size: 0.8rem;
   color: #94a3b8;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  line-height: 1.25;
 }
 
 .maplibre-hover-tooltip .tooltip-pos {
   font-size: 0.82rem;
   font-weight: 600;
   color: #38bdf8;
+  line-height: 1.25;
 }
 
 @media (max-width: 1100px) {
@@ -1234,38 +1244,6 @@ a {
   display: none !important;
 }
 
-/* Floating Hover Tooltip */
-.maplibre-hover-tooltip {
-  position: absolute;
-  pointer-events: none;
-  z-index: 50;
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: rgba(14, 13, 11, 0.94);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(217, 168, 78, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  transition: opacity 0.1s ease;
-}
-
-.maplibre-hover-tooltip .tooltip-title {
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: #fff;
-}
-
-.maplibre-hover-tooltip .tooltip-taxa {
-  font-size: 0.78rem;
-  color: var(--fg-2);
-}
-
-.maplibre-hover-tooltip .tooltip-pos {
-  font-size: 0.78rem;
-  font-weight: 600;
-}
 
 /* Map Footer Bar */
 .map-footer-bar {
