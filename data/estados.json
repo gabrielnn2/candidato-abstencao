@@ -197,7 +197,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 133200,
         "total_aptos": 588433,
         "taxa_abstencao": 22.64,
@@ -205,14 +205,25 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (AC) (PL)",
-          "Candidato 2 ao Senado (AC) (PT)",
-          "Candidato 3 ao Senado (AC) (PSD)",
-          "Candidato 4 ao Senado (AC) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Ney Amorim (PODEMOS)",
+          "Jorge Viana (PT)",
+          "Márcio Bittar (UNIÃO)",
+          "Sérgio Petecão (PSD)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 5735,
+        "diferenca_lider": -25321,
         "ranking": [
+          {
+            "nome": "Alan Rick",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Alan Rick (UNIÃO)",
+            "numero": "444",
+            "votos": 158521,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 28.72
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -221,63 +232,63 @@
             "votos": 133200,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 28.61
-          },
-          {
-            "nome": "Candidato 1 ao Senado (AC)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (AC) (PL)",
-            "numero": "222",
-            "votos": 127465,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.38
+            "percentual_simulado": 24.13
           },
           {
-            "nome": "Candidato 2 ao Senado (AC)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (AC) (PT)",
-            "numero": "133",
-            "votos": 91046,
+            "nome": "Ney Amorim",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Ney Amorim (PODEMOS)",
+            "numero": "200",
+            "votos": 74632,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.56
+            "percentual_simulado": 13.52
           },
           {
-            "nome": "Candidato 3 ao Senado (AC)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (AC) (PSD)",
-            "numero": "555",
-            "votos": 59180,
+            "nome": "Jorge Viana",
+            "partido": "PT",
+            "nome_exibicao": "Jorge Viana (PT)",
+            "numero": "133",
+            "votos": 59680,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.71
+            "percentual_simulado": 10.81
           },
           {
-            "nome": "Candidato 4 ao Senado (AC)",
+            "nome": "Márcio Bittar",
             "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (AC) (UNIÃO)",
-            "numero": "444",
-            "votos": 36418,
+            "nome_exibicao": "Márcio Bittar (UNIÃO)",
+            "numero": "440",
+            "votos": 52351,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.82
+            "percentual_simulado": 9.48
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
-            "numero": "--",
-            "votos": 18209,
+            "nome": "Sérgio Petecão",
+            "partido": "PSD",
+            "nome_exibicao": "Sérgio Petecão (PSD)",
+            "numero": "555",
+            "votos": 43975,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.91
+            "percentual_simulado": 7.97
+          },
+          {
+            "nome": "Demais Concorrentes",
+            "partido": "DIVERSOS",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
+            "numero": "--",
+            "votos": 29652,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 7,
+            "percentual_simulado": 5.37
           }
         ]
       }
@@ -475,7 +486,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 542475,
         "total_aptos": 2411000,
         "taxa_abstencao": 22.5,
@@ -483,14 +494,25 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (AL) (PL)",
-          "Candidato 2 ao Senado (AL) (PT)",
-          "Candidato 3 ao Senado (AL) (PSD)",
-          "Candidato 4 ao Senado (AL) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Davi Davino Filho (PP)",
+          "Rodrigo Cunha (PODEMOS)",
+          "Arthur Lira (PP)",
+          "Paulão (PT)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 19288,
+        "diferenca_lider": -31685,
         "ranking": [
+          {
+            "nome": "Renan Calheiros",
+            "partido": "MDB",
+            "nome_exibicao": "Renan Calheiros (MDB)",
+            "numero": "151",
+            "votos": 574160,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 25.39
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -499,63 +521,63 @@
             "votos": 542475,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 28.45
-          },
-          {
-            "nome": "Candidato 1 ao Senado (AL)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (AL) (PL)",
-            "numero": "222",
-            "votos": 523187,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.44
+            "percentual_simulado": 23.99
           },
           {
-            "nome": "Candidato 2 ao Senado (AL)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (AL) (PT)",
-            "numero": "133",
-            "votos": 373705,
+            "nome": "Davi Davino Filho",
+            "partido": "PP",
+            "nome_exibicao": "Davi Davino Filho (PP)",
+            "numero": "111",
+            "votos": 489927,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.6
+            "percentual_simulado": 21.66
           },
           {
-            "nome": "Candidato 3 ao Senado (AL)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (AL) (PSD)",
-            "numero": "555",
-            "votos": 242908,
+            "nome": "Rodrigo Cunha",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Rodrigo Cunha (PODEMOS)",
+            "numero": "200",
+            "votos": 312865,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.74
+            "percentual_simulado": 13.83
           },
           {
-            "nome": "Candidato 4 ao Senado (AL)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (AL) (UNIÃO)",
-            "numero": "444",
-            "votos": 149482,
+            "nome": "Arthur Lira",
+            "partido": "PP",
+            "nome_exibicao": "Arthur Lira (PP)",
+            "numero": "112",
+            "votos": 197689,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.84
+            "percentual_simulado": 8.74
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
-            "numero": "--",
-            "votos": 74741,
+            "nome": "Paulão",
+            "partido": "PT",
+            "nome_exibicao": "Paulão (PT)",
+            "numero": "133",
+            "votos": 92828,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.92
+            "percentual_simulado": 4.1
+          },
+          {
+            "nome": "Demais Concorrentes",
+            "partido": "DIVERSOS",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
+            "numero": "--",
+            "votos": 51571,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 7,
+            "percentual_simulado": 2.28
           }
         ]
       }
@@ -752,31 +774,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 526916,
         "total_aptos": 2647822,
         "taxa_abstencao": 19.9,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (AM) (PT)",
-          "Candidato 3 ao Senado (AM) (PSD)",
-          "Candidato 4 ao Senado (AM) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Arthur Virgílio Neto (PSDB)",
+          "Eduardo Braga (MDB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -66937,
+        "diferenca_lider": -281284,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (AM)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (AM) (PL)",
-            "numero": "222",
-            "votos": 593853,
+            "nome": "Omar Aziz",
+            "partido": "PSD",
+            "nome_exibicao": "Omar Aziz (PSD)",
+            "numero": "555",
+            "votos": 808200,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.62
+            "percentual_simulado": 32.61
+          },
+          {
+            "nome": "Coronel Menezes",
+            "partido": "PL",
+            "nome_exibicao": "Coronel Menezes (PL)",
+            "numero": "222",
+            "votos": 563906,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 22.76
           },
           {
             "nome": "Abstenção",
@@ -786,52 +818,41 @@
             "votos": 526916,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 25.39
-          },
-          {
-            "nome": "Candidato 2 ao Senado (AM)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (AM) (PT)",
-            "numero": "133",
-            "votos": 424181,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.44
+            "percentual_simulado": 21.26
           },
           {
-            "nome": "Candidato 3 ao Senado (AM)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (AM) (PSD)",
-            "numero": "555",
-            "votos": 275717,
+            "nome": "Arthur Virgílio Neto",
+            "partido": "PSDB",
+            "nome_exibicao": "Arthur Virgílio Neto (PSDB)",
+            "numero": "455",
+            "votos": 243904,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.29
+            "percentual_simulado": 9.84
           },
           {
-            "nome": "Candidato 4 ao Senado (AM)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (AM) (UNIÃO)",
-            "numero": "444",
-            "votos": 169672,
+            "nome": "Eduardo Braga",
+            "partido": "MDB",
+            "nome_exibicao": "Eduardo Braga (MDB)",
+            "numero": "151",
+            "votos": 204879,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.18
+            "percentual_simulado": 8.27
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 84836,
+            "votos": 130342,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.09
+            "percentual_simulado": 5.26
           }
         ]
       }
@@ -1030,23 +1051,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (AP) (PT)",
-          "Candidato 3 ao Senado (AP) (PSD)",
-          "Candidato 4 ao Senado (AP) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Rayssa Furlan (MDB)",
+          "Randolfe Rodrigues (PT)",
+          "Lucas Barreto (PSD)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -6167,
+        "diferenca_lider": -75991,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (AP)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (AP) (PL)",
-            "numero": "222",
-            "votos": 121814,
+            "nome": "Davi Alcolumbre",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Davi Alcolumbre (UNIÃO)",
+            "numero": "444",
+            "votos": 191638,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.12
+            "percentual_simulado": 37.15
           },
           {
             "nome": "Abstenção",
@@ -1057,51 +1078,51 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 26.69
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 2 ao Senado (AP)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (AP) (PT)",
-            "numero": "133",
-            "votos": 87010,
+            "nome": "Rayssa Furlan",
+            "partido": "MDB",
+            "nome_exibicao": "Rayssa Furlan (MDB)",
+            "numero": "151",
+            "votos": 86053,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 16.68
           },
           {
-            "nome": "Candidato 3 ao Senado (AP)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (AP) (PSD)",
-            "numero": "555",
-            "votos": 56556,
+            "nome": "Randolfe Rodrigues",
+            "partido": "PT",
+            "nome_exibicao": "Randolfe Rodrigues (PT)",
+            "numero": "133",
+            "votos": 60837,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 11.79
           },
           {
-            "nome": "Candidato 4 ao Senado (AP)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (AP) (UNIÃO)",
-            "numero": "444",
-            "votos": 34804,
+            "nome": "Lucas Barreto",
+            "partido": "PSD",
+            "nome_exibicao": "Lucas Barreto (PSD)",
+            "numero": "555",
+            "votos": 38023,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 7.37
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 17402,
+            "votos": 23694,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 4.59
           }
         ]
       }
@@ -1306,23 +1327,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (BA) (PT)",
-          "Candidato 3 ao Senado (BA) (PSD)",
-          "Candidato 4 ao Senado (BA) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Cacá Leão (PP)",
+          "Angelo Coronel (PSD)",
+          "Raissa Oliveira (PL)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -126526,
+        "diferenca_lider": -1117160,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (BA)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (BA) (PL)",
-            "numero": "222",
-            "votos": 2498896,
+            "nome": "Jaques Wagner",
+            "partido": "PT",
+            "nome_exibicao": "Jaques Wagner (PT)",
+            "numero": "133",
+            "votos": 3489530,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.12
+            "percentual_simulado": 32.97
           },
           {
             "nome": "Abstenção",
@@ -1333,51 +1354,51 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 26.69
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 2 ao Senado (BA)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (BA) (PT)",
-            "numero": "133",
-            "votos": 1784926,
+            "nome": "Cacá Leão",
+            "partido": "PP",
+            "nome_exibicao": "Cacá Leão (PP)",
+            "numero": "111",
+            "votos": 2069086,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 19.55
           },
           {
-            "nome": "Candidato 3 ao Senado (BA)",
+            "nome": "Angelo Coronel",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (BA) (PSD)",
+            "nome_exibicao": "Angelo Coronel (PSD)",
             "numero": "555",
-            "votos": 1160201,
+            "votos": 1354758,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 12.8
           },
           {
-            "nome": "Candidato 4 ao Senado (BA)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (BA) (UNIÃO)",
-            "numero": "444",
-            "votos": 713970,
+            "nome": "Raissa Oliveira",
+            "partido": "PL",
+            "nome_exibicao": "Raissa Oliveira (PL)",
+            "numero": "222",
+            "votos": 919593,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 8.69
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 356985,
+            "votos": 377690,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 3.57
           }
         ]
       }
@@ -1576,23 +1597,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (CE) (PT)",
-          "Candidato 3 ao Senado (CE) (PSD)",
-          "Candidato 4 ao Senado (CE) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Kamila Cardoso (AVANTE)",
+          "Eduardo Girão (NOVO)",
+          "Cid Gomes (PSB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -338272,
+        "diferenca_lider": -2361557,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (CE)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (CE) (PL)",
-            "numero": "222",
-            "votos": 1565872,
+            "nome": "Camilo Santana",
+            "partido": "PT",
+            "nome_exibicao": "Camilo Santana (PT)",
+            "numero": "133",
+            "votos": 3589157,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.49
+            "percentual_simulado": 56.32
           },
           {
             "nome": "Abstenção",
@@ -1603,51 +1624,51 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 23.12
+            "percentual_simulado": 19.26
           },
           {
-            "nome": "Candidato 2 ao Senado (CE)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (CE) (PT)",
-            "numero": "133",
-            "votos": 1118480,
+            "nome": "Kamila Cardoso",
+            "partido": "AVANTE",
+            "nome_exibicao": "Kamila Cardoso (AVANTE)",
+            "numero": "700",
+            "votos": 746026,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.06
+            "percentual_simulado": 11.71
           },
           {
-            "nome": "Candidato 3 ao Senado (CE)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (CE) (PSD)",
-            "numero": "555",
-            "votos": 727012,
+            "nome": "Eduardo Girão",
+            "partido": "NOVO",
+            "nome_exibicao": "Eduardo Girão (NOVO)",
+            "numero": "300",
+            "votos": 385875,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.69
+            "percentual_simulado": 6.06
           },
           {
-            "nome": "Candidato 4 ao Senado (CE)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (CE) (UNIÃO)",
-            "numero": "444",
-            "votos": 447392,
+            "nome": "Cid Gomes",
+            "partido": "PSB",
+            "nome_exibicao": "Cid Gomes (PSB)",
+            "numero": "400",
+            "votos": 282975,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.43
+            "percentual_simulado": 4.44
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 223696,
+            "votos": 140973,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.21
+            "percentual_simulado": 2.21
           }
         ]
       }
@@ -1850,31 +1871,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 386071,
         "total_aptos": 2206125,
         "taxa_abstencao": 17.5,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (DF) (PT)",
-          "Candidato 3 ao Senado (DF) (PSD)",
-          "Candidato 4 ao Senado (DF) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Rosilene Corrêa (PT)",
+          "Leila Barros (PDT)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -123544,
+        "diferenca_lider": -367096,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (DF)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (DF) (PL)",
-            "numero": "222",
-            "votos": 509615,
+            "nome": "Damares Alves",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Damares Alves (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 753167,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.72
+            "percentual_simulado": 36.55
+          },
+          {
+            "nome": "Flávia Arruda",
+            "partido": "PL",
+            "nome_exibicao": "Flávia Arruda (PL)",
+            "numero": "222",
+            "votos": 453775,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 22.02
           },
           {
             "nome": "Abstenção",
@@ -1884,52 +1915,41 @@
             "votos": 386071,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 22.52
-          },
-          {
-            "nome": "Candidato 2 ao Senado (DF)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (DF) (PT)",
-            "numero": "133",
-            "votos": 364010,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.23
+            "percentual_simulado": 18.74
           },
           {
-            "nome": "Candidato 3 ao Senado (DF)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (DF) (PSD)",
-            "numero": "555",
-            "votos": 236607,
+            "nome": "Rosilene Corrêa",
+            "partido": "PT",
+            "nome_exibicao": "Rosilene Corrêa (PT)",
+            "numero": "133",
+            "votos": 259539,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.8
+            "percentual_simulado": 12.6
           },
           {
-            "nome": "Candidato 4 ao Senado (DF)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (DF) (UNIÃO)",
-            "numero": "444",
-            "votos": 145604,
+            "nome": "Leila Barros",
+            "partido": "PDT",
+            "nome_exibicao": "Leila Barros (PDT)",
+            "numero": "123",
+            "votos": 125583,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.49
+            "percentual_simulado": 6.09
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 72802,
+            "votos": 82382,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.25
+            "percentual_simulado": 4.0
           }
         ]
       }
@@ -2125,31 +2145,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 613410,
         "total_aptos": 2921000,
         "taxa_abstencao": 21.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (ES) (PT)",
-          "Candidato 3 ao Senado (ES) (PSD)",
-          "Candidato 4 ao Senado (ES) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Fabiano Contarato (PT)",
+          "Marcos do Val (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -32715,
+        "diferenca_lider": -276544,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (ES)",
+            "nome": "Magno Malta",
             "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (ES) (PL)",
+            "nome_exibicao": "Magno Malta (PL)",
             "numero": "222",
-            "votos": 646125,
+            "votos": 889954,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.12
+            "percentual_simulado": 32.52
+          },
+          {
+            "nome": "Rose de Freitas",
+            "partido": "MDB",
+            "nome_exibicao": "Rose de Freitas (MDB)",
+            "numero": "151",
+            "votos": 808856,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 29.56
           },
           {
             "nome": "Abstenção",
@@ -2159,52 +2189,41 @@
             "votos": 613410,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 26.69
-          },
-          {
-            "nome": "Candidato 2 ao Senado (ES)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (ES) (PT)",
-            "numero": "133",
-            "votos": 461518,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 3 ao Senado (ES)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (ES) (PSD)",
-            "numero": "555",
-            "votos": 299986,
+            "nome": "Fabiano Contarato",
+            "partido": "PT",
+            "nome_exibicao": "Fabiano Contarato (PT)",
+            "numero": "133",
+            "votos": 222913,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 8.15
           },
           {
-            "nome": "Candidato 4 ao Senado (ES)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (ES) (UNIÃO)",
-            "numero": "444",
-            "votos": 184607,
+            "nome": "Marcos do Val",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Marcos do Val (PODEMOS)",
+            "numero": "200",
+            "votos": 131624,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 4.81
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 92303,
+            "votos": 69633,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 2.54
           }
         ]
       }
@@ -2408,7 +2427,7 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 1,
         "votos": 1022700,
         "total_aptos": 4870000,
         "taxa_abstencao": 21.0,
@@ -2416,24 +2435,14 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (GO) (PT)",
-          "Candidato 3 ao Senado (GO) (PSD)",
-          "Candidato 4 ao Senado (GO) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Wilder Morais (PL)",
+          "Marconi Perillo (PSDB)",
+          "Jorge Kajuru (PSB)",
+          "Vanderlan Cardoso (PSD)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -54544,
+        "diferenca_lider": 128265,
         "ranking": [
-          {
-            "nome": "Candidato 1 ao Senado (GO)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (GO) (PL)",
-            "numero": "222",
-            "votos": 1077244,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 1,
-            "percentual_simulado": 28.12
-          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -2442,52 +2451,63 @@
             "votos": 1022700,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 26.69
+            "posicao": 1,
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 2 ao Senado (GO)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (GO) (PT)",
-            "numero": "133",
-            "votos": 769460,
+            "nome": "Wilder Morais",
+            "partido": "PL",
+            "nome_exibicao": "Wilder Morais (PL)",
+            "numero": "222",
+            "votos": 894435,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 19.61
+          },
+          {
+            "nome": "Marconi Perillo",
+            "partido": "PSDB",
+            "nome_exibicao": "Marconi Perillo (PSDB)",
+            "numero": "455",
+            "votos": 867181,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 19.01
           },
           {
-            "nome": "Candidato 3 ao Senado (GO)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (GO) (PSD)",
-            "numero": "555",
-            "votos": 500149,
+            "nome": "Jorge Kajuru",
+            "partido": "PSB",
+            "nome_exibicao": "Jorge Kajuru (PSB)",
+            "numero": "400",
+            "votos": 760995,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 16.68
           },
           {
-            "nome": "Candidato 4 ao Senado (GO)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (GO) (UNIÃO)",
-            "numero": "444",
-            "votos": 307784,
+            "nome": "Vanderlan Cardoso",
+            "partido": "PSD",
+            "nome_exibicao": "Vanderlan Cardoso (PSD)",
+            "numero": "555",
+            "votos": 619415,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 13.58
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 153892,
+            "votos": 397487,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 8.71
           }
         ]
       }
@@ -2680,7 +2700,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 1109240,
         "total_aptos": 5042000,
         "taxa_abstencao": 22.0,
@@ -2688,14 +2708,24 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (MA) (PL)",
-          "Candidato 2 ao Senado (MA) (PT)",
-          "Candidato 3 ao Senado (MA) (PSD)",
-          "Candidato 4 ao Senado (MA) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Roberto Rocha (PTB)",
+          "Weverton Rocha (PDT)",
+          "Eliziane Gama (PSD)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 8068,
+        "diferenca_lider": -1148840,
         "ranking": [
+          {
+            "nome": "Flávio Dino",
+            "partido": "PSB",
+            "nome_exibicao": "Flávio Dino (PSB)",
+            "numero": "400",
+            "votos": 2258080,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 47.77
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -2704,63 +2734,52 @@
             "votos": 1109240,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 27.87
-          },
-          {
-            "nome": "Candidato 1 ao Senado (MA)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (MA) (PL)",
-            "numero": "222",
-            "votos": 1101172,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.67
+            "percentual_simulado": 23.46
           },
           {
-            "nome": "Candidato 2 ao Senado (MA)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (MA) (PT)",
-            "numero": "133",
-            "votos": 786552,
+            "nome": "Roberto Rocha",
+            "partido": "PTB",
+            "nome_exibicao": "Roberto Rocha (PTB)",
+            "numero": "144",
+            "votos": 741718,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.76
+            "percentual_simulado": 15.69
           },
           {
-            "nome": "Candidato 3 ao Senado (MA)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (MA) (PSD)",
-            "numero": "555",
-            "votos": 511258,
+            "nome": "Weverton Rocha",
+            "partido": "PDT",
+            "nome_exibicao": "Weverton Rocha (PDT)",
+            "numero": "123",
+            "votos": 343723,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.85
+            "percentual_simulado": 7.27
           },
           {
-            "nome": "Candidato 4 ao Senado (MA)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (MA) (UNIÃO)",
-            "numero": "444",
-            "votos": 314620,
+            "nome": "Eliziane Gama",
+            "partido": "PSD",
+            "nome_exibicao": "Eliziane Gama (PSD)",
+            "numero": "555",
+            "votos": 188143,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.9
+            "percentual_simulado": 3.98
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 157310,
+            "votos": 86473,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.95
+            "percentual_simulado": 1.83
           }
         ]
       }
@@ -2963,22 +2982,42 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 3,
         "votos": 3583800,
         "total_aptos": 16290000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (MG) (PL)",
-          "Candidato 2 ao Senado (MG) (PT)",
-          "Candidato 3 ao Senado (MG) (PSD)",
-          "Candidato 4 ao Senado (MG) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Rodrigo Pacheco (PSD)",
+          "Carlos Viana (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 26064,
+        "diferenca_lider": -1269765,
         "ranking": [
+          {
+            "nome": "Cleitinho Azevedo",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Cleitinho Azevedo (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 4853565,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 31.78
+          },
+          {
+            "nome": "Alexandre Silveira",
+            "partido": "PSD",
+            "nome_exibicao": "Alexandre Silveira (PSD)",
+            "numero": "555",
+            "votos": 4184914,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 27.4
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -2987,63 +3026,41 @@
             "votos": 3583800,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 27.87
-          },
-          {
-            "nome": "Candidato 1 ao Senado (MG)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (MG) (PL)",
-            "numero": "222",
-            "votos": 3557736,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 27.67
-          },
-          {
-            "nome": "Candidato 2 ao Senado (MG)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (MG) (PT)",
-            "numero": "133",
-            "votos": 2541240,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.76
+            "percentual_simulado": 23.46
           },
           {
-            "nome": "Candidato 3 ao Senado (MG)",
+            "nome": "Rodrigo Pacheco",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (MG) (PSD)",
-            "numero": "555",
-            "votos": 1651806,
+            "nome_exibicao": "Rodrigo Pacheco (PSD)",
+            "numero": "550",
+            "votos": 1461213,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.85
+            "percentual_simulado": 9.57
           },
           {
-            "nome": "Candidato 4 ao Senado (MG)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (MG) (UNIÃO)",
-            "numero": "444",
-            "votos": 1016496,
+            "nome": "Carlos Viana",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Carlos Viana (PODEMOS)",
+            "numero": "200",
+            "votos": 759830,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.9
+            "percentual_simulado": 4.97
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 508248,
+            "votos": 430181,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.95
+            "percentual_simulado": 2.82
           }
         ]
       }
@@ -3267,23 +3284,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (MS) (PT)",
-          "Candidato 3 ao Senado (MS) (PSD)",
-          "Candidato 4 ao Senado (MS) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Luiz Henrique Mandetta (UNIÃO)",
+          "Nelsinho Trad (PSD)",
+          "Soraya Thronicke (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -22355,
+        "diferenca_lider": -463586,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (MS)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (MS) (PL)",
-            "numero": "222",
-            "votos": 441515,
+            "nome": "Tereza Cristina",
+            "partido": "PP",
+            "nome_exibicao": "Tereza Cristina (PP)",
+            "numero": "111",
+            "votos": 882746,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.12
+            "percentual_simulado": 47.21
           },
           {
             "nome": "Abstenção",
@@ -3294,51 +3311,51 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 26.69
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 2 ao Senado (MS)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (MS) (PT)",
-            "numero": "133",
-            "votos": 315368,
+            "nome": "Luiz Henrique Mandetta",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Luiz Henrique Mandetta (UNIÃO)",
+            "numero": "444",
+            "votos": 220505,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 11.79
           },
           {
-            "nome": "Candidato 3 ao Senado (MS)",
+            "nome": "Nelsinho Trad",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (MS) (PSD)",
+            "nome_exibicao": "Nelsinho Trad (PSD)",
             "numero": "555",
-            "votos": 204989,
+            "votos": 181336,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 9.7
           },
           {
-            "nome": "Candidato 4 ao Senado (MS)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (MS) (UNIÃO)",
-            "numero": "444",
-            "votos": 126147,
+            "nome": "Soraya Thronicke",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Soraya Thronicke (PODEMOS)",
+            "numero": "200",
+            "votos": 108801,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 5.82
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 63073,
+            "votos": 57302,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 3.06
           }
         ]
       }
@@ -3530,7 +3547,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 543180,
         "total_aptos": 2469000,
         "taxa_abstencao": 22.0,
@@ -3538,14 +3555,24 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (MT) (PL)",
-          "Candidato 2 ao Senado (MT) (PT)",
-          "Candidato 3 ao Senado (MT) (PSD)",
-          "Candidato 4 ao Senado (MT) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Jayme Campos (UNIÃO)",
+          "Carlos Fávaro (PSD)",
+          "Neri Geller (PP)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 3951,
+        "diferenca_lider": -582592,
         "ranking": [
+          {
+            "nome": "Wellington Fagundes",
+            "partido": "PL",
+            "nome_exibicao": "Wellington Fagundes (PL)",
+            "numero": "222",
+            "votos": 1125772,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 48.63
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -3554,63 +3581,52 @@
             "votos": 543180,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 27.87
-          },
-          {
-            "nome": "Candidato 1 ao Senado (MT)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (MT) (PL)",
-            "numero": "222",
-            "votos": 539229,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.67
+            "percentual_simulado": 23.46
           },
           {
-            "nome": "Candidato 2 ao Senado (MT)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (MT) (PT)",
-            "numero": "133",
-            "votos": 385164,
+            "nome": "Jayme Campos",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Jayme Campos (UNIÃO)",
+            "numero": "444",
+            "votos": 327774,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.76
+            "percentual_simulado": 14.16
           },
           {
-            "nome": "Candidato 3 ao Senado (MT)",
+            "nome": "Carlos Fávaro",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (MT) (PSD)",
+            "nome_exibicao": "Carlos Fávaro (PSD)",
             "numero": "555",
-            "votos": 250356,
+            "votos": 186034,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.85
+            "percentual_simulado": 8.04
           },
           {
-            "nome": "Candidato 4 ao Senado (MT)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (MT) (UNIÃO)",
-            "numero": "444",
-            "votos": 154065,
+            "nome": "Neri Geller",
+            "partido": "PP",
+            "nome_exibicao": "Neri Geller (PP)",
+            "numero": "111",
+            "votos": 92131,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.9
+            "percentual_simulado": 3.98
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 77032,
+            "votos": 40041,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.95
+            "percentual_simulado": 1.73
           }
         ]
       }
@@ -3802,22 +3818,42 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 3,
         "votos": 1338040,
         "total_aptos": 6082000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (PA) (PL)",
-          "Candidato 2 ao Senado (PA) (PT)",
-          "Candidato 3 ao Senado (PA) (PSD)",
-          "Candidato 4 ao Senado (PA) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Jader Barbalho (MDB)",
+          "Zequinha Marinho (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 9732,
+        "diferenca_lider": -505500,
         "ranking": [
+          {
+            "nome": "Beto Faro",
+            "partido": "PT",
+            "nome_exibicao": "Beto Faro (PT)",
+            "numero": "133",
+            "votos": 1843540,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 32.33
+          },
+          {
+            "nome": "Mário Couto",
+            "partido": "PL",
+            "nome_exibicao": "Mário Couto (PL)",
+            "numero": "222",
+            "votos": 1505732,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 26.4
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -3826,63 +3862,41 @@
             "votos": 1338040,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 27.87
-          },
-          {
-            "nome": "Candidato 1 ao Senado (PA)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (PA) (PL)",
-            "numero": "222",
-            "votos": 1328308,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 27.67
-          },
-          {
-            "nome": "Candidato 2 ao Senado (PA)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (PA) (PT)",
-            "numero": "133",
-            "votos": 948792,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.76
+            "percentual_simulado": 23.46
           },
           {
-            "nome": "Candidato 3 ao Senado (PA)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (PA) (PSD)",
-            "numero": "555",
-            "votos": 616714,
+            "nome": "Jader Barbalho",
+            "partido": "MDB",
+            "nome_exibicao": "Jader Barbalho (MDB)",
+            "numero": "151",
+            "votos": 589199,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.85
+            "percentual_simulado": 10.33
           },
           {
-            "nome": "Candidato 4 ao Senado (PA)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (PA) (UNIÃO)",
-            "numero": "444",
-            "votos": 379516,
+            "nome": "Zequinha Marinho",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Zequinha Marinho (PODEMOS)",
+            "numero": "200",
+            "votos": 283688,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.9
+            "percentual_simulado": 4.97
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 189758,
+            "votos": 142280,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.95
+            "percentual_simulado": 2.5
           }
         ]
       }
@@ -4079,31 +4093,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 556380,
         "total_aptos": 3091000,
         "taxa_abstencao": 18.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (PB) (PT)",
-          "Candidato 3 ao Senado (PB) (PSD)",
-          "Candidato 4 ao Senado (PB) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Veneziano Vital do Rêgo (MDB)",
+          "Daniella Ribeiro (PSD)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -153313,
+        "diferenca_lider": -162296,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (PB)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (PB) (PL)",
-            "numero": "222",
-            "votos": 709693,
+            "nome": "Efraim Filho",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Efraim Filho (UNIÃO)",
+            "numero": "444",
+            "votos": 718676,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.49
+            "percentual_simulado": 24.88
+          },
+          {
+            "nome": "Pollyanna Dutra",
+            "partido": "PSB",
+            "nome_exibicao": "Pollyanna Dutra (PSB)",
+            "numero": "400",
+            "votos": 664577,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 23.01
           },
           {
             "nome": "Abstenção",
@@ -4113,52 +4137,41 @@
             "votos": 556380,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 23.12
-          },
-          {
-            "nome": "Candidato 2 ao Senado (PB)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (PB) (PT)",
-            "numero": "133",
-            "votos": 506924,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.06
+            "percentual_simulado": 19.26
           },
           {
-            "nome": "Candidato 3 ao Senado (PB)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (PB) (PSD)",
-            "numero": "555",
-            "votos": 329500,
+            "nome": "Veneziano Vital do Rêgo",
+            "partido": "MDB",
+            "nome_exibicao": "Veneziano Vital do Rêgo (MDB)",
+            "numero": "151",
+            "votos": 501347,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.69
+            "percentual_simulado": 17.36
           },
           {
-            "nome": "Candidato 4 ao Senado (PB)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (PB) (UNIÃO)",
-            "numero": "444",
-            "votos": 202769,
+            "nome": "Daniella Ribeiro",
+            "partido": "PSD",
+            "nome_exibicao": "Daniella Ribeiro (PSD)",
+            "numero": "555",
+            "votos": 291481,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.43
+            "percentual_simulado": 10.09
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 101384,
+            "votos": 155767,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.21
+            "percentual_simulado": 5.39
           }
         ]
       }
@@ -4368,31 +4381,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 1263240,
         "total_aptos": 7018000,
         "taxa_abstencao": 18.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (PE) (PT)",
-          "Candidato 3 ao Senado (PE) (PSD)",
-          "Candidato 4 ao Senado (PE) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "André de Paula (PSD)",
+          "Humberto Costa (PT)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -348092,
+        "diferenca_lider": -1178527,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (PE)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (PE) (PL)",
-            "numero": "222",
-            "votos": 1611332,
+            "nome": "Teresa Leitão",
+            "partido": "PT",
+            "nome_exibicao": "Teresa Leitão (PT)",
+            "numero": "133",
+            "votos": 2441767,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.49
+            "percentual_simulado": 37.24
+          },
+          {
+            "nome": "Gilson Machado",
+            "partido": "PL",
+            "nome_exibicao": "Gilson Machado (PL)",
+            "numero": "222",
+            "votos": 1561841,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 23.82
           },
           {
             "nome": "Abstenção",
@@ -4402,52 +4425,41 @@
             "votos": 1263240,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 23.12
-          },
-          {
-            "nome": "Candidato 2 ao Senado (PE)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (PE) (PT)",
-            "numero": "133",
-            "votos": 1150952,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.06
+            "percentual_simulado": 19.26
           },
           {
-            "nome": "Candidato 3 ao Senado (PE)",
+            "nome": "André de Paula",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (PE) (PSD)",
+            "nome_exibicao": "André de Paula (PSD)",
             "numero": "555",
-            "votos": 748118,
+            "votos": 661797,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.69
+            "percentual_simulado": 10.09
           },
           {
-            "nome": "Candidato 4 ao Senado (PE)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (PE) (UNIÃO)",
-            "numero": "444",
-            "votos": 460380,
+            "nome": "Humberto Costa",
+            "partido": "PT",
+            "nome_exibicao": "Humberto Costa (PT)",
+            "numero": "130",
+            "votos": 450022,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.43
+            "percentual_simulado": 6.86
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 230190,
+            "votos": 178950,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.21
+            "percentual_simulado": 2.73
           }
         ]
       }
@@ -4638,31 +4650,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 462600,
         "total_aptos": 2570000,
         "taxa_abstencao": 18.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (PI) (PT)",
-          "Candidato 3 ao Senado (PI) (PSD)",
-          "Candidato 4 ao Senado (PI) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Ciro Nogueira (PP)",
+          "Marcelo Castro (MDB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -127472,
+        "diferenca_lider": -532784,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (PI)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (PI) (PL)",
-            "numero": "222",
-            "votos": 590072,
+            "nome": "Wellington Dias",
+            "partido": "PT",
+            "nome_exibicao": "Wellington Dias (PT)",
+            "numero": "133",
+            "votos": 995384,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.49
+            "percentual_simulado": 41.45
+          },
+          {
+            "nome": "Joel Rodrigues",
+            "partido": "PP",
+            "nome_exibicao": "Joel Rodrigues (PP)",
+            "numero": "111",
+            "votos": 816238,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 33.99
           },
           {
             "nome": "Abstenção",
@@ -4672,52 +4694,41 @@
             "votos": 462600,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 23.12
-          },
-          {
-            "nome": "Candidato 2 ao Senado (PI)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (PI) (PT)",
-            "numero": "133",
-            "votos": 421480,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.06
+            "percentual_simulado": 19.26
           },
           {
-            "nome": "Candidato 3 ao Senado (PI)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (PI) (PSD)",
-            "numero": "555",
-            "votos": 273962,
+            "nome": "Ciro Nogueira",
+            "partido": "PP",
+            "nome_exibicao": "Ciro Nogueira (PP)",
+            "numero": "112",
+            "votos": 67858,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.69
+            "percentual_simulado": 2.83
           },
           {
-            "nome": "Candidato 4 ao Senado (PI)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (PI) (UNIÃO)",
-            "numero": "444",
-            "votos": 168592,
+            "nome": "Marcelo Castro",
+            "partido": "MDB",
+            "nome_exibicao": "Marcelo Castro (MDB)",
+            "numero": "151",
+            "votos": 40714,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.43
+            "percentual_simulado": 1.7
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 84296,
+            "votos": 18612,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.21
+            "percentual_simulado": 0.78
           }
         ]
       }
@@ -4920,31 +4931,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 1610250,
         "total_aptos": 8475000,
         "taxa_abstencao": 19.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (PR) (PT)",
-          "Candidato 3 ao Senado (PR) (PSD)",
-          "Candidato 4 ao Senado (PR) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Alvaro Dias (PODEMOS)",
+          "Oriovisto Guimarães (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -311880,
+        "diferenca_lider": -505465,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (PR)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (PR) (PL)",
-            "numero": "222",
-            "votos": 1922130,
+            "nome": "Sergio Moro",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Sergio Moro (UNIÃO)",
+            "numero": "444",
+            "votos": 2115715,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.03
+            "percentual_simulado": 26.69
+          },
+          {
+            "nome": "Paulo Martins",
+            "partido": "PL",
+            "nome_exibicao": "Paulo Martins (PL)",
+            "numero": "222",
+            "votos": 1837830,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 23.19
           },
           {
             "nome": "Abstenção",
@@ -4954,52 +4975,41 @@
             "votos": 1610250,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 24.32
-          },
-          {
-            "nome": "Candidato 2 ao Senado (PR)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (PR) (PT)",
-            "numero": "133",
-            "votos": 1372950,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.73
+            "percentual_simulado": 20.32
           },
           {
-            "nome": "Candidato 3 ao Senado (PR)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (PR) (PSD)",
-            "numero": "555",
-            "votos": 892417,
+            "nome": "Alvaro Dias",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Alvaro Dias (PODEMOS)",
+            "numero": "200",
+            "votos": 1509421,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.48
+            "percentual_simulado": 19.04
           },
           {
-            "nome": "Candidato 4 ao Senado (PR)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (PR) (UNIÃO)",
-            "numero": "444",
-            "votos": 549180,
+            "nome": "Oriovisto Guimarães",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Oriovisto Guimarães (PODEMOS)",
+            "numero": "201",
+            "votos": 517876,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.29
+            "percentual_simulado": 6.53
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 274590,
+            "votos": 334725,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.15
+            "percentual_simulado": 4.22
           }
         ]
       }
@@ -5203,7 +5213,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 2950210,
         "total_aptos": 12827000,
         "taxa_abstencao": 23.0,
@@ -5211,14 +5221,25 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (RJ) (PL)",
-          "Candidato 2 ao Senado (RJ) (PT)",
-          "Candidato 3 ao Senado (RJ) (PSD)",
-          "Candidato 4 ao Senado (RJ) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Alessandro Molon (PSB)",
+          "Clarissa Garotinho (UNIÃO)",
+          "Daniel Silveira (PTB)",
+          "Carlos Portinho (PL)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 184709,
+        "diferenca_lider": -65647,
         "ranking": [
+          {
+            "nome": "Romário",
+            "partido": "PL",
+            "nome_exibicao": "Romário (PL)",
+            "numero": "222",
+            "votos": 3015857,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 25.06
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -5227,63 +5248,63 @@
             "votos": 2950210,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 29.04
-          },
-          {
-            "nome": "Candidato 1 ao Senado (RJ)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
-            "numero": "222",
-            "votos": 2765501,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.22
+            "percentual_simulado": 24.51
           },
           {
-            "nome": "Candidato 2 ao Senado (RJ)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-            "numero": "133",
-            "votos": 1975358,
+            "nome": "Alessandro Molon",
+            "partido": "PSB",
+            "nome_exibicao": "Alessandro Molon (PSB)",
+            "numero": "400",
+            "votos": 2289834,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.44
+            "percentual_simulado": 19.02
           },
           {
-            "nome": "Candidato 3 ao Senado (RJ)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-            "numero": "555",
-            "votos": 1283982,
+            "nome": "Clarissa Garotinho",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+            "numero": "444",
+            "votos": 1499296,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.64
+            "percentual_simulado": 12.46
           },
           {
-            "nome": "Candidato 4 ao Senado (RJ)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-            "numero": "444",
-            "votos": 790143,
+            "nome": "Daniel Silveira",
+            "partido": "PTB",
+            "nome_exibicao": "Daniel Silveira (PTB)",
+            "numero": "144",
+            "votos": 1281217,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.78
+            "percentual_simulado": 10.64
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
-            "numero": "--",
-            "votos": 395071,
+            "nome": "Carlos Portinho",
+            "partido": "PL",
+            "nome_exibicao": "Carlos Portinho (PL)",
+            "numero": "220",
+            "votos": 681498,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.89
+            "percentual_simulado": 5.66
+          },
+          {
+            "nome": "Demais Concorrentes",
+            "partido": "DIVERSOS",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
+            "numero": "--",
+            "votos": 318941,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 7,
+            "percentual_simulado": 2.65
           }
         ]
       }
@@ -5475,31 +5496,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 485260,
         "total_aptos": 2554000,
         "taxa_abstencao": 19.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (RN) (PT)",
-          "Candidato 3 ao Senado (RN) (PSD)",
-          "Candidato 4 ao Senado (RN) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Rafael Motta (PSB)",
+          "Styvenson Valentim (PODEMOS)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -93987,
+        "diferenca_lider": -301539,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (RN)",
+            "nome": "Rogério Marinho",
             "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (RN) (PL)",
+            "nome_exibicao": "Rogério Marinho (PL)",
             "numero": "222",
-            "votos": 579247,
+            "votos": 786799,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.03
+            "percentual_simulado": 32.94
+          },
+          {
+            "nome": "Carlos Eduardo Alves",
+            "partido": "PDT",
+            "nome_exibicao": "Carlos Eduardo Alves (PDT)",
+            "numero": "123",
+            "votos": 542423,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 22.71
           },
           {
             "nome": "Abstenção",
@@ -5509,52 +5540,41 @@
             "votos": 485260,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 24.32
-          },
-          {
-            "nome": "Candidato 2 ao Senado (RN)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (RN) (PT)",
-            "numero": "133",
-            "votos": 413748,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.73
+            "percentual_simulado": 20.32
           },
           {
-            "nome": "Candidato 3 ao Senado (RN)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (RN) (PSD)",
-            "numero": "555",
-            "votos": 268936,
+            "nome": "Rafael Motta",
+            "partido": "PSB",
+            "nome_exibicao": "Rafael Motta (PSB)",
+            "numero": "400",
+            "votos": 352099,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.48
+            "percentual_simulado": 14.74
           },
           {
-            "nome": "Candidato 4 ao Senado (RN)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (RN) (UNIÃO)",
-            "numero": "444",
-            "votos": 165499,
+            "nome": "Styvenson Valentim",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Styvenson Valentim (PODEMOS)",
+            "numero": "200",
+            "votos": 142743,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.29
+            "percentual_simulado": 5.98
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 82749,
+            "votos": 79174,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.15
+            "percentual_simulado": 3.31
           }
         ]
       }
@@ -5759,13 +5779,13 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (RO) (PL)",
-          "Candidato 2 ao Senado (RO) (PT)",
-          "Candidato 3 ao Senado (RO) (PSD)",
-          "Candidato 4 ao Senado (RO) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Jaime Bagattoli (PL)",
+          "Mariana Carvalho (REPUBLICANOS)",
+          "Marcos Rogério (PL)",
+          "Confúcio Moura (MDB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 49200,
+        "diferenca_lider": 3666,
         "ranking": [
           {
             "nome": "Abstenção",
@@ -5776,62 +5796,62 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 1,
-            "percentual_simulado": 31.35
+            "percentual_simulado": 26.6
           },
           {
-            "nome": "Candidato 1 ao Senado (RO)",
+            "nome": "Jaime Bagattoli",
             "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (RO) (PL)",
+            "nome_exibicao": "Jaime Bagattoli (PL)",
             "numero": "222",
-            "votos": 258300,
+            "votos": 303834,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 26.33
+            "percentual_simulado": 26.28
           },
           {
-            "nome": "Candidato 2 ao Senado (RO)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (RO) (PT)",
-            "numero": "133",
-            "votos": 184500,
+            "nome": "Mariana Carvalho",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Mariana Carvalho (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 272432,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 18.81
+            "percentual_simulado": 23.56
           },
           {
-            "nome": "Candidato 3 ao Senado (RO)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (RO) (PSD)",
-            "numero": "555",
-            "votos": 119925,
+            "nome": "Marcos Rogério",
+            "partido": "PL",
+            "nome_exibicao": "Marcos Rogério (PL)",
+            "numero": "220",
+            "votos": 157009,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.23
+            "percentual_simulado": 13.58
           },
           {
-            "nome": "Candidato 4 ao Senado (RO)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (RO) (UNIÃO)",
-            "numero": "444",
-            "votos": 73800,
+            "nome": "Confúcio Moura",
+            "partido": "MDB",
+            "nome_exibicao": "Confúcio Moura (MDB)",
+            "numero": "151",
+            "votos": 78080,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.52
+            "percentual_simulado": 6.75
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 36900,
+            "votos": 37342,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.76
+            "percentual_simulado": 3.23
           }
         ]
       }
@@ -6022,31 +6042,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 66130,
         "total_aptos": 389000,
         "taxa_abstencao": 17.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (RR) (PT)",
-          "Candidato 3 ao Senado (RR) (PSD)",
-          "Candidato 4 ao Senado (RR) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Telmário Mota (PROS)",
+          "Chico Rodrigues (PSB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -24273,
+        "diferenca_lider": -71785,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (RR)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (RR) (PL)",
-            "numero": "222",
-            "votos": 90403,
+            "nome": "Hiran Gonçalves",
+            "partido": "PP",
+            "nome_exibicao": "Hiran Gonçalves (PP)",
+            "numero": "111",
+            "votos": 137915,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.95
+            "percentual_simulado": 37.98
+          },
+          {
+            "nome": "Romero Jucá",
+            "partido": "MDB",
+            "nome_exibicao": "Romero Jucá (MDB)",
+            "numero": "151",
+            "votos": 105449,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 29.04
           },
           {
             "nome": "Abstenção",
@@ -6056,52 +6086,41 @@
             "votos": 66130,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 21.91
-          },
-          {
-            "nome": "Candidato 2 ao Senado (RR)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (RR) (PT)",
-            "numero": "133",
-            "votos": 64574,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.39
+            "percentual_simulado": 18.21
           },
           {
-            "nome": "Candidato 3 ao Senado (RR)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (RR) (PSD)",
-            "numero": "555",
-            "votos": 41973,
+            "nome": "Telmário Mota",
+            "partido": "PROS",
+            "nome_exibicao": "Telmário Mota (PROS)",
+            "numero": "900",
+            "votos": 28218,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.91
+            "percentual_simulado": 7.77
           },
           {
-            "nome": "Candidato 4 ao Senado (RR)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (RR) (UNIÃO)",
-            "numero": "444",
-            "votos": 25829,
+            "nome": "Chico Rodrigues",
+            "partido": "PSB",
+            "nome_exibicao": "Chico Rodrigues (PSB)",
+            "numero": "400",
+            "votos": 16337,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.56
+            "percentual_simulado": 4.5
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 12914,
+            "votos": 9119,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.28
+            "percentual_simulado": 2.51
           }
         ]
       }
@@ -6298,31 +6317,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 1718600,
         "total_aptos": 8593000,
         "taxa_abstencao": 20.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (RS) (PT)",
-          "Candidato 3 ao Senado (RS) (PSD)",
-          "Candidato 4 ao Senado (RS) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Ana Amélia Lemos (PSD)",
+          "Paulo Paim (PT)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -206232,
+        "diferenca_lider": -1071114,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (RS)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (RS) (PL)",
-            "numero": "222",
-            "votos": 1924832,
+            "nome": "Hamilton Mourão",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Hamilton Mourão (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 2789714,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.57
+            "percentual_simulado": 34.68
+          },
+          {
+            "nome": "Olívio Dutra",
+            "partido": "PT",
+            "nome_exibicao": "Olívio Dutra (PT)",
+            "numero": "133",
+            "votos": 2390641,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 29.72
           },
           {
             "nome": "Abstenção",
@@ -6332,52 +6361,41 @@
             "votos": 1718600,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 25.51
-          },
-          {
-            "nome": "Candidato 2 ao Senado (RS)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (RS) (PT)",
-            "numero": "133",
-            "votos": 1374880,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.41
+            "percentual_simulado": 21.37
           },
           {
-            "nome": "Candidato 3 ao Senado (RS)",
+            "nome": "Ana Amélia Lemos",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (RS) (PSD)",
+            "nome_exibicao": "Ana Amélia Lemos (PSD)",
             "numero": "555",
-            "votos": 893672,
+            "votos": 664067,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.27
+            "percentual_simulado": 8.26
           },
           {
-            "nome": "Candidato 4 ao Senado (RS)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (RS) (UNIÃO)",
-            "numero": "444",
-            "votos": 549952,
+            "nome": "Paulo Paim",
+            "partido": "PT",
+            "nome_exibicao": "Paulo Paim (PT)",
+            "numero": "130",
+            "votos": 328871,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.16
+            "percentual_simulado": 4.09
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 274976,
+            "votos": 151154,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.08
+            "percentual_simulado": 1.88
           }
         ]
       }
@@ -6586,31 +6604,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 933130,
         "total_aptos": 5489000,
         "taxa_abstencao": 17.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (SC) (PT)",
-          "Candidato 3 ao Senado (SC) (PSD)",
-          "Candidato 4 ao Senado (SC) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Dário Berger (PSB)",
+          "Esperidião Amin (PP)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -342513,
+        "diferenca_lider": -734628,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (SC)",
+            "nome": "Jorge Seif",
             "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (SC) (PL)",
+            "nome_exibicao": "Jorge Seif (PL)",
             "numero": "222",
-            "votos": 1275643,
+            "votos": 1667758,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.95
+            "percentual_simulado": 32.54
+          },
+          {
+            "nome": "Raimundo Colombo",
+            "partido": "PSD",
+            "nome_exibicao": "Raimundo Colombo (PSD)",
+            "numero": "555",
+            "votos": 968213,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 18.89
           },
           {
             "nome": "Abstenção",
@@ -6620,52 +6648,41 @@
             "votos": 933130,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 21.91
-          },
-          {
-            "nome": "Candidato 2 ao Senado (SC)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (SC) (PT)",
-            "numero": "133",
-            "votos": 911174,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.39
+            "percentual_simulado": 18.21
           },
           {
-            "nome": "Candidato 3 ao Senado (SC)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (SC) (PSD)",
-            "numero": "555",
-            "votos": 592263,
+            "nome": "Dário Berger",
+            "partido": "PSB",
+            "nome_exibicao": "Dário Berger (PSB)",
+            "numero": "400",
+            "votos": 775409,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.91
+            "percentual_simulado": 15.13
           },
           {
-            "nome": "Candidato 4 ao Senado (SC)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (SC) (UNIÃO)",
-            "numero": "444",
-            "votos": 364469,
+            "nome": "Esperidião Amin",
+            "partido": "PP",
+            "nome_exibicao": "Esperidião Amin (PP)",
+            "numero": "111",
+            "votos": 523925,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.56
+            "percentual_simulado": 10.22
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 182234,
+            "votos": 256094,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.28
+            "percentual_simulado": 5.0
           }
         ]
       }
@@ -6849,31 +6866,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 300780,
         "total_aptos": 1671000,
         "taxa_abstencao": 18.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (SE) (PT)",
-          "Candidato 3 ao Senado (SE) (PSD)",
-          "Candidato 4 ao Senado (SE) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Alessandro Vieira (MDB)",
+          "Rogério Carvalho (PT)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -82881,
+        "diferenca_lider": -59373,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (SE)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (SE) (PL)",
-            "numero": "222",
-            "votos": 383661,
+            "nome": "Laércio Oliveira",
+            "partido": "PP",
+            "nome_exibicao": "Laércio Oliveira (PP)",
+            "numero": "111",
+            "votos": 360153,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 29.49
+            "percentual_simulado": 23.07
+          },
+          {
+            "nome": "Valmir de Franciscano",
+            "partido": "PL",
+            "nome_exibicao": "Valmir de Franciscano (PL)",
+            "numero": "222",
+            "votos": 346665,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 22.2
           },
           {
             "nome": "Abstenção",
@@ -6883,52 +6910,41 @@
             "votos": 300780,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 23.12
-          },
-          {
-            "nome": "Candidato 2 ao Senado (SE)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (SE) (PT)",
-            "numero": "133",
-            "votos": 274044,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.06
+            "percentual_simulado": 19.26
           },
           {
-            "nome": "Candidato 3 ao Senado (SE)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (SE) (PSD)",
-            "numero": "555",
-            "votos": 178128,
+            "nome": "Alessandro Vieira",
+            "partido": "MDB",
+            "nome_exibicao": "Alessandro Vieira (MDB)",
+            "numero": "151",
+            "votos": 271029,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.69
+            "percentual_simulado": 17.36
           },
           {
-            "nome": "Candidato 4 ao Senado (SE)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (SE) (UNIÃO)",
-            "numero": "444",
-            "votos": 109617,
+            "nome": "Rogério Carvalho",
+            "partido": "PT",
+            "nome_exibicao": "Rogério Carvalho (PT)",
+            "numero": "133",
+            "votos": 195393,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.43
+            "percentual_simulado": 12.51
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 54808,
+            "votos": 87359,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.21
+            "percentual_simulado": 5.59
           }
         ]
       }
@@ -7136,22 +7152,42 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 3,
         "votos": 7626300,
         "total_aptos": 34665000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 1 ao Senado (SP) (PL)",
-          "Candidato 2 ao Senado (SP) (PT)",
-          "Candidato 3 ao Senado (SP) (PSD)",
-          "Candidato 4 ao Senado (SP) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Mara Gabrilli (PSD)",
+          "Alexandre Giordano (MDB)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": 55464,
+        "diferenca_lider": -4731900,
         "ranking": [
+          {
+            "nome": "Marcos Pontes",
+            "partido": "PL",
+            "nome_exibicao": "Marcos Pontes (PL)",
+            "numero": "222",
+            "votos": 12358200,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 38.02
+          },
+          {
+            "nome": "Márcio França",
+            "partido": "PSB",
+            "nome_exibicao": "Márcio França (PSB)",
+            "numero": "400",
+            "votos": 9004968,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 27.71
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -7160,63 +7196,41 @@
             "votos": 7626300,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 27.87
-          },
-          {
-            "nome": "Candidato 1 ao Senado (SP)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (SP) (PL)",
-            "numero": "222",
-            "votos": 7570836,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 27.67
-          },
-          {
-            "nome": "Candidato 2 ao Senado (SP)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (SP) (PT)",
-            "numero": "133",
-            "votos": 5407740,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.76
+            "percentual_simulado": 23.46
           },
           {
-            "nome": "Candidato 3 ao Senado (SP)",
+            "nome": "Mara Gabrilli",
             "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (SP) (PSD)",
+            "nome_exibicao": "Mara Gabrilli (PSD)",
             "numero": "555",
-            "votos": 3515031,
+            "votos": 1865670,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.85
+            "percentual_simulado": 5.74
           },
           {
-            "nome": "Candidato 4 ao Senado (SP)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (SP) (UNIÃO)",
-            "numero": "444",
-            "votos": 2163096,
+            "nome": "Alexandre Giordano",
+            "partido": "MDB",
+            "nome_exibicao": "Alexandre Giordano (MDB)",
+            "numero": "151",
+            "votos": 1044775,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.9
+            "percentual_simulado": 3.21
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 1081548,
+            "votos": 601989,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.95
+            "percentual_simulado": 1.85
           }
         ]
       }
@@ -7408,31 +7422,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 229530,
         "total_aptos": 1093000,
         "taxa_abstencao": 21.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Candidato 2 ao Senado (TO) (PT)",
-          "Candidato 3 ao Senado (TO) (PSD)",
-          "Candidato 4 ao Senado (TO) (UNIÃO)",
-          "Outros Concorrentes ao Senado (DIVERSOS)"
+          "Kátia Abreu (PP)",
+          "Eduardo Gomes (PL)",
+          "Demais Concorrentes (DIVERSOS)"
         ],
-        "diferenca_lider": -12241,
+        "diferenca_lider": -88147,
         "ranking": [
           {
-            "nome": "Candidato 1 ao Senado (TO)",
-            "partido": "PL",
-            "nome_exibicao": "Candidato 1 ao Senado (TO) (PL)",
-            "numero": "222",
-            "votos": 241771,
+            "nome": "Professora Dorinha",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Professora Dorinha (UNIÃO)",
+            "numero": "444",
+            "votos": 317677,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.12
+            "percentual_simulado": 31.03
+          },
+          {
+            "nome": "Carlos Amastha",
+            "partido": "PSB",
+            "nome_exibicao": "Carlos Amastha (PSB)",
+            "numero": "400",
+            "votos": 250233,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 24.44
           },
           {
             "nome": "Abstenção",
@@ -7442,52 +7466,41 @@
             "votos": 229530,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 26.69
-          },
-          {
-            "nome": "Candidato 2 ao Senado (TO)",
-            "partido": "PT",
-            "nome_exibicao": "Candidato 2 ao Senado (TO) (PT)",
-            "numero": "133",
-            "votos": 172694,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 20.08
+            "percentual_simulado": 22.42
           },
           {
-            "nome": "Candidato 3 ao Senado (TO)",
-            "partido": "PSD",
-            "nome_exibicao": "Candidato 3 ao Senado (TO) (PSD)",
-            "numero": "555",
-            "votos": 112251,
+            "nome": "Kátia Abreu",
+            "partido": "PP",
+            "nome_exibicao": "Kátia Abreu (PP)",
+            "numero": "111",
+            "votos": 146962,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 13.05
+            "percentual_simulado": 14.35
           },
           {
-            "nome": "Candidato 4 ao Senado (TO)",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Candidato 4 ao Senado (TO) (UNIÃO)",
-            "numero": "444",
-            "votos": 69077,
+            "nome": "Eduardo Gomes",
+            "partido": "PL",
+            "nome_exibicao": "Eduardo Gomes (PL)",
+            "numero": "222",
+            "votos": 51635,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.03
+            "percentual_simulado": 5.04
           },
           {
-            "nome": "Outros Concorrentes ao Senado",
+            "nome": "Demais Concorrentes",
             "partido": "DIVERSOS",
-            "nome_exibicao": "Outros Concorrentes ao Senado (DIVERSOS)",
+            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
             "numero": "--",
-            "votos": 34538,
+            "votos": 27883,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.02
+            "percentual_simulado": 2.72
           }
         ]
       }

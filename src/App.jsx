@@ -7,7 +7,7 @@ import Gov1TSection from './components/Gov1TSection';
 import MethodologySection from './components/MethodologySection';
 import SearchModal from './components/SearchModal';
 import ShareModal from './components/ShareModal';
-import { REGION_STATES } from './utils/electoralMath';
+import { REGION_STATES, synthesizeMunicipalCargos } from './utils/electoralMath';
 
 export default function App() {
   const [brasilData, setBrasilData] = useState(null);
@@ -82,31 +82,60 @@ export default function App() {
 
   // Select Municipio
   const handleSelectMunicipio = useCallback((munId) => {
-    // Look up in municipiosData or window.MUNICIPIOS_GEO
     const idNum = Number(munId);
-    let munItem = municipiosData.find(m => Number(m.id) === idNum);
+    let munItem = municipiosData.find(m => (m.id && Number(m.id) === idNum) || m.slug === munId || (m.nome && m.nome.toLowerCase() === String(munId).toLowerCase()));
 
-    if (!munItem && window.MUNICIPIOS_GEO) {
-      const feat = window.MUNICIPIOS_GEO.features.find(f => Number(f.id) === idNum || Number(f.properties?.id) === idNum);
-      if (feat) {
-        munItem = {
-          id: feat.properties.id,
-          nome: feat.properties.nome,
-          uf: feat.properties.uf,
-          aptos: feat.properties.pop ? Math.round(feat.properties.pop * 0.78) : 50000,
-          abstencao: feat.properties.abstencoes || 10000,
-          taxa_abstencao: feat.properties.taxa || 20.0,
-          cargos: {
-            Presidente: { posicao: feat.properties.pos_pres || 3, ranking: [] },
-            Governador: { posicao: feat.properties.pos_gov || 3, ranking: [] },
-            Senador: { posicao: feat.properties.pos_sen || 2, ranking: [] }
-          }
-        };
+    // Also check window.MUNICIPIOS_GEO
+    const feat = window.MUNICIPIOS_GEO?.features?.find(f => Number(f.id) === idNum || Number(f.properties?.id) === idNum || (f.properties?.nome && f.properties.nome.toLowerCase() === String(munId).toLowerCase()));
+
+    if (!munItem && feat) {
+      const p = feat.properties;
+      const aptos = p.aptos || (p.pop ? Math.round(p.pop * 0.78) : 50000);
+      const abstencao = p.abstencao || p.abstencoes || Math.round(aptos * ((p.taxa || 20) / 100));
+      const taxa = p.taxa || (aptos > 0 ? Number(((abstencao / aptos) * 100).toFixed(2)) : 20.0);
+      const ufSigla = p.uf;
+      const ufItem = estadosData.find(u => u.uf === ufSigla);
+      const cargos = synthesizeMunicipalCargos(p, ufItem);
+
+      munItem = {
+        id: p.id,
+        nome: p.nome,
+        uf: p.uf,
+        aptos,
+        abstencao,
+        taxa_abstencao: taxa,
+        cargos
+      };
+    } else if (munItem) {
+      // If found in municipiosData, make sure cargos has real candidates for all 3 cargos
+      const ufItem = estadosData.find(u => u.uf === munItem.uf);
+      if (ufItem) {
+        const hasSenRanking = munItem.cargos?.Senador?.ranking?.length > 0;
+        const hasGovRanking = munItem.cargos?.Governador?.ranking?.length > 0;
+        if (!hasSenRanking || !hasGovRanking) {
+          const synthesized = synthesizeMunicipalCargos({
+            aptos: munItem.aptos,
+            abstencao: munItem.abstencao,
+            taxa: munItem.taxa_abstencao,
+            pos_pres: munItem.cargos?.Presidente?.posicao,
+            pos_gov: munItem.cargos?.Governador?.posicao,
+            pos_sen: munItem.cargos?.Senador?.posicao
+          }, ufItem);
+          munItem = {
+            ...munItem,
+            cargos: {
+              ...synthesized,
+              ...munItem.cargos,
+              Senador: hasSenRanking ? munItem.cargos.Senador : synthesized.Senador,
+              Governador: hasGovRanking ? munItem.cargos.Governador : synthesized.Governador
+            }
+          };
+        }
       }
     }
 
     if (munItem) {
-      setCurrentScope({ type: 'municipio', id: munItem.id, item: munItem });
+      setCurrentScope({ type: 'municipio', id: munItem.id || munId, item: munItem });
       // Set region from UF
       if (munItem.uf) {
         for (const [reg, ufs] of Object.entries(REGION_STATES)) {
@@ -117,7 +146,7 @@ export default function App() {
         }
       }
     }
-  }, [municipiosData]);
+  }, [municipiosData, estadosData]);
 
   // Select Scope from Search Modal
   const handleSelectScope = useCallback((searchItem) => {

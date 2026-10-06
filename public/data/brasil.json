@@ -113,6 +113,186 @@
           "percentual_simulado": 0.17
         }
       ]
+    },
+    "Governador": {
+      "posicao": 3,
+      "votos": 33463551,
+      "total_aptos": 158745502,
+      "taxa_abstencao": 21.08,
+      "vencedor_primeiro_turno": false,
+      "iria_segundo_turno": false,
+      "eleito_senado": false,
+      "candidatos_superados": [
+        "Terceiras Vias e Demais Concorrentes (DIVERSOS)"
+      ],
+      "diferenca_lider": -30356449,
+      "ranking": [
+        {
+          "nome": "Líderes Governistas Estaduais",
+          "partido": "GOVERNO",
+          "nome_exibicao": "Líderes Governistas Estaduais (GOVERNO)",
+          "numero": "--",
+          "votos": 63820000,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 1,
+          "percentual_simulado": 41.2
+        },
+        {
+          "nome": "Oposições Estaduais",
+          "partido": "OPOSIÇÃO",
+          "nome_exibicao": "Oposições Estaduais (OPOSIÇÃO)",
+          "numero": "--",
+          "votos": 46510000,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 2,
+          "percentual_simulado": 30.02
+        },
+        {
+          "nome": "Abstenção",
+          "partido": "ELEITORES AUSENTES",
+          "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
+          "numero": "00",
+          "votos": 33463551,
+          "is_abstencao": true,
+          "foto": "assets/abstencao.svg",
+          "posicao": 3,
+          "percentual_simulado": 21.6
+        },
+        {
+          "nome": "Terceiras Vias e Demais Concorrentes",
+          "partido": "DIVERSOS",
+          "nome_exibicao": "Terceiras Vias e Demais Concorrentes (DIVERSOS)",
+          "numero": "--",
+          "votos": 11120000,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 4,
+          "percentual_simulado": 7.18
+        }
+      ]
+    },
+    "Senador": {
+      "posicao": 1,
+      "votos": 33463551,
+      "total_aptos": 158745502,
+      "taxa_abstencao": 21.08,
+      "vencedor_primeiro_turno": false,
+      "iria_segundo_turno": false,
+      "eleito_senado": true,
+      "candidatos_superados": [
+        "Bancada do PL (14 Senadores) (PL)",
+        "Bancada do PT / Federação (8 Senadores) (PT)",
+        "Bancada do UNIÃO BRASIL (5 Senadores) (UNIÃO)",
+        "Bancada do PSD (4 Senadores) (PSD)",
+        "Bancada do MDB (3 Senadores) (MDB)",
+        "Bancada do PP (2 Senadores) (PP)",
+        "Demais Partidos (DIVERSOS)",
+        "Bancada do PODEMOS (1 Senador) (PODEMOS)"
+      ],
+      "diferenca_lider": 8051251,
+      "ranking": [
+        {
+          "nome": "Abstenção",
+          "partido": "ELEITORES AUSENTES",
+          "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
+          "numero": "00",
+          "votos": 33463551,
+          "is_abstencao": true,
+          "foto": "assets/abstencao.svg",
+          "posicao": 1,
+          "percentual_simulado": 23.75
+        },
+        {
+          "nome": "Bancada do PL (14 Senadores)",
+          "partido": "PL",
+          "nome_exibicao": "Bancada do PL (14 Senadores) (PL)",
+          "numero": "22",
+          "votos": 25412300,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 2,
+          "percentual_simulado": 18.03
+        },
+        {
+          "nome": "Bancada do PT / Federação (8 Senadores)",
+          "partido": "PT",
+          "nome_exibicao": "Bancada do PT / Federação (8 Senadores) (PT)",
+          "numero": "13",
+          "votos": 22615400,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 3,
+          "percentual_simulado": 16.05
+        },
+        {
+          "nome": "Bancada do UNIÃO BRASIL (5 Senadores)",
+          "partido": "UNIÃO",
+          "nome_exibicao": "Bancada do UNIÃO BRASIL (5 Senadores) (UNIÃO)",
+          "numero": "44",
+          "votos": 14230100,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 4,
+          "percentual_simulado": 10.1
+        },
+        {
+          "nome": "Bancada do PSD (4 Senadores)",
+          "partido": "PSD",
+          "nome_exibicao": "Bancada do PSD (4 Senadores) (PSD)",
+          "numero": "55",
+          "votos": 13510800,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 5,
+          "percentual_simulado": 9.59
+        },
+        {
+          "nome": "Bancada do MDB (3 Senadores)",
+          "partido": "MDB",
+          "nome_exibicao": "Bancada do MDB (3 Senadores) (MDB)",
+          "numero": "15",
+          "votos": 11120400,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 6,
+          "percentual_simulado": 7.89
+        },
+        {
+          "nome": "Bancada do PP (2 Senadores)",
+          "partido": "PP",
+          "nome_exibicao": "Bancada do PP (2 Senadores) (PP)",
+          "numero": "11",
+          "votos": 9340500,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 7,
+          "percentual_simulado": 6.63
+        },
+        {
+          "nome": "Demais Partidos",
+          "partido": "DIVERSOS",
+          "nome_exibicao": "Demais Partidos (DIVERSOS)",
+          "numero": "--",
+          "votos": 6210000,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 8,
+          "percentual_simulado": 4.41
+        },
+        {
+          "nome": "Bancada do PODEMOS (1 Senador)",
+          "partido": "PODEMOS",
+          "nome_exibicao": "Bancada do PODEMOS (1 Senador) (PODEMOS)",
+          "numero": "20",
+          "votos": 5012300,
+          "is_abstencao": false,
+          "foto": "",
+          "posicao": 9,
+          "percentual_simulado": 3.56
+        }
+      ]
     }
   },
   "analise_governadores_1t": {
@@ -524,6 +704,7 @@
     "total_cidades_analisadas": 96,
     "top_maior_taxa": [
       {
+        "id": 1600501,
         "nome": "Oiapoque",
         "uf": "AP",
         "slug": "oiapoque-ap",
@@ -706,7 +887,7 @@
             ]
           },
           "Senador": {
-            "posicao": 1,
+            "posicao": 2,
             "votos": 5940,
             "total_aptos": 19800,
             "taxa_abstencao": 30.0,
@@ -714,14 +895,24 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (AP) (PL)",
-              "Candidato 2 ao Senado (AP) (PT)",
-              "Candidato 3 ao Senado (AP) (PSD)",
-              "Candidato 4 ao Senado (AP) (UNIÃO)",
+              "Rayssa Furlan (MDB)",
+              "Randolfe Rodrigues (PT)",
+              "Lucas Barreto (PSD)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 2060,
+            "diferenca_lider": -165,
             "ranking": [
+              {
+                "nome": "Davi Alcolumbre",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Davi Alcolumbre (UNIÃO)",
+                "numero": "444",
+                "votos": 6105,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 1,
+                "percentual_simulado": 32.67
+              },
               {
                 "nome": "Abstenção",
                 "partido": "ELEITORES AUSENTES",
@@ -730,63 +921,52 @@
                 "votos": 5940,
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
-                "posicao": 1,
-                "percentual_simulado": 37.0
-              },
-              {
-                "nome": "Candidato 1 ao Senado (AP)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (AP) (PL)",
-                "numero": "222",
-                "votos": 3880,
-                "is_abstencao": false,
-                "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 24.17
+                "percentual_simulado": 31.78
               },
               {
-                "nome": "Candidato 2 ao Senado (AP)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (AP) (PT)",
-                "numero": "133",
-                "votos": 2772,
+                "nome": "Rayssa Furlan",
+                "partido": "MDB",
+                "nome_exibicao": "Rayssa Furlan (MDB)",
+                "numero": "151",
+                "votos": 2741,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 17.27
+                "percentual_simulado": 14.67
               },
               {
-                "nome": "Candidato 3 ao Senado (AP)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (AP) (PSD)",
-                "numero": "555",
-                "votos": 1801,
+                "nome": "Randolfe Rodrigues",
+                "partido": "PT",
+                "nome_exibicao": "Randolfe Rodrigues (PT)",
+                "numero": "133",
+                "votos": 1938,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 11.22
+                "percentual_simulado": 10.37
               },
               {
-                "nome": "Candidato 4 ao Senado (AP)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (AP) (UNIÃO)",
-                "numero": "444",
-                "votos": 1108,
+                "nome": "Lucas Barreto",
+                "partido": "PSD",
+                "nome_exibicao": "Lucas Barreto (PSD)",
+                "numero": "555",
+                "votos": 1211,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 6.9
+                "percentual_simulado": 6.48
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 554,
+                "votos": 754,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 3.45
+                "percentual_simulado": 4.03
               }
             ]
           }
@@ -794,6 +974,7 @@
         "veredito_principal": "Em Oiapoque (AP), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (30.0% da cidade)!"
       },
       {
+        "id": 1500602,
         "nome": "Altamira",
         "uf": "PA",
         "slug": "altamira-pa",
@@ -983,13 +1164,13 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (PA) (PL)",
-              "Candidato 2 ao Senado (PA) (PT)",
-              "Candidato 3 ao Senado (PA) (PSD)",
-              "Candidato 4 ao Senado (PA) (UNIÃO)",
+              "Beto Faro (PT)",
+              "Mário Couto (PL)",
+              "Jader Barbalho (MDB)",
+              "Zequinha Marinho (PODEMOS)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 6602,
+            "diferenca_lider": 18,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -1000,62 +1181,62 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 34.76
+                "percentual_simulado": 29.71
               },
               {
-                "nome": "Candidato 1 ao Senado (PA)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (PA) (PL)",
-                "numero": "222",
-                "votos": 16974,
+                "nome": "Beto Faro",
+                "partido": "PT",
+                "nome_exibicao": "Beto Faro (PT)",
+                "numero": "133",
+                "votos": 23558,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.03
+                "percentual_simulado": 29.69
               },
               {
-                "nome": "Candidato 2 ao Senado (PA)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (PA) (PT)",
-                "numero": "133",
-                "votos": 12124,
+                "nome": "Mário Couto",
+                "partido": "PL",
+                "nome_exibicao": "Mário Couto (PL)",
+                "numero": "222",
+                "votos": 19242,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 17.87
+                "percentual_simulado": 24.25
               },
               {
-                "nome": "Candidato 3 ao Senado (PA)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (PA) (PSD)",
-                "numero": "555",
-                "votos": 7881,
+                "nome": "Jader Barbalho",
+                "partido": "MDB",
+                "nome_exibicao": "Jader Barbalho (MDB)",
+                "numero": "151",
+                "votos": 7529,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 11.62
+                "percentual_simulado": 9.49
               },
               {
-                "nome": "Candidato 4 ao Senado (PA)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (PA) (UNIÃO)",
-                "numero": "444",
-                "votos": 4849,
+                "nome": "Zequinha Marinho",
+                "partido": "PODEMOS",
+                "nome_exibicao": "Zequinha Marinho (PODEMOS)",
+                "numero": "200",
+                "votos": 3625,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.15
+                "percentual_simulado": 4.57
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 2424,
+                "votos": 1818,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 3.57
+                "percentual_simulado": 2.29
               }
             ]
           }
@@ -1063,6 +1244,7 @@
         "veredito_principal": "Em Altamira (PA), a Abstenção ficaria na 3ª posição para Presidente (23,576 ausentes)."
       },
       {
+        "id": 3520400,
         "nome": "Ilhabela",
         "uf": "SP",
         "slug": "ilhabela-sp",
@@ -1269,7 +1451,7 @@
             ]
           },
           "Senador": {
-            "posicao": 1,
+            "posicao": 2,
             "votos": 8424,
             "total_aptos": 31200,
             "taxa_abstencao": 27.0,
@@ -1277,14 +1459,24 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (SP) (PL)",
-              "Candidato 2 ao Senado (SP) (PT)",
-              "Candidato 3 ao Senado (SP) (PSD)",
-              "Candidato 4 ao Senado (SP) (UNIÃO)",
+              "Márcio França (PSB)",
+              "Mara Gabrilli (PSD)",
+              "Alexandre Giordano (MDB)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 2047,
+            "diferenca_lider": -1985,
             "ranking": [
+              {
+                "nome": "Marcos Pontes",
+                "partido": "PL",
+                "nome_exibicao": "Marcos Pontes (PL)",
+                "numero": "222",
+                "votos": 10409,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 1,
+                "percentual_simulado": 35.43
+              },
               {
                 "nome": "Abstenção",
                 "partido": "ELEITORES AUSENTES",
@@ -1293,63 +1485,52 @@
                 "votos": 8424,
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
-                "posicao": 1,
-                "percentual_simulado": 33.63
-              },
-              {
-                "nome": "Candidato 1 ao Senado (SP)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (SP) (PL)",
-                "numero": "222",
-                "votos": 6377,
-                "is_abstencao": false,
-                "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.46
+                "percentual_simulado": 28.68
               },
               {
-                "nome": "Candidato 2 ao Senado (SP)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (SP) (PT)",
-                "numero": "133",
-                "votos": 4555,
+                "nome": "Márcio França",
+                "partido": "PSB",
+                "nome_exibicao": "Márcio França (PSB)",
+                "numero": "400",
+                "votos": 7584,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.18
+                "percentual_simulado": 25.82
               },
               {
-                "nome": "Candidato 3 ao Senado (SP)",
+                "nome": "Mara Gabrilli",
                 "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (SP) (PSD)",
+                "nome_exibicao": "Mara Gabrilli (PSD)",
                 "numero": "555",
-                "votos": 2960,
+                "votos": 1571,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 11.82
+                "percentual_simulado": 5.35
               },
               {
-                "nome": "Candidato 4 ao Senado (SP)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (SP) (UNIÃO)",
-                "numero": "444",
-                "votos": 1822,
+                "nome": "Alexandre Giordano",
+                "partido": "MDB",
+                "nome_exibicao": "Alexandre Giordano (MDB)",
+                "numero": "151",
+                "votos": 880,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.27
+                "percentual_simulado": 3.0
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 911,
+                "votos": 507,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 3.64
+                "percentual_simulado": 1.73
               }
             ]
           }
@@ -1357,6 +1538,7 @@
         "veredito_principal": "Em Ilhabela (SP), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (27.0% da cidade)!"
       },
       {
+        "id": 3303807,
         "nome": "Paraty",
         "uf": "RJ",
         "slug": "paraty-rj",
@@ -1559,13 +1741,14 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RJ) (PL)",
-              "Candidato 2 ao Senado (RJ) (PT)",
-              "Candidato 3 ao Senado (RJ) (PSD)",
-              "Candidato 4 ao Senado (RJ) (UNIÃO)",
+              "Romário (PL)",
+              "Alessandro Molon (PSB)",
+              "Clarissa Garotinho (UNIÃO)",
+              "Daniel Silveira (PTB)",
+              "Carlos Portinho (PL)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 2415,
+            "diferenca_lider": 1734,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -1576,62 +1759,73 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 33.63
+                "percentual_simulado": 28.68
               },
               {
-                "nome": "Candidato 1 ao Senado (RJ)",
+                "nome": "Romário",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
+                "nome_exibicao": "Romário (PL)",
                 "numero": "222",
-                "votos": 7521,
+                "votos": 8202,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.46
+                "percentual_simulado": 23.67
               },
               {
-                "nome": "Candidato 2 ao Senado (RJ)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-                "numero": "133",
-                "votos": 5372,
+                "nome": "Alessandro Molon",
+                "partido": "PSB",
+                "nome_exibicao": "Alessandro Molon (PSB)",
+                "numero": "400",
+                "votos": 6227,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.18
+                "percentual_simulado": 17.97
               },
               {
-                "nome": "Candidato 3 ao Senado (RJ)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-                "numero": "555",
-                "votos": 3492,
+                "nome": "Clarissa Garotinho",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+                "numero": "444",
+                "votos": 4077,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 11.82
+                "percentual_simulado": 11.77
               },
               {
-                "nome": "Candidato 4 ao Senado (RJ)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-                "numero": "444",
-                "votos": 2149,
+                "nome": "Daniel Silveira",
+                "partido": "PTB",
+                "nome_exibicao": "Daniel Silveira (PTB)",
+                "numero": "144",
+                "votos": 3484,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.27
+                "percentual_simulado": 10.06
+              },
+              {
+                "nome": "Carlos Portinho",
+                "partido": "PL",
+                "nome_exibicao": "Carlos Portinho (PL)",
+                "numero": "220",
+                "votos": 1853,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 6,
+                "percentual_simulado": 5.35
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 1074,
+                "votos": 867,
                 "is_abstencao": false,
                 "foto": "",
-                "posicao": 6,
-                "percentual_simulado": 3.64
+                "posicao": 7,
+                "percentual_simulado": 2.5
               }
             ]
           }
@@ -1639,6 +1833,7 @@
         "veredito_principal": "Em Paraty (RJ), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (27.0% da cidade)!"
       },
       {
+        "id": 3304557,
         "nome": "Rio de Janeiro",
         "uf": "RJ",
         "slug": "rio-de-janeiro-rj",
@@ -1841,13 +2036,14 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RJ) (PL)",
-              "Candidato 2 ao Senado (RJ) (PT)",
-              "Candidato 3 ao Senado (RJ) (PSD)",
-              "Candidato 4 ao Senado (RJ) (UNIÃO)",
+              "Romário (PL)",
+              "Alessandro Molon (PSB)",
+              "Clarissa Garotinho (UNIÃO)",
+              "Daniel Silveira (PTB)",
+              "Carlos Portinho (PL)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 328614,
+            "diferenca_lider": 235921,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -1858,62 +2054,73 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 33.63
+                "percentual_simulado": 28.67
               },
               {
-                "nome": "Candidato 1 ao Senado (RJ)",
+                "nome": "Romário",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
+                "nome_exibicao": "Romário (PL)",
                 "numero": "222",
-                "votos": 1023916,
+                "votos": 1116609,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.46
+                "percentual_simulado": 23.67
               },
               {
-                "nome": "Candidato 2 ao Senado (RJ)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-                "numero": "133",
-                "votos": 731368,
+                "nome": "Alessandro Molon",
+                "partido": "PSB",
+                "nome_exibicao": "Alessandro Molon (PSB)",
+                "numero": "400",
+                "votos": 847802,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.18
+                "percentual_simulado": 17.97
               },
               {
-                "nome": "Candidato 3 ao Senado (RJ)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-                "numero": "555",
-                "votos": 475389,
+                "nome": "Clarissa Garotinho",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+                "numero": "444",
+                "votos": 555108,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 11.82
+                "percentual_simulado": 11.77
               },
               {
-                "nome": "Candidato 4 ao Senado (RJ)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-                "numero": "444",
-                "votos": 292547,
+                "nome": "Daniel Silveira",
+                "partido": "PTB",
+                "nome_exibicao": "Daniel Silveira (PTB)",
+                "numero": "144",
+                "votos": 474365,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.27
+                "percentual_simulado": 10.06
+              },
+              {
+                "nome": "Carlos Portinho",
+                "partido": "PL",
+                "nome_exibicao": "Carlos Portinho (PL)",
+                "numero": "220",
+                "votos": 252322,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 6,
+                "percentual_simulado": 5.35
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 146273,
+                "votos": 118086,
                 "is_abstencao": false,
                 "foto": "",
-                "posicao": 6,
-                "percentual_simulado": 3.64
+                "posicao": 7,
+                "percentual_simulado": 2.5
               }
             ]
           }
@@ -1921,6 +2128,7 @@
         "veredito_principal": "Em Rio de Janeiro (RJ), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (27.0% da cidade)!"
       },
       {
+        "id": 3300704,
         "nome": "Cabo Frio",
         "uf": "RJ",
         "slug": "cabo-frio-rj",
@@ -2123,13 +2331,14 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RJ) (PL)",
-              "Candidato 2 ao Senado (RJ) (PT)",
-              "Candidato 3 ao Senado (RJ) (PSD)",
-              "Candidato 4 ao Senado (RJ) (UNIÃO)",
+              "Romário (PL)",
+              "Alessandro Molon (PSB)",
+              "Clarissa Garotinho (UNIÃO)",
+              "Daniel Silveira (PTB)",
+              "Carlos Portinho (PL)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 9130,
+            "diferenca_lider": 5887,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -2140,62 +2349,73 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 32.49
+                "percentual_simulado": 27.64
               },
               {
-                "nome": "Candidato 1 ao Senado (RJ)",
+                "nome": "Romário",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
+                "nome_exibicao": "Romário (PL)",
                 "numero": "222",
-                "votos": 35824,
+                "votos": 39067,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.89
+                "percentual_simulado": 24.02
               },
               {
-                "nome": "Candidato 2 ao Senado (RJ)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-                "numero": "133",
-                "votos": 25589,
+                "nome": "Alessandro Molon",
+                "partido": "PSB",
+                "nome_exibicao": "Alessandro Molon (PSB)",
+                "numero": "400",
+                "votos": 29662,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.5
+                "percentual_simulado": 18.24
               },
               {
-                "nome": "Candidato 3 ao Senado (RJ)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-                "numero": "555",
-                "votos": 16632,
+                "nome": "Clarissa Garotinho",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+                "numero": "444",
+                "votos": 19422,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 12.02
+                "percentual_simulado": 11.94
               },
               {
-                "nome": "Candidato 4 ao Senado (RJ)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-                "numero": "444",
-                "votos": 10235,
+                "nome": "Daniel Silveira",
+                "partido": "PTB",
+                "nome_exibicao": "Daniel Silveira (PTB)",
+                "numero": "144",
+                "votos": 16597,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.4
+                "percentual_simulado": 10.2
+              },
+              {
+                "nome": "Carlos Portinho",
+                "partido": "PL",
+                "nome_exibicao": "Carlos Portinho (PL)",
+                "numero": "220",
+                "votos": 8828,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 6,
+                "percentual_simulado": 5.43
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 5117,
+                "votos": 4131,
                 "is_abstencao": false,
                 "foto": "",
-                "posicao": 6,
-                "percentual_simulado": 3.7
+                "posicao": 7,
+                "percentual_simulado": 2.54
               }
             ]
           }
@@ -2203,6 +2423,7 @@
         "veredito_principal": "Em Cabo Frio (RJ), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (26.0% da cidade)!"
       },
       {
+        "id": 3303500,
         "nome": "Nova Iguaçu",
         "uf": "RJ",
         "slug": "nova-iguaçu-rj",
@@ -2405,13 +2626,14 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RJ) (PL)",
-              "Candidato 2 ao Senado (RJ) (PT)",
-              "Candidato 3 ao Senado (RJ) (PSD)",
-              "Candidato 4 ao Senado (RJ) (UNIÃO)",
+              "Romário (PL)",
+              "Alessandro Molon (PSB)",
+              "Clarissa Garotinho (UNIÃO)",
+              "Daniel Silveira (PTB)",
+              "Carlos Portinho (PL)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 32338,
+            "diferenca_lider": 20850,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -2422,62 +2644,73 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 32.49
+                "percentual_simulado": 27.64
               },
               {
-                "nome": "Candidato 1 ao Senado (RJ)",
+                "nome": "Romário",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
+                "nome_exibicao": "Romário (PL)",
                 "numero": "222",
-                "votos": 126899,
+                "votos": 138387,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.89
+                "percentual_simulado": 24.02
               },
               {
-                "nome": "Candidato 2 ao Senado (RJ)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-                "numero": "133",
-                "votos": 90642,
+                "nome": "Alessandro Molon",
+                "partido": "PSB",
+                "nome_exibicao": "Alessandro Molon (PSB)",
+                "numero": "400",
+                "votos": 105072,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.5
+                "percentual_simulado": 18.24
               },
               {
-                "nome": "Candidato 3 ao Senado (RJ)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-                "numero": "555",
-                "votos": 58917,
+                "nome": "Clarissa Garotinho",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+                "numero": "444",
+                "votos": 68797,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 12.02
+                "percentual_simulado": 11.94
               },
               {
-                "nome": "Candidato 4 ao Senado (RJ)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-                "numero": "444",
-                "votos": 36257,
+                "nome": "Daniel Silveira",
+                "partido": "PTB",
+                "nome_exibicao": "Daniel Silveira (PTB)",
+                "numero": "144",
+                "votos": 58790,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.4
+                "percentual_simulado": 10.2
+              },
+              {
+                "nome": "Carlos Portinho",
+                "partido": "PL",
+                "nome_exibicao": "Carlos Portinho (PL)",
+                "numero": "220",
+                "votos": 31271,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 6,
+                "percentual_simulado": 5.43
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 18128,
+                "votos": 14635,
                 "is_abstencao": false,
                 "foto": "",
-                "posicao": 6,
-                "percentual_simulado": 3.7
+                "posicao": 7,
+                "percentual_simulado": 2.54
               }
             ]
           }
@@ -2485,6 +2718,7 @@
         "veredito_principal": "Em Nova Iguaçu (RJ), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (26.0% da cidade)!"
       },
       {
+        "id": 1100205,
         "nome": "Porto Velho",
         "uf": "RO",
         "slug": "porto-velho-ro",
@@ -2687,13 +2921,13 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RO) (PL)",
-              "Candidato 2 ao Senado (RO) (PT)",
-              "Candidato 3 ao Senado (RO) (PSD)",
-              "Candidato 4 ao Senado (RO) (UNIÃO)",
+              "Jaime Bagattoli (PL)",
+              "Mariana Carvalho (REPUBLICANOS)",
+              "Marcos Rogério (PL)",
+              "Confúcio Moura (MDB)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 19139,
+            "diferenca_lider": 5898,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -2704,62 +2938,62 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 32.49
+                "percentual_simulado": 27.64
               },
               {
-                "nome": "Candidato 1 ao Senado (RO)",
+                "nome": "Jaime Bagattoli",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RO) (PL)",
+                "nome_exibicao": "Jaime Bagattoli (PL)",
                 "numero": "222",
-                "votos": 75109,
+                "votos": 88350,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.89
+                "percentual_simulado": 25.91
               },
               {
-                "nome": "Candidato 2 ao Senado (RO)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RO) (PT)",
-                "numero": "133",
-                "votos": 53649,
+                "nome": "Mariana Carvalho",
+                "partido": "REPUBLICANOS",
+                "nome_exibicao": "Mariana Carvalho (REPUBLICANOS)",
+                "numero": "100",
+                "votos": 79218,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.5
+                "percentual_simulado": 23.23
               },
               {
-                "nome": "Candidato 3 ao Senado (RO)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RO) (PSD)",
-                "numero": "555",
-                "votos": 34872,
+                "nome": "Marcos Rogério",
+                "partido": "PL",
+                "nome_exibicao": "Marcos Rogério (PL)",
+                "numero": "220",
+                "votos": 45655,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 12.02
+                "percentual_simulado": 13.39
               },
               {
-                "nome": "Candidato 4 ao Senado (RO)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RO) (UNIÃO)",
-                "numero": "444",
-                "votos": 21459,
+                "nome": "Confúcio Moura",
+                "partido": "MDB",
+                "nome_exibicao": "Confúcio Moura (MDB)",
+                "numero": "151",
+                "votos": 22704,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.4
+                "percentual_simulado": 6.66
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 10729,
+                "votos": 10858,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 3.7
+                "percentual_simulado": 3.18
               }
             ]
           }
@@ -2767,6 +3001,7 @@
         "veredito_principal": "Em Porto Velho (RO), a Abstenção iria para o SEGUNDO TURNO presidencial em 2º lugar (26.0% da cidade)!"
       },
       {
+        "id": 1303809,
         "nome": "São Gabriel da Cachoeira",
         "uf": "AM",
         "slug": "são-gabriel-da-cachoeira-am",
@@ -2960,7 +3195,7 @@
             ]
           },
           "Senador": {
-            "posicao": 1,
+            "posicao": 2,
             "votos": 8606,
             "total_aptos": 33100,
             "taxa_abstencao": 26.0,
@@ -2968,14 +3203,24 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (AM) (PL)",
-              "Candidato 2 ao Senado (AM) (PT)",
-              "Candidato 3 ao Senado (AM) (PSD)",
-              "Candidato 4 ao Senado (AM) (UNIÃO)",
+              "Coronel Menezes (PL)",
+              "Arthur Virgílio Neto (PSDB)",
+              "Eduardo Braga (MDB)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 1748,
+            "diferenca_lider": -727,
             "ranking": [
+              {
+                "nome": "Omar Aziz",
+                "partido": "PSD",
+                "nome_exibicao": "Omar Aziz (PSD)",
+                "numero": "555",
+                "votos": 9333,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 1,
+                "percentual_simulado": 29.97
+              },
               {
                 "nome": "Abstenção",
                 "partido": "ELEITORES AUSENTES",
@@ -2984,63 +3229,52 @@
                 "votos": 8606,
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
-                "posicao": 1,
-                "percentual_simulado": 32.5
-              },
-              {
-                "nome": "Candidato 1 ao Senado (AM)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (AM) (PL)",
-                "numero": "222",
-                "votos": 6858,
-                "is_abstencao": false,
-                "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 25.89
+                "percentual_simulado": 27.64
               },
               {
-                "nome": "Candidato 2 ao Senado (AM)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (AM) (PT)",
-                "numero": "133",
-                "votos": 4898,
+                "nome": "Coronel Menezes",
+                "partido": "PL",
+                "nome_exibicao": "Coronel Menezes (PL)",
+                "numero": "222",
+                "votos": 6512,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.49
+                "percentual_simulado": 20.91
               },
               {
-                "nome": "Candidato 3 ao Senado (AM)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (AM) (PSD)",
-                "numero": "555",
-                "votos": 3184,
+                "nome": "Arthur Virgílio Neto",
+                "partido": "PSDB",
+                "nome_exibicao": "Arthur Virgílio Neto (PSDB)",
+                "numero": "455",
+                "votos": 2816,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 12.02
+                "percentual_simulado": 9.04
               },
               {
-                "nome": "Candidato 4 ao Senado (AM)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (AM) (UNIÃO)",
-                "numero": "444",
-                "votos": 1959,
+                "nome": "Eduardo Braga",
+                "partido": "MDB",
+                "nome_exibicao": "Eduardo Braga (MDB)",
+                "numero": "151",
+                "votos": 2366,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.4
+                "percentual_simulado": 7.6
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 979,
+                "votos": 1505,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 3.7
+                "percentual_simulado": 4.83
               }
             ]
           }
@@ -3048,6 +3282,7 @@
         "veredito_principal": "Em São Gabriel da Cachoeira (AM), a Abstenção ficaria na 3ª posição para Presidente (8,606 ausentes)."
       },
       {
+        "id": 3300100,
         "nome": "Angra dos Reis",
         "uf": "RJ",
         "slug": "angra-dos-reis-rj",
@@ -3250,13 +3485,14 @@
             "iria_segundo_turno": false,
             "eleito_senado": true,
             "candidatos_superados": [
-              "Candidato 1 ao Senado (RJ) (PL)",
-              "Candidato 2 ao Senado (RJ) (PT)",
-              "Candidato 3 ao Senado (RJ) (PSD)",
-              "Candidato 4 ao Senado (RJ) (UNIÃO)",
+              "Romário (PL)",
+              "Alessandro Molon (PSB)",
+              "Clarissa Garotinho (UNIÃO)",
+              "Daniel Silveira (PTB)",
+              "Carlos Portinho (PL)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": 5540,
+            "diferenca_lider": 2907,
             "ranking": [
               {
                 "nome": "Abstenção",
@@ -3267,62 +3503,73 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 1,
-                "percentual_simulado": 31.35
+                "percentual_simulado": 26.6
               },
               {
-                "nome": "Candidato 1 ao Senado (RJ)",
+                "nome": "Romário",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RJ) (PL)",
+                "nome_exibicao": "Romário (PL)",
                 "numero": "222",
-                "votos": 29085,
+                "votos": 31718,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 26.33
+                "percentual_simulado": 24.36
               },
               {
-                "nome": "Candidato 2 ao Senado (RJ)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RJ) (PT)",
-                "numero": "133",
-                "votos": 20775,
+                "nome": "Alessandro Molon",
+                "partido": "PSB",
+                "nome_exibicao": "Alessandro Molon (PSB)",
+                "numero": "400",
+                "votos": 24082,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 3,
-                "percentual_simulado": 18.81
+                "percentual_simulado": 18.5
               },
               {
-                "nome": "Candidato 3 ao Senado (RJ)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RJ) (PSD)",
-                "numero": "555",
-                "votos": 13503,
+                "nome": "Clarissa Garotinho",
+                "partido": "UNIÃO",
+                "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
+                "numero": "444",
+                "votos": 15768,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 12.23
+                "percentual_simulado": 12.11
               },
               {
-                "nome": "Candidato 4 ao Senado (RJ)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RJ) (UNIÃO)",
-                "numero": "444",
-                "votos": 8310,
+                "nome": "Daniel Silveira",
+                "partido": "PTB",
+                "nome_exibicao": "Daniel Silveira (PTB)",
+                "numero": "144",
+                "votos": 13474,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 7.52
+                "percentual_simulado": 10.35
+              },
+              {
+                "nome": "Carlos Portinho",
+                "partido": "PL",
+                "nome_exibicao": "Carlos Portinho (PL)",
+                "numero": "220",
+                "votos": 7167,
+                "is_abstencao": false,
+                "foto": "",
+                "posicao": 6,
+                "percentual_simulado": 5.51
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 4155,
+                "votos": 3354,
                 "is_abstencao": false,
                 "foto": "",
-                "posicao": 6,
-                "percentual_simulado": 3.76
+                "posicao": 7,
+                "percentual_simulado": 2.58
               }
             ]
           }
@@ -3332,6 +3579,7 @@
     ],
     "top_menor_taxa": [
       {
+        "id": 4202404,
         "nome": "Blumenau",
         "uf": "SC",
         "slug": "blumenau-sc",
@@ -3545,33 +3793,33 @@
             "iria_segundo_turno": false,
             "eleito_senado": false,
             "candidatos_superados": [
-              "Candidato 3 ao Senado (SC) (PSD)",
-              "Candidato 4 ao Senado (SC) (UNIÃO)",
+              "Dário Berger (PSB)",
+              "Esperidião Amin (PP)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": -19958,
+            "diferenca_lider": -39145,
             "ranking": [
               {
-                "nome": "Candidato 1 ao Senado (SC)",
+                "nome": "Jorge Seif",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (SC) (PL)",
+                "nome_exibicao": "Jorge Seif (PL)",
                 "numero": "222",
-                "votos": 62422,
+                "votos": 81609,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 1,
-                "percentual_simulado": 30.42
+                "percentual_simulado": 32.97
               },
               {
-                "nome": "Candidato 2 ao Senado (SC)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (SC) (PT)",
-                "numero": "133",
-                "votos": 44587,
+                "nome": "Raimundo Colombo",
+                "partido": "PSD",
+                "nome_exibicao": "Raimundo Colombo (PSD)",
+                "numero": "555",
+                "votos": 47378,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 21.73
+                "percentual_simulado": 19.14
               },
               {
                 "nome": "Abstenção",
@@ -3582,40 +3830,40 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 3,
-                "percentual_simulado": 20.69
+                "percentual_simulado": 17.15
               },
               {
-                "nome": "Candidato 3 ao Senado (SC)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (SC) (PSD)",
-                "numero": "555",
-                "votos": 28981,
+                "nome": "Dário Berger",
+                "partido": "PSB",
+                "nome_exibicao": "Dário Berger (PSB)",
+                "numero": "400",
+                "votos": 37943,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 14.12
+                "percentual_simulado": 15.33
               },
               {
-                "nome": "Candidato 4 ao Senado (SC)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (SC) (UNIÃO)",
-                "numero": "444",
-                "votos": 17834,
+                "nome": "Esperidião Amin",
+                "partido": "PP",
+                "nome_exibicao": "Esperidião Amin (PP)",
+                "numero": "111",
+                "votos": 25637,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 8.69
+                "percentual_simulado": 10.36
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 8917,
+                "votos": 12531,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 4.35
+                "percentual_simulado": 5.06
               }
             ]
           }
@@ -3623,6 +3871,7 @@
         "veredito_principal": "Em Blumenau (SC), a Abstenção ficaria na 3ª posição para Presidente (42,464 ausentes)."
       },
       {
+        "id": 1400100,
         "nome": "Boa Vista",
         "uf": "RR",
         "slug": "boa-vista-rr",
@@ -3811,33 +4060,33 @@
             "iria_segundo_turno": false,
             "eleito_senado": false,
             "candidatos_superados": [
-              "Candidato 3 ao Senado (RR) (PSD)",
-              "Candidato 4 ao Senado (RR) (UNIÃO)",
+              "Telmário Mota (PROS)",
+              "Chico Rodrigues (PSB)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": -17460,
+            "diferenca_lider": -46159,
             "ranking": [
               {
-                "nome": "Candidato 1 ao Senado (RR)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (RR) (PL)",
-                "numero": "222",
-                "votos": 54607,
+                "nome": "Hiran Gonçalves",
+                "partido": "PP",
+                "nome_exibicao": "Hiran Gonçalves (PP)",
+                "numero": "111",
+                "votos": 83306,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 1,
-                "percentual_simulado": 30.42
+                "percentual_simulado": 38.47
               },
               {
-                "nome": "Candidato 2 ao Senado (RR)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (RR) (PT)",
-                "numero": "133",
-                "votos": 39005,
+                "nome": "Romero Jucá",
+                "partido": "MDB",
+                "nome_exibicao": "Romero Jucá (MDB)",
+                "numero": "151",
+                "votos": 63695,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 21.73
+                "percentual_simulado": 29.41
               },
               {
                 "nome": "Abstenção",
@@ -3848,40 +4097,40 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 3,
-                "percentual_simulado": 20.69
+                "percentual_simulado": 17.15
               },
               {
-                "nome": "Candidato 3 ao Senado (RR)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (RR) (PSD)",
-                "numero": "555",
-                "votos": 25353,
+                "nome": "Telmário Mota",
+                "partido": "PROS",
+                "nome_exibicao": "Telmário Mota (PROS)",
+                "numero": "900",
+                "votos": 17045,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 14.12
+                "percentual_simulado": 7.87
               },
               {
-                "nome": "Candidato 4 ao Senado (RR)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (RR) (UNIÃO)",
-                "numero": "444",
-                "votos": 15602,
+                "nome": "Chico Rodrigues",
+                "partido": "PSB",
+                "nome_exibicao": "Chico Rodrigues (PSB)",
+                "numero": "400",
+                "votos": 9868,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 8.69
+                "percentual_simulado": 4.56
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 7801,
+                "votos": 5508,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 4.35
+                "percentual_simulado": 2.54
               }
             ]
           }
@@ -3889,6 +4138,7 @@
         "veredito_principal": "Em Boa Vista (RR), a Abstenção ficaria na 3ª posição para Presidente (37,147 ausentes)."
       },
       {
+        "id": null,
         "nome": "Brasília (Plano Piloto)",
         "uf": "DF",
         "slug": "brasília-(plano-piloto)-df",
@@ -4089,33 +4339,33 @@
             "iria_segundo_turno": false,
             "eleito_senado": false,
             "candidatos_superados": [
-              "Candidato 3 ao Senado (DF) (PSD)",
-              "Candidato 4 ao Senado (DF) (UNIÃO)",
+              "Rosilene Corrêa (PT)",
+              "Leila Barros (PDT)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": -43616,
+            "diferenca_lider": -108811,
             "ranking": [
               {
-                "nome": "Candidato 1 ao Senado (DF)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (DF) (PL)",
-                "numero": "222",
-                "votos": 136416,
+                "nome": "Damares Alves",
+                "partido": "REPUBLICANOS",
+                "nome_exibicao": "Damares Alves (REPUBLICANOS)",
+                "numero": "100",
+                "votos": 201611,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 1,
-                "percentual_simulado": 30.42
+                "percentual_simulado": 37.26
               },
               {
-                "nome": "Candidato 2 ao Senado (DF)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (DF) (PT)",
-                "numero": "133",
-                "votos": 97440,
+                "nome": "Flávia Arruda",
+                "partido": "PL",
+                "nome_exibicao": "Flávia Arruda (PL)",
+                "numero": "222",
+                "votos": 121468,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 21.73
+                "percentual_simulado": 22.45
               },
               {
                 "nome": "Abstenção",
@@ -4126,40 +4376,40 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 3,
-                "percentual_simulado": 20.69
+                "percentual_simulado": 17.15
               },
               {
-                "nome": "Candidato 3 ao Senado (DF)",
-                "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (DF) (PSD)",
-                "numero": "555",
-                "votos": 63336,
+                "nome": "Rosilene Corrêa",
+                "partido": "PT",
+                "nome_exibicao": "Rosilene Corrêa (PT)",
+                "numero": "133",
+                "votos": 69474,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 14.12
+                "percentual_simulado": 12.84
               },
               {
-                "nome": "Candidato 4 ao Senado (DF)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (DF) (UNIÃO)",
-                "numero": "444",
-                "votos": 38976,
+                "nome": "Leila Barros",
+                "partido": "PDT",
+                "nome_exibicao": "Leila Barros (PDT)",
+                "numero": "123",
+                "votos": 33616,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 8.69
+                "percentual_simulado": 6.21
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 19488,
+                "votos": 22052,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 4.35
+                "percentual_simulado": 4.08
               }
             ]
           }
@@ -4167,6 +4417,7 @@
         "veredito_principal": "Em Brasília (Plano Piloto) (DF), a Abstenção ficaria na 3ª posição para Presidente (92,800 ausentes)."
       },
       {
+        "id": 2604106,
         "nome": "Caruaru",
         "uf": "PE",
         "slug": "caruaru-pe",
@@ -4380,33 +4631,33 @@
             "iria_segundo_turno": false,
             "eleito_senado": false,
             "candidatos_superados": [
-              "Candidato 3 ao Senado (PE) (PSD)",
-              "Candidato 4 ao Senado (PE) (UNIÃO)",
+              "André de Paula (PSD)",
+              "Humberto Costa (PT)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": -18596,
+            "diferenca_lider": -48573,
             "ranking": [
               {
-                "nome": "Candidato 1 ao Senado (PE)",
-                "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (PE) (PL)",
-                "numero": "222",
-                "votos": 58164,
+                "nome": "Teresa Leitão",
+                "partido": "PT",
+                "nome_exibicao": "Teresa Leitão (PT)",
+                "numero": "133",
+                "votos": 88141,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 1,
-                "percentual_simulado": 30.42
+                "percentual_simulado": 38.21
               },
               {
-                "nome": "Candidato 2 ao Senado (PE)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (PE) (PT)",
-                "numero": "133",
-                "votos": 41546,
+                "nome": "Gilson Machado",
+                "partido": "PL",
+                "nome_exibicao": "Gilson Machado (PL)",
+                "numero": "222",
+                "votos": 56378,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 21.73
+                "percentual_simulado": 24.44
               },
               {
                 "nome": "Abstenção",
@@ -4417,40 +4668,40 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 3,
-                "percentual_simulado": 20.69
+                "percentual_simulado": 17.15
               },
               {
-                "nome": "Candidato 3 ao Senado (PE)",
+                "nome": "André de Paula",
                 "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (PE) (PSD)",
+                "nome_exibicao": "André de Paula (PSD)",
                 "numero": "555",
-                "votos": 27005,
+                "votos": 23889,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 14.12
+                "percentual_simulado": 10.36
               },
               {
-                "nome": "Candidato 4 ao Senado (PE)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (PE) (UNIÃO)",
-                "numero": "444",
-                "votos": 16618,
+                "nome": "Humberto Costa",
+                "partido": "PT",
+                "nome_exibicao": "Humberto Costa (PT)",
+                "numero": "130",
+                "votos": 16244,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 8.69
+                "percentual_simulado": 7.04
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 8309,
+                "votos": 6459,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 4.35
+                "percentual_simulado": 2.8
               }
             ]
           }
@@ -4458,6 +4709,7 @@
         "veredito_principal": "Em Caruaru (PE), a Abstenção ficaria na 3ª posição para Presidente (39,568 ausentes)."
       },
       {
+        "id": 3500600,
         "nome": "Águas de São Pedro",
         "uf": "SP",
         "slug": "águas-de-são-pedro-sp",
@@ -4670,33 +4922,33 @@
             "iria_segundo_turno": false,
             "eleito_senado": false,
             "candidatos_superados": [
-              "Candidato 3 ao Senado (SP) (PSD)",
-              "Candidato 4 ao Senado (SP) (UNIÃO)",
+              "Mara Gabrilli (PSD)",
+              "Alexandre Giordano (MDB)",
               "Demais Concorrentes (DIVERSOS)"
             ],
-            "diferenca_lider": -315,
+            "diferenca_lider": -940,
             "ranking": [
               {
-                "nome": "Candidato 1 ao Senado (SP)",
+                "nome": "Marcos Pontes",
                 "partido": "PL",
-                "nome_exibicao": "Candidato 1 ao Senado (SP) (PL)",
+                "nome_exibicao": "Marcos Pontes (PL)",
                 "numero": "222",
-                "votos": 987,
+                "votos": 1612,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 1,
-                "percentual_simulado": 30.42
+                "percentual_simulado": 41.17
               },
               {
-                "nome": "Candidato 2 ao Senado (SP)",
-                "partido": "PT",
-                "nome_exibicao": "Candidato 2 ao Senado (SP) (PT)",
-                "numero": "133",
-                "votos": 705,
+                "nome": "Márcio França",
+                "partido": "PSB",
+                "nome_exibicao": "Márcio França (PSB)",
+                "numero": "400",
+                "votos": 1174,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 2,
-                "percentual_simulado": 21.73
+                "percentual_simulado": 29.99
               },
               {
                 "nome": "Abstenção",
@@ -4707,40 +4959,40 @@
                 "is_abstencao": true,
                 "foto": "assets/abstencao.svg",
                 "posicao": 3,
-                "percentual_simulado": 20.71
+                "percentual_simulado": 17.16
               },
               {
-                "nome": "Candidato 3 ao Senado (SP)",
+                "nome": "Mara Gabrilli",
                 "partido": "PSD",
-                "nome_exibicao": "Candidato 3 ao Senado (SP) (PSD)",
+                "nome_exibicao": "Mara Gabrilli (PSD)",
                 "numero": "555",
-                "votos": 458,
+                "votos": 243,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 4,
-                "percentual_simulado": 14.11
+                "percentual_simulado": 6.21
               },
               {
-                "nome": "Candidato 4 ao Senado (SP)",
-                "partido": "UNIÃO",
-                "nome_exibicao": "Candidato 4 ao Senado (SP) (UNIÃO)",
-                "numero": "444",
-                "votos": 282,
+                "nome": "Alexandre Giordano",
+                "partido": "MDB",
+                "nome_exibicao": "Alexandre Giordano (MDB)",
+                "numero": "151",
+                "votos": 136,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 5,
-                "percentual_simulado": 8.69
+                "percentual_simulado": 3.47
               },
               {
                 "nome": "Demais Concorrentes",
                 "partido": "DIVERSOS",
                 "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
                 "numero": "--",
-                "votos": 141,
+                "votos": 78,
                 "is_abstencao": false,
                 "foto": "",
                 "posicao": 6,
-                "percentual_simulado": 4.35
+                "percentual_simulado": 1.99
               }
             ]
           }
@@ -4751,31 +5003,15 @@
     "estados_eleito_senador": [
       "AC",
       "AL",
-      "AM",
       "AP",
       "BA",
       "CE",
-      "DF",
-      "ES",
       "GO",
       "MA",
-      "MG",
       "MS",
       "MT",
-      "PA",
-      "PB",
-      "PE",
-      "PI",
-      "PR",
       "RJ",
-      "RN",
-      "RO",
-      "RR",
-      "RS",
-      "SC",
-      "SE",
-      "SP",
-      "TO"
+      "RO"
     ],
     "estados_2t_governador": [
       "AC",
