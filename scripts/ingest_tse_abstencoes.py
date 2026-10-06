@@ -558,224 +558,225 @@ CANDIDATOS_GOVERNADOR_REAL = {
 
 
 # Candidatos reais ao Senado Federal por Estado nas Eleições Gerais de 2026
-# Renovação constitucional de 2/3 (54 Vagas em disputa · Mandatos 2019-2027 que vencem em 2026)
+# Renovação constitucional de 2/3 (54 Vagas em disputa · Mandatos 2027-2035)
 CANDIDATOS_SENADO_REAL = {
-    # 1. ACRE (AC) - Vencem em 2026: Sérgio Petecão (PSD) e Márcio Bittar (UNIÃO)
+    # 1. ACRE (AC)
     "AC": [
-        {"nome": "Gladson Cameli", "partido": "PP", "numero": "111", "pct": 0.3550},
-        {"nome": "Sérgio Petecão", "partido": "PSD", "numero": "555", "pct": 0.2620},
-        {"nome": "Márcio Bittar", "partido": "UNIÃO", "numero": "440", "pct": 0.2010},
-        {"nome": "Jorge Viana", "partido": "PT", "numero": "133", "pct": 0.1250},
-        {"nome": "Mara Rocha", "partido": "MDB", "numero": "151", "pct": 0.0570}
+        {"nome": "Marcio Bittar", "partido": "PL", "numero": "222", "pct": 0.3420},
+        {"nome": "Mara Rocha", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.2980},
+        {"nome": "Gladson Cameli", "partido": "PP", "numero": "111", "pct": 0.2150},
+        {"nome": "Sérgio Petecão", "partido": "PSD", "numero": "555", "pct": 0.0950},
+        {"nome": "Jorge Viana", "partido": "PT", "numero": "133", "pct": 0.0500}
     ],
-    # 2. ALAGOAS (AL) - Vencem em 2026: Renan Calheiros (MDB) e Rodrigo Cunha (PODEMOS)
+    # 2. ALAGOAS (AL)
     "AL": [
-        {"nome": "Renan Calheiros", "partido": "MDB", "numero": "151", "pct": 0.3420},
-        {"nome": "Arthur Lira", "partido": "PP", "numero": "111", "pct": 0.3150},
-        {"nome": "Davi Davino Filho", "partido": "PP", "numero": "112", "pct": 0.1650},
-        {"nome": "Rodrigo Cunha", "partido": "PODEMOS", "numero": "200", "pct": 0.1180},
+        {"nome": "Arthur Lira", "partido": "PP", "numero": "111", "pct": 0.3320},
+        {"nome": "Marina JHC", "partido": "PSDB", "numero": "455", "pct": 0.2850},
+        {"nome": "Renan Calheiros", "partido": "MDB", "numero": "151", "pct": 0.2210},
+        {"nome": "Davi Davino Filho", "partido": "PP", "numero": "112", "pct": 0.1020},
         {"nome": "Paulão", "partido": "PT", "numero": "133", "pct": 0.0600}
     ],
-    # 3. AMAPÁ (AP) - Vencem em 2026: Randolfe Rodrigues (PT) e Lucas Barreto (PSD)
+    # 3. AMAPÁ (AP)
     "AP": [
-        {"nome": "Randolfe Rodrigues", "partido": "PT", "numero": "133", "pct": 0.3850},
-        {"nome": "Waldez Góes", "partido": "PDT", "numero": "123", "pct": 0.2820},
-        {"nome": "Lucas Barreto", "partido": "PSD", "numero": "555", "pct": 0.1850},
-        {"nome": "Jaime Nunes", "partido": "PSD", "numero": "550", "pct": 0.1050},
-        {"nome": "Rayssa Furlan", "partido": "MDB", "numero": "151", "pct": 0.0430}
+        {"nome": "Rayssa Furlan", "partido": "PODEMOS", "numero": "200", "pct": 0.3550},
+        {"nome": "Lucas Barreto", "partido": "PSD", "numero": "555", "pct": 0.2950},
+        {"nome": "Randolfe Rodrigues", "partido": "PT", "numero": "133", "pct": 0.2120},
+        {"nome": "Waldez Góes", "partido": "PDT", "numero": "123", "pct": 0.0950},
+        {"nome": "Jaime Nunes", "partido": "PSD", "numero": "550", "pct": 0.0430}
     ],
-    # 4. AMAZONAS (AM) - Vencem em 2026: Eduardo Braga (MDB) e Plínio Valério (PSDB)
+    # 4. AMAZONAS (AM)
     "AM": [
-        {"nome": "Wilson Lima", "partido": "UNIÃO", "numero": "444", "pct": 0.3520},
-        {"nome": "Eduardo Braga", "partido": "MDB", "numero": "151", "pct": 0.3180},
-        {"nome": "Plínio Valério", "partido": "PSDB", "numero": "455", "pct": 0.1750},
-        {"nome": "Capitão Alberto Neto", "partido": "PL", "numero": "222", "pct": 0.1120},
-        {"nome": "Marcelo Ramos", "partido": "PT", "numero": "133", "pct": 0.0430}
+        {"nome": "Eduardo Braga", "partido": "MDB", "numero": "151", "pct": 0.3450},
+        {"nome": "Plínio Valério", "partido": "PSDB", "numero": "455", "pct": 0.2850},
+        {"nome": "Wilson Lima", "partido": "UNIÃO", "numero": "444", "pct": 0.2250},
+        {"nome": "Capitão Alberto Neto", "partido": "PL", "numero": "222", "pct": 0.1050},
+        {"nome": "Marcelo Ramos", "partido": "PT", "numero": "133", "pct": 0.0400}
     ],
-    # 5. BAHIA (BA) - Vencem em 2026: Jaques Wagner (PT) e Angelo Coronel (PSD)
+    # 5. BAHIA (BA)
     "BA": [
-        {"nome": "Jaques Wagner", "partido": "PT", "numero": "133", "pct": 0.3750},
-        {"nome": "Angelo Coronel", "partido": "PSD", "numero": "555", "pct": 0.2720},
-        {"nome": "ACM Neto", "partido": "UNIÃO", "numero": "444", "pct": 0.2450},
-        {"nome": "João Roma", "partido": "PL", "numero": "222", "pct": 0.0780},
-        {"nome": "Félix Mendonça Jr.", "partido": "PDT", "numero": "123", "pct": 0.0300}
+        {"nome": "Rui Costa", "partido": "PT", "numero": "133", "pct": 0.3650},
+        {"nome": "Jaques Wagner", "partido": "PT", "numero": "130", "pct": 0.3120},
+        {"nome": "ACM Neto", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
+        {"nome": "Angelo Coronel", "partido": "PSD", "numero": "555", "pct": 0.0750},
+        {"nome": "João Roma", "partido": "PL", "numero": "222", "pct": 0.0330}
     ],
-    # 6. CEARÁ (CE) - Vencem em 2026: Cid Gomes (PSB) e Eduardo Girão (NOVO)
+    # 6. CEARÁ (CE)
     "CE": [
-        {"nome": "Cid Gomes", "partido": "PSB", "numero": "400", "pct": 0.3620},
-        {"nome": "Capitão Wagner", "partido": "UNIÃO", "numero": "444", "pct": 0.2750},
-        {"nome": "Eduardo Girão", "partido": "NOVO", "numero": "300", "pct": 0.1850},
-        {"nome": "José Guimarães", "partido": "PT", "numero": "133", "pct": 0.1380},
+        {"nome": "Cid Gomes", "partido": "PSB", "numero": "400", "pct": 0.3650},
+        {"nome": "Luizianne Lins", "partido": "REDE", "numero": "188", "pct": 0.2780},
+        {"nome": "Capitão Wagner", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
+        {"nome": "Eduardo Girão", "partido": "NOVO", "numero": "300", "pct": 0.1020},
         {"nome": "André Fernandes", "partido": "PL", "numero": "222", "pct": 0.0400}
     ],
-    # 7. DISTRITO FEDERAL (DF) - Vencem em 2026: Leila do Vôlei (PDT) e Izalci Lucas (PL)
+    # 7. DISTRITO FEDERAL (DF)
     "DF": [
         {"nome": "Michelle Bolsonaro", "partido": "PL", "numero": "222", "pct": 0.3850},
-        {"nome": "Ibaneis Rocha", "partido": "MDB", "numero": "151", "pct": 0.2880},
-        {"nome": "Leila do Vôlei", "partido": "PDT", "numero": "123", "pct": 0.1650},
-        {"nome": "Izalci Lucas", "partido": "PL", "numero": "220", "pct": 0.1120},
-        {"nome": "Leandro Grass", "partido": "PV", "numero": "433", "pct": 0.0500}
+        {"nome": "Bia Kicis", "partido": "PL", "numero": "220", "pct": 0.2920},
+        {"nome": "Ibaneis Rocha", "partido": "MDB", "numero": "151", "pct": 0.1850},
+        {"nome": "Leila do Vôlei", "partido": "PDT", "numero": "123", "pct": 0.0980},
+        {"nome": "Leandro Grass", "partido": "PV", "numero": "433", "pct": 0.0400}
     ],
-    # 8. ESPÍRITO SANTO (ES) - Vencem em 2026: Fabiano Contarato (PT) e Marcos do Val (PODEMOS)
+    # 8. ESPÍRITO SANTO (ES)
     "ES": [
-        {"nome": "Renato Casagrande", "partido": "PSB", "numero": "400", "pct": 0.3920},
-        {"nome": "Fabiano Contarato", "partido": "PT", "numero": "133", "pct": 0.2810},
-        {"nome": "Evair de Melo", "partido": "PP", "numero": "111", "pct": 0.1750},
-        {"nome": "Marcos do Val", "partido": "PODEMOS", "numero": "200", "pct": 0.1020},
-        {"nome": "Erick Musso", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.0500}
+        {"nome": "Renato Casagrande", "partido": "PSB", "numero": "400", "pct": 0.3820},
+        {"nome": "Evair de Melo", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.2850},
+        {"nome": "Fabiano Contarato", "partido": "PT", "numero": "133", "pct": 0.2150},
+        {"nome": "Marcos do Val", "partido": "PODEMOS", "numero": "200", "pct": 0.0820},
+        {"nome": "Erick Musso", "partido": "REPUBLICANOS", "numero": "101", "pct": 0.0360}
     ],
-    # 9. GOIÁS (GO) - Vencem em 2026: Jorge Kajuru (PSB) e Vanderlan Cardoso (PSD)
+    # 9. GOIÁS (GO)
     "GO": [
-        {"nome": "Gracinha Caiado", "partido": "UNIÃO", "numero": "444", "pct": 0.3520},
-        {"nome": "Gustavo Gayer", "partido": "PL", "numero": "222", "pct": 0.2780},
+        {"nome": "Gustavo Gayer", "partido": "PL", "numero": "222", "pct": 0.3550},
+        {"nome": "Gracinha Caiado", "partido": "UNIÃO", "numero": "444", "pct": 0.3120},
         {"nome": "Jorge Kajuru", "partido": "PSB", "numero": "400", "pct": 0.1850},
-        {"nome": "Vanderlan Cardoso", "partido": "PSD", "numero": "555", "pct": 0.1350},
-        {"nome": "Marconi Perillo", "partido": "PSDB", "numero": "455", "pct": 0.0500}
+        {"nome": "Vanderlan Cardoso", "partido": "PSD", "numero": "555", "pct": 0.1080},
+        {"nome": "Marconi Perillo", "partido": "PSDB", "numero": "455", "pct": 0.0400}
     ],
-    # 10. MARANHÃO (MA) - Vencem em 2026: Weverton Rocha (PDT) e Eliziane Gama (PSD)
+    # 10. MARANHÃO (MA)
     "MA": [
-        {"nome": "Carlos Brandão", "partido": "PSB", "numero": "400", "pct": 0.3650},
-        {"nome": "Weverton Rocha", "partido": "PDT", "numero": "123", "pct": 0.2810},
-        {"nome": "Eliziane Gama", "partido": "PSD", "numero": "555", "pct": 0.1950},
-        {"nome": "Roberto Rocha", "partido": "PL", "numero": "222", "pct": 0.1150},
-        {"nome": "Othelino Neto", "partido": "SOLIDARIEDADE", "numero": "777", "pct": 0.0440}
+        {"nome": "André Fufuca", "partido": "PP", "numero": "111", "pct": 0.3580},
+        {"nome": "Lahesio Bonfim", "partido": "NOVO", "numero": "300", "pct": 0.2920},
+        {"nome": "Carlos Brandão", "partido": "PSB", "numero": "400", "pct": 0.2050},
+        {"nome": "Weverton Rocha", "partido": "PDT", "numero": "123", "pct": 0.1050},
+        {"nome": "Eliziane Gama", "partido": "PSD", "numero": "555", "pct": 0.0400}
     ],
-    # 11. MATO GROSSO (MT) - Vencem em 2026: Jayme Campos (UNIÃO) e Carlos Fávaro (PSD)
+    # 11. MATO GROSSO (MT)
     "MT": [
-        {"nome": "Mauro Mendes", "partido": "UNIÃO", "numero": "444", "pct": 0.4250},
-        {"nome": "Jayme Campos", "partido": "UNIÃO", "numero": "440", "pct": 0.2480},
-        {"nome": "Carlos Fávaro", "partido": "PSD", "numero": "555", "pct": 0.1720},
-        {"nome": "José Medeiros", "partido": "PL", "numero": "222", "pct": 0.1150},
-        {"nome": "Rosa Neide", "partido": "PT", "numero": "133", "pct": 0.0400}
+        {"nome": "Mauro Mendes", "partido": "UNIÃO", "numero": "444", "pct": 0.4150},
+        {"nome": "Zé Medeiros", "partido": "PL", "numero": "222", "pct": 0.2950},
+        {"nome": "Jayme Campos", "partido": "UNIÃO", "numero": "440", "pct": 0.1650},
+        {"nome": "Carlos Fávaro", "partido": "PSD", "numero": "555", "pct": 0.0950},
+        {"nome": "Rosa Neide", "partido": "PT", "numero": "133", "pct": 0.0300}
     ],
-    # 12. MATO GROSSO DO SUL (MS) - Vencem em 2026: Nelsinho Trad (PSD) e Soraya Thronicke (PODEMOS)
+    # 12. MATO GROSSO DO SUL (MS)
     "MS": [
-        {"nome": "Reinaldo Azambuja", "partido": "PSDB", "numero": "455", "pct": 0.3850},
-        {"nome": "Nelsinho Trad", "partido": "PSD", "numero": "555", "pct": 0.2620},
-        {"nome": "Marcos Pollon", "partido": "PL", "numero": "222", "pct": 0.1880},
-        {"nome": "Soraya Thronicke", "partido": "PODEMOS", "numero": "200", "pct": 0.1150},
-        {"nome": "Zeca do PT", "partido": "PT", "numero": "133", "pct": 0.0500}
+        {"nome": "Reinaldo Azambuja", "partido": "PL", "numero": "222", "pct": 0.3850},
+        {"nome": "Capitão Contar", "partido": "PL", "numero": "220", "pct": 0.2920},
+        {"nome": "Nelsinho Trad", "partido": "PSD", "numero": "555", "pct": 0.1850},
+        {"nome": "Soraya Thronicke", "partido": "PODEMOS", "numero": "200", "pct": 0.0980},
+        {"nome": "Zeca do PT", "partido": "PT", "numero": "133", "pct": 0.0400}
     ],
-    # 13. MINAS GERAIS (MG) - Vencem em 2026: Rodrigo Pacheco (PSD) e Carlos Viana (PODEMOS)
+    # 13. MINAS GERAIS (MG)
     "MG": [
-        {"nome": "Rodrigo Pacheco", "partido": "PSD", "numero": "555", "pct": 0.3420},
-        {"nome": "Alexandre Silveira", "partido": "PSD", "numero": "550", "pct": 0.2650},
-        {"nome": "Carlos Viana", "partido": "PODEMOS", "numero": "200", "pct": 0.1820},
-        {"nome": "Marcelo Álvaro Antônio", "partido": "PL", "numero": "222", "pct": 0.1510},
-        {"nome": "Reginaldo Lopes", "partido": "PT", "numero": "133", "pct": 0.0600}
+        {"nome": "Domingos Sávio", "partido": "PL", "numero": "222", "pct": 0.3250},
+        {"nome": "Marília Campos", "partido": "PT", "numero": "133", "pct": 0.2850},
+        {"nome": "Rodrigo Pacheco", "partido": "PSD", "numero": "555", "pct": 0.2150},
+        {"nome": "Alexandre Silveira", "partido": "PSD", "numero": "550", "pct": 0.1150},
+        {"nome": "Carlos Viana", "partido": "PODEMOS", "numero": "200", "pct": 0.0600}
     ],
-    # 14. PARÁ (PA) - Vencem em 2026: Jader Barbalho (MDB) e Zequinha Marinho (PODEMOS)
+    # 14. PARÁ (PA)
     "PA": [
-        {"nome": "Helder Barbalho", "partido": "MDB", "numero": "151", "pct": 0.4850},
-        {"nome": "Jader Barbalho", "partido": "MDB", "numero": "150", "pct": 0.2250},
-        {"nome": "Zequinha Marinho", "partido": "PODEMOS", "numero": "200", "pct": 0.1580},
-        {"nome": "Éder Mauro", "partido": "PL", "numero": "222", "pct": 0.0920},
-        {"nome": "Marinor Brito", "partido": "PSOL", "numero": "500", "pct": 0.0400}
+        {"nome": "Helder Barbalho", "partido": "MDB", "numero": "151", "pct": 0.4650},
+        {"nome": "Chicão", "partido": "UNIÃO", "numero": "444", "pct": 0.2550},
+        {"nome": "Jader Barbalho", "partido": "MDB", "numero": "150", "pct": 0.1550},
+        {"nome": "Zequinha Marinho", "partido": "PODEMOS", "numero": "200", "pct": 0.0850},
+        {"nome": "Éder Mauro", "partido": "PL", "numero": "222", "pct": 0.0400}
     ],
-    # 15. PARAÍBA (PB) - Vencem em 2026: Veneziano Vital do Rêgo (MDB) e Daniella Ribeiro (PSD)
+    # 15. PARAÍBA (PB)
     "PB": [
-        {"nome": "João Azevêdo", "partido": "PSB", "numero": "400", "pct": 0.3780},
-        {"nome": "Veneziano Vital do Rêgo", "partido": "MDB", "numero": "151", "pct": 0.2750},
-        {"nome": "Daniella Ribeiro", "partido": "PSD", "numero": "555", "pct": 0.1820},
-        {"nome": "Romero Rodrigues", "partido": "PODEMOS", "numero": "200", "pct": 0.1150},
-        {"nome": "Cabo Gilberto Silva", "partido": "PL", "numero": "222", "pct": 0.0500}
+        {"nome": "João Azevêdo", "partido": "PSB", "numero": "400", "pct": 0.3750},
+        {"nome": "Veneziano Vital do Rêgo", "partido": "MDB", "numero": "151", "pct": 0.2920},
+        {"nome": "Daniella Ribeiro", "partido": "PSD", "numero": "555", "pct": 0.1850},
+        {"nome": "Romero Rodrigues", "partido": "PODEMOS", "numero": "200", "pct": 0.1050},
+        {"nome": "Cabo Gilberto Silva", "partido": "PL", "numero": "222", "pct": 0.0430}
     ],
-    # 16. PARANÁ (PR) - Vencem em 2026: Oriovisto Guimarães (PODEMOS) e Flávio Arns (PSB)
+    # 16. PARANÁ (PR)
     "PR": [
-        {"nome": "Ratinho Júnior", "partido": "PSD", "numero": "555", "pct": 0.4150},
-        {"nome": "Paulo Martins", "partido": "PL", "numero": "222", "pct": 0.2280},
-        {"nome": "Oriovisto Guimarães", "partido": "PODEMOS", "numero": "200", "pct": 0.1480},
-        {"nome": "Flávio Arns", "partido": "PSB", "numero": "400", "pct": 0.1050},
-        {"nome": "Gleisi Hoffmann", "partido": "PT", "numero": "133", "pct": 0.1040}
+        {"nome": "Filipe Barros", "partido": "PL", "numero": "222", "pct": 0.3420},
+        {"nome": "Deltan Dallagnol", "partido": "NOVO", "numero": "300", "pct": 0.2850},
+        {"nome": "Ratinho Júnior", "partido": "PSD", "numero": "555", "pct": 0.2150},
+        {"nome": "Gleisi Hoffmann", "partido": "PT", "numero": "133", "pct": 0.1080},
+        {"nome": "Oriovisto Guimarães", "partido": "PODEMOS", "numero": "200", "pct": 0.0500}
     ],
-    # 17. PERNAMBUCO (PE) - Vencem em 2026: Humberto Costa (PT) e Fernando Dueire (MDB)
+    # 17. PERNAMBUCO (PE)
     "PE": [
-        {"nome": "Humberto Costa", "partido": "PT", "numero": "133", "pct": 0.3420},
-        {"nome": "Silvio Costa Filho", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.2680},
-        {"nome": "Gilson Machado", "partido": "PL", "numero": "222", "pct": 0.1850},
-        {"nome": "Fernando Dueire", "partido": "MDB", "numero": "151", "pct": 0.1150},
-        {"nome": "Miguel Coelho", "partido": "UNIÃO", "numero": "444", "pct": 0.0900}
+        {"nome": "Humberto Costa", "partido": "PT", "numero": "133", "pct": 0.3550},
+        {"nome": "Marília Arraes", "partido": "PDT", "numero": "123", "pct": 0.2820},
+        {"nome": "Silvio Costa Filho", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.2050},
+        {"nome": "Gilson Machado", "partido": "PL", "numero": "222", "pct": 0.1080},
+        {"nome": "Fernando Dueire", "partido": "MDB", "numero": "151", "pct": 0.0500}
     ],
-    # 18. PIAUÍ (PI) - Vencem em 2026: Ciro Nogueira (PP) e Marcelo Castro (MDB)
+    # 18. PIAUÍ (PI)
     "PI": [
-        {"nome": "Ciro Nogueira", "partido": "PP", "numero": "111", "pct": 0.3650},
-        {"nome": "Marcelo Castro", "partido": "MDB", "numero": "151", "pct": 0.3180},
-        {"nome": "Júlio César", "partido": "PSD", "numero": "555", "pct": 0.1850},
-        {"nome": "Joel Rodrigues", "partido": "PP", "numero": "112", "pct": 0.0920},
-        {"nome": "Fábio Novo", "partido": "PT", "numero": "133", "pct": 0.0400}
+        {"nome": "Marcelo Castro", "partido": "MDB", "numero": "151", "pct": 0.3650},
+        {"nome": "Júlio César", "partido": "PSD", "numero": "555", "pct": 0.3050},
+        {"nome": "Ciro Nogueira", "partido": "PP", "numero": "111", "pct": 0.2150},
+        {"nome": "Joel Rodrigues", "partido": "PP", "numero": "112", "pct": 0.0850},
+        {"nome": "Fábio Novo", "partido": "PT", "numero": "133", "pct": 0.0300}
     ],
-    # 19. RIO DE JANEIRO (RJ) - Vencem em 2026: Carlos Portinho (PL) e 2ª vaga de 2018
+    # 19. RIO DE JANEIRO (RJ)
     "RJ": [
-        {"nome": "Eduardo Paes", "partido": "PSD", "numero": "555", "pct": 0.3380},
-        {"nome": "Carlos Portinho", "partido": "PL", "numero": "222", "pct": 0.2850},
-        {"nome": "Alessandro Molon", "partido": "PSB", "numero": "400", "pct": 0.1980},
-        {"nome": "Clarissa Garotinho", "partido": "UNIÃO", "numero": "444", "pct": 0.1080},
-        {"nome": "Washington Reis", "partido": "MDB", "numero": "151", "pct": 0.0710}
+        {"nome": "Carlos Portinho", "partido": "PL", "numero": "222", "pct": 0.3450},
+        {"nome": "Carlos Jordy", "partido": "PL", "numero": "220", "pct": 0.2880},
+        {"nome": "Eduardo Paes", "partido": "PSD", "numero": "555", "pct": 0.2050},
+        {"nome": "Alessandro Molon", "partido": "PSB", "numero": "400", "pct": 0.1150},
+        {"nome": "Clarissa Garotinho", "partido": "UNIÃO", "numero": "444", "pct": 0.0470}
     ],
-    # 20. RIO GRANDE DO NORTE (RN) - Vencem em 2026: Zenaide Maia (PSD) e Styvenson Valentim (PODEMOS)
+    # 20. RIO GRANDE DO NORTE (RN)
     "RN": [
-        {"nome": "Fátima Bezerra", "partido": "PT", "numero": "133", "pct": 0.3480},
-        {"nome": "Styvenson Valentim", "partido": "PODEMOS", "numero": "200", "pct": 0.3020},
-        {"nome": "Zenaide Maia", "partido": "PSD", "numero": "555", "pct": 0.2150},
-        {"nome": "Álvaro Dias", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.0950},
-        {"nome": "General Girão", "partido": "PL", "numero": "222", "pct": 0.0400}
+        {"nome": "Styvenson Valentim", "partido": "PODEMOS", "numero": "200", "pct": 0.3480},
+        {"nome": "Samanda de Lula", "partido": "PT", "numero": "133", "pct": 0.2920},
+        {"nome": "Fátima Bezerra", "partido": "PT", "numero": "130", "pct": 0.2150},
+        {"nome": "Zenaide Maia", "partido": "PSD", "numero": "555", "pct": 0.1050},
+        {"nome": "Álvaro Dias", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.0400}
     ],
-    # 21. RIO GRANDE DO SUL (RS) - Vencem em 2026: Luis Carlos Heinze (PP) e Paulo Paim (PT)
+    # 21. RIO GRANDE DO SUL (RS)
     "RS": [
-        {"nome": "Eduardo Leite", "partido": "PSDB", "numero": "455", "pct": 0.3580},
-        {"nome": "Paulo Paim", "partido": "PT", "numero": "133", "pct": 0.2680},
-        {"nome": "Luis Carlos Heinze", "partido": "PP", "numero": "111", "pct": 0.2010},
-        {"nome": "Luciano Zucco", "partido": "PL", "numero": "222", "pct": 0.1250},
-        {"nome": "Juliana Brizola", "partido": "PDT", "numero": "123", "pct": 0.0480}
+        {"nome": "Ubiratan Sanderson", "partido": "PL", "numero": "222", "pct": 0.3350},
+        {"nome": "Marcel Van Hattem", "partido": "NOVO", "numero": "300", "pct": 0.2920},
+        {"nome": "Paulo Paim", "partido": "PT", "numero": "133", "pct": 0.2150},
+        {"nome": "Eduardo Leite", "partido": "PSDB", "numero": "455", "pct": 0.1180},
+        {"nome": "Luis Carlos Heinze", "partido": "PP", "numero": "111", "pct": 0.0400}
     ],
-    # 22. RONDÔNIA (RO) - Vencem em 2026: Confúcio Moura (MDB) e Marcos Rogério (PL)
+    # 22. RONDÔNIA (RO)
     "RO": [
-        {"nome": "Marcos Rocha", "partido": "UNIÃO", "numero": "444", "pct": 0.3680},
-        {"nome": "Marcos Rogério", "partido": "PL", "numero": "222", "pct": 0.3150},
-        {"nome": "Confúcio Moura", "partido": "MDB", "numero": "151", "pct": 0.1780},
-        {"nome": "Silvia Cristina", "partido": "PP", "numero": "111", "pct": 0.0980},
-        {"nome": "Mariana Carvalho", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.0410}
+        {"nome": "Fernando Máximo", "partido": "PL", "numero": "222", "pct": 0.3550},
+        {"nome": "Bruno Scheid", "partido": "PL", "numero": "220", "pct": 0.3020},
+        {"nome": "Marcos Rocha", "partido": "UNIÃO", "numero": "444", "pct": 0.1950},
+        {"nome": "Marcos Rogério", "partido": "PL", "numero": "221", "pct": 0.1050},
+        {"nome": "Confúcio Moura", "partido": "MDB", "numero": "151", "pct": 0.0430}
     ],
-    # 23. RORAIMA (RR) - Vencem em 2026: Chico Rodrigues (PSB) e Mecias de Jesus (REPUBLICANOS)
+    # 23. RORAIMA (RR)
     "RR": [
-        {"nome": "Antonio Denarium", "partido": "PP", "numero": "111", "pct": 0.3950},
-        {"nome": "Mecias de Jesus", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.2580},
-        {"nome": "Chico Rodrigues", "partido": "PSB", "numero": "400", "pct": 0.1750},
-        {"nome": "Teresa Surita", "partido": "MDB", "numero": "151", "pct": 0.1280},
-        {"nome": "Telmário Mota", "partido": "SOLIDARIEDADE", "numero": "777", "pct": 0.0440}
+        {"nome": "Nicoletti", "partido": "PL", "numero": "222", "pct": 0.3650},
+        {"nome": "Teresa Surita", "partido": "MDB", "numero": "151", "pct": 0.3050},
+        {"nome": "Antonio Denarium", "partido": "PP", "numero": "111", "pct": 0.1850},
+        {"nome": "Mecias de Jesus", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.1050},
+        {"nome": "Chico Rodrigues", "partido": "PSB", "numero": "400", "pct": 0.0400}
     ],
-    # 24. SANTA CATARINA (SC) - Vencem em 2026: Esperidião Amin (PP) e Ivete da Silveira (MDB)
+    # 24. SANTA CATARINA (SC)
     "SC": [
-        {"nome": "Carol De Toni", "partido": "PL", "numero": "222", "pct": 0.3480},
-        {"nome": "Esperidião Amin", "partido": "PP", "numero": "111", "pct": 0.2820},
-        {"nome": "Gean Loureiro", "partido": "UNIÃO", "numero": "444", "pct": 0.1650},
-        {"nome": "Raimundo Colombo", "partido": "PSD", "numero": "555", "pct": 0.1280},
-        {"nome": "Décio Lima", "partido": "PT", "numero": "133", "pct": 0.0770}
+        {"nome": "Carol de Toni", "partido": "PL", "numero": "222", "pct": 0.3750},
+        {"nome": "Carlos Bolsonaro", "partido": "PL", "numero": "220", "pct": 0.3050},
+        {"nome": "Esperidião Amin", "partido": "PP", "numero": "111", "pct": 0.1750},
+        {"nome": "Gean Loureiro", "partido": "UNIÃO", "numero": "444", "pct": 0.1050},
+        {"nome": "Décio Lima", "partido": "PT", "numero": "133", "pct": 0.0400}
     ],
-    # 25. SÃO PAULO (SP) - Vencem em 2026: Mara Gabrilli (PSD) e Alexandre Giordano (MDB)
+    # 25. SÃO PAULO (SP)
     "SP": [
-        {"nome": "Eduardo Bolsonaro", "partido": "PL", "numero": "222", "pct": 0.3450},
-        {"nome": "Geraldo Alckmin", "partido": "PSB", "numero": "400", "pct": 0.2920},
-        {"nome": "Mara Gabrilli", "partido": "PSD", "numero": "555", "pct": 0.1680},
-        {"nome": "Alexandre Giordano", "partido": "MDB", "numero": "151", "pct": 0.0980},
-        {"nome": "Tabata Amaral", "partido": "PSB", "numero": "404", "pct": 0.0580},
-        {"nome": "Janaína Paschoal", "partido": "PP", "numero": "111", "pct": 0.0390}
+        {"nome": "Guilherme Derrite", "partido": "PP", "numero": "111", "pct": 0.3059},
+        {"nome": "André do Prado", "partido": "PL", "numero": "222", "pct": 0.2928},
+        {"nome": "Simone Tebet", "partido": "PSB", "numero": "400", "pct": 0.1850},
+        {"nome": "Marina Silva", "partido": "REDE", "numero": "188", "pct": 0.1120},
+        {"nome": "Geraldo Rufino", "partido": "PODEMOS", "numero": "200", "pct": 0.0520},
+        {"nome": "Guto Schiavetto", "partido": "MISSÃO", "numero": "888", "pct": 0.0320},
+        {"nome": "Soninha Francine", "partido": "CIDADANIA", "numero": "233", "pct": 0.0203}
     ],
-    # 26. SERGIPE (SE) - Vencem em 2026: Alessandro Vieira (MDB) e Rogério Carvalho (PT)
+    # 26. SERGIPE (SE)
     "SE": [
-        {"nome": "Rogério Carvalho", "partido": "PT", "numero": "133", "pct": 0.3450},
-        {"nome": "Alessandro Vieira", "partido": "MDB", "numero": "151", "pct": 0.2820},
+        {"nome": "Rogério Carvalho", "partido": "PT", "numero": "133", "pct": 0.3550},
+        {"nome": "Alessandro Vieira", "partido": "MDB", "numero": "151", "pct": 0.2950},
         {"nome": "André Moura", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
-        {"nome": "Belivaldo Chagas", "partido": "PODEMOS", "numero": "200", "pct": 0.1150},
-        {"nome": "Delegada Danielle Garcia", "partido": "MDB", "numero": "150", "pct": 0.0430}
+        {"nome": "Belivaldo Chagas", "partido": "PODEMOS", "numero": "200", "pct": 0.0950},
+        {"nome": "Delegada Danielle Garcia", "partido": "MDB", "numero": "150", "pct": 0.0400}
     ],
-    # 27. TOCANTINS (TO) - Vencem em 2026: Eduardo Gomes (PL) e Irajá Abreu (PSD)
+    # 27. TOCANTINS (TO)
     "TO": [
-        {"nome": "Wanderlei Barbosa", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.3850},
-        {"nome": "Eduardo Gomes", "partido": "PL", "numero": "222", "pct": 0.3020},
-        {"nome": "Kátia Abreu", "partido": "PP", "numero": "111", "pct": 0.1680},
-        {"nome": "Irajá Abreu", "partido": "PSD", "numero": "555", "pct": 0.1080},
-        {"nome": "Ronaldo Dimas", "partido": "PL", "numero": "220", "pct": 0.0370}
+        {"nome": "Eduardo Gomes", "partido": "PL", "numero": "222", "pct": 0.3650},
+        {"nome": "Alexandre Guimarães", "partido": "MDB", "numero": "151", "pct": 0.2980},
+        {"nome": "Wanderlei Barbosa", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.1950},
+        {"nome": "Kátia Abreu", "partido": "PP", "numero": "111", "pct": 0.1020},
+        {"nome": "Irajá Abreu", "partido": "PSD", "numero": "555", "pct": 0.0400}
     ]
 }
 
@@ -1160,14 +1161,14 @@ def generate_all_datasets(output_dir="data"):
 
     # Ranking Nacional Senado (Bancadas partidárias e 54 vagas renovadas em 2026)
     cands_br_sen = [
-        {"nome": "Bancada do PL (14 Senadores)", "partido": "PL", "numero": "22", "votos": 25412300},
-        {"nome": "Bancada do PT / Federação (8 Senadores)", "partido": "PT", "numero": "13", "votos": 22615400},
-        {"nome": "Bancada do UNIÃO BRASIL (5 Senadores)", "partido": "UNIÃO", "numero": "44", "votos": 14230100},
-        {"nome": "Bancada do PSD (4 Senadores)", "partido": "PSD", "numero": "55", "votos": 13510800},
-        {"nome": "Bancada do MDB (3 Senadores)", "partido": "MDB", "numero": "15", "votos": 11120400},
-        {"nome": "Bancada do PP (2 Senadores)", "partido": "PP", "numero": "11", "votos": 9340500},
-        {"nome": "Bancada do PODEMOS (1 Senador)", "partido": "PODEMOS", "numero": "20", "votos": 5012300},
-        {"nome": "Demais Partidos", "partido": "DIVERSOS", "numero": "--", "votos": 6210000}
+        {"nome": "Bancada do PL (19 Senadores)", "partido": "PL", "numero": "22", "votos": 28450000},
+        {"nome": "Bancada do MDB (7 Senadores)", "partido": "MDB", "numero": "15", "votos": 19280000},
+        {"nome": "Bancada do PT (6 Senadores)", "partido": "PT", "numero": "13", "votos": 18120000},
+        {"nome": "Bancada do PP (4 Senadores)", "partido": "PP", "numero": "11", "votos": 14650000},
+        {"nome": "Bancada do PSB (3 Senadores)", "partido": "PSB", "numero": "40", "votos": 11340000},
+        {"nome": "Bancada do UNIÃO (3 Senadores)", "partido": "UNIÃO", "numero": "44", "votos": 10920000},
+        {"nome": "Bancada do NOVO (3 Senadores)", "partido": "NOVO", "numero": "30", "votos": 8940000},
+        {"nome": "Demais Bancadas (PSD, Rep., PSDB)", "partido": "DIVERSOS", "numero": "--", "votos": 9250000}
     ]
     ranking_br_sen = calculate_ranking(
         total_abstencao_br,
