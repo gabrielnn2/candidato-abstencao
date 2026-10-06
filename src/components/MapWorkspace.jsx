@@ -7,7 +7,9 @@ import {
   REGION_STATES,
   formatNumber,
   formatPercent,
-  getFillColorExpression
+  getFillColorExpression,
+  getGovStatus,
+  getGovStatusLabel
 } from '../utils/electoralMath';
 
 export default function MapWorkspace({
@@ -132,17 +134,7 @@ export default function MapWorkspace({
                   feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
                   feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
                 }
-                if (!feat.properties.status_gov) {
-                  const pos = u.cargos?.Governador?.posicao || 3;
-                  const d1t = u.dados_1t_governador;
-                  if (pos <= 2) {
-                    feat.properties.status_gov = 'foi_2t';
-                  } else if (d1t && !d1t.sobrevive_1t) {
-                    feat.properties.status_gov = 'forcou_2t';
-                  } else {
-                    feat.properties.status_gov = 'nao_alterou';
-                  }
-                }
+                feat.properties.status_gov = getGovStatus(u);
               }
             });
           }
@@ -236,6 +228,18 @@ export default function MapWorkspace({
 
         // 2. Source: Municípios
         if (window.MUNICIPIOS_GEO) {
+          if (estadosData && estadosData.length > 0) {
+            const ufMap = new Map(estadosData.map(u => [u.uf, u]));
+            window.MUNICIPIOS_GEO.features?.forEach(feat => {
+              if (!feat.properties.status_gov) {
+                const u = ufMap.get(feat.properties?.uf);
+                if (u) {
+                  feat.properties.status_gov = getGovStatus(u);
+                }
+              }
+            });
+          }
+
           map.addSource('municipios', {
             type: 'geojson',
             data: window.MUNICIPIOS_GEO
@@ -356,12 +360,14 @@ export default function MapWorkspace({
           let posDesc = '';
           if (cargo === 'Governador') {
             const status = p.status_gov || 'nao_alterou';
-            if (status === 'foi_2t') {
-              posDesc = '🟢 Foi para o 2º Turno (Abstenção em 1º ou 2º)';
-            } else if (status === 'forcou_2t') {
-              posDesc = '⚡ Forçou o 2º Turno (Derrubou vitória em 1º T)';
+            if (status === 'forcou_e_iria_2t') {
+              posDesc = '🟢 Forçaria e iria para o segundo turno';
+            } else if (status === 'forcou_2t_entre_dois') {
+              posDesc = '🟠 Forçaria um segundo turno entre os dois primeiros colocados';
+            } else if (status === 'iria_2t_no_lugar') {
+              posDesc = '🔵 Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
             } else {
-              posDesc = '🛡️ Não alterou (Sem alteração no 1º turno)';
+              posDesc = '🛡️ Não alteraria';
             }
           } else {
             const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
@@ -421,12 +427,14 @@ export default function MapWorkspace({
           let posDesc = '';
           if (cargo === 'Governador') {
             const status = p.status_gov || 'nao_alterou';
-            if (status === 'foi_2t') {
-              posDesc = '🟢 Foi para o 2º Turno (Abstenção em 1º ou 2º)';
-            } else if (status === 'forcou_2t') {
-              posDesc = '⚡ Forçou o 2º Turno (Derrubou vitória em 1º T)';
+            if (status === 'forcou_e_iria_2t') {
+              posDesc = '🟢 Forçaria e iria para o segundo turno';
+            } else if (status === 'forcou_2t_entre_dois') {
+              posDesc = '🟠 Forçaria um segundo turno entre os dois primeiros colocados';
+            } else if (status === 'iria_2t_no_lugar') {
+              posDesc = '🔵 Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
             } else {
-              posDesc = '🛡️ Não alterou (Sem alteração no 1º turno)';
+              posDesc = '🛡️ Não alteraria';
             }
           } else {
             const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
@@ -906,9 +914,10 @@ export default function MapWorkspace({
         {/* Dynamic Legend based on cargo (Governador vs Presidente/Senador) */}
         {currentCargo === 'Governador' ? (
           <div className="legend-pills">
-            <span className="legend-item"><i className="legend-color green"></i> Foi para segundo turno</span>
-            <span className="legend-item"><i className="legend-color gold"></i> Forçou segundo turno</span>
-            <span className="legend-item"><i className="legend-color slate"></i> Não alterou</span>
+            <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o segundo turno</span>
+            <span className="legend-item"><i className="legend-color gold"></i> Forçaria um segundo turno entre os dois primeiros colocados</span>
+            <span className="legend-item"><i className="legend-color cyan"></i> Iria para o segundo turno no lugar de um dos dois primeiros candidatos</span>
+            <span className="legend-item"><i className="legend-color slate"></i> Não alteraria</span>
           </div>
         ) : (
           <div className="legend-pills">

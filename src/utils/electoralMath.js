@@ -66,14 +66,55 @@ export function getRankBadge(pos) {
   return `${pos}º Lugar`;
 }
 
+export function getGovStatus(item) {
+  if (!item) return 'nao_alterou';
+  const pos = item.cargos?.Governador?.posicao || item.pos_gov || item.posicao || 3;
+  const d1t = item.dados_1t_governador;
+
+  if (d1t) {
+    // Teve vitória em 1º turno na eleição oficial
+    if (!d1t.sobrevive_1t) {
+      if (pos <= 2) {
+        return 'forcou_e_iria_2t'; // Forçaria e iria para o segundo turno
+      } else {
+        return 'forcou_2t_entre_dois'; // Forçaria um segundo turno entre os dois primeiros colocados
+      }
+    } else {
+      return 'nao_alterou'; // Não alteraria (governador resistiu com > 50%)
+    }
+  } else {
+    // Disputa já iria para o 2º turno originalmente
+    if (pos <= 2) {
+      return 'iria_2t_no_lugar'; // Iria para o segundo turno no lugar de um dos dois primeiros candidatos
+    } else {
+      return 'nao_alterou'; // Não alteraria
+    }
+  }
+}
+
+export function getGovStatusLabel(status) {
+  switch (status) {
+    case 'forcou_e_iria_2t':
+      return 'Forçaria e iria para o segundo turno';
+    case 'forcou_2t_entre_dois':
+      return 'Forçaria um segundo turno entre os dois primeiros colocados';
+    case 'iria_2t_no_lugar':
+      return 'Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
+    case 'nao_alterou':
+    default:
+      return 'Não alteraria';
+  }
+}
+
 export function getFillColorExpression(cargo) {
   if (cargo === 'Governador') {
     return [
       'match',
       ['get', 'status_gov'],
-      'foi_2t', '#10b981',      // Verde Esmeralda (Foi para segundo turno)
-      'forcou_2t', '#f59e0b',   // Âmbar / Laranja (Forçou segundo turno)
-      /* default */ '#262d3d'   // Dark Slate (Não alterou)
+      'forcou_e_iria_2t', '#10b981',       // Verde Esmeralda (Forçaria e iria para o segundo turno)
+      'forcou_2t_entre_dois', '#f59e0b',    // Âmbar / Ouro (Forçaria um segundo turno entre os dois primeiros colocados)
+      'iria_2t_no_lugar', '#38bdf8',        // Ciano / Azul (Iria para o segundo turno no lugar de um dos dois primeiros candidatos)
+      /* default nao_alterou */ '#262d3d'  // Dark Slate (Não alteraria)
     ];
   }
   const prop = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';

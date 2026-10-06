@@ -1188,6 +1188,7 @@ a {
 
 .legend-color.green { background: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.4); }
 .legend-color.gold { background: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); }
+.legend-color.cyan { background: #38bdf8; box-shadow: 0 0 6px rgba(56, 189, 248, 0.4); }
 .legend-color.silver { background: #38bdf8; box-shadow: 0 0 6px rgba(56, 189, 248, 0.4); }
 .legend-color.bronze { background: #334155; }
 .legend-color.slate { background: #262d3d; border: 1px solid #475569; }
@@ -1515,6 +1516,24 @@ a {
   font-weight: 600;
   color: var(--fg-4);
 }
+
+.uf-sigla {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.uf-sub {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--fg-4);
+}
+
+.uf-sub.gold { color: #f59e0b; }
+.uf-sub.green { color: #10b981; font-weight: 700; }
+.uf-sub.cyan { color: #38bdf8; font-weight: 700; }
+.uf-sub.slate { color: #64748b; }
 
 .uf-tile.rank-1 .uf-tile-rank { color: var(--gold); }
 .uf-tile.rank-2 .uf-tile-rank { color: #38bdf8; }
@@ -3013,6 +3032,16 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.finding-stats-row.four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .finding-stats-row.four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .finding-stat-item {
   display: flex;
   flex-direction: column;
@@ -3037,6 +3066,10 @@ a {
 
 .finding-stat-item.highlight-green .finding-stat-val {
   color: #34d399;
+}
+
+.finding-stat-item.highlight-cyan .finding-stat-val {
+  color: #38bdf8;
 }
 
 .finding-stat-label {

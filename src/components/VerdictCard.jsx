@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatNumber, formatPercent, getRankBadge } from '../utils/electoralMath';
+import { formatNumber, formatPercent, getRankBadge, getGovStatus, getGovStatusLabel } from '../utils/electoralMath';
 
 export default function VerdictCard({
   currentCargo,
@@ -75,23 +75,17 @@ export default function VerdictCard({
     badge2 = { icon: '📉', text: <>Posição Nacional: <strong>2ª Maior Bancada Eleita</strong></> };
     badge3 = { icon: '📊', text: <>Desempenho: <strong>2 UFs em 1º · 8 UFs em 2º</strong></> };
   } else if (isBrasil && currentCargo === 'Governador') {
-    const g1t = brasilData?.analise_governadores_1t;
-    const total1T = g1t?.total_analisados || 16;
-    const derrubados1T = g1t?.total_derrubados || 12;
-    const pctDerrubados = g1t?.pct_derrubados || 75;
-    const abst2T = g1t?.total_estados_com_abstencao_no_2t || 6;
-
     headline = (
       <>
-        Mesmo em 3º lugar, a presença da Abstenção{' '}
-        <span className="highlight-amber">TERIA FORÇADO SEGUNDO TURNO EM {pctDerrubados}% DOS ESTADOS</span>{' '}
-        onde governadores venceram no 1º turno!
+        A Abstenção{' '}
+        <span className="highlight-amber">FORÇARIA E IRIA AO 2º TURNO EM 4 ESTADOS</span>,{' '}
+        <span className="highlight-white">FORÇARIA O 2º TURNO EM OUTROS 12</span> e não alteraria em 11 estados!
       </>
     );
-    subtext = `O Grande Achado: Dos ${total1T} governadores eleitos em 1º turno no país, ${derrubados1T} perderiam a vitória imediata e teriam que disputar o 2º Turno caso os ausentes contassem como votos válidos! O volume de votos ausentes é tão massivo que impede qualquer líder de alcançar os 50% dos votos válidos em quase todo o Brasil.`;
-    badge1 = { icon: '⚡', text: <>Forçaria 2º Turno? <strong>SIM! (Derrubaria {derrubados1T} de {total1T} Gov.)</strong></>, highlight: true };
-    badge2 = { icon: '📉', text: <>Disputa Direta no 2ºT: <strong>Em {abst2T} Estados a Abstenção iria ao 2ºT</strong></> };
-    badge3 = { icon: '📊', text: <>Total de Ausentes: <strong>{formatNumber(abstencao)} ({formatPercent(taxa)})</strong></> };
+    subtext = 'Pela Constituição Federal, vencer no 1º turno exige mais de 50% dos votos. Com os votos dos ausentes, 4 estados teriam a Abstenção no 2º Turno (GO, MG, MT e RO), 12 estados teriam o 2º turno forçado entre os dois primeiros colocados, e em apenas 11 estados o andamento da eleição não seria alterado.';
+    badge1 = { icon: '🟢', text: <>Forçaria e iria ao 2ºT: <strong>4 Estados (GO, MG, MT, RO)</strong></>, highlight: true };
+    badge2 = { icon: '🟠', text: <>Forçaria 2ºT entre os 2 primeiros: <strong>12 Estados</strong></> };
+    badge3 = { icon: '🛡️', text: <>Não alteraria: <strong>11 Estados</strong></> };
   } else if (isBrasil && currentCargo === 'Presidente') {
     headline = (
       <>
@@ -143,65 +137,78 @@ export default function VerdictCard({
       badge2 = { icon: '📉', text: <>Ausentes: <strong>{formatNumber(votosAbst)} ({formatPercent(taxa)})</strong></> };
       badge3 = { icon: '📊', text: <>Eleitorado Apto: <strong>{formatNumber(aptos)}</strong></> };
     } else {
-      // Presidente ou Governador
+    } else if (currentCargo === 'Governador') {
+      const govStatus = getGovStatus(currentScope.item);
+      if (govStatus === 'forcou_e_iria_2t') {
+        headline = (
+          <>
+            Em <em>{locationTitle}</em>, a Abstenção{' '}
+            <span className="highlight-amber">FORÇARIA E IRIA PARA O SEGUNDO TURNO</span> contra o líder!
+          </>
+        );
+        subtext = `O governador oficial venceu no 1º turno, mas a presença de ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)}) dilui os votos do líder para menos de 50% e supera o 2º colocado real, levando a Abstenção diretamente para o 2º Turno!`;
+        badge1 = { icon: '🟢', text: <>Indicador: <strong>Forçaria e iria para o segundo turno</strong></>, highlight: true };
+      } else if (govStatus === 'forcou_2t_entre_dois') {
+        headline = (
+          <>
+            Em <em>{locationTitle}</em>, a presença da Abstenção{' '}
+            <span className="highlight-amber">FORÇARIA UM SEGUNDO TURNO ENTRE OS DOIS PRIMEIROS COLOCADOS!</span>
+          </>
+        );
+        subtext = `Oficialmente a disputa encerrou no 1º turno. Porém, a presença massiva de ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)}) dilui os votos do líder para menos de 50%, forçando um 2º Turno entre os dois primeiros candidatos reais.`;
+        badge1 = { icon: '🟠', text: <>Indicador: <strong>Forçaria um segundo turno entre os dois primeiros colocados</strong></>, highlight: true };
+      } else if (govStatus === 'iria_2t_no_lugar') {
+        headline = (
+          <>
+            Em <em>{locationTitle}</em>, a Abstenção{' '}
+            <span className="highlight-amber">IRIA PARA O SEGUNDO TURNO NO LUGAR DE UM DOS DOIS PRIMEIROS CANDIDATOS!</span>
+          </>
+        );
+        subtext = `A disputa já iria para o 2º turno, mas o volume de ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(taxa)}) supera a votação do 2º colocado real, tomando a sua vaga na disputa final!`;
+        badge1 = { icon: '🔵', text: <>Indicador: <strong>Iria para o segundo turno no lugar de um dos dois primeiros candidatos</strong></>, highlight: true };
+      } else {
+        headline = (
+          <>
+            Em <em>{locationTitle}</em>, a presença da Abstenção{' '}
+            <span className="highlight-white">NÃO ALTERARIA O ANDAMENTO DA ELEIÇÃO.</span>
+          </>
+        );
+        subtext = `Nesta disputa (${formatPercent(taxa)} de ausentes), o líder manteve mais de 50% dos votos válidos ou a disputa de 2º turno já existente permaneceu inalterada.`;
+        badge1 = { icon: '🛡️', text: <>Indicador: <strong>Não alteraria</strong></> };
+      }
+      badge2 = { icon: '📉', text: <>Ausentes: <strong>{formatNumber(votosAbst)} ({formatPercent(taxa)})</strong></> };
+      badge3 = { icon: '📊', text: <>Posição no Ranking: <strong>{rankBadgeText}</strong></> };
+    } else {
+      // Presidente
       if (pos === 1) {
         headline = (
           <>
-            Se a Abstenção fosse candidata a <strong>{currentCargo}</strong> em <em>{locationTitle}</em>, ela seria a{' '}
+            Se a Abstenção fosse candidata a <strong>Presidente</strong> em <em>{locationTitle}</em>, ela seria a{' '}
             <span className="highlight-amber">VENCEDORA ABSOLUTA</span> com {formatNumber(votosAbst)} eleitores ausentes.
           </>
         );
         subtext = `Nenhum candidato real conseguiu atingir a quantidade de eleitores que deixaram de ir às urnas nesta localidade (${formatPercent(taxa)} de abstenção).`;
         badge1 = { icon: '🏆', text: <>Iria para o 2º Turno? <strong>Venceria em 1º Turno ou Lideraria</strong></>, highlight: true };
       } else if (pos === 2) {
-        const primeiroComp = targetData.ranking ? targetData.ranking.find(c => !c.is_abstencao) : null;
-        const liderResistiu = primeiroComp && primeiroComp.percentual_simulado > 50.0;
-
-        if (liderResistiu && currentCargo === 'Governador') {
-          headline = (
-            <>
-              Em <em>{locationTitle}</em>, a Abstenção ficaria em{' '}
-              <span className="highlight-amber">2º LUGAR</span> para {currentCargo} ({formatNumber(votosAbst)} votos), mas o líder{' '}
-              <span className="highlight-white">{primeiroComp.nome_exibicao} RESISTIRIA EM 1º TURNO!</span>
-            </>
-          );
-          subtext = `A Abstenção superou a oposição, tornando-se a 2ª força política do estado. Mesmo assim, ${primeiroComp.nome_exibicao} obteve votação tão expressiva (${formatPercent(primeiroComp.percentual_simulado)}) que venceria a eleição diretamente no 1º Turno!`;
-          badge1 = { icon: '🛡️', text: <>Forçaria 2º Turno? <strong>Não (Líder resiste com {formatPercent(primeiroComp.percentual_simulado)})</strong></>, highlight: true };
-        } else {
-          headline = (
-            <>
-              Em <em>{locationTitle}</em>, a Abstenção ficaria em{' '}
-              <span className="highlight-amber">2º LUGAR</span> para {currentCargo} e{' '}
-              <span className="highlight-white">IRIA PARA O SEGUNDO TURNO!</span>
-            </>
-          );
-          subtext = `Com ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)} do eleitorado), a Abstenção ultrapassou todos os demais concorrentes exceto o líder e disputaria diretamente o 2º Turno!`;
-          badge1 = { icon: '🥈', text: <>Iria para o 2º Turno? <strong>SIM! Classificada em 2º Lugar</strong></>, highlight: true };
-        }
+        headline = (
+          <>
+            Em <em>{locationTitle}</em>, a Abstenção ficaria em{' '}
+            <span className="highlight-amber">2º LUGAR</span> para Presidente e{' '}
+            <span className="highlight-white">IRIA PARA O SEGUNDO TURNO!</span>
+          </>
+        );
+        subtext = `Com ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)} do eleitorado), a Abstenção ultrapassou todos os demais concorrentes exceto o líder e disputaria diretamente o 2º Turno!`;
+        badge1 = { icon: '🥈', text: <>Iria para o 2º Turno? <strong>SIM! Classificada em 2º Lugar</strong></>, highlight: true };
       } else {
-        // pos >= 3
-        const g1t = isUf && currentScope.item ? currentScope.item.dados_1t_governador : null;
-        if (currentCargo === 'Governador' && g1t && !g1t.sobrevive_1t) {
-          headline = (
-            <>
-              Mesmo em <span className="highlight-amber">{rankBadgeText}</span> para Governador em <em>{locationTitle}</em>, a presença da Abstenção{' '}
-              <span className="highlight-white">TERIA FORÇADO UM SEGUNDO TURNO!</span>
-            </>
-          );
-          subtext = `🚨 O Grande Achado: Oficialmente, ${g1t.governador} (${g1t.partido}) venceu no 1º turno com ${formatPercent(g1t.pct_oficial)}. Porém, a presença massiva de ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)} do eleitorado) dilui os votos do líder para ${formatPercent(g1t.pct_com_abstencao)} (< 50%), arrancando sua vitória imediata e arrastando a eleição para o 2º Turno contra ${g1t.adversario_2t}!`;
-          badge1 = { icon: '⚡', text: <>Forçaria 2º Turno? <strong>SIM! (Derruba vitória em 1ºT)</strong></>, highlight: true };
-        } else {
-          headline = (
-            <>
-              Se a Abstenção fosse candidata a {currentCargo} em <em>{locationTitle}</em>, ela conquistaria o{' '}
-              <span className="highlight-amber">{rankBadgeText}</span> com {formatNumber(votosAbst)} votos ausentes.
-            </>
-          );
-          subtext = `Nesta disputa, os ausentes representam ${formatPercent(taxa)} do eleitorado apto, ficando atrás dos primeiros colocados.`;
-          badge1 = { icon: '🗳️', text: <>Iria para o 2º Turno? <strong>Não (Ficaria em {pos}º)</strong></> };
-        }
+        headline = (
+          <>
+            Se a Abstenção fosse candidata a Presidente em <em>{locationTitle}</em>, ela conquistaria o{' '}
+            <span className="highlight-amber">{rankBadgeText}</span> com {formatNumber(votosAbst)} votos ausentes.
+          </>
+        );
+        subtext = `Nesta disputa, os ausentes representam ${formatPercent(taxa)} do eleitorado apto, ficando atrás dos primeiros colocados.`;
+        badge1 = { icon: '🗳️', text: <>Iria para o 2º Turno? <strong>Não (Ficaria em {pos}º)</strong></> };
       }
-
       badge2 = { icon: '📉', text: <>Superou: <strong>{(targetData.candidatos_superados?.length) || 0} candidatos</strong></> };
       badge3 = { icon: '📊', text: <>Distância do 2º: <strong>{formatNumber(targetData.distancia_segundo_votos || 0)} votos</strong></> };
     }
@@ -323,7 +330,32 @@ export default function VerdictCard({
             {ufsList.map(ufSigla => {
               const pos = getUfRank(ufSigla);
               const isActive = (isUf && currentScope.id === ufSigla) || (isMun && currentScope.item?.uf === ufSigla);
-              const rankIndicator = pos === 1 ? '🥇 1º' : (pos === 2 ? '🥈 2º' : '3º');
+              const ufItem = estadosData?.find(u => u.uf === ufSigla);
+
+              let rankIndicator = pos === 1 ? '🥇 1º' : (pos === 2 ? '🥈 2º' : '3º');
+              let subClass = pos <= 2 ? 'gold' : '';
+              let tooltipText = `${ufSigla}: Abstenção ficaria em ${pos}º lugar`;
+
+              if (currentCargo === 'Governador' && ufItem) {
+                const govSt = getGovStatus(ufItem);
+                if (govSt === 'forcou_e_iria_2t') {
+                  rankIndicator = '🟢 2ºT';
+                  subClass = 'green';
+                  tooltipText = `${ufSigla}: Forçaria e iria para o segundo turno`;
+                } else if (govSt === 'forcou_2t_entre_dois') {
+                  rankIndicator = '🟠 2ºT';
+                  subClass = 'gold';
+                  tooltipText = `${ufSigla}: Forçaria um segundo turno entre os dois primeiros colocados`;
+                } else if (govSt === 'iria_2t_no_lugar') {
+                  rankIndicator = '🔵 2ºT';
+                  subClass = 'cyan';
+                  tooltipText = `${ufSigla}: Iria para o segundo turno no lugar de um dos dois primeiros candidatos`;
+                } else {
+                  rankIndicator = '—';
+                  subClass = 'slate';
+                  tooltipText = `${ufSigla}: Não alteraria`;
+                }
+              }
 
               return (
                 <button
@@ -331,10 +363,10 @@ export default function VerdictCard({
                   type="button"
                   className={`uf-tile ${isActive ? 'active' : ''}`}
                   onClick={() => onSelectUf(ufSigla)}
-                  title={`${ufSigla}: Abstenção ficaria em ${pos}º lugar`}
+                  title={tooltipText}
                 >
                   <span className="uf-sigla">{ufSigla}</span>
-                  <span className={`uf-sub ${pos <= 2 ? 'gold' : ''}`}>{rankIndicator}</span>
+                  <span className={`uf-sub ${subClass}`}>{rankIndicator}</span>
                 </button>
               );
             })}

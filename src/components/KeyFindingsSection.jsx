@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { formatNumber } from '../utils/electoralMath';
+import { formatNumber, getGovStatus } from '../utils/electoralMath';
 
 export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
   // Compute metrics dynamically from official loaded data with robust fallbacks
@@ -25,19 +25,25 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
       estadosPres2 = estadosData.filter(u => u.cargos?.Presidente?.posicao === 2).length;
     }
 
-    // 2. GOVERNADOR
-    let govFoi2t = 7;
-    let govForcou2t = 12;
-    let govNaoAlterou = 8;
+    // 2. GOVERNADOR (4 indicadores oficiais)
+    let govForcouEIria2t = 4;
+    let govForcou2tEntreDois = 12;
+    let govIriaNoLugar = 0;
+    let govNaoAlterou = 11;
 
     if (estadosData.length > 0) {
-      govFoi2t = estadosData.filter(u => (u.cargos?.Governador?.posicao || 3) <= 2).length;
-      govForcou2t = estadosData.filter(u => {
-        const isPos3Plus = (u.cargos?.Governador?.posicao || 3) > 2;
-        const g1t = u.dados_1t_governador;
-        return isPos3Plus && g1t && !g1t.sobrevive_1t;
-      }).length;
-      govNaoAlterou = Math.max(0, estadosData.length - govFoi2t - govForcou2t);
+      govForcouEIria2t = 0;
+      govForcou2tEntreDois = 0;
+      govIriaNoLugar = 0;
+      govNaoAlterou = 0;
+
+      estadosData.forEach(u => {
+        const st = getGovStatus(u);
+        if (st === 'forcou_e_iria_2t') govForcouEIria2t++;
+        else if (st === 'forcou_2t_entre_dois') govForcou2tEntreDois++;
+        else if (st === 'iria_2t_no_lugar') govIriaNoLugar++;
+        else govNaoAlterou++;
+      });
     }
 
     // 3. SENADO
@@ -57,8 +63,9 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
       mult3aVia,
       multDiff1e2,
       estadosPres2,
-      govFoi2t,
-      govForcou2t,
+      govForcouEIria2t,
+      govForcou2tEntreDois,
+      govIriaNoLugar,
       govNaoAlterou,
       sen1o,
       sen2o,
@@ -130,24 +137,31 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </h3>
 
           <p className="finding-narrative">
-            O total de abstenções <strong>iria para o segundo turno em {findings.govFoi2t} estados</strong>,{' '}
-            <strong>forçaria um segundo turno</strong> entre os dois primeiros candidatos em{' '}
-            <span className="finding-highlight">{findings.govForcou2t} estados</span> em que a disputa se encerrou no primeiro turno e em{' '}
-            <strong>apenas {findings.govNaoAlterou} estados não alteraria</strong> o andamento das eleições.
+            O total de abstenções <strong>forçaria e iria para o segundo turno em {findings.govForcouEIria2t} estados</strong>,{' '}
+            <strong>forçaria um segundo turno entre os dois primeiros colocados</strong> em{' '}
+            <span className="finding-highlight">{findings.govForcou2tEntreDois} estados</span> em que a disputa se encerrou no 1º turno,{' '}
+            {findings.govIriaNoLugar > 0 ? (
+              <>iria para o 2º turno no lugar de um dos dois primeiros candidatos em <strong>{findings.govIriaNoLugar} estados</strong> e </>
+            ) : null}
+            em <strong>{findings.govNaoAlterou} estados não alteraria</strong> o andamento das eleições.
           </p>
 
-          <div className="finding-stats-row">
+          <div className="finding-stats-row four-cols">
             <div className="finding-stat-item highlight-green">
-              <span className="finding-stat-val">{findings.govFoi2t}</span>
-              <span className="finding-stat-label">Abstenção no 2ºT</span>
+              <span className="finding-stat-val">{findings.govForcouEIria2t}</span>
+              <span className="finding-stat-label">Forçaria e Iria ao 2ºT</span>
             </div>
             <div className="finding-stat-item highlight-gold">
-              <span className="finding-stat-val">{findings.govForcou2t}</span>
-              <span className="finding-stat-label">Forçaria 2º Turno</span>
+              <span className="finding-stat-val">{findings.govForcou2tEntreDois}</span>
+              <span className="finding-stat-label">Forçaria Entre os 2</span>
+            </div>
+            <div className="finding-stat-item highlight-cyan">
+              <span className="finding-stat-val">{findings.govIriaNoLugar}</span>
+              <span className="finding-stat-label">Iria no Lugar de 1</span>
             </div>
             <div className="finding-stat-item">
               <span className="finding-stat-val">{findings.govNaoAlterou}</span>
-              <span className="finding-stat-label">Sem Alteração</span>
+              <span className="finding-stat-label">Não Alteraria</span>
             </div>
           </div>
         </article>
