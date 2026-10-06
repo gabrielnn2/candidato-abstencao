@@ -51,6 +51,9 @@ export default function MapWorkspace({
   const onSelectMunicipioRef = useRef(onSelectMunicipio);
   onSelectMunicipioRef.current = onSelectMunicipio;
 
+  // Track previous scope key to ensure camera doesn't fly/zoom when user simply switches cargo
+  const prevScopeKeyRef = useRef('');
+
   const isFiltered = currentScope.type !== 'brasil' || currentRegiao !== 'todas';
 
   // Automatically switch viewMode to 'municipios' when a municipio is selected
@@ -531,6 +534,10 @@ export default function MapWorkspace({
     const map = mapInstanceRef.current;
     if (!map || !mapLoaded) return;
 
+    const scopeKey = `${currentScope?.type || 'brasil'}_${currentScope?.id || 'BR'}_${currentRegiao}`;
+    const scopeChanged = prevScopeKeyRef.current !== scopeKey;
+    prevScopeKeyRef.current = scopeKey;
+
     if (currentScope.type === 'municipio' && currentScope.item) {
       // 1. ISOLATE MUNICIPIO: Show ONLY the selected municipality!
       const targetId = Number(currentScope.item.id);
@@ -556,23 +563,25 @@ export default function MapWorkspace({
         map.setFilter('estado-highlight', ['==', 'uf', munUf]);
       }
 
-      // Auto-fit to isolated municipality
-      const feat = window.MUNICIPIOS_GEO?.features?.find(
-        f => Number(f.id) === targetId || Number(f.properties?.id) === targetId
-      );
-      const bbox = currentScope.item.bbox || feat?.properties?.bbox;
-      if (bbox && bbox.length === 4) {
-        map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], {
-          padding: 80,
-          duration: 700,
-          maxZoom: 11
-        });
-      } else if (feat?.properties?.lat && feat?.properties?.lon) {
-        map.flyTo({
-          center: [feat.properties.lon, feat.properties.lat],
-          zoom: 8.5,
-          duration: 700
-        });
+      // Auto-fit to isolated municipality only if scope changed
+      if (scopeChanged) {
+        const feat = window.MUNICIPIOS_GEO?.features?.find(
+          f => Number(f.id) === targetId || Number(f.properties?.id) === targetId
+        );
+        const bbox = currentScope.item.bbox || feat?.properties?.bbox;
+        if (bbox && bbox.length === 4) {
+          map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], {
+            padding: 80,
+            duration: 700,
+            maxZoom: 11
+          });
+        } else if (feat?.properties?.lat && feat?.properties?.lon) {
+          map.flyTo({
+            center: [feat.properties.lon, feat.properties.lat],
+            zoom: 8.5,
+            duration: 700
+          });
+        }
       }
 
     } else if (currentScope.type === 'uf') {
@@ -599,13 +608,15 @@ export default function MapWorkspace({
         map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
       }
 
-      // Auto-fit to isolated State
-      const bbox = STATE_BOUNDS[targetUf];
-      if (bbox) {
-        map.fitBounds(bbox, {
-          padding: 50,
-          duration: 700
-        });
+      // Auto-fit to isolated State only if scope changed
+      if (scopeChanged) {
+        const bbox = STATE_BOUNDS[targetUf];
+        if (bbox) {
+          map.fitBounds(bbox, {
+            padding: 50,
+            duration: 700
+          });
+        }
       }
 
     } else if (currentRegiao !== 'todas') {
@@ -632,13 +643,15 @@ export default function MapWorkspace({
         map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
       }
 
-      // Auto-fit to isolated Region
-      const bbox = REGION_BOUNDS[currentRegiao];
-      if (bbox) {
-        map.fitBounds(bbox, {
-          padding: 45,
-          duration: 700
-        });
+      // Auto-fit to isolated Region only if scope changed
+      if (scopeChanged) {
+        const bbox = REGION_BOUNDS[currentRegiao];
+        if (bbox) {
+          map.fitBounds(bbox, {
+            padding: 45,
+            duration: 700
+          });
+        }
       }
 
     } else {
@@ -663,16 +676,18 @@ export default function MapWorkspace({
         map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
       }
 
-      // Reframe Brazil
-      map.fitBounds(BRAZIL_BOUNDS, {
-        padding: BRAZIL_FIT_PADDING,
-        duration: 700,
-        maxZoom: 4.2
-      });
+      // Reframe Brazil only if scope changed
+      if (scopeChanged) {
+        map.fitBounds(BRAZIL_BOUNDS, {
+          padding: BRAZIL_FIT_PADDING,
+          duration: 700,
+          maxZoom: 4.2
+        });
+      }
     }
   }, [currentScope, currentRegiao, mapLoaded]);
 
-  // Window Resize Listener
+  // Window & Container Resize Listener
   useEffect(() => {
     const handleResize = () => {
       const map = mapInstanceRef.current;
@@ -680,7 +695,19 @@ export default function MapWorkspace({
       map.resize();
     };
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    let ro = null;
+    if (mapContainerRef.current && window.ResizeObserver) {
+      ro = new ResizeObserver(() => {
+        handleResize();
+      });
+      ro.observe(mapContainerRef.current);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (ro) ro.disconnect();
+    };
   }, [mapLoaded]);
 
   // Pill Title Text in Legend Bar
@@ -866,6 +893,7 @@ export default function MapWorkspace({
           </div>
           {isFiltered && (
             <button
+              type="button"
               className="pill-back-btn"
               title="Voltar para a visão do Brasil"
               onClick={onResetBrasil}
@@ -915,7 +943,7 @@ export default function MapWorkspace({
 
       {/* Quick state reset button when zoomed in */}
       <div className="map-footer-bar">
-        <button className="btn-reset-map-view" id="btnResetMapView" onClick={onResetBrasil}>
+        <button type="button" className="btn-reset-map-view" id="btnResetMapView" onClick={onResetBrasil}>
           🇧🇷 Reenquadrar Todo o Brasil
         </button>
         <span className="map-footer-hint">

@@ -25,10 +25,15 @@ export default function Header({ currentCargo, onSelectCargo, onOpenSearch }) {
         {cargos.map(c => (
           <button
             key={c.id}
+            type="button"
             className={`cargo-btn ${currentCargo === c.id ? 'active' : ''}`}
             role="tab"
             aria-selected={currentCargo === c.id}
-            onClick={() => onSelectCargo(c.id)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onSelectCargo(c.id);
+            }}
           >
             <span className="cargo-icon">{c.icon}</span>
             <span className="cargo-label">{c.label}</span>

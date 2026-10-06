@@ -223,11 +223,11 @@ export default function VerdictCard({
         </div>
         <div className="verdict-controls">
           {!isBrasil && (
-            <button className="btn-ghost" id="btnResetBrasil" title="Voltar para a visão do Brasil" onClick={onResetBrasil}>
+            <button type="button" className="btn-ghost" id="btnResetBrasil" title="Voltar para a visão do Brasil" onClick={onResetBrasil}>
               🇧🇷 Ver Brasil Completo
             </button>
           )}
-          <button className="btn-share" id="btnShareCard" title="Compartilhar este veredito" onClick={onOpenShare}>
+          <button type="button" className="btn-share" id="btnShareCard" title="Compartilhar este veredito" onClick={onOpenShare}>
             <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
               <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
             </svg>
@@ -236,7 +236,9 @@ export default function VerdictCard({
         </div>
       </div>
 
-      {/* Provocative Newspaper Headline */}
+      {/* Internal scrollable content area: Fixed height card, smooth inner scrolling */}
+      <div className="verdict-body-scroll" id="verdictBodyScroll">
+        {/* Provocative Newspaper Headline */}
       <div className="headline-container">
         <h2 className="verdict-headline" id="verdictHeadline">
           {headline}
@@ -326,6 +328,7 @@ export default function VerdictCard({
               return (
                 <button
                   key={ufSigla}
+                  type="button"
                   className={`uf-tile ${isActive ? 'active' : ''}`}
                   onClick={() => onSelectUf(ufSigla)}
                   title={`${ufSigla}: Abstenção ficaria em ${pos}º lugar`}
@@ -338,6 +341,7 @@ export default function VerdictCard({
           </div>
         </div>
       </section>
+      </div>
     </article>
   );
 }
