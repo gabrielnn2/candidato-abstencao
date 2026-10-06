@@ -136,7 +136,6 @@ export default function VerdictCard({
       }
       badge2 = { icon: '📉', text: <>Ausentes: <strong>{formatNumber(votosAbst)} ({formatPercent(taxa)})</strong></> };
       badge3 = { icon: '📊', text: <>Eleitorado Apto: <strong>{formatNumber(aptos)}</strong></> };
-    } else {
     } else if (currentCargo === 'Governador') {
       const govStatus = getGovStatus(currentScope.item);
       if (govStatus === 'forcou_e_iria_2t') {
