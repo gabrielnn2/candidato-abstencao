@@ -205,24 +205,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Ney Amorim (PODEMOS)",
-          "Jorge Viana (PT)",
-          "Márcio Bittar (UNIÃO)",
           "Sérgio Petecão (PSD)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Márcio Bittar (UNIÃO)",
+          "Jorge Viana (PT)",
+          "Mara Rocha (MDB)"
         ],
-        "diferenca_lider": -25321,
+        "diferenca_lider": -15478,
         "ranking": [
           {
-            "nome": "Alan Rick",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Alan Rick (UNIÃO)",
-            "numero": "444",
-            "votos": 158521,
+            "nome": "Gladson Cameli",
+            "partido": "PP",
+            "nome_exibicao": "Gladson Cameli (PP)",
+            "numero": "111",
+            "votos": 148678,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 28.72
+            "percentual_simulado": 26.93
           },
           {
             "nome": "Abstenção",
@@ -236,32 +235,32 @@
             "percentual_simulado": 24.13
           },
           {
-            "nome": "Ney Amorim",
-            "partido": "PODEMOS",
-            "nome_exibicao": "Ney Amorim (PODEMOS)",
-            "numero": "200",
-            "votos": 74632,
+            "nome": "Sérgio Petecão",
+            "partido": "PSD",
+            "nome_exibicao": "Sérgio Petecão (PSD)",
+            "numero": "555",
+            "votos": 109729,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 13.52
-          },
-          {
-            "nome": "Jorge Viana",
-            "partido": "PT",
-            "nome_exibicao": "Jorge Viana (PT)",
-            "numero": "133",
-            "votos": 59680,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 10.81
+            "percentual_simulado": 19.88
           },
           {
             "nome": "Márcio Bittar",
             "partido": "UNIÃO",
             "nome_exibicao": "Márcio Bittar (UNIÃO)",
             "numero": "440",
+            "votos": 84181,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 15.25
+          },
+          {
+            "nome": "Jorge Viana",
+            "partido": "PT",
+            "nome_exibicao": "Jorge Viana (PT)",
+            "numero": "133",
             "votos": 52351,
             "is_abstencao": false,
             "foto": "",
@@ -269,26 +268,15 @@
             "percentual_simulado": 9.48
           },
           {
-            "nome": "Sérgio Petecão",
-            "partido": "PSD",
-            "nome_exibicao": "Sérgio Petecão (PSD)",
-            "numero": "555",
-            "votos": 43975,
+            "nome": "Mara Rocha",
+            "partido": "MDB",
+            "nome_exibicao": "Mara Rocha (MDB)",
+            "numero": "151",
+            "votos": 23872,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 7.97
-          },
-          {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 29652,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 7,
-            "percentual_simulado": 5.37
+            "percentual_simulado": 4.32
           }
         ]
       }
@@ -494,24 +482,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
+          "Arthur Lira (PP)",
           "Davi Davino Filho (PP)",
           "Rodrigo Cunha (PODEMOS)",
-          "Arthur Lira (PP)",
-          "Paulão (PT)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Paulão (PT)"
         ],
-        "diferenca_lider": -31685,
+        "diferenca_lider": -45437,
         "ranking": [
           {
             "nome": "Renan Calheiros",
             "partido": "MDB",
             "nome_exibicao": "Renan Calheiros (MDB)",
             "numero": "151",
-            "votos": 574160,
+            "votos": 587912,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 25.39
+            "percentual_simulado": 26.0
           },
           {
             "nome": "Abstenção",
@@ -525,59 +512,48 @@
             "percentual_simulado": 23.99
           },
           {
-            "nome": "Davi Davino Filho",
+            "nome": "Arthur Lira",
             "partido": "PP",
-            "nome_exibicao": "Davi Davino Filho (PP)",
+            "nome_exibicao": "Arthur Lira (PP)",
             "numero": "111",
-            "votos": 489927,
+            "votos": 541498,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 21.66
+            "percentual_simulado": 23.94
+          },
+          {
+            "nome": "Davi Davino Filho",
+            "partido": "PP",
+            "nome_exibicao": "Davi Davino Filho (PP)",
+            "numero": "112",
+            "votos": 283642,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 12.54
           },
           {
             "nome": "Rodrigo Cunha",
             "partido": "PODEMOS",
             "nome_exibicao": "Rodrigo Cunha (PODEMOS)",
             "numero": "200",
-            "votos": 312865,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 13.83
-          },
-          {
-            "nome": "Arthur Lira",
-            "partido": "PP",
-            "nome_exibicao": "Arthur Lira (PP)",
-            "numero": "112",
-            "votos": 197689,
+            "votos": 202847,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.74
+            "percentual_simulado": 8.97
           },
           {
             "nome": "Paulão",
             "partido": "PT",
             "nome_exibicao": "Paulão (PT)",
             "numero": "133",
-            "votos": 92828,
+            "votos": 103142,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.1
-          },
-          {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 51571,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 7,
-            "percentual_simulado": 2.28
+            "percentual_simulado": 4.56
           }
         ]
       }
@@ -782,33 +758,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Arthur Virgílio Neto (PSDB)",
-          "Eduardo Braga (MDB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Plínio Valério (PSDB)",
+          "Capitão Alberto Neto (PL)",
+          "Marcelo Ramos (PT)"
         ],
-        "diferenca_lider": -281284,
+        "diferenca_lider": -159918,
         "ranking": [
           {
-            "nome": "Omar Aziz",
-            "partido": "PSD",
-            "nome_exibicao": "Omar Aziz (PSD)",
-            "numero": "555",
-            "votos": 808200,
+            "nome": "Wilson Lima",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Wilson Lima (UNIÃO)",
+            "numero": "444",
+            "votos": 686834,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.61
+            "percentual_simulado": 27.72
           },
           {
-            "nome": "Coronel Menezes",
-            "partido": "PL",
-            "nome_exibicao": "Coronel Menezes (PL)",
-            "numero": "222",
-            "votos": 563906,
+            "nome": "Eduardo Braga",
+            "partido": "MDB",
+            "nome_exibicao": "Eduardo Braga (MDB)",
+            "numero": "151",
+            "votos": 620492,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 22.76
+            "percentual_simulado": 25.04
           },
           {
             "nome": "Abstenção",
@@ -822,37 +798,37 @@
             "percentual_simulado": 21.26
           },
           {
-            "nome": "Arthur Virgílio Neto",
+            "nome": "Plínio Valério",
             "partido": "PSDB",
-            "nome_exibicao": "Arthur Virgílio Neto (PSDB)",
+            "nome_exibicao": "Plínio Valério (PSDB)",
             "numero": "455",
-            "votos": 243904,
+            "votos": 341465,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 9.84
+            "percentual_simulado": 13.78
           },
           {
-            "nome": "Eduardo Braga",
-            "partido": "MDB",
-            "nome_exibicao": "Eduardo Braga (MDB)",
-            "numero": "151",
-            "votos": 204879,
+            "nome": "Capitão Alberto Neto",
+            "partido": "PL",
+            "nome_exibicao": "Capitão Alberto Neto (PL)",
+            "numero": "222",
+            "votos": 218538,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.27
+            "percentual_simulado": 8.82
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 130342,
+            "nome": "Marcelo Ramos",
+            "partido": "PT",
+            "nome_exibicao": "Marcelo Ramos (PT)",
+            "numero": "133",
+            "votos": 83903,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 5.26
+            "percentual_simulado": 3.39
           }
         ]
       }
@@ -1051,23 +1027,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Rayssa Furlan (MDB)",
-          "Randolfe Rodrigues (PT)",
+          "Waldez Góes (PDT)",
           "Lucas Barreto (PSD)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Jaime Nunes (PSD)",
+          "Rayssa Furlan (MDB)"
         ],
-        "diferenca_lider": -75991,
+        "diferenca_lider": -38448,
         "ranking": [
           {
-            "nome": "Davi Alcolumbre",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Davi Alcolumbre (UNIÃO)",
-            "numero": "444",
-            "votos": 191638,
+            "nome": "Randolfe Rodrigues",
+            "partido": "PT",
+            "nome_exibicao": "Randolfe Rodrigues (PT)",
+            "numero": "133",
+            "votos": 154095,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 37.15
+            "percentual_simulado": 29.87
           },
           {
             "nome": "Abstenção",
@@ -1081,48 +1057,48 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "Rayssa Furlan",
-            "partido": "MDB",
-            "nome_exibicao": "Rayssa Furlan (MDB)",
-            "numero": "151",
-            "votos": 86053,
+            "nome": "Waldez Góes",
+            "partido": "PDT",
+            "nome_exibicao": "Waldez Góes (PDT)",
+            "numero": "123",
+            "votos": 112869,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 16.68
-          },
-          {
-            "nome": "Randolfe Rodrigues",
-            "partido": "PT",
-            "nome_exibicao": "Randolfe Rodrigues (PT)",
-            "numero": "133",
-            "votos": 60837,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 11.79
+            "percentual_simulado": 21.88
           },
           {
             "nome": "Lucas Barreto",
             "partido": "PSD",
             "nome_exibicao": "Lucas Barreto (PSD)",
             "numero": "555",
-            "votos": 38023,
+            "votos": 74045,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 14.35
+          },
+          {
+            "nome": "Jaime Nunes",
+            "partido": "PSD",
+            "nome_exibicao": "Jaime Nunes (PSD)",
+            "numero": "550",
+            "votos": 42026,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 7.37
+            "percentual_simulado": 8.15
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 23694,
+            "nome": "Rayssa Furlan",
+            "partido": "MDB",
+            "nome_exibicao": "Rayssa Furlan (MDB)",
+            "numero": "151",
+            "votos": 17210,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.59
+            "percentual_simulado": 3.34
           }
         ]
       }
@@ -1327,23 +1303,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Cacá Leão (PP)",
           "Angelo Coronel (PSD)",
-          "Raissa Oliveira (PL)",
-          "Demais Concorrentes (DIVERSOS)"
+          "ACM Neto (UNIÃO)",
+          "João Roma (PL)",
+          "Félix Mendonça Jr. (PDT)"
         ],
-        "diferenca_lider": -1117160,
+        "diferenca_lider": -706627,
         "ranking": [
           {
             "nome": "Jaques Wagner",
             "partido": "PT",
             "nome_exibicao": "Jaques Wagner (PT)",
             "numero": "133",
-            "votos": 3489530,
+            "votos": 3078997,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.97
+            "percentual_simulado": 29.09
           },
           {
             "nome": "Abstenção",
@@ -1357,48 +1333,48 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "Cacá Leão",
-            "partido": "PP",
-            "nome_exibicao": "Cacá Leão (PP)",
-            "numero": "111",
-            "votos": 2069086,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 3,
-            "percentual_simulado": 19.55
-          },
-          {
             "nome": "Angelo Coronel",
             "partido": "PSD",
             "nome_exibicao": "Angelo Coronel (PSD)",
             "numero": "555",
-            "votos": 1354758,
+            "votos": 2233299,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 21.1
+          },
+          {
+            "nome": "ACM Neto",
+            "partido": "UNIÃO",
+            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "numero": "444",
+            "votos": 2011611,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.8
+            "percentual_simulado": 19.01
           },
           {
-            "nome": "Raissa Oliveira",
+            "nome": "João Roma",
             "partido": "PL",
-            "nome_exibicao": "Raissa Oliveira (PL)",
+            "nome_exibicao": "João Roma (PL)",
             "numero": "222",
-            "votos": 919593,
+            "votos": 640431,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 8.69
+            "percentual_simulado": 6.05
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 377690,
+            "nome": "Félix Mendonça Jr.",
+            "partido": "PDT",
+            "nome_exibicao": "Félix Mendonça Jr. (PDT)",
+            "numero": "123",
+            "votos": 246319,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.57
+            "percentual_simulado": 2.33
           }
         ]
       }
@@ -1589,31 +1565,41 @@
         ]
       },
       "Senador": {
-        "posicao": 2,
+        "posicao": 3,
         "votos": 1227600,
         "total_aptos": 6820000,
         "taxa_abstencao": 18.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": true,
+        "eleito_senado": false,
         "candidatos_superados": [
-          "Kamila Cardoso (AVANTE)",
           "Eduardo Girão (NOVO)",
-          "Cid Gomes (PSB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "José Guimarães (PT)",
+          "André Fernandes (PL)"
         ],
-        "diferenca_lider": -2361557,
+        "diferenca_lider": -634892,
         "ranking": [
           {
-            "nome": "Camilo Santana",
-            "partido": "PT",
-            "nome_exibicao": "Camilo Santana (PT)",
-            "numero": "133",
-            "votos": 3589157,
+            "nome": "Cid Gomes",
+            "partido": "PSB",
+            "nome_exibicao": "Cid Gomes (PSB)",
+            "numero": "400",
+            "votos": 1862492,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 56.32
+            "percentual_simulado": 29.23
+          },
+          {
+            "nome": "Capitão Wagner",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Capitão Wagner (UNIÃO)",
+            "numero": "444",
+            "votos": 1414877,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 2,
+            "percentual_simulado": 22.2
           },
           {
             "nome": "Abstenção",
@@ -1623,52 +1609,41 @@
             "votos": 1227600,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 2,
-            "percentual_simulado": 19.26
-          },
-          {
-            "nome": "Kamila Cardoso",
-            "partido": "AVANTE",
-            "nome_exibicao": "Kamila Cardoso (AVANTE)",
-            "numero": "700",
-            "votos": 746026,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 3,
-            "percentual_simulado": 11.71
+            "percentual_simulado": 19.26
           },
           {
             "nome": "Eduardo Girão",
             "partido": "NOVO",
             "nome_exibicao": "Eduardo Girão (NOVO)",
             "numero": "300",
-            "votos": 385875,
+            "votos": 951826,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 6.06
+            "percentual_simulado": 14.94
           },
           {
-            "nome": "Cid Gomes",
-            "partido": "PSB",
-            "nome_exibicao": "Cid Gomes (PSB)",
-            "numero": "400",
-            "votos": 282975,
+            "nome": "José Guimarães",
+            "partido": "PT",
+            "nome_exibicao": "José Guimarães (PT)",
+            "numero": "133",
+            "votos": 710011,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.44
+            "percentual_simulado": 11.14
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 140973,
+            "nome": "André Fernandes",
+            "partido": "PL",
+            "nome_exibicao": "André Fernandes (PL)",
+            "numero": "222",
+            "votos": 205800,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.21
+            "percentual_simulado": 3.23
           }
         ]
       }
@@ -1879,33 +1854,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Rosilene Corrêa (PT)",
-          "Leila Barros (PDT)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Leila do Vôlei (PDT)",
+          "Izalci Lucas (PL)",
+          "Leandro Grass (PV)"
         ],
-        "diferenca_lider": -367096,
+        "diferenca_lider": -258591,
         "ranking": [
           {
-            "nome": "Damares Alves",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Damares Alves (REPUBLICANOS)",
-            "numero": "100",
-            "votos": 753167,
+            "nome": "Michelle Bolsonaro",
+            "partido": "PL",
+            "nome_exibicao": "Michelle Bolsonaro (PL)",
+            "numero": "222",
+            "votos": 644662,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 36.55
+            "percentual_simulado": 31.29
           },
           {
-            "nome": "Flávia Arruda",
-            "partido": "PL",
-            "nome_exibicao": "Flávia Arruda (PL)",
-            "numero": "222",
-            "votos": 453775,
+            "nome": "Ibaneis Rocha",
+            "partido": "MDB",
+            "nome_exibicao": "Ibaneis Rocha (MDB)",
+            "numero": "151",
+            "votos": 482241,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 22.02
+            "percentual_simulado": 23.4
           },
           {
             "nome": "Abstenção",
@@ -1919,37 +1894,37 @@
             "percentual_simulado": 18.74
           },
           {
-            "nome": "Rosilene Corrêa",
-            "partido": "PT",
-            "nome_exibicao": "Rosilene Corrêa (PT)",
-            "numero": "133",
-            "votos": 259539,
+            "nome": "Leila do Vôlei",
+            "partido": "PDT",
+            "nome_exibicao": "Leila do Vôlei (PDT)",
+            "numero": "123",
+            "votos": 276284,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 12.6
+            "percentual_simulado": 13.41
           },
           {
-            "nome": "Leila Barros",
-            "partido": "PDT",
-            "nome_exibicao": "Leila Barros (PDT)",
-            "numero": "123",
-            "votos": 125583,
+            "nome": "Izalci Lucas",
+            "partido": "PL",
+            "nome_exibicao": "Izalci Lucas (PL)",
+            "numero": "220",
+            "votos": 187538,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 6.09
+            "percentual_simulado": 9.1
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 82382,
+            "nome": "Leandro Grass",
+            "partido": "PV",
+            "nome_exibicao": "Leandro Grass (PV)",
+            "numero": "433",
+            "votos": 83722,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.0
+            "percentual_simulado": 4.06
           }
         ]
       }
@@ -2145,41 +2120,31 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 613410,
         "total_aptos": 2921000,
         "taxa_abstencao": 21.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
           "Fabiano Contarato (PT)",
+          "Evair de Melo (PP)",
           "Marcos do Val (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Erick Musso (REPUBLICANOS)"
         ],
-        "diferenca_lider": -276544,
+        "diferenca_lider": -218798,
         "ranking": [
           {
-            "nome": "Magno Malta",
-            "partido": "PL",
-            "nome_exibicao": "Magno Malta (PL)",
-            "numero": "222",
-            "votos": 889954,
+            "nome": "Renato Casagrande",
+            "partido": "PSB",
+            "nome_exibicao": "Renato Casagrande (PSB)",
+            "numero": "400",
+            "votos": 832208,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.52
-          },
-          {
-            "nome": "Rose de Freitas",
-            "partido": "MDB",
-            "nome_exibicao": "Rose de Freitas (MDB)",
-            "numero": "151",
-            "votos": 808856,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 29.56
+            "percentual_simulado": 30.41
           },
           {
             "nome": "Abstenção",
@@ -2189,7 +2154,7 @@
             "votos": 613410,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 22.42
           },
           {
@@ -2197,33 +2162,44 @@
             "partido": "PT",
             "nome_exibicao": "Fabiano Contarato (PT)",
             "numero": "133",
-            "votos": 222913,
+            "votos": 596557,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 21.8
+          },
+          {
+            "nome": "Evair de Melo",
+            "partido": "PP",
+            "nome_exibicao": "Evair de Melo (PP)",
+            "numero": "111",
+            "votos": 371521,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 8.15
+            "percentual_simulado": 13.58
           },
           {
             "nome": "Marcos do Val",
             "partido": "PODEMOS",
             "nome_exibicao": "Marcos do Val (PODEMOS)",
             "numero": "200",
-            "votos": 131624,
+            "votos": 216544,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.81
+            "percentual_simulado": 7.91
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 69633,
+            "nome": "Erick Musso",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Erick Musso (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 106149,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.54
+            "percentual_simulado": 3.88
           }
         ]
       }
@@ -2427,7 +2403,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 1022700,
         "total_aptos": 4870000,
         "taxa_abstencao": 21.0,
@@ -2435,14 +2411,24 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Wilder Morais (PL)",
-          "Marconi Perillo (PSDB)",
+          "Gustavo Gayer (PL)",
           "Jorge Kajuru (PSB)",
           "Vanderlan Cardoso (PSD)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Marconi Perillo (PSDB)"
         ],
-        "diferenca_lider": 128265,
+        "diferenca_lider": -223209,
         "ranking": [
+          {
+            "nome": "Gracinha Caiado",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Gracinha Caiado (UNIÃO)",
+            "numero": "444",
+            "votos": 1245909,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 27.31
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -2451,63 +2437,52 @@
             "votos": 1022700,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
+            "posicao": 2,
             "percentual_simulado": 22.42
           },
           {
-            "nome": "Wilder Morais",
+            "nome": "Gustavo Gayer",
             "partido": "PL",
-            "nome_exibicao": "Wilder Morais (PL)",
+            "nome_exibicao": "Gustavo Gayer (PL)",
             "numero": "222",
-            "votos": 894435,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 19.61
-          },
-          {
-            "nome": "Marconi Perillo",
-            "partido": "PSDB",
-            "nome_exibicao": "Marconi Perillo (PSDB)",
-            "numero": "455",
-            "votos": 867181,
+            "votos": 983985,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 19.01
+            "percentual_simulado": 21.57
           },
           {
             "nome": "Jorge Kajuru",
             "partido": "PSB",
             "nome_exibicao": "Jorge Kajuru (PSB)",
             "numero": "400",
-            "votos": 760995,
+            "votos": 654810,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 16.68
+            "percentual_simulado": 14.35
           },
           {
             "nome": "Vanderlan Cardoso",
             "partido": "PSD",
             "nome_exibicao": "Vanderlan Cardoso (PSD)",
             "numero": "555",
-            "votos": 619415,
+            "votos": 477834,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 13.58
+            "percentual_simulado": 10.47
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 397487,
+            "nome": "Marconi Perillo",
+            "partido": "PSDB",
+            "nome_exibicao": "Marconi Perillo (PSDB)",
+            "numero": "455",
+            "votos": 176975,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 8.71
+            "percentual_simulado": 3.88
           }
         ]
       }
@@ -2708,23 +2683,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Roberto Rocha (PTB)",
           "Weverton Rocha (PDT)",
           "Eliziane Gama (PSD)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Roberto Rocha (PL)",
+          "Othelino Neto (SOLIDARIEDADE)"
         ],
-        "diferenca_lider": -1148840,
+        "diferenca_lider": -211380,
         "ranking": [
           {
-            "nome": "Flávio Dino",
+            "nome": "Carlos Brandão",
             "partido": "PSB",
-            "nome_exibicao": "Flávio Dino (PSB)",
+            "nome_exibicao": "Carlos Brandão (PSB)",
             "numero": "400",
-            "votos": 2258080,
+            "votos": 1320620,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 47.77
+            "percentual_simulado": 27.94
           },
           {
             "nome": "Abstenção",
@@ -2738,48 +2713,48 @@
             "percentual_simulado": 23.46
           },
           {
-            "nome": "Roberto Rocha",
-            "partido": "PTB",
-            "nome_exibicao": "Roberto Rocha (PTB)",
-            "numero": "144",
-            "votos": 741718,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 3,
-            "percentual_simulado": 15.69
-          },
-          {
             "nome": "Weverton Rocha",
             "partido": "PDT",
             "nome_exibicao": "Weverton Rocha (PDT)",
             "numero": "123",
-            "votos": 343723,
+            "votos": 1016697,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 7.27
+            "posicao": 3,
+            "percentual_simulado": 21.51
           },
           {
             "nome": "Eliziane Gama",
             "partido": "PSD",
             "nome_exibicao": "Eliziane Gama (PSD)",
             "numero": "555",
-            "votos": 188143,
+            "votos": 705537,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 14.92
+          },
+          {
+            "nome": "Roberto Rocha",
+            "partido": "PL",
+            "nome_exibicao": "Roberto Rocha (PL)",
+            "numero": "222",
+            "votos": 416085,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 3.98
+            "percentual_simulado": 8.8
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 86473,
+            "nome": "Othelino Neto",
+            "partido": "SOLIDARIEDADE",
+            "nome_exibicao": "Othelino Neto (SOLIDARIEDADE)",
+            "numero": "777",
+            "votos": 159198,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 1.83
+            "percentual_simulado": 3.37
           }
         ]
       }
@@ -2982,41 +2957,31 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 3583800,
         "total_aptos": 16290000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
-          "Rodrigo Pacheco (PSD)",
+          "Alexandre Silveira (PSD)",
           "Carlos Viana (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Marcelo Álvaro Antônio (PL)",
+          "Reginaldo Lopes (PT)"
         ],
-        "diferenca_lider": -1269765,
+        "diferenca_lider": -414078,
         "ranking": [
           {
-            "nome": "Cleitinho Azevedo",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Cleitinho Azevedo (REPUBLICANOS)",
-            "numero": "100",
-            "votos": 4853565,
+            "nome": "Rodrigo Pacheco",
+            "partido": "PSD",
+            "nome_exibicao": "Rodrigo Pacheco (PSD)",
+            "numero": "555",
+            "votos": 3997878,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 31.78
-          },
-          {
-            "nome": "Alexandre Silveira",
-            "partido": "PSD",
-            "nome_exibicao": "Alexandre Silveira (PSD)",
-            "numero": "555",
-            "votos": 4184914,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 27.4
+            "percentual_simulado": 26.18
           },
           {
             "nome": "Abstenção",
@@ -3026,41 +2991,52 @@
             "votos": 3583800,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 23.46
           },
           {
-            "nome": "Rodrigo Pacheco",
+            "nome": "Alexandre Silveira",
             "partido": "PSD",
-            "nome_exibicao": "Rodrigo Pacheco (PSD)",
+            "nome_exibicao": "Alexandre Silveira (PSD)",
             "numero": "550",
-            "votos": 1461213,
+            "votos": 3097771,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 9.57
+            "posicao": 3,
+            "percentual_simulado": 20.28
           },
           {
             "nome": "Carlos Viana",
             "partido": "PODEMOS",
             "nome_exibicao": "Carlos Viana (PODEMOS)",
             "numero": "200",
-            "votos": 759830,
+            "votos": 2127526,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 13.93
+          },
+          {
+            "nome": "Marcelo Álvaro Antônio",
+            "partido": "PL",
+            "nome_exibicao": "Marcelo Álvaro Antônio (PL)",
+            "numero": "222",
+            "votos": 1765145,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.97
+            "percentual_simulado": 11.56
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 430181,
+            "nome": "Reginaldo Lopes",
+            "partido": "PT",
+            "nome_exibicao": "Reginaldo Lopes (PT)",
+            "numero": "133",
+            "votos": 701382,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.82
+            "percentual_simulado": 4.59
           }
         ]
       }
@@ -3284,23 +3260,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Luiz Henrique Mandetta (UNIÃO)",
           "Nelsinho Trad (PSD)",
+          "Marcos Pollon (PL)",
           "Soraya Thronicke (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Zeca do PT (PT)"
         ],
-        "diferenca_lider": -463586,
+        "diferenca_lider": -139356,
         "ranking": [
           {
-            "nome": "Tereza Cristina",
-            "partido": "PP",
-            "nome_exibicao": "Tereza Cristina (PP)",
-            "numero": "111",
-            "votos": 882746,
+            "nome": "Reinaldo Azambuja",
+            "partido": "PSDB",
+            "nome_exibicao": "Reinaldo Azambuja (PSDB)",
+            "numero": "455",
+            "votos": 558516,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 47.21
+            "percentual_simulado": 29.87
           },
           {
             "nome": "Abstenção",
@@ -3314,48 +3290,48 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "Luiz Henrique Mandetta",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Luiz Henrique Mandetta (UNIÃO)",
-            "numero": "444",
-            "votos": 220505,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 3,
-            "percentual_simulado": 11.79
-          },
-          {
             "nome": "Nelsinho Trad",
             "partido": "PSD",
             "nome_exibicao": "Nelsinho Trad (PSD)",
             "numero": "555",
-            "votos": 181336,
+            "votos": 380081,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 20.33
+          },
+          {
+            "nome": "Marcos Pollon",
+            "partido": "PL",
+            "nome_exibicao": "Marcos Pollon (PL)",
+            "numero": "222",
+            "votos": 272730,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 9.7
+            "percentual_simulado": 14.59
           },
           {
             "nome": "Soraya Thronicke",
             "partido": "PODEMOS",
             "nome_exibicao": "Soraya Thronicke (PODEMOS)",
             "numero": "200",
-            "votos": 108801,
+            "votos": 166829,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 5.82
+            "percentual_simulado": 8.92
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 57302,
+            "nome": "Zeca do PT",
+            "partido": "PT",
+            "nome_exibicao": "Zeca do PT (PT)",
+            "numero": "133",
+            "votos": 72534,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.06
+            "percentual_simulado": 3.88
           }
         ]
       }
@@ -3557,21 +3533,21 @@
         "candidatos_superados": [
           "Jayme Campos (UNIÃO)",
           "Carlos Fávaro (PSD)",
-          "Neri Geller (PP)",
-          "Demais Concorrentes (DIVERSOS)"
+          "José Medeiros (PL)",
+          "Rosa Neide (PT)"
         ],
-        "diferenca_lider": -582592,
+        "diferenca_lider": -209815,
         "ranking": [
           {
-            "nome": "Wellington Fagundes",
-            "partido": "PL",
-            "nome_exibicao": "Wellington Fagundes (PL)",
-            "numero": "222",
-            "votos": 1125772,
+            "nome": "Mauro Mendes",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Mauro Mendes (UNIÃO)",
+            "numero": "444",
+            "votos": 752995,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 48.63
+            "percentual_simulado": 32.53
           },
           {
             "nome": "Abstenção",
@@ -3588,45 +3564,45 @@
             "nome": "Jayme Campos",
             "partido": "UNIÃO",
             "nome_exibicao": "Jayme Campos (UNIÃO)",
-            "numero": "444",
-            "votos": 327774,
+            "numero": "440",
+            "votos": 439394,
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 14.16
+            "percentual_simulado": 18.98
           },
           {
             "nome": "Carlos Fávaro",
             "partido": "PSD",
             "nome_exibicao": "Carlos Fávaro (PSD)",
             "numero": "555",
-            "votos": 186034,
+            "votos": 304741,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 8.04
+            "percentual_simulado": 13.16
           },
           {
-            "nome": "Neri Geller",
-            "partido": "PP",
-            "nome_exibicao": "Neri Geller (PP)",
-            "numero": "111",
-            "votos": 92131,
+            "nome": "José Medeiros",
+            "partido": "PL",
+            "nome_exibicao": "José Medeiros (PL)",
+            "numero": "222",
+            "votos": 203751,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 3.98
+            "percentual_simulado": 8.8
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 40041,
+            "nome": "Rosa Neide",
+            "partido": "PT",
+            "nome_exibicao": "Rosa Neide (PT)",
+            "numero": "133",
+            "votos": 70870,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 1.73
+            "percentual_simulado": 3.06
           }
         ]
       }
@@ -3818,41 +3794,31 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 1338040,
         "total_aptos": 6082000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
           "Jader Barbalho (MDB)",
           "Zequinha Marinho (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Éder Mauro (PL)",
+          "Marinor Brito (PSOL)"
         ],
-        "diferenca_lider": -505500,
+        "diferenca_lider": -778714,
         "ranking": [
           {
-            "nome": "Beto Faro",
-            "partido": "PT",
-            "nome_exibicao": "Beto Faro (PT)",
-            "numero": "133",
-            "votos": 1843540,
+            "nome": "Helder Barbalho",
+            "partido": "MDB",
+            "nome_exibicao": "Helder Barbalho (MDB)",
+            "numero": "151",
+            "votos": 2116754,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.33
-          },
-          {
-            "nome": "Mário Couto",
-            "partido": "PL",
-            "nome_exibicao": "Mário Couto (PL)",
-            "numero": "222",
-            "votos": 1505732,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 26.4
+            "percentual_simulado": 37.12
           },
           {
             "nome": "Abstenção",
@@ -3862,41 +3828,52 @@
             "votos": 1338040,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 23.46
           },
           {
             "nome": "Jader Barbalho",
             "partido": "MDB",
             "nome_exibicao": "Jader Barbalho (MDB)",
-            "numero": "151",
-            "votos": 589199,
+            "numero": "150",
+            "votos": 981999,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 10.33
+            "posicao": 3,
+            "percentual_simulado": 17.22
           },
           {
             "nome": "Zequinha Marinho",
             "partido": "PODEMOS",
             "nome_exibicao": "Zequinha Marinho (PODEMOS)",
             "numero": "200",
-            "votos": 283688,
+            "votos": 689581,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 12.09
+          },
+          {
+            "nome": "Éder Mauro",
+            "partido": "PL",
+            "nome_exibicao": "Éder Mauro (PL)",
+            "numero": "222",
+            "votos": 401528,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.97
+            "percentual_simulado": 7.04
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 142280,
+            "nome": "Marinor Brito",
+            "partido": "PSOL",
+            "nome_exibicao": "Marinor Brito (PSOL)",
+            "numero": "500",
+            "votos": 174577,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.5
+            "percentual_simulado": 3.06
           }
         ]
       }
@@ -4101,33 +4078,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Veneziano Vital do Rêgo (MDB)",
           "Daniella Ribeiro (PSD)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Romero Rodrigues (PODEMOS)",
+          "Cabo Gilberto Silva (PL)"
         ],
-        "diferenca_lider": -162296,
+        "diferenca_lider": -325059,
         "ranking": [
           {
-            "nome": "Efraim Filho",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Efraim Filho (UNIÃO)",
-            "numero": "444",
-            "votos": 718676,
+            "nome": "João Azevêdo",
+            "partido": "PSB",
+            "nome_exibicao": "João Azevêdo (PSB)",
+            "numero": "400",
+            "votos": 881439,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 24.88
+            "percentual_simulado": 30.52
           },
           {
-            "nome": "Pollyanna Dutra",
-            "partido": "PSB",
-            "nome_exibicao": "Pollyanna Dutra (PSB)",
-            "numero": "400",
-            "votos": 664577,
+            "nome": "Veneziano Vital do Rêgo",
+            "partido": "MDB",
+            "nome_exibicao": "Veneziano Vital do Rêgo (MDB)",
+            "numero": "151",
+            "votos": 641258,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 23.01
+            "percentual_simulado": 22.2
           },
           {
             "nome": "Abstenção",
@@ -4141,37 +4118,37 @@
             "percentual_simulado": 19.26
           },
           {
-            "nome": "Veneziano Vital do Rêgo",
-            "partido": "MDB",
-            "nome_exibicao": "Veneziano Vital do Rêgo (MDB)",
-            "numero": "151",
-            "votos": 501347,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 17.36
-          },
-          {
             "nome": "Daniella Ribeiro",
             "partido": "PSD",
             "nome_exibicao": "Daniella Ribeiro (PSD)",
             "numero": "555",
-            "votos": 291481,
+            "votos": 424396,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 14.69
+          },
+          {
+            "nome": "Romero Rodrigues",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Romero Rodrigues (PODEMOS)",
+            "numero": "200",
+            "votos": 268162,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 10.09
+            "percentual_simulado": 9.28
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 155767,
+            "nome": "Cabo Gilberto Silva",
+            "partido": "PL",
+            "nome_exibicao": "Cabo Gilberto Silva (PL)",
+            "numero": "222",
+            "votos": 116592,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 5.39
+            "percentual_simulado": 4.04
           }
         ]
       }
@@ -4389,33 +4366,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "André de Paula (PSD)",
-          "Humberto Costa (PT)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Gilson Machado (PL)",
+          "Fernando Dueire (MDB)",
+          "Miguel Coelho (UNIÃO)"
         ],
-        "diferenca_lider": -1178527,
+        "diferenca_lider": -547437,
         "ranking": [
           {
-            "nome": "Teresa Leitão",
+            "nome": "Humberto Costa",
             "partido": "PT",
-            "nome_exibicao": "Teresa Leitão (PT)",
+            "nome_exibicao": "Humberto Costa (PT)",
             "numero": "133",
-            "votos": 2441767,
+            "votos": 1810677,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 37.24
+            "percentual_simulado": 27.61
           },
           {
-            "nome": "Gilson Machado",
-            "partido": "PL",
-            "nome_exibicao": "Gilson Machado (PL)",
-            "numero": "222",
-            "votos": 1561841,
+            "nome": "Silvio Costa Filho",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Silvio Costa Filho (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 1418893,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 23.82
+            "percentual_simulado": 21.64
           },
           {
             "nome": "Abstenção",
@@ -4429,37 +4406,37 @@
             "percentual_simulado": 19.26
           },
           {
-            "nome": "André de Paula",
-            "partido": "PSD",
-            "nome_exibicao": "André de Paula (PSD)",
-            "numero": "555",
-            "votos": 661797,
+            "nome": "Gilson Machado",
+            "partido": "PL",
+            "nome_exibicao": "Gilson Machado (PL)",
+            "numero": "222",
+            "votos": 979460,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 10.09
+            "percentual_simulado": 14.94
           },
           {
-            "nome": "Humberto Costa",
-            "partido": "PT",
-            "nome_exibicao": "Humberto Costa (PT)",
-            "numero": "130",
-            "votos": 450022,
+            "nome": "Fernando Dueire",
+            "partido": "MDB",
+            "nome_exibicao": "Fernando Dueire (MDB)",
+            "numero": "151",
+            "votos": 608853,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 6.86
+            "percentual_simulado": 9.28
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 178950,
+            "nome": "Miguel Coelho",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Miguel Coelho (UNIÃO)",
+            "numero": "444",
+            "votos": 476494,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.73
+            "percentual_simulado": 7.27
           }
         ]
       }
@@ -4658,33 +4635,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Ciro Nogueira (PP)",
-          "Marcelo Castro (MDB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Júlio César (PSD)",
+          "Joel Rodrigues (PP)",
+          "Fábio Novo (PT)"
         ],
-        "diferenca_lider": -532784,
+        "diferenca_lider": -245064,
         "ranking": [
           {
-            "nome": "Wellington Dias",
-            "partido": "PT",
-            "nome_exibicao": "Wellington Dias (PT)",
-            "numero": "133",
-            "votos": 995384,
+            "nome": "Ciro Nogueira",
+            "partido": "PP",
+            "nome_exibicao": "Ciro Nogueira (PP)",
+            "numero": "111",
+            "votos": 707664,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 41.45
+            "percentual_simulado": 29.47
           },
           {
-            "nome": "Joel Rodrigues",
-            "partido": "PP",
-            "nome_exibicao": "Joel Rodrigues (PP)",
-            "numero": "111",
-            "votos": 816238,
+            "nome": "Marcelo Castro",
+            "partido": "MDB",
+            "nome_exibicao": "Marcelo Castro (MDB)",
+            "numero": "151",
+            "votos": 616540,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 33.99
+            "percentual_simulado": 25.67
           },
           {
             "nome": "Abstenção",
@@ -4698,37 +4675,37 @@
             "percentual_simulado": 19.26
           },
           {
-            "nome": "Ciro Nogueira",
-            "partido": "PP",
-            "nome_exibicao": "Ciro Nogueira (PP)",
-            "numero": "112",
-            "votos": 67858,
+            "nome": "Júlio César",
+            "partido": "PSD",
+            "nome_exibicao": "Júlio César (PSD)",
+            "numero": "555",
+            "votos": 358679,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 2.83
+            "percentual_simulado": 14.94
           },
           {
-            "nome": "Marcelo Castro",
-            "partido": "MDB",
-            "nome_exibicao": "Marcelo Castro (MDB)",
-            "numero": "151",
-            "votos": 40714,
+            "nome": "Joel Rodrigues",
+            "partido": "PP",
+            "nome_exibicao": "Joel Rodrigues (PP)",
+            "numero": "112",
+            "votos": 178370,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 1.7
+            "percentual_simulado": 7.43
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 18612,
+            "nome": "Fábio Novo",
+            "partido": "PT",
+            "nome_exibicao": "Fábio Novo (PT)",
+            "numero": "133",
+            "votos": 77552,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 0.78
+            "percentual_simulado": 3.23
           }
         ]
       }
@@ -4931,41 +4908,31 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 1610250,
         "total_aptos": 8475000,
         "taxa_abstencao": 19.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
-          "Alvaro Dias (PODEMOS)",
+          "Paulo Martins (PL)",
           "Oriovisto Guimarães (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Flávio Arns (PSB)",
+          "Gleisi Hoffmann (PT)"
         ],
-        "diferenca_lider": -505465,
+        "diferenca_lider": -1010711,
         "ranking": [
           {
-            "nome": "Sergio Moro",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Sergio Moro (UNIÃO)",
-            "numero": "444",
-            "votos": 2115715,
+            "nome": "Ratinho Júnior",
+            "partido": "PSD",
+            "nome_exibicao": "Ratinho Júnior (PSD)",
+            "numero": "555",
+            "votos": 2620961,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 26.69
-          },
-          {
-            "nome": "Paulo Martins",
-            "partido": "PL",
-            "nome_exibicao": "Paulo Martins (PL)",
-            "numero": "222",
-            "votos": 1837830,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 23.19
+            "percentual_simulado": 33.07
           },
           {
             "nome": "Abstenção",
@@ -4975,41 +4942,52 @@
             "votos": 1610250,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 20.32
           },
           {
-            "nome": "Alvaro Dias",
-            "partido": "PODEMOS",
-            "nome_exibicao": "Alvaro Dias (PODEMOS)",
-            "numero": "200",
-            "votos": 1509421,
+            "nome": "Paulo Martins",
+            "partido": "PL",
+            "nome_exibicao": "Paulo Martins (PL)",
+            "numero": "222",
+            "votos": 1439949,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 19.04
+            "posicao": 3,
+            "percentual_simulado": 18.17
           },
           {
             "nome": "Oriovisto Guimarães",
             "partido": "PODEMOS",
             "nome_exibicao": "Oriovisto Guimarães (PODEMOS)",
-            "numero": "201",
-            "votos": 517876,
+            "numero": "200",
+            "votos": 934704,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 11.79
+          },
+          {
+            "nome": "Flávio Arns",
+            "partido": "PSB",
+            "nome_exibicao": "Flávio Arns (PSB)",
+            "numero": "400",
+            "votos": 663134,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 6.53
+            "percentual_simulado": 8.37
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 334725,
+            "nome": "Gleisi Hoffmann",
+            "partido": "PT",
+            "nome_exibicao": "Gleisi Hoffmann (PT)",
+            "numero": "133",
+            "votos": 656819,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 4.22
+            "percentual_simulado": 8.29
           }
         ]
       }
@@ -5221,24 +5199,23 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
+          "Carlos Portinho (PL)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)",
-          "Daniel Silveira (PTB)",
-          "Carlos Portinho (PL)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Washington Reis (MDB)"
         ],
-        "diferenca_lider": -65647,
+        "diferenca_lider": -121076,
         "ranking": [
           {
-            "nome": "Romário",
-            "partido": "PL",
-            "nome_exibicao": "Romário (PL)",
-            "numero": "222",
-            "votos": 3015857,
+            "nome": "Eduardo Paes",
+            "partido": "PSD",
+            "nome_exibicao": "Eduardo Paes (PSD)",
+            "numero": "555",
+            "votos": 3071286,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 25.06
+            "percentual_simulado": 25.52
           },
           {
             "nome": "Abstenção",
@@ -5252,59 +5229,48 @@
             "percentual_simulado": 24.51
           },
           {
+            "nome": "Carlos Portinho",
+            "partido": "PL",
+            "nome_exibicao": "Carlos Portinho (PL)",
+            "numero": "222",
+            "votos": 2589694,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 21.51
+          },
+          {
             "nome": "Alessandro Molon",
             "partido": "PSB",
             "nome_exibicao": "Alessandro Molon (PSB)",
             "numero": "400",
-            "votos": 2289834,
+            "votos": 1799155,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 3,
-            "percentual_simulado": 19.02
+            "posicao": 4,
+            "percentual_simulado": 14.95
           },
           {
             "nome": "Clarissa Garotinho",
             "partido": "UNIÃO",
             "nome_exibicao": "Clarissa Garotinho (UNIÃO)",
             "numero": "444",
-            "votos": 1499296,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 12.46
-          },
-          {
-            "nome": "Daniel Silveira",
-            "partido": "PTB",
-            "nome_exibicao": "Daniel Silveira (PTB)",
-            "numero": "144",
-            "votos": 1281217,
+            "votos": 981357,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 10.64
+            "percentual_simulado": 8.15
           },
           {
-            "nome": "Carlos Portinho",
-            "partido": "PL",
-            "nome_exibicao": "Carlos Portinho (PL)",
-            "numero": "220",
-            "votos": 681498,
+            "nome": "Washington Reis",
+            "partido": "MDB",
+            "nome_exibicao": "Washington Reis (MDB)",
+            "numero": "151",
+            "votos": 645151,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 5.66
-          },
-          {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 318941,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 7,
-            "percentual_simulado": 2.65
+            "percentual_simulado": 5.36
           }
         ]
       }
@@ -5504,33 +5470,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Rafael Motta (PSB)",
-          "Styvenson Valentim (PODEMOS)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Zenaide Maia (PSD)",
+          "Álvaro Dias (REPUBLICANOS)",
+          "General Girão (PL)"
         ],
-        "diferenca_lider": -301539,
+        "diferenca_lider": -177067,
         "ranking": [
           {
-            "nome": "Rogério Marinho",
-            "partido": "PL",
-            "nome_exibicao": "Rogério Marinho (PL)",
-            "numero": "222",
-            "votos": 786799,
+            "nome": "Fátima Bezerra",
+            "partido": "PT",
+            "nome_exibicao": "Fátima Bezerra (PT)",
+            "numero": "133",
+            "votos": 662327,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.94
+            "percentual_simulado": 27.73
           },
           {
-            "nome": "Carlos Eduardo Alves",
-            "partido": "PDT",
-            "nome_exibicao": "Carlos Eduardo Alves (PDT)",
-            "numero": "123",
-            "votos": 542423,
+            "nome": "Styvenson Valentim",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Styvenson Valentim (PODEMOS)",
+            "numero": "200",
+            "votos": 574778,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 22.71
+            "percentual_simulado": 24.06
           },
           {
             "nome": "Abstenção",
@@ -5544,37 +5510,37 @@
             "percentual_simulado": 20.32
           },
           {
-            "nome": "Rafael Motta",
-            "partido": "PSB",
-            "nome_exibicao": "Rafael Motta (PSB)",
-            "numero": "400",
-            "votos": 352099,
+            "nome": "Zenaide Maia",
+            "partido": "PSD",
+            "nome_exibicao": "Zenaide Maia (PSD)",
+            "numero": "555",
+            "votos": 409196,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 14.74
+            "percentual_simulado": 17.13
           },
           {
-            "nome": "Styvenson Valentim",
-            "partido": "PODEMOS",
-            "nome_exibicao": "Styvenson Valentim (PODEMOS)",
-            "numero": "200",
-            "votos": 142743,
+            "nome": "Álvaro Dias",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Álvaro Dias (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 180807,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 5.98
+            "percentual_simulado": 7.57
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 79174,
+            "nome": "General Girão",
+            "partido": "PL",
+            "nome_exibicao": "General Girão (PL)",
+            "numero": "222",
+            "votos": 76129,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.31
+            "percentual_simulado": 3.19
           }
         ]
       }
@@ -5771,7 +5737,7 @@
         ]
       },
       "Senador": {
-        "posicao": 1,
+        "posicao": 2,
         "votos": 307500,
         "total_aptos": 1230000,
         "taxa_abstencao": 25.0,
@@ -5779,14 +5745,24 @@
         "iria_segundo_turno": false,
         "eleito_senado": true,
         "candidatos_superados": [
-          "Jaime Bagattoli (PL)",
-          "Mariana Carvalho (REPUBLICANOS)",
           "Marcos Rogério (PL)",
           "Confúcio Moura (MDB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Silvia Cristina (PP)",
+          "Mariana Carvalho (REPUBLICANOS)"
         ],
-        "diferenca_lider": 3666,
+        "diferenca_lider": -4821,
         "ranking": [
+          {
+            "nome": "Marcos Rocha",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Marcos Rocha (UNIÃO)",
+            "numero": "444",
+            "votos": 312321,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 1,
+            "percentual_simulado": 27.01
+          },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
@@ -5795,63 +5771,52 @@
             "votos": 307500,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 1,
-            "percentual_simulado": 26.6
-          },
-          {
-            "nome": "Jaime Bagattoli",
-            "partido": "PL",
-            "nome_exibicao": "Jaime Bagattoli (PL)",
-            "numero": "222",
-            "votos": 303834,
-            "is_abstencao": false,
-            "foto": "",
             "posicao": 2,
-            "percentual_simulado": 26.28
-          },
-          {
-            "nome": "Mariana Carvalho",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Mariana Carvalho (REPUBLICANOS)",
-            "numero": "100",
-            "votos": 272432,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 3,
-            "percentual_simulado": 23.56
+            "percentual_simulado": 26.6
           },
           {
             "nome": "Marcos Rogério",
             "partido": "PL",
             "nome_exibicao": "Marcos Rogério (PL)",
-            "numero": "220",
-            "votos": 157009,
+            "numero": "222",
+            "votos": 267340,
             "is_abstencao": false,
             "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 13.58
+            "posicao": 3,
+            "percentual_simulado": 23.12
           },
           {
             "nome": "Confúcio Moura",
             "partido": "MDB",
             "nome_exibicao": "Confúcio Moura (MDB)",
             "numero": "151",
-            "votos": 78080,
+            "votos": 151068,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 13.07
+          },
+          {
+            "nome": "Silvia Cristina",
+            "partido": "PP",
+            "nome_exibicao": "Silvia Cristina (PP)",
+            "numero": "111",
+            "votos": 83172,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 6.75
+            "percentual_simulado": 7.19
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 37342,
+            "nome": "Mariana Carvalho",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Mariana Carvalho (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 34796,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 3.23
+            "percentual_simulado": 3.01
           }
         ]
       }
@@ -6050,33 +6015,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Telmário Mota (PROS)",
           "Chico Rodrigues (PSB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Teresa Surita (MDB)",
+          "Telmário Mota (SOLIDARIEDADE)"
         ],
-        "diferenca_lider": -71785,
+        "diferenca_lider": -51200,
         "ranking": [
           {
-            "nome": "Hiran Gonçalves",
+            "nome": "Antonio Denarium",
             "partido": "PP",
-            "nome_exibicao": "Hiran Gonçalves (PP)",
+            "nome_exibicao": "Antonio Denarium (PP)",
             "numero": "111",
-            "votos": 137915,
+            "votos": 117330,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 37.98
+            "percentual_simulado": 32.31
           },
           {
-            "nome": "Romero Jucá",
-            "partido": "MDB",
-            "nome_exibicao": "Romero Jucá (MDB)",
-            "numero": "151",
-            "votos": 105449,
+            "nome": "Mecias de Jesus",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Mecias de Jesus (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 76636,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 29.04
+            "percentual_simulado": 21.1
           },
           {
             "nome": "Abstenção",
@@ -6090,37 +6055,37 @@
             "percentual_simulado": 18.21
           },
           {
-            "nome": "Telmário Mota",
-            "partido": "PROS",
-            "nome_exibicao": "Telmário Mota (PROS)",
-            "numero": "900",
-            "votos": 28218,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 7.77
-          },
-          {
             "nome": "Chico Rodrigues",
             "partido": "PSB",
             "nome_exibicao": "Chico Rodrigues (PSB)",
             "numero": "400",
-            "votos": 16337,
+            "votos": 51982,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 14.31
+          },
+          {
+            "nome": "Teresa Surita",
+            "partido": "MDB",
+            "nome_exibicao": "Teresa Surita (MDB)",
+            "numero": "151",
+            "votos": 38021,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.5
+            "percentual_simulado": 10.47
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 9119,
+            "nome": "Telmário Mota",
+            "partido": "SOLIDARIEDADE",
+            "nome_exibicao": "Telmário Mota (SOLIDARIEDADE)",
+            "numero": "777",
+            "votos": 13069,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.51
+            "percentual_simulado": 3.6
           }
         ]
       }
@@ -6317,41 +6282,31 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 1718600,
         "total_aptos": 8593000,
         "taxa_abstencao": 20.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
-          "Ana Amélia Lemos (PSD)",
           "Paulo Paim (PT)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Luis Carlos Heinze (PP)",
+          "Luciano Zucco (PL)",
+          "Juliana Brizola (PDT)"
         ],
-        "diferenca_lider": -1071114,
+        "diferenca_lider": -545552,
         "ranking": [
           {
-            "nome": "Hamilton Mourão",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Hamilton Mourão (REPUBLICANOS)",
-            "numero": "100",
-            "votos": 2789714,
+            "nome": "Eduardo Leite",
+            "partido": "PSDB",
+            "nome_exibicao": "Eduardo Leite (PSDB)",
+            "numero": "455",
+            "votos": 2264152,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 34.68
-          },
-          {
-            "nome": "Olívio Dutra",
-            "partido": "PT",
-            "nome_exibicao": "Olívio Dutra (PT)",
-            "numero": "133",
-            "votos": 2390641,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 29.72
+            "percentual_simulado": 28.15
           },
           {
             "nome": "Abstenção",
@@ -6361,41 +6316,52 @@
             "votos": 1718600,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 21.37
-          },
-          {
-            "nome": "Ana Amélia Lemos",
-            "partido": "PSD",
-            "nome_exibicao": "Ana Amélia Lemos (PSD)",
-            "numero": "555",
-            "votos": 664067,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 4,
-            "percentual_simulado": 8.26
           },
           {
             "nome": "Paulo Paim",
             "partido": "PT",
             "nome_exibicao": "Paulo Paim (PT)",
-            "numero": "130",
-            "votos": 328871,
+            "numero": "133",
+            "votos": 1694952,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 21.07
+          },
+          {
+            "nome": "Luis Carlos Heinze",
+            "partido": "PP",
+            "nome_exibicao": "Luis Carlos Heinze (PP)",
+            "numero": "111",
+            "votos": 1271214,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 4,
+            "percentual_simulado": 15.81
+          },
+          {
+            "nome": "Luciano Zucco",
+            "partido": "PL",
+            "nome_exibicao": "Luciano Zucco (PL)",
+            "numero": "222",
+            "votos": 790556,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 4.09
+            "percentual_simulado": 9.83
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 151154,
+            "nome": "Juliana Brizola",
+            "partido": "PDT",
+            "nome_exibicao": "Juliana Brizola (PDT)",
+            "numero": "123",
+            "votos": 303573,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 1.88
+            "percentual_simulado": 3.77
           }
         ]
       }
@@ -6612,33 +6578,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Dário Berger (PSB)",
-          "Esperidião Amin (PP)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Gean Loureiro (UNIÃO)",
+          "Raimundo Colombo (PSD)",
+          "Décio Lima (PT)"
         ],
-        "diferenca_lider": -734628,
+        "diferenca_lider": -525477,
         "ranking": [
           {
-            "nome": "Jorge Seif",
+            "nome": "Carol De Toni",
             "partido": "PL",
-            "nome_exibicao": "Jorge Seif (PL)",
+            "nome_exibicao": "Carol De Toni (PL)",
             "numero": "222",
-            "votos": 1667758,
+            "votos": 1458607,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 32.54
+            "percentual_simulado": 28.46
           },
           {
-            "nome": "Raimundo Colombo",
-            "partido": "PSD",
-            "nome_exibicao": "Raimundo Colombo (PSD)",
-            "numero": "555",
-            "votos": 968213,
+            "nome": "Esperidião Amin",
+            "partido": "PP",
+            "nome_exibicao": "Esperidião Amin (PP)",
+            "numero": "111",
+            "votos": 1181974,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 18.89
+            "percentual_simulado": 23.07
           },
           {
             "nome": "Abstenção",
@@ -6652,37 +6618,37 @@
             "percentual_simulado": 18.21
           },
           {
-            "nome": "Dário Berger",
-            "partido": "PSB",
-            "nome_exibicao": "Dário Berger (PSB)",
-            "numero": "400",
-            "votos": 775409,
+            "nome": "Gean Loureiro",
+            "partido": "UNIÃO",
+            "nome_exibicao": "Gean Loureiro (UNIÃO)",
+            "numero": "444",
+            "votos": 691581,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 15.13
+            "percentual_simulado": 13.5
           },
           {
-            "nome": "Esperidião Amin",
-            "partido": "PP",
-            "nome_exibicao": "Esperidião Amin (PP)",
-            "numero": "111",
-            "votos": 523925,
+            "nome": "Raimundo Colombo",
+            "partido": "PSD",
+            "nome_exibicao": "Raimundo Colombo (PSD)",
+            "numero": "555",
+            "votos": 536499,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 10.22
+            "percentual_simulado": 10.47
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 256094,
+            "nome": "Décio Lima",
+            "partido": "PT",
+            "nome_exibicao": "Décio Lima (PT)",
+            "numero": "133",
+            "votos": 322737,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 5.0
+            "percentual_simulado": 6.3
           }
         ]
       }
@@ -6874,33 +6840,33 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "Alessandro Vieira (MDB)",
-          "Rogério Carvalho (PT)",
-          "Demais Concorrentes (DIVERSOS)"
+          "André Moura (UNIÃO)",
+          "Belivaldo Chagas (PODEMOS)",
+          "Delegada Danielle Garcia (MDB)"
         ],
-        "diferenca_lider": -59373,
+        "diferenca_lider": -134127,
         "ranking": [
           {
-            "nome": "Laércio Oliveira",
-            "partido": "PP",
-            "nome_exibicao": "Laércio Oliveira (PP)",
-            "numero": "111",
-            "votos": 360153,
+            "nome": "Rogério Carvalho",
+            "partido": "PT",
+            "nome_exibicao": "Rogério Carvalho (PT)",
+            "numero": "133",
+            "votos": 434907,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 23.07
+            "percentual_simulado": 27.85
           },
           {
-            "nome": "Valmir de Franciscano",
-            "partido": "PL",
-            "nome_exibicao": "Valmir de Franciscano (PL)",
-            "numero": "222",
-            "votos": 346665,
+            "nome": "Alessandro Vieira",
+            "partido": "MDB",
+            "nome_exibicao": "Alessandro Vieira (MDB)",
+            "numero": "151",
+            "votos": 355489,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 22.2
+            "percentual_simulado": 22.77
           },
           {
             "nome": "Abstenção",
@@ -6914,10 +6880,10 @@
             "percentual_simulado": 19.26
           },
           {
-            "nome": "Alessandro Vieira",
-            "partido": "MDB",
-            "nome_exibicao": "Alessandro Vieira (MDB)",
-            "numero": "151",
+            "nome": "André Moura",
+            "partido": "UNIÃO",
+            "nome_exibicao": "André Moura (UNIÃO)",
+            "numero": "444",
             "votos": 271029,
             "is_abstencao": false,
             "foto": "",
@@ -6925,26 +6891,26 @@
             "percentual_simulado": 17.36
           },
           {
-            "nome": "Rogério Carvalho",
-            "partido": "PT",
-            "nome_exibicao": "Rogério Carvalho (PT)",
-            "numero": "133",
-            "votos": 195393,
+            "nome": "Belivaldo Chagas",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Belivaldo Chagas (PODEMOS)",
+            "numero": "200",
+            "votos": 144969,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 12.51
+            "percentual_simulado": 9.28
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 87359,
+            "nome": "Delegada Danielle Garcia",
+            "partido": "MDB",
+            "nome_exibicao": "Delegada Danielle Garcia (MDB)",
+            "numero": "150",
+            "votos": 54205,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 5.59
+            "percentual_simulado": 3.47
           }
         ]
       }
@@ -7152,41 +7118,32 @@
         ]
       },
       "Senador": {
-        "posicao": 3,
+        "posicao": 2,
         "votos": 7626300,
         "total_aptos": 34665000,
         "taxa_abstencao": 22.0,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
-        "eleito_senado": false,
+        "eleito_senado": true,
         "candidatos_superados": [
+          "Geraldo Alckmin (PSB)",
           "Mara Gabrilli (PSD)",
           "Alexandre Giordano (MDB)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Tabata Amaral (PSB)",
+          "Janaína Paschoal (PP)"
         ],
-        "diferenca_lider": -4731900,
+        "diferenca_lider": -955783,
         "ranking": [
           {
-            "nome": "Marcos Pontes",
+            "nome": "Eduardo Bolsonaro",
             "partido": "PL",
-            "nome_exibicao": "Marcos Pontes (PL)",
+            "nome_exibicao": "Eduardo Bolsonaro (PL)",
             "numero": "222",
-            "votos": 12358200,
+            "votos": 8582083,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 38.02
-          },
-          {
-            "nome": "Márcio França",
-            "partido": "PSB",
-            "nome_exibicao": "Márcio França (PSB)",
-            "numero": "400",
-            "votos": 9004968,
-            "is_abstencao": false,
-            "foto": "",
-            "posicao": 2,
-            "percentual_simulado": 27.71
+            "percentual_simulado": 26.4
           },
           {
             "nome": "Abstenção",
@@ -7196,41 +7153,63 @@
             "votos": 7626300,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
-            "posicao": 3,
+            "posicao": 2,
             "percentual_simulado": 23.46
+          },
+          {
+            "nome": "Geraldo Alckmin",
+            "partido": "PSB",
+            "nome_exibicao": "Geraldo Alckmin (PSB)",
+            "numero": "400",
+            "votos": 7263676,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 3,
+            "percentual_simulado": 22.35
           },
           {
             "nome": "Mara Gabrilli",
             "partido": "PSD",
             "nome_exibicao": "Mara Gabrilli (PSD)",
             "numero": "555",
-            "votos": 1865670,
+            "votos": 4179101,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 5.74
+            "percentual_simulado": 12.86
           },
           {
             "nome": "Alexandre Giordano",
             "partido": "MDB",
             "nome_exibicao": "Alexandre Giordano (MDB)",
             "numero": "151",
-            "votos": 1044775,
+            "votos": 2437809,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 3.21
+            "percentual_simulado": 7.5
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 601989,
+            "nome": "Tabata Amaral",
+            "partido": "PSB",
+            "nome_exibicao": "Tabata Amaral (PSB)",
+            "numero": "404",
+            "votos": 1442785,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 1.85
+            "percentual_simulado": 4.44
+          },
+          {
+            "nome": "Janaína Paschoal",
+            "partido": "PP",
+            "nome_exibicao": "Janaína Paschoal (PP)",
+            "numero": "111",
+            "votos": 970148,
+            "is_abstencao": false,
+            "foto": "",
+            "posicao": 7,
+            "percentual_simulado": 2.98
           }
         ]
       }
@@ -7431,32 +7410,32 @@
         "eleito_senado": false,
         "candidatos_superados": [
           "Kátia Abreu (PP)",
-          "Eduardo Gomes (PL)",
-          "Demais Concorrentes (DIVERSOS)"
+          "Irajá Abreu (PSD)",
+          "Ronaldo Dimas (PL)"
         ],
-        "diferenca_lider": -88147,
+        "diferenca_lider": -76310,
         "ranking": [
           {
-            "nome": "Professora Dorinha",
-            "partido": "UNIÃO",
-            "nome_exibicao": "Professora Dorinha (UNIÃO)",
-            "numero": "444",
-            "votos": 317677,
+            "nome": "Wanderlei Barbosa",
+            "partido": "REPUBLICANOS",
+            "nome_exibicao": "Wanderlei Barbosa (REPUBLICANOS)",
+            "numero": "100",
+            "votos": 305840,
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 31.03
+            "percentual_simulado": 29.87
           },
           {
-            "nome": "Carlos Amastha",
-            "partido": "PSB",
-            "nome_exibicao": "Carlos Amastha (PSB)",
-            "numero": "400",
-            "votos": 250233,
+            "nome": "Eduardo Gomes",
+            "partido": "PL",
+            "nome_exibicao": "Eduardo Gomes (PL)",
+            "numero": "222",
+            "votos": 239906,
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 24.44
+            "percentual_simulado": 23.43
           },
           {
             "nome": "Abstenção",
@@ -7474,33 +7453,33 @@
             "partido": "PP",
             "nome_exibicao": "Kátia Abreu (PP)",
             "numero": "111",
-            "votos": 146962,
+            "votos": 133457,
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 14.35
+            "percentual_simulado": 13.03
           },
           {
-            "nome": "Eduardo Gomes",
-            "partido": "PL",
-            "nome_exibicao": "Eduardo Gomes (PL)",
-            "numero": "222",
-            "votos": 51635,
+            "nome": "Irajá Abreu",
+            "partido": "PSD",
+            "nome_exibicao": "Irajá Abreu (PSD)",
+            "numero": "555",
+            "votos": 85794,
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 5.04
+            "percentual_simulado": 8.38
           },
           {
-            "nome": "Demais Concorrentes",
-            "partido": "DIVERSOS",
-            "nome_exibicao": "Demais Concorrentes (DIVERSOS)",
-            "numero": "--",
-            "votos": 27883,
+            "nome": "Ronaldo Dimas",
+            "partido": "PL",
+            "nome_exibicao": "Ronaldo Dimas (PL)",
+            "numero": "220",
+            "votos": 29392,
             "is_abstencao": false,
             "foto": "",
             "posicao": 6,
-            "percentual_simulado": 2.72
+            "percentual_simulado": 2.87
           }
         ]
       }
