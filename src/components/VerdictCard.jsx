@@ -65,15 +65,15 @@ export default function VerdictCard({
   if (isBrasil && currentCargo === 'Senador') {
     headline = (
       <>
-        Se a Abstenção fosse um partido para o Senado em 2026, ela conquistaria uma cadeira em{' '}
-        <span className="highlight-amber">TODOS OS 27 ESTADOS</span> e formaria a{' '}
-        <span className="highlight-white">MAIOR BANCADA DO PAÍS (27 SENADORES)!</span>
+        Se a Abstenção fosse um partido para o Senado em 2026, ela conquistaria{' '}
+        <span className="highlight-amber">10 CADEIRAS NO SENADO</span> e formaria a{' '}
+        <span className="highlight-white">2ª MAIOR BANCADA DO PAÍS</span> (atrás apenas do PL)!
       </>
     );
-    subtext = 'Nas Eleições Gerais de 2026, cada estado renova 2 vagas no Senado (54 vagas no total). Em 9 estados os ausentes ficariam em 1º lugar e em 18 estados em 2º lugar — conquistando exatamente 50% de todas as cadeiras em disputa no país!';
-    badge1 = { icon: '🏛️', text: <>Cadeiras no Senado: <strong>27 de 54 Vagas (50%)</strong></>, highlight: true };
-    badge2 = { icon: '📉', text: <>Eleita em: <strong>27 de 27 Unidades Federativas</strong></> };
-    badge3 = { icon: '📊', text: <>Desempenho: <strong>9 UFs em 1º · 18 UFs em 2º</strong></> };
+    subtext = 'Nas Eleições Gerais de 2026, cada estado renova duas vagas no Senado (54 vagas no total). Os eleitores ausentes conquistariam 10 cadeiras (2 UFs em 1º lugar e 8 UFs em 2º lugar), superando bancadas tradicionais como MDB (7), PT (6) e PP (4), ficando atrás apenas do PL (17 eleitos).';
+    badge1 = { icon: '🏛️', text: <>Cadeiras Conquistadas: <strong>10 de 54 Vagas</strong></>, highlight: true };
+    badge2 = { icon: '📉', text: <>Posição Nacional: <strong>2ª Maior Bancada Eleita</strong></> };
+    badge3 = { icon: '📊', text: <>Desempenho: <strong>2 UFs em 1º · 8 UFs em 2º</strong></> };
   } else if (isBrasil && currentCargo === 'Governador') {
     const g1t = brasilData?.analise_governadores_1t;
     const total1T = g1t?.total_analisados || 16;

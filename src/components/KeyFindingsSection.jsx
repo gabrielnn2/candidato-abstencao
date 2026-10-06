@@ -163,13 +163,14 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            A Maior Bancada Partidária do Congresso Nacional
+            A 2ª Maior Bancada Eleita do Senado (Atrás Apenas do PL)
           </h3>
 
           <p className="finding-narrative">
             No Senado, as abstenções <strong>ganhariam uma cadeira em {findings.senCadeiras} estados</strong>, sendo que em{' '}
             <span className="finding-highlight">{findings.sen1o} deles</span> ficaria em primeiro lugar na disputa e apenas em{' '}
-            <strong>{findings.senSemCadeira} estados não conquistaria</strong> uma cadeira.
+            <strong>{findings.senSemCadeira} estados não conquistaria</strong> uma cadeira. Com {findings.senCadeiras} eleitos, seria a{' '}
+            <strong>2ª maior bancada da Casa</strong>, atrás apenas do PL (17 eleitos) e à frente de MDB (7) e PT (6).
           </p>
 
           <div className="finding-stats-row">
