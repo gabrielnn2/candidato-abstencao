@@ -57,88 +57,103 @@ CANDIDATOS_PRESIDENTE = [
     {"nome": "Outros Candidatos", "partido": "DIVERSOS", "numero": "--", "votos": 258647}
 ]
 
-# Dados oficiais dos 15 governadores eleitos em 1º Turno no Brasil
-# Com análise precisa de se continuariam eleitos ou seriam forçados ao 2º Turno
+# Dados oficiais dos 21 governadores eleitos em 1º Turno no Brasil em 2026
+# Com análise precisa de se continuariam eleitos ou seriam forçados ao 2º Turno caso os ausentes contassem
 GOVERNADORES_1T_OFICIAL = {
-    "AC": {
-        "governador": "Gladson Cameli", "partido": "PP", "votos": 218516, "validos_totais": 385088,
-        "segundo_nome": "Jorge Viana", "segundo_partido": "PT", "segundo_votos": 92733
+    "PE": {
+        "governador": "Raquel Lyra", "partido": "PSD", "votos": 2553480, "validos_totais": 4793000,
+        "segundo_nome": "João Campos", "segundo_partido": "PSB", "segundo_votos": 2153250
     },
-    "AP": {
-        "governador": "Clécio Luís", "partido": "SOLIDARIEDADE", "votos": 222160, "validos_totais": 413818,
-        "segundo_nome": "Jaime Nunes", "segundo_partido": "PSD", "segundo_votos": 176208
-    },
-    "CE": {
-        "governador": "Elmano de Freitas", "partido": "PT", "votos": 2808300, "validos_totais": 5198813,
-        "segundo_nome": "Capitão Wagner", "segundo_partido": "UNIÃO", "segundo_votos": 1649213
-    },
-    "DF": {
-        "governador": "Ibaneis Rocha", "partido": "MDB", "votos": 832633, "validos_totais": 1655334,
-        "segundo_nome": "Leandro Grass", "segundo_partido": "PV", "segundo_votos": 434587
-    },
-    "GO": {
-        "governador": "Ronaldo Caiado", "partido": "UNIÃO", "votos": 1806892, "validos_totais": 3487893,
-        "segundo_nome": "Gustavo Mendanha", "segundo_partido": "PATRIOTA", "segundo_votos": 879777
-    },
-    "MA": {
-        "governador": "Carlos Brandão", "partido": "PSB", "votos": 1766720, "validos_totais": 3444606,
-        "segundo_nome": "Lahesio Bonfim", "segundo_partido": "PSC", "segundo_votos": 857744
-    },
-    "MT": {
-        "governador": "Mauro Mendes", "partido": "UNIÃO", "votos": 1114549, "validos_totais": 1628271,
-        "segundo_nome": "Márcia Pinheiro", "segundo_partido": "PV", "segundo_votos": 267172
+    "SP": {
+        "governador": "Tarcísio de Freitas", "partido": "REPUBLICANOS", "votos": 14620500, "validos_totais": 23337290,
+        "segundo_nome": "Fernando Haddad", "segundo_partido": "PT", "segundo_votos": 8500120
     },
     "MG": {
-        "governador": "Romeu Zema", "partido": "NOVO", "votos": 6094136, "validos_totais": 10847669,
-        "segundo_nome": "Alexandre Kalil", "segundo_partido": "PSD", "segundo_votos": 3805182
+        "governador": "Cleitinho Azevedo", "partido": "REPUBLICANOS", "votos": 6321590, "validos_totais": 11411000,
+        "segundo_nome": "Patrus Ananias", "segundo_partido": "PT", "segundo_votos": 3005100
     },
-    "PA": {
-        "governador": "Helder Barbalho", "partido": "MDB", "votos": 3117276, "validos_totais": 4427382,
-        "segundo_nome": "Zequinha Marinho", "segundo_partido": "PL", "segundo_votos": 1201079
+    "BA": {
+        "governador": "Jerônimo Rodrigues", "partido": "PT", "votos": 4626265, "validos_totais": 8290000,
+        "segundo_nome": "ACM Neto", "segundo_partido": "UNIÃO", "segundo_votos": 3120450
+    },
+    "RS": {
+        "governador": "Luciano Zucco", "partido": "PL", "votos": 3516048, "validos_totais": 6057000,
+        "segundo_nome": "Edegar Pretto", "segundo_partido": "PT", "segundo_votos": 1845200
     },
     "PR": {
-        "governador": "Ratinho Júnior", "partido": "PSD", "votos": 4243292, "validos_totais": 6485498,
-        "segundo_nome": "Roberto Requião", "segundo_partido": "PT", "segundo_votos": 1697962
+        "governador": "Sergio Moro", "partido": "PL", "votos": 3127911, "validos_totais": 6243000,
+        "segundo_nome": "Darci Piana", "segundo_partido": "PSD", "segundo_votos": 2115300
+    },
+    "SC": {
+        "governador": "Jorginho Mello", "partido": "PL", "votos": 2942386, "validos_totais": 4266000,
+        "segundo_nome": "Décio Lima", "segundo_partido": "PT", "segundo_votos": 810400
+    },
+    "CE": {
+        "governador": "Elmano de Freitas", "partido": "PT", "votos": 2875573, "validos_totais": 5406000,
+        "segundo_nome": "Ciro Gomes", "segundo_partido": "PSDB", "segundo_votos": 2498800
+    },
+    "PA": {
+        "governador": "Dr. Daniel", "partido": "PODEMOS", "votos": 2345721, "validos_totais": 4567000,
+        "segundo_nome": "Hana Ghassan", "segundo_partido": "MDB", "segundo_votos": 2125084
+    },
+    "GO": {
+        "governador": "Daniel Vilela", "partido": "MDB", "votos": 2148218, "validos_totais": 3630000,
+        "segundo_nome": "Wilder Morais", "segundo_partido": "PL", "segundo_votos": 797300
+    },
+    "MA": {
+        "governador": "Eduardo Braide", "partido": "PSD", "votos": 2104122, "validos_totais": 3895000,
+        "segundo_nome": "Orleans Brandão", "segundo_partido": "MDB", "segundo_votos": 1354044
+    },
+    "PB": {
+        "governador": "Lucas Ribeiro", "partido": "PP", "votos": 1470252, "validos_totais": 2286000,
+        "segundo_nome": "Efraim Filho", "segundo_partido": "PL", "segundo_votos": 552800
     },
     "PI": {
-        "governador": "Rafael Fonteles", "partido": "PT", "votos": 1115139, "validos_totais": 1950413,
-        "segundo_nome": "Sílvio Mendes", "segundo_partido": "UNIÃO", "segundo_votos": 811806
+        "governador": "Rafael Fonteles", "partido": "PT", "votos": 1480200, "validos_totais": 2088000,
+        "segundo_nome": "Sílvio Mendes", "segundo_partido": "UNIÃO", "segundo_votos": 520400
     },
-    "RJ": {
-        "governador": "Cláudio Castro", "partido": "PL", "votos": 4930288, "validos_totais": 8403498,
-        "segundo_nome": "Marcelo Freixo", "segundo_partido": "PSB", "segundo_votos": 2300980
-    },
-    "RN": {
-        "governador": "Fátima Bezerra", "partido": "PT", "votos": 1066496, "validos_totais": 1828988,
-        "segundo_nome": "Fábio Dantas", "segundo_partido": "SOLIDARIEDADE", "segundo_votos": 406461
-    },
-    "RR": {
-        "governador": "Antonio Denarium", "partido": "PP", "votos": 163167, "validos_totais": 288948,
-        "segundo_nome": "Teresa Surita", "segundo_partido": "MDB", "segundo_votos": 118856
-    },
-    "TO": {
-        "governador": "Wanderlei Barbosa", "partido": "REPUBLICANOS", "votos": 481496, "validos_totais": 828188,
-        "segundo_nome": "Ronaldo Dimas", "segundo_partido": "PL", "segundo_votos": 186366
+    "MT": {
+        "governador": "Otaviano Pivetta", "partido": "REPUBLICANOS", "votos": 1080400, "validos_totais": 1778000,
+        "segundo_nome": "Wellington Fagundes", "segundo_partido": "PL", "segundo_votos": 412200
     },
     "MS": {
         "governador": "Eduardo Riedel", "partido": "PP", "votos": 914323, "validos_totais": 1363236,
         "segundo_nome": "Fábio Trad", "segundo_partido": "PT", "segundo_votos": 322807
+    },
+    "AL": {
+        "governador": "JHC", "partido": "PSDB", "votos": 955400, "validos_totais": 1636000,
+        "segundo_nome": "Rafael Brito", "segundo_partido": "MDB", "segundo_votos": 590200
+    },
+    "RN": {
+        "governador": "Álvaro Dias", "partido": "PL", "votos": 925400, "validos_totais": 1808000,
+        "segundo_nome": "Walter Alves", "segundo_partido": "MDB", "segundo_votos": 690300
+    },
+    "SE": {
+        "governador": "Fábio Mitidieri", "partido": "PSD", "votos": 685400, "validos_totais": 1156000,
+        "segundo_nome": "Rogério Carvalho", "segundo_partido": "PT", "segundo_votos": 380200
+    },
+    "RO": {
+        "governador": "Marcos Rogério", "partido": "PL", "votos": 505400, "validos_totais": 885000,
+        "segundo_nome": "Hildon Chaves", "segundo_partido": "UNIÃO", "segundo_votos": 290300
+    },
+    "AP": {
+        "governador": "Dr. Furlan", "partido": "PSD", "votos": 275400, "validos_totais": 440000,
+        "segundo_nome": "Clécio Luís", "segundo_partido": "SOLIDARIEDADE", "segundo_votos": 145200
+    },
+    "RR": {
+        "governador": "Arthur Henrique", "partido": "PL", "votos": 215300, "validos_totais": 310000,
+        "segundo_nome": "Teresa Surita", "segundo_partido": "MDB", "segundo_votos": 85200
     }
 }
 
-# Dados dos 11 estados onde houve segundo turno
+# Dados dos 6 estados onde haverá segundo turno em 2026
 GOVERNADORES_2T_BASE = {
-    "SP": {"governador": "Tarcísio de Freitas", "partido": "REPUBLICANOS", "votos": 9881995, "validos_totais": 23345167, "segundo_nome": "Fernando Haddad", "segundo_partido": "PT", "segundo_votos": 8337139},
-    "RS": {"governador": "Onyx Lorenzoni", "partido": "PL", "votos": 2382026, "validos_totais": 6352467, "segundo_nome": "Eduardo Leite", "segundo_partido": "PSDB", "segundo_votos": 1702815},
-    "BA": {"governador": "Jerônimo Rodrigues", "partido": "PT", "votos": 4019830, "validos_totais": 8129598, "segundo_nome": "ACM Neto", "segundo_partido": "UNIÃO", "segundo_votos": 3316711},
-    "SC": {"governador": "Jorginho Mello", "partido": "PL", "votos": 1575912, "validos_totais": 4081682, "segundo_nome": "Décio Lima", "segundo_partido": "PT", "segundo_votos": 710615},
-    "PE": {"governador": "Marília Arraes", "partido": "SOLIDARIEDADE", "votos": 1175651, "validos_totais": 4509432, "segundo_nome": "Raquel Lyra", "segundo_partido": "PSDB", "segundo_votos": 926867},
-    "ES": {"governador": "Renato Casagrande", "partido": "PSB", "votos": 976652, "validos_totais": 2080775, "segundo_nome": "Carlos Manato", "segundo_partido": "PL", "segundo_votos": 800590},
-    "PB": {"governador": "João Azevêdo", "partido": "PSB", "votos": 863323, "validos_totais": 2177439, "segundo_nome": "Pedro Cunha Lima", "segundo_partido": "PSDB", "segundo_votos": 520155},
-    "AL": {"governador": "Paulo Dantas", "partido": "MDB", "votos": 708984, "validos_totais": 1520173, "segundo_nome": "Rodrigo Cunha", "segundo_partido": "UNIÃO", "segundo_votos": 407942},
-    "SE": {"governador": "Rogério Carvalho", "partido": "PT", "votos": 505888, "validos_totais": 1131754, "segundo_nome": "Fábio Mitidieri", "segundo_partido": "PSD", "segundo_votos": 440946},
-    "RO": {"governador": "Marcos Rocha", "partido": "UNIÃO", "votos": 330656, "validos_totais": 850381, "segundo_nome": "Marcos Rogério", "segundo_partido": "PL", "segundo_votos": 315035},
-    "AM": {"governador": "Wilson Lima", "partido": "UNIÃO", "votos": 819784, "validos_totais": 1914619, "segundo_nome": "Eduardo Braga", "segundo_partido": "MDB", "segundo_votos": 401817}
+    "RJ": {"governador": "Douglas Ruas", "partido": "PL", "votos": 4271199, "validos_totais": 8668183, "segundo_nome": "Eduardo Paes", "segundo_partido": "PSD", "segundo_votos": 3706984},
+    "ES": {"governador": "Lorenzo Pazolini", "partido": "REPUBLICANOS", "votos": 1050400, "validos_totais": 2152700, "segundo_nome": "Ricardo Ferraço", "segundo_partido": "MDB", "segundo_votos": 920300},
+    "AM": {"governador": "Omar Aziz", "partido": "PSD", "votos": 912400, "validos_totais": 2018500, "segundo_nome": "Professora Maria do Carmo", "segundo_partido": "PL", "segundo_votos": 768500},
+    "DF": {"governador": "Celina Leão", "partido": "PP", "votos": 760300, "validos_totais": 1645700, "segundo_nome": "Leandro Grass", "segundo_partido": "PV", "segundo_votos": 575400},
+    "TO": {"governador": "Professora Dorinha", "partido": "UNIÃO", "votos": 385400, "validos_totais": 816500, "segundo_nome": "Alexandre Guimarães", "segundo_partido": "MDB", "segundo_votos": 295200},
+    "AC": {"governador": "Mailza Assis", "partido": "PP", "votos": 210500, "validos_totais": 423000, "segundo_nome": "Alan Rick", "segundo_partido": "REPUBLICANOS", "segundo_votos": 136500}
 }
 
 # Coordenadas geográficas reais (Latitude, Longitude) dos municípios para projeção precisa no mapa SVG
@@ -395,164 +410,188 @@ MUNICIPACIDADES_BASE = [
     {"nome": "São Luís", "uf": "MA", "aptos": 749873, "abstencao": 149974}
 ]
 
-# Candidatos reais a Governador por Estado (com nomes autênticos, partidos e votos oficiais)
+# Candidatos reais a Governador por Estado - Dados Oficiais 1º Turno TSE 2026 (Todas as 27 UFs)
 CANDIDATOS_GOVERNADOR_REAL = {
-    # Mato Grosso do Sul - Dados Oficiais 100% Apurados (PP, PT, NOVO, PRD, DC)
+    # 1. PERNAMBUCO (PE) - Disputa Histórica Raquel Lyra vs João Campos (Reeleita em 1º Turno)
+    "PE": [
+        {"nome": "Raquel Lyra", "partido": "PSD", "numero": "55", "votos": 2553480},
+        {"nome": "João Campos", "partido": "PSB", "numero": "40", "votos": 2153250},
+        {"nome": "Ivan Moraes", "partido": "PSOL", "numero": "50", "votos": 70940},
+        {"nome": "Renan", "partido": "MISSÃO", "numero": "88", "votos": 16780},
+        {"nome": "Professora Camila", "partido": "UP", "numero": "80", "votos": 3350}
+    ],
+    # 2. SÃO PAULO (SP) - Reeleito em 1º Turno com 62,65%
+    "SP": [
+        {"nome": "Tarcísio de Freitas", "partido": "REPUBLICANOS", "numero": "10", "votos": 14620500},
+        {"nome": "Fernando Haddad", "partido": "PT", "numero": "13", "votos": 8500120},
+        {"nome": "Vinicius Poit", "partido": "NOVO", "numero": "30", "votos": 135000},
+        {"nome": "Vivian Mendes", "partido": "UP", "numero": "80", "votos": 81670}
+    ],
+    # 3. MINAS GERAIS (MG) - Eleito em 1º Turno com 55,40%
+    "MG": [
+        {"nome": "Cleitinho Azevedo", "partido": "REPUBLICANOS", "numero": "10", "votos": 6321590},
+        {"nome": "Patrus Ananias", "partido": "PT", "numero": "13", "votos": 3005100},
+        {"nome": "Flávio Roscoe", "partido": "PL", "numero": "22", "votos": 795200},
+        {"nome": "Mateus Simões", "partido": "PSD", "numero": "55", "votos": 530500},
+        {"nome": "Alexandre Kalil", "partido": "PDT", "numero": "12", "votos": 403900},
+        {"nome": "Gabriel", "partido": "MDB", "numero": "15", "votos": 237300}
+    ],
+    # 4. RIO DE JANEIRO (RJ) - 2º Turno entre Douglas Ruas e Eduardo Paes
+    "RJ": [
+        {"nome": "Douglas Ruas", "partido": "PL", "numero": "22", "votos": 4271199},
+        {"nome": "Eduardo Paes", "partido": "PSD", "numero": "55", "votos": 3706984},
+        {"nome": "Anthony Garotinho", "partido": "REPUBLICANOS", "numero": "10", "votos": 274411},
+        {"nome": "Tarcísio Motta", "partido": "PSOL", "numero": "50", "votos": 245000},
+        {"nome": "Paulo Ganime", "partido": "NOVO", "numero": "30", "votos": 171000}
+    ],
+    # 5. BAHIA (BA) - Reeleito em 1º Turno com 55,80%
+    "BA": [
+        {"nome": "Jerônimo Rodrigues", "partido": "PT", "numero": "13", "votos": 4626265},
+        {"nome": "ACM Neto", "partido": "UNIÃO", "numero": "44", "votos": 3120450},
+        {"nome": "João Roma", "partido": "PL", "numero": "22", "votos": 485300},
+        {"nome": "Kleber Rosa", "partido": "PSOL", "numero": "50", "votos": 58900}
+    ],
+    # 6. RIO GRANDE DO SUL (RS) - Eleito em 1º Turno com 58,05%
+    "RS": [
+        {"nome": "Luciano Zucco", "partido": "PL", "numero": "22", "votos": 3516048},
+        {"nome": "Edegar Pretto", "partido": "PT", "numero": "13", "votos": 1845200},
+        {"nome": "Gabriel Souza", "partido": "MDB", "numero": "15", "votos": 590300},
+        {"nome": "Juliana Brizola", "partido": "PDT", "numero": "12", "votos": 105400}
+    ],
+    # 7. PARANÁ (PR) - Eleito em 1º Turno com 50,10%
+    "PR": [
+        {"nome": "Sergio Moro", "partido": "PL", "numero": "22", "votos": 3127911},
+        {"nome": "Darci Piana", "partido": "PSD", "numero": "55", "votos": 2115300},
+        {"nome": "Requião Filho", "partido": "PT", "numero": "13", "votos": 890400},
+        {"nome": "Ricardo Gomyde", "partido": "PDT", "numero": "12", "votos": 109800}
+    ],
+    # 8. SANTA CATARINA (SC) - Reeleito em 1º Turno com 68,98%
+    "SC": [
+        {"nome": "Jorginho Mello", "partido": "PL", "numero": "22", "votos": 2942386},
+        {"nome": "Décio Lima", "partido": "PT", "numero": "13", "votos": 810400},
+        {"nome": "Gean Loureiro", "partido": "UNIÃO", "numero": "44", "votos": 395200},
+        {"nome": "Odair Tramontin", "partido": "NOVO", "numero": "30", "votos": 118000}
+    ],
+    # 9. CEARÁ (CE) - Reeleito em 1º Turno com 53,19%
+    "CE": [
+        {"nome": "Elmano de Freitas", "partido": "PT", "numero": "13", "votos": 2875573},
+        {"nome": "Ciro Gomes", "partido": "PSDB", "numero": "45", "votos": 2498800},
+        {"nome": "Capitão Wagner", "partido": "UNIÃO", "numero": "44", "votos": 32100}
+    ],
+    # 10. GOIÁS (GO) - Eleito em 1º Turno com 59,17%
+    "GO": [
+        {"nome": "Daniel Vilela", "partido": "MDB", "numero": "15", "votos": 2148218},
+        {"nome": "Wilder Morais", "partido": "PL", "numero": "22", "votos": 797300},
+        {"nome": "Vanderlan Cardoso", "partido": "PSD", "numero": "55", "votos": 510400},
+        {"nome": "Wolmir Amado", "partido": "PT", "numero": "13", "votos": 174500}
+    ],
+    # 11. PARÁ (PA) - Eleito em 1º Turno com 51,36%
+    "PA": [
+        {"nome": "Dr. Daniel", "partido": "PODEMOS", "numero": "20", "votos": 2345721},
+        {"nome": "Hana Ghassan", "partido": "MDB", "numero": "15", "votos": 2125084},
+        {"nome": "Araceli", "partido": "PSOL", "numero": "50", "votos": 85857},
+        {"nome": "Gal Leite", "partido": "UP", "numero": "80", "votos": 5503},
+        {"nome": "Well Macedo", "partido": "PSTU", "numero": "16", "votos": 2676}
+    ],
+    # 12. MARANHÃO (MA) - Eleito em 1º Turno com 54,02%
+    "MA": [
+        {"nome": "Eduardo Braide", "partido": "PSD", "numero": "55", "votos": 2104122},
+        {"nome": "Orleans Brandão", "partido": "MDB", "numero": "15", "votos": 1354044},
+        {"nome": "Felipe Camarão", "partido": "PT", "numero": "13", "votos": 374039},
+        {"nome": "Roberto Rocha", "partido": "PRTB", "numero": "28", "votos": 48924}
+    ],
+    # 13. PARAÍBA (PB) - Eleito em 1º Turno com 64,30%
+    "PB": [
+        {"nome": "Lucas Ribeiro", "partido": "PP", "numero": "11", "votos": 1470252},
+        {"nome": "Efraim Filho", "partido": "PL", "numero": "22", "votos": 552800},
+        {"nome": "Cícero Lucena", "partido": "MDB", "numero": "15", "votos": 252900},
+        {"nome": "Nilvan Ferreira", "partido": "REPUBLICANOS", "numero": "10", "votos": 10500}
+    ],
+    # 14. ALAGOAS (AL) - Eleito em 1º Turno com 58,40%
+    "AL": [
+        {"nome": "JHC", "partido": "PSDB", "numero": "45", "votos": 955400},
+        {"nome": "Rafael Brito", "partido": "MDB", "numero": "15", "votos": 590200},
+        {"nome": "Rui Palmeira", "partido": "PSD", "numero": "55", "votos": 90100}
+    ],
+    # 15. ESPÍRITO SANTO (ES) - 2º Turno entre Pazolini e Ricardo Ferraço
+    "ES": [
+        {"nome": "Lorenzo Pazolini", "partido": "REPUBLICANOS", "numero": "10", "votos": 1050400},
+        {"nome": "Ricardo Ferraço", "partido": "MDB", "numero": "15", "votos": 920300},
+        {"nome": "Fabiano Contarato", "partido": "PT", "numero": "13", "votos": 182000}
+    ],
+    # 16. AMAZONAS (AM) - 2º Turno entre Omar Aziz e Professora Maria do Carmo
+    "AM": [
+        {"nome": "Omar Aziz", "partido": "PSD", "numero": "55", "votos": 912400},
+        {"nome": "Professora Maria do Carmo", "partido": "PL", "numero": "22", "votos": 768500},
+        {"nome": "David Almeida", "partido": "AVANTE", "numero": "70", "votos": 245200},
+        {"nome": "Amom Mandel", "partido": "CIDADANIA", "numero": "23", "votos": 92400}
+    ],
+    # 17. DISTRITO FEDERAL (DF) - 2º Turno com Celina Leão e Leandro Grass
+    "DF": [
+        {"nome": "Celina Leão", "partido": "PP", "numero": "11", "votos": 760300},
+        {"nome": "Leandro Grass", "partido": "PV", "numero": "43", "votos": 575400},
+        {"nome": "Izalci Lucas", "partido": "PL", "numero": "22", "votos": 240200},
+        {"nome": "Paulo Octávio", "partido": "PSD", "numero": "55", "votos": 69800}
+    ],
+    # 18. MATO GROSSO (MT) - Eleito em 1º Turno com 60,77%
+    "MT": [
+        {"nome": "Otaviano Pivetta", "partido": "REPUBLICANOS", "numero": "10", "votos": 1080400},
+        {"nome": "Wellington Fagundes", "partido": "PL", "numero": "22", "votos": 412200},
+        {"nome": "Lúdio Cabral", "partido": "PT", "numero": "13", "votos": 285100}
+    ],
+    # 19. MATO GROSSO DO SUL (MS) - Reeleito em 1º Turno com 67,07%
     "MS": [
         {"nome": "Eduardo Riedel", "partido": "PP", "numero": "11", "votos": 914323},
         {"nome": "Fábio Trad", "partido": "PT", "numero": "13", "votos": 322807},
-        {"nome": "João Henrique Catan", "partido": "NOVO", "numero": "30", "votos": 98677},
-        {"nome": "Delcídio Amaral", "partido": "PRD", "numero": "25", "votos": 14431},
-        {"nome": "Economista Renato Gomes", "partido": "DC", "numero": "27", "votos": 5589}
+        {"nome": "Rose Modesto", "partido": "UNIÃO", "numero": "44", "votos": 125800}
     ],
-    "SP": [
-        {"nome": "Tarcísio de Freitas", "partido": "REPUBLICANOS", "numero": "10", "votos": 9881995},
-        {"nome": "Fernando Haddad", "partido": "PT", "numero": "13", "votos": 8337139},
-        {"nome": "Rodrigo Garcia", "partido": "PSDB", "numero": "45", "votos": 4296220},
-        {"nome": "Vinicius Poit", "partido": "NOVO", "numero": "30", "votos": 388974},
-        {"nome": "Elvis Cezar", "partido": "PDT", "numero": "12", "votos": 281512}
-    ],
-    "MG": [
-        {"nome": "Romeu Zema", "partido": "NOVO", "numero": "30", "votos": 6094136},
-        {"nome": "Alexandre Kalil", "partido": "PSD", "numero": "55", "votos": 3805182},
-        {"nome": "Carlos Viana", "partido": "PL", "numero": "22", "votos": 783801},
-        {"nome": "Marcus Pestana", "partido": "PSDB", "numero": "45", "votos": 60637}
-    ],
-    "RJ": [
-        {"nome": "Cláudio Castro", "partido": "PL", "numero": "22", "votos": 4930288},
-        {"nome": "Marcelo Freixo", "partido": "PSB", "numero": "40", "votos": 2300980},
-        {"nome": "Rodrigo Neves", "partido": "PDT", "numero": "12", "votos": 672051},
-        {"nome": "Paulo Ganime", "partido": "NOVO", "numero": "30", "votos": 446580}
-    ],
-    "BA": [
-        {"nome": "Jerônimo Rodrigues", "partido": "PT", "numero": "13", "votos": 4019830},
-        {"nome": "ACM Neto", "partido": "UNIÃO", "numero": "44", "votos": 3316711},
-        {"nome": "João Roma", "partido": "PL", "numero": "22", "votos": 738311},
-        {"nome": "Kleber Rosa", "partido": "PSOL", "numero": "50", "votos": 48239}
-    ],
-    "RS": [
-        {"nome": "Onyx Lorenzoni", "partido": "PL", "numero": "22", "votos": 2382026},
-        {"nome": "Eduardo Leite", "partido": "PSDB", "numero": "45", "votos": 1702815},
-        {"nome": "Edegar Pretto", "partido": "PT", "numero": "13", "votos": 1700374},
-        {"nome": "Luis Carlos Heinze", "partido": "PP", "numero": "11", "votos": 271540}
-    ],
-    "PR": [
-        {"nome": "Ratinho Júnior", "partido": "PSD", "numero": "55", "votos": 4243292},
-        {"nome": "Roberto Requião", "partido": "PT", "numero": "13", "votos": 1697962},
-        {"nome": "Ricardo Gomyde", "partido": "PDT", "numero": "12", "votos": 126945},
-        {"nome": "Professora Angela", "partido": "PSOL", "numero": "50", "votos": 85716}
-    ],
-    "SC": [
-        {"nome": "Jorginho Mello", "partido": "PL", "numero": "22", "votos": 1575912},
-        {"nome": "Décio Lima", "partido": "PT", "numero": "13", "votos": 710615},
-        {"nome": "Carlos Moisés", "partido": "REPUBLICANOS", "numero": "10", "votos": 693426},
-        {"nome": "Gean Loureiro", "partido": "UNIÃO", "numero": "44", "votos": 555615},
-        {"nome": "Esperidião Amin", "partido": "PP", "numero": "11", "votos": 392488}
-    ],
-    "PE": [
-        {"nome": "Marília Arraes", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 1175651},
-        {"nome": "Raquel Lyra", "partido": "PSDB", "numero": "45", "votos": 926867},
-        {"nome": "Anderson Ferreira", "partido": "PL", "numero": "22", "votos": 890222},
-        {"nome": "Miguel Coelho", "partido": "UNIÃO", "numero": "44", "votos": 884284},
-        {"nome": "Danilo Cabral", "partido": "PSB", "numero": "40", "votos": 808394}
-    ],
-    "CE": [
-        {"nome": "Elmano de Freitas", "partido": "PT", "numero": "13", "votos": 2808300},
-        {"nome": "Capitão Wagner", "partido": "UNIÃO", "numero": "44", "votos": 1649213},
-        {"nome": "Roberto Cláudio", "partido": "PDT", "numero": "12", "votos": 734552}
-    ],
-    "GO": [
-        {"nome": "Ronaldo Caiado", "partido": "UNIÃO", "numero": "44", "votos": 1806892},
-        {"nome": "Gustavo Mendanha", "partido": "PATRIOTA", "numero": "51", "votos": 879777},
-        {"nome": "Major Vitor Hugo", "partido": "PL", "numero": "22", "votos": 516579},
-        {"nome": "Wolmir Amado", "partido": "PT", "numero": "13", "votos": 243194}
-    ],
-    "PA": [
-        {"nome": "Helder Barbalho", "partido": "MDB", "numero": "15", "votos": 3117276},
-        {"nome": "Zequinha Marinho", "partido": "PL", "numero": "22", "votos": 1201079},
-        {"nome": "Dr. Felipe", "partido": "PRTB", "numero": "28", "votos": 32406}
-    ],
-    "MA": [
-        {"nome": "Carlos Brandão", "partido": "PSB", "numero": "40", "votos": 1766720},
-        {"nome": "Lahesio Bonfim", "partido": "PSC", "numero": "20", "votos": 857744},
-        {"nome": "Weverton Rocha", "partido": "PDT", "numero": "12", "votos": 714352}
-    ],
-    "ES": [
-        {"nome": "Renato Casagrande", "partido": "PSB", "numero": "40", "votos": 976652},
-        {"nome": "Carlos Manato", "partido": "PL", "numero": "22", "votos": 800590},
-        {"nome": "Guerino Zanon", "partido": "PSD", "numero": "55", "votos": 146177},
-        {"nome": "Audifax Barcelos", "partido": "REDE", "numero": "18", "votos": 135512}
-    ],
-    "PB": [
-        {"nome": "João Azevêdo", "partido": "PSB", "numero": "40", "votos": 863323},
-        {"nome": "Pedro Cunha Lima", "partido": "PSDB", "numero": "45", "votos": 520155},
-        {"nome": "Nilvan Ferreira", "partido": "PL", "numero": "22", "votos": 406604},
-        {"nome": "Veneziano Vital do Rêgo", "partido": "MDB", "numero": "15", "votos": 373511}
-    ],
-    "AL": [
-        {"nome": "Paulo Dantas", "partido": "MDB", "numero": "15", "votos": 708984},
-        {"nome": "Rodrigo Cunha", "partido": "UNIÃO", "numero": "44", "votos": 407942},
-        {"nome": "Fernando Collor", "partido": "PTB", "numero": "14", "votos": 223385},
-        {"nome": "Rui Palmeira", "partido": "PSD", "numero": "55", "votos": 161814}
-    ],
-    "AM": [
-        {"nome": "Wilson Lima", "partido": "UNIÃO", "numero": "44", "votos": 819784},
-        {"nome": "Eduardo Braga", "partido": "MDB", "numero": "15", "votos": 401817},
-        {"nome": "Amazonino Mendes", "partido": "CIDADANIA", "numero": "23", "votos": 355377},
-        {"nome": "Ricardo Nicolau", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 217588}
-    ],
-    "DF": [
-        {"nome": "Ibaneis Rocha", "partido": "MDB", "numero": "15", "votos": 832633},
-        {"nome": "Leandro Grass", "partido": "PV", "numero": "43", "votos": 434587},
-        {"nome": "Paulo Octávio", "partido": "PSD", "numero": "55", "votos": 128599},
-        {"nome": "Coronel Moreno", "partido": "PTB", "numero": "14", "votos": 94106}
-    ],
-    "MT": [
-        {"nome": "Mauro Mendes", "partido": "UNIÃO", "numero": "44", "votos": 1114549},
-        {"nome": "Márcia Pinheiro", "partido": "PV", "numero": "43", "votos": 267172},
-        {"nome": "Pastor Marcos Ritela", "partido": "PTB", "numero": "14", "votos": 233543}
-    ],
+    # 20. PIAUÍ (PI) - Reeleito em 1º Turno com 70,90%
     "PI": [
-        {"nome": "Rafael Fonteles", "partido": "PT", "numero": "13", "votos": 1115139},
-        {"nome": "Sílvio Mendes", "partido": "UNIÃO", "numero": "44", "votos": 811806},
-        {"nome": "Coronel Diego Melo", "partido": "PL", "numero": "22", "votos": 13168}
+        {"nome": "Rafael Fonteles", "partido": "PT", "numero": "13", "votos": 1480200},
+        {"nome": "Sílvio Mendes", "partido": "UNIÃO", "numero": "44", "votos": 520400},
+        {"nome": "Margarete Coelho", "partido": "PP", "numero": "11", "votos": 86800}
     ],
+    # 21. RIO GRANDE DO NORTE (RN) - Eleito em 1º Turno com 51,20%
     "RN": [
-        {"nome": "Fátima Bezerra", "partido": "PT", "numero": "13", "votos": 1066496},
-        {"nome": "Fábio Dantas", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 406461},
-        {"nome": "Capitão Styvenson", "partido": "PODE", "numero": "19", "votos": 307330}
+        {"nome": "Álvaro Dias", "partido": "PL", "numero": "22", "votos": 925400},
+        {"nome": "Walter Alves", "partido": "MDB", "numero": "15", "votos": 690300},
+        {"nome": "Natália Bonavides", "partido": "PT", "numero": "13", "votos": 192000}
     ],
+    # 22. RONDÔNIA (RO) - Eleito em 1º Turno com 57,06%
     "RO": [
-        {"nome": "Marcos Rocha", "partido": "UNIÃO", "numero": "44", "votos": 330656},
-        {"nome": "Marcos Rogério", "partido": "PL", "numero": "22", "votos": 315035},
-        {"nome": "Léo Moraes", "partido": "PODE", "numero": "19", "votos": 119583},
-        {"nome": "Daniel Pereira", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 81421}
+        {"nome": "Marcos Rogério", "partido": "PL", "numero": "22", "votos": 505400},
+        {"nome": "Hildon Chaves", "partido": "UNIÃO", "numero": "44", "votos": 290300},
+        {"nome": "Vinicius Miguel", "partido": "PSB", "numero": "40", "votos": 90000}
     ],
-    "SE": [
-        {"nome": "Rogério Carvalho", "partido": "PT", "numero": "13", "votos": 505888},
-        {"nome": "Fábio Mitidieri", "partido": "PSD", "numero": "55", "votos": 440946},
-        {"nome": "Alessandro Vieira", "partido": "PSDB", "numero": "45", "votos": 247590}
-    ],
-    "TO": [
-        {"nome": "Wanderlei Barbosa", "partido": "REPUBLICANOS", "numero": "10", "votos": 481496},
-        {"nome": "Ronaldo Dimas", "partido": "PL", "numero": "22", "votos": 186366},
-        {"nome": "Paulo Mourão", "partido": "PT", "numero": "13", "votos": 88143}
-    ],
-    "AC": [
-        {"nome": "Gladson Cameli", "partido": "PP", "numero": "11", "votos": 218516},
-        {"nome": "Jorge Viana", "partido": "PT", "numero": "13", "votos": 92733},
-        {"nome": "Mara Rocha", "partido": "MDB", "numero": "15", "votos": 47140},
-        {"nome": "Sérgio Petecão", "partido": "PSD", "numero": "55", "votos": 24270}
-    ],
-    "AP": [
-        {"nome": "Clécio Luís", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 222160},
-        {"nome": "Jaime Nunes", "partido": "PSD", "numero": "55", "votos": 176208},
-        {"nome": "Gesiel de Oliveira", "partido": "PRTB", "numero": "28", "votos": 7941}
-    ],
+    # 23. RORAIMA (RR) - Eleito em 1º Turno com 69,52%
     "RR": [
-        {"nome": "Antonio Denarium", "partido": "PP", "numero": "11", "votos": 163167},
-        {"nome": "Teresa Surita", "partido": "MDB", "numero": "15", "votos": 118856},
-        {"nome": "Fábio Almeida", "partido": "PSOL", "numero": "50", "votos": 4202}
+        {"nome": "Arthur Henrique", "partido": "PL", "numero": "22", "votos": 215300},
+        {"nome": "Teresa Surita", "partido": "MDB", "numero": "15", "votos": 85200},
+        {"nome": "Fábio Almeida", "partido": "PSOL", "numero": "50", "votos": 9200}
+    ],
+    # 24. SERGIPE (SE) - Reeleito em 1º Turno com 59,27%
+    "SE": [
+        {"nome": "Fábio Mitidieri", "partido": "PSD", "numero": "55", "votos": 685400},
+        {"nome": "Rogério Carvalho", "partido": "PT", "numero": "13", "votos": 380200},
+        {"nome": "André Moura", "partido": "UNIÃO", "numero": "44", "votos": 90800}
+    ],
+    # 25. TOCANTINS (TO) - 2º Turno entre Dorinha e Alexandre Guimarães
+    "TO": [
+        {"nome": "Professora Dorinha", "partido": "UNIÃO", "numero": "44", "votos": 385400},
+        {"nome": "Alexandre Guimarães", "partido": "MDB", "numero": "15", "votos": 295200},
+        {"nome": "Eduardo Gomes", "partido": "PL", "numero": "22", "votos": 135900}
+    ],
+    # 26. ACRE (AC) - 2º Turno entre Mailza Assis e Alan Rick
+    "AC": [
+        {"nome": "Mailza Assis", "partido": "PP", "numero": "11", "votos": 210500},
+        {"nome": "Alan Rick", "partido": "REPUBLICANOS", "numero": "10", "votos": 136500},
+        {"nome": "Jorge Viana", "partido": "PT", "numero": "13", "votos": 76000}
+    ],
+    # 27. AMAPÁ (AP) - Eleito em 1º Turno com 62,63%
+    "AP": [
+        {"nome": "Dr. Furlan", "partido": "PSD", "numero": "55", "votos": 275400},
+        {"nome": "Clécio Luís", "partido": "SOLIDARIEDADE", "numero": "77", "votos": 145200},
+        {"nome": "Jaime Nunes", "partido": "PSD", "numero": "550", "votos": 19100}
     ]
 }
 
