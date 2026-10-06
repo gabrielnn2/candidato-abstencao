@@ -65,6 +65,21 @@ export default function App() {
     setCurrentRegiao('todas');
   }, [brasilData]);
 
+  // Select Regiao
+  const handleSelectRegiao = useCallback((reg) => {
+    setCurrentRegiao(reg);
+    if (reg !== 'todas') {
+      if (currentScope.type === 'uf' && !REGION_STATES[reg]?.includes(currentScope.id)) {
+        setCurrentScope({ type: 'brasil', id: 'BR', item: brasilData });
+      } else if (currentScope.type === 'municipio') {
+        const munUf = currentScope.item?.uf;
+        if (!REGION_STATES[reg]?.includes(munUf)) {
+          setCurrentScope({ type: 'brasil', id: 'BR', item: brasilData });
+        }
+      }
+    }
+  }, [currentScope, brasilData]);
+
   // Select UF
   const handleSelectUf = useCallback((ufSigla) => {
     const ufItem = estadosData.find(u => u.uf === ufSigla);
@@ -168,7 +183,6 @@ export default function App() {
       <Header
         currentCargo={currentCargo}
         onSelectCargo={setCurrentCargo}
-        onOpenSearch={() => setIsSearchOpen(true)}
       />
 
       {/* Telemetry Bar */}
@@ -192,11 +206,12 @@ export default function App() {
             currentCargo={currentCargo}
             currentScope={currentScope}
             currentRegiao={currentRegiao}
-            onSelectRegiao={setCurrentRegiao}
+            onSelectRegiao={handleSelectRegiao}
             onSelectUf={handleSelectUf}
             onSelectMunicipio={handleSelectMunicipio}
             onResetBrasil={handleResetBrasil}
             onOpenSearch={() => setIsSearchOpen(true)}
+            estadosData={estadosData}
           />
         </div>
 

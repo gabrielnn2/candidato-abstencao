@@ -720,11 +720,11 @@ a {
   color: var(--fg-3);
 }
 
-/* Map Controls Toolbar: Região, Estado & Busca de Município */
+/* Map Controls Toolbar: Visualização (Radio), Região, Estado & Busca de Município */
 .map-controls-toolbar {
   display: grid;
-  grid-template-columns: 130px 170px 1fr;
-  gap: 10px;
+  grid-template-columns: auto 130px 170px 1fr;
+  gap: 12px;
   align-items: end;
   background: rgba(18, 17, 14, 0.6);
   padding: 12px 14px;
@@ -732,19 +732,136 @@ a {
   border: 1px solid var(--line);
 }
 
-@media (max-width: 992px) {
+/* Radio selection: Visualização (Municípios / Estados) */
+.view-mode-group {
+  min-width: 220px;
+}
+
+.radio-group-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-card, rgba(20, 24, 33, 0.75));
+  border: 1px solid var(--line, rgba(255, 255, 255, 0.08));
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.custom-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--fg-2, #94a3b8);
+  transition: all 0.15s ease;
+}
+
+.custom-radio-item:hover {
+  color: #ffffff;
+}
+
+.custom-radio-item.is-selected {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.custom-radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #64748b;
+  border-radius: 50%;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+  background: transparent;
+}
+
+.custom-radio-input:hover {
+  border-color: #38bdf8;
+}
+
+.custom-radio-input:checked {
+  border-color: #38bdf8;
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+}
+
+.custom-radio-input:checked::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0d1117;
+}
+
+.radio-text {
+  letter-spacing: 0.01em;
+}
+
+/* Floating MapLibre Hover Tooltip */
+.maplibre-hover-tooltip {
+  position: absolute;
+  background: rgba(13, 17, 23, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 12px rgba(56, 189, 248, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #f1f5f9;
+  z-index: 1000;
+  pointer-events: none;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  min-width: 190px;
+  animation: fadeIn 0.1s ease-out;
+}
+
+.maplibre-hover-tooltip .tooltip-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.maplibre-hover-tooltip .tooltip-taxa {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.maplibre-hover-tooltip .tooltip-pos {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+@media (max-width: 1100px) {
   .map-controls-toolbar {
     grid-template-columns: 1fr 1fr;
+  }
+  .control-group.view-mode-group {
+    grid-column: span 1;
   }
   .control-group.search-group {
     grid-column: span 2;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .map-controls-toolbar {
     grid-template-columns: 1fr;
   }
+  .control-group.view-mode-group,
   .control-group.search-group {
     grid-column: span 1;
   }

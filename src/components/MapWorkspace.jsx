@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import {
   BRAZIL_BOUNDS,
   BRAZIL_FIT_PADDING,
+  REGION_BOUNDS,
+  STATE_BOUNDS,
   REGION_STATES,
   formatNumber,
   formatPercent,
@@ -16,11 +18,15 @@ export default function MapWorkspace({
   onSelectUf,
   onSelectMunicipio,
   onResetBrasil,
-  onOpenSearch
+  onOpenSearch,
+  estadosData = []
 }) {
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const [mapLoaded, setMapLoaded] = useState(false);
+
+  // View Mode: 'estados' (default) or 'municipios'
+  const [viewMode, setViewMode] = useState('estados');
 
   // Hover Tooltip State
   const [tooltip, setTooltip] = useState({
@@ -32,13 +38,32 @@ export default function MapWorkspace({
     pos: ''
   });
 
+  // Keep latest refs for MapLibre event handlers
+  const currentCargoRef = useRef(currentCargo);
+  currentCargoRef.current = currentCargo;
+
+  const viewModeRef = useRef(viewMode);
+  viewModeRef.current = viewMode;
+
+  const onSelectUfRef = useRef(onSelectUf);
+  onSelectUfRef.current = onSelectUf;
+
+  const onSelectMunicipioRef = useRef(onSelectMunicipio);
+  onSelectMunicipioRef.current = onSelectMunicipio;
+
   const isFiltered = currentScope.type !== 'brasil' || currentRegiao !== 'todas';
+
+  // Automatically switch viewMode to 'municipios' when a municipio is selected
+  useEffect(() => {
+    if (currentScope.type === 'municipio') {
+      setViewMode('municipios');
+    }
+  }, [currentScope.type, currentScope.id]);
 
   // Initialize MapLibre GL
   useEffect(() => {
     const maplibregl = window.maplibregl;
     if (!maplibregl || !mapContainerRef.current) return;
-
     if (mapInstanceRef.current) return;
 
     try {
@@ -67,23 +92,147 @@ export default function MapWorkspace({
 
       map.on('load', () => {
         mapInstanceRef.current = map;
-        setMapLoaded(true);
 
-        // 1. Source: Municípios
+        // 1. Source: Estados
+        if (window.ESTADOS_GEO) {
+          // Enrich state properties if needed
+          if (estadosData && estadosData.length > 0) {
+            const ufMap = new Map(estadosData.map(u => [u.uf, u]));
+            window.ESTADOS_GEO.features?.forEach(feat => {
+              const u = ufMap.get(feat.properties?.uf);
+              if (u && (!feat.properties.pos_pres || !feat.properties.taxa)) {
+                feat.properties.nome = u.nome;
+                feat.properties.aptos = u.aptos;
+                feat.properties.abstencao = u.abstencao;
+                feat.properties.abstencoes = u.abstencao;
+                feat.properties.taxa = u.taxa_abstencao;
+                feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
+                feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
+                feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+              }
+            });
+          }
+
+          map.addSource('estados', {
+            type: 'geojson',
+            data: window.ESTADOS_GEO
+          });
+
+          // Estados Fill Layer (Visible by default)
+          map.addLayer({
+            id: 'estados-fill',
+            type: 'fill',
+            source: 'estados',
+            paint: {
+              'fill-color': getFillColorExpression(currentCargoRef.current),
+              'fill-opacity': 0.88
+            },
+            layout: {
+              visibility: 'visible'
+            }
+          });
+
+          // Estado Hover Fill Overlay
+          map.addLayer({
+            id: 'estado-hover-fill',
+            type: 'fill',
+            source: 'estados',
+            paint: {
+              'fill-color': '#ffffff',
+              'fill-opacity': 0.25
+            },
+            filter: ['==', 'uf', ''],
+            layout: {
+              visibility: 'visible'
+            }
+          });
+
+          // Estados Line Boundary
+          map.addLayer({
+            id: 'estados-line',
+            type: 'line',
+            source: 'estados',
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                3, 0.95,
+                6, 1.6,
+                10, 2.2
+              ],
+              'line-opacity': 0.75
+            },
+            layout: {
+              visibility: 'visible'
+            }
+          });
+
+          // Estado Hover Outline
+          map.addLayer({
+            id: 'estado-hover-line',
+            type: 'line',
+            source: 'estados',
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': 3.2,
+              'line-opacity': 1.0
+            },
+            filter: ['==', 'uf', ''],
+            layout: {
+              visibility: 'visible'
+            }
+          });
+
+          // Estado Selection Highlight
+          map.addLayer({
+            id: 'estado-highlight',
+            type: 'line',
+            source: 'estados',
+            paint: {
+              'line-color': '#38bdf8',
+              'line-width': 3.6,
+              'line-opacity': 1.0
+            },
+            filter: ['==', 'uf', ''],
+            layout: {
+              visibility: 'visible'
+            }
+          });
+        }
+
+        // 2. Source: Municípios
         if (window.MUNICIPIOS_GEO) {
           map.addSource('municipios', {
             type: 'geojson',
             data: window.MUNICIPIOS_GEO
           });
 
-          // Fill Layer
+          // Municípios Fill Layer (Hidden by default in Estados mode)
           map.addLayer({
             id: 'municipios-fill',
             type: 'fill',
             source: 'municipios',
             paint: {
-              'fill-color': getFillColorExpression(currentCargo),
+              'fill-color': getFillColorExpression(currentCargoRef.current),
               'fill-opacity': 0.86
+            },
+            layout: {
+              visibility: 'none'
+            }
+          });
+
+          // Município Hover Fill Overlay (White luminous highlight)
+          map.addLayer({
+            id: 'municipio-hover-fill',
+            type: 'fill',
+            source: 'municipios',
+            paint: {
+              'fill-color': '#ffffff',
+              'fill-opacity': 0.32
+            },
+            filter: ['==', ['to-number', ['get', 'id']], -1],
+            layout: {
+              visibility: 'none'
             }
           });
 
@@ -107,65 +256,46 @@ export default function MapWorkspace({
                 6, 0.35,
                 9, 0.55
               ]
+            },
+            layout: {
+              visibility: 'none'
             }
           });
 
-          // Municipio Highlight
+          // Município Hover Outline (Bright white stroke)
+          map.addLayer({
+            id: 'municipio-hover-line',
+            type: 'line',
+            source: 'municipios',
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': 3.0,
+              'line-opacity': 1.0
+            },
+            filter: ['==', ['to-number', ['get', 'id']], -1],
+            layout: {
+              visibility: 'none'
+            }
+          });
+
+          // Município Selection Highlight (Cyan stroke)
           map.addLayer({
             id: 'municipio-highlight',
             type: 'line',
             source: 'municipios',
             paint: {
-              'line-color': '#ffffff',
-              'line-width': 2.8,
+              'line-color': '#38bdf8',
+              'line-width': 3.2,
               'line-opacity': 1.0
             },
-            filter: ['==', 'id', '']
-          });
-        }
-
-        // 2. Source: Estados
-        if (window.ESTADOS_GEO) {
-          map.addSource('estados', {
-            type: 'geojson',
-            data: window.ESTADOS_GEO
-          });
-
-          map.addLayer({
-            id: 'estados-line',
-            type: 'line',
-            source: 'estados',
-            paint: {
-              'line-color': '#ffffff',
-              'line-width': [
-                'interpolate', ['linear'], ['zoom'],
-                3, 0.85,
-                6, 1.4,
-                10, 2.0
-              ],
-              'line-opacity': 0.70
+            filter: ['==', ['to-number', ['get', 'id']], -1],
+            layout: {
+              visibility: 'none'
             }
           });
-
-          map.addLayer({
-            id: 'estado-highlight',
-            type: 'line',
-            source: 'estados',
-            paint: {
-              'line-color': '#ffffff',
-              'line-width': [
-                'interpolate', ['linear'], ['zoom'],
-                3, 2.4,
-                6, 3.2,
-                10, 4.2
-              ],
-              'line-opacity': 1.0
-            },
-            filter: ['==', 'uf', '']
-          });
         }
 
-        // Initial perfect fit
+        // Initial view fit
         map.resize();
         map.fitBounds(BRAZIL_BOUNDS, {
           padding: BRAZIL_FIT_PADDING,
@@ -173,39 +303,113 @@ export default function MapWorkspace({
           maxZoom: 4.2
         });
 
-        // Hover events
-        map.on('mousemove', 'municipios-fill', (e) => {
+        // --- Estados Hover & Click Events ---
+        map.on('mousemove', 'estados-fill', (e) => {
+          if (viewModeRef.current !== 'estados') return;
           if (!e.features || e.features.length === 0) return;
           map.getCanvas().style.cursor = 'pointer';
-          const props = e.features[0].properties;
+          const p = e.features[0].properties;
+          const uf = p.uf;
 
-          const posProp = currentCargo === 'Presidente' ? 'pos_pres' : (currentCargo === 'Governador' ? 'pos_gov' : 'pos_sen');
-          const pos = props[posProp] || 3;
+          if (map.getLayer('estado-hover-line')) {
+            map.setFilter('estado-hover-line', ['==', 'uf', uf]);
+          }
+          if (map.getLayer('estado-hover-fill')) {
+            map.setFilter('estado-hover-fill', ['==', 'uf', uf]);
+          }
+
+          const cargo = currentCargoRef.current;
+          const posProp = cargo === 'Presidente' ? 'pos_pres' : (cargo === 'Governador' ? 'pos_gov' : 'pos_sen');
+          const pos = p[posProp] || 3;
 
           let posDesc = '🥉 3º Lugar ou abaixo';
           if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-          else if (pos === 2) posDesc = currentCargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+          else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
 
           setTooltip({
             visible: true,
             x: e.point.x,
             y: e.point.y,
-            title: `${props.nome} (${props.uf})`,
-            taxa: `Abstenção: ${formatPercent(props.taxa)} (${formatNumber(props.abstencoes)} ausentes)`,
+            title: `${p.nome || p.name} (${p.uf})`,
+            taxa: `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`,
+            pos: posDesc
+          });
+        });
+
+        map.on('mouseleave', 'estados-fill', () => {
+          if (viewModeRef.current !== 'estados') return;
+          map.getCanvas().style.cursor = '';
+          if (map.getLayer('estado-hover-line')) {
+            map.setFilter('estado-hover-line', ['==', 'uf', '']);
+          }
+          if (map.getLayer('estado-hover-fill')) {
+            map.setFilter('estado-hover-fill', ['==', 'uf', '']);
+          }
+          setTooltip(t => ({ ...t, visible: false }));
+        });
+
+        map.on('click', 'estados-fill', (e) => {
+          if (viewModeRef.current !== 'estados') return;
+          if (!e.features || e.features.length === 0) return;
+          const p = e.features[0].properties;
+          onSelectUfRef.current(p.uf);
+        });
+
+        // --- Municípios Hover & Click Events ---
+        map.on('mousemove', 'municipios-fill', (e) => {
+          if (viewModeRef.current !== 'municipios') return;
+          if (!e.features || e.features.length === 0) return;
+          map.getCanvas().style.cursor = 'pointer';
+          const feat = e.features[0];
+          const p = feat.properties;
+          const munId = Number(p.id || feat.id);
+
+          // Highlight hovered municipality with luminous outline & fill
+          if (map.getLayer('municipio-hover-line')) {
+            map.setFilter('municipio-hover-line', ['==', ['to-number', ['get', 'id']], munId]);
+          }
+          if (map.getLayer('municipio-hover-fill')) {
+            map.setFilter('municipio-hover-fill', ['==', ['to-number', ['get', 'id']], munId]);
+          }
+
+          const cargo = currentCargoRef.current;
+          const posProp = cargo === 'Presidente' ? 'pos_pres' : (cargo === 'Governador' ? 'pos_gov' : 'pos_sen');
+          const pos = p[posProp] || 3;
+
+          let posDesc = '🥉 3º Lugar ou abaixo';
+          if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
+          else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+
+          setTooltip({
+            visible: true,
+            x: e.point.x,
+            y: e.point.y,
+            title: `${p.nome} (${p.uf})`,
+            taxa: `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`,
             pos: posDesc
           });
         });
 
         map.on('mouseleave', 'municipios-fill', () => {
+          if (viewModeRef.current !== 'municipios') return;
           map.getCanvas().style.cursor = '';
+          if (map.getLayer('municipio-hover-line')) {
+            map.setFilter('municipio-hover-line', ['==', ['to-number', ['get', 'id']], -1]);
+          }
+          if (map.getLayer('municipio-hover-fill')) {
+            map.setFilter('municipio-hover-fill', ['==', ['to-number', ['get', 'id']], -1]);
+          }
           setTooltip(t => ({ ...t, visible: false }));
         });
 
         map.on('click', 'municipios-fill', (e) => {
+          if (viewModeRef.current !== 'municipios') return;
           if (!e.features || e.features.length === 0) return;
           const props = e.features[0].properties;
-          onSelectMunicipio(props.id);
+          onSelectMunicipioRef.current(props.id);
         });
+
+        setMapLoaded(true);
       });
 
     } catch (err) {
@@ -224,45 +428,194 @@ export default function MapWorkspace({
   useEffect(() => {
     const map = mapInstanceRef.current;
     if (!map || !mapLoaded) return;
+    const colorExpr = getFillColorExpression(currentCargo);
     if (map.getLayer('municipios-fill')) {
-      map.setPaintProperty('municipios-fill', 'fill-color', getFillColorExpression(currentCargo));
+      map.setPaintProperty('municipios-fill', 'fill-color', colorExpr);
+    }
+    if (map.getLayer('estados-fill')) {
+      map.setPaintProperty('estados-fill', 'fill-color', colorExpr);
     }
   }, [currentCargo, mapLoaded]);
 
-  // Update Scope and Region visual highlights
+  // Toggle ViewMode Layers Visibility (Estados vs Municípios)
   useEffect(() => {
     const map = mapInstanceRef.current;
     if (!map || !mapLoaded) return;
 
-    if (currentScope.type === 'brasil') {
-      if (currentRegiao === 'todas') {
-        if (map.getLayer('estado-highlight')) map.setFilter('estado-highlight', ['==', 'uf', '']);
-        if (map.getLayer('municipio-highlight')) map.setFilter('municipio-highlight', ['==', 'id', '']);
-        if (map.getLayer('municipios-fill')) map.setPaintProperty('municipios-fill', 'fill-opacity', 0.86);
-        if (map.getLayer('municipios-line')) map.setPaintProperty('municipios-line', 'line-opacity', 0.25);
-      } else {
-        const ufs = REGION_STATES[currentRegiao] || [];
-        if (map.getLayer('estado-highlight')) map.setFilter('estado-highlight', ['in', 'uf', ...ufs]);
-        if (map.getLayer('municipio-highlight')) map.setFilter('municipio-highlight', ['==', 'id', '']);
-        if (map.getLayer('municipios-fill')) {
-          map.setPaintProperty('municipios-fill', 'fill-opacity', ['case', ['in', ['get', 'uf'], ['literal', ufs]], 0.95, 0.15]);
-        }
-      }
-    } else if (currentScope.type === 'uf') {
-      const targetUf = currentScope.id;
-      if (map.getLayer('estado-highlight')) map.setFilter('estado-highlight', ['==', 'uf', targetUf]);
-      if (map.getLayer('municipio-highlight')) map.setFilter('municipio-highlight', ['==', 'id', '']);
-      if (map.getLayer('municipios-fill')) {
-        map.setPaintProperty('municipios-fill', 'fill-opacity', ['case', ['==', ['get', 'uf'], targetUf], 0.96, 0.12]);
-      }
-    } else if (currentScope.type === 'municipio' && currentScope.item) {
+    if (viewMode === 'estados') {
+      // Show Estados layers
+      if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'visible');
+      if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
+      if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'visible');
+      if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'visible');
+      if (map.getLayer('estado-highlight')) map.setLayoutProperty('estado-highlight', 'visibility', 'visible');
+
+      // Hide Municípios layers
+      if (map.getLayer('municipios-fill')) map.setLayoutProperty('municipios-fill', 'visibility', 'none');
+      if (map.getLayer('municipios-line')) map.setLayoutProperty('municipios-line', 'visibility', 'none');
+      if (map.getLayer('municipio-hover-fill')) map.setLayoutProperty('municipio-hover-fill', 'visibility', 'none');
+      if (map.getLayer('municipio-hover-line')) map.setLayoutProperty('municipio-hover-line', 'visibility', 'none');
+      if (map.getLayer('municipio-highlight')) map.setLayoutProperty('municipio-highlight', 'visibility', 'none');
+    } else {
+      // Municípios view mode:
+      // Hide Estados fill (keep faint boundary)
+      if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'none');
+      if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
+      if (map.getLayer('estado-hover-fill')) map.setLayoutProperty('estado-hover-fill', 'visibility', 'none');
+      if (map.getLayer('estado-hover-line')) map.setLayoutProperty('estado-hover-line', 'visibility', 'none');
+
+      // Show Municípios layers
+      if (map.getLayer('municipios-fill')) map.setLayoutProperty('municipios-fill', 'visibility', 'visible');
+      if (map.getLayer('municipios-line')) map.setLayoutProperty('municipios-line', 'visibility', 'visible');
+      if (map.getLayer('municipio-hover-fill')) map.setLayoutProperty('municipio-hover-fill', 'visibility', 'visible');
+      if (map.getLayer('municipio-hover-line')) map.setLayoutProperty('municipio-hover-line', 'visibility', 'visible');
+      if (map.getLayer('municipio-highlight')) map.setLayoutProperty('municipio-highlight', 'visibility', 'visible');
+    }
+  }, [viewMode, mapLoaded]);
+
+  // Handle Isolation & Zoom when selecting Município, Estado ou Região
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map || !mapLoaded) return;
+
+    if (currentScope.type === 'municipio' && currentScope.item) {
+      // 1. ISOLATE MUNICIPIO: Show ONLY the selected municipality!
       const targetId = Number(currentScope.item.id);
       const munUf = currentScope.item.uf;
-      if (map.getLayer('estado-highlight')) map.setFilter('estado-highlight', ['==', 'uf', munUf]);
-      if (map.getLayer('municipio-highlight')) map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], targetId]);
+
       if (map.getLayer('municipios-fill')) {
-        map.setPaintProperty('municipios-fill', 'fill-opacity', ['case', ['==', ['to-number', ['get', 'id']], targetId], 1.0, ['==', ['get', 'uf'], munUf], 0.88, 0.10]);
+        map.setFilter('municipios-fill', ['==', ['to-number', ['get', 'id']], targetId]);
       }
+      if (map.getLayer('municipios-line')) {
+        map.setFilter('municipios-line', ['==', ['to-number', ['get', 'id']], targetId]);
+      }
+      if (map.getLayer('municipio-highlight')) {
+        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], targetId]);
+      }
+
+      if (map.getLayer('estados-fill')) {
+        map.setFilter('estados-fill', ['==', 'uf', munUf]);
+      }
+      if (map.getLayer('estados-line')) {
+        map.setFilter('estados-line', ['==', 'uf', munUf]);
+      }
+      if (map.getLayer('estado-highlight')) {
+        map.setFilter('estado-highlight', ['==', 'uf', munUf]);
+      }
+
+      // Auto-fit to isolated municipality
+      const feat = window.MUNICIPIOS_GEO?.features?.find(
+        f => Number(f.id) === targetId || Number(f.properties?.id) === targetId
+      );
+      const bbox = currentScope.item.bbox || feat?.properties?.bbox;
+      if (bbox && bbox.length === 4) {
+        map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], {
+          padding: 80,
+          duration: 700,
+          maxZoom: 11
+        });
+      } else if (feat?.properties?.lat && feat?.properties?.lon) {
+        map.flyTo({
+          center: [feat.properties.lon, feat.properties.lat],
+          zoom: 8.5,
+          duration: 700
+        });
+      }
+
+    } else if (currentScope.type === 'uf') {
+      // 2. ISOLATE ESTADO: Show ONLY the selected State!
+      const targetUf = currentScope.id;
+
+      if (map.getLayer('estados-fill')) {
+        map.setFilter('estados-fill', ['==', 'uf', targetUf]);
+      }
+      if (map.getLayer('estados-line')) {
+        map.setFilter('estados-line', ['==', 'uf', targetUf]);
+      }
+      if (map.getLayer('estado-highlight')) {
+        map.setFilter('estado-highlight', ['==', 'uf', targetUf]);
+      }
+
+      if (map.getLayer('municipios-fill')) {
+        map.setFilter('municipios-fill', ['==', 'uf', targetUf]);
+      }
+      if (map.getLayer('municipios-line')) {
+        map.setFilter('municipios-line', ['==', 'uf', targetUf]);
+      }
+      if (map.getLayer('municipio-highlight')) {
+        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+      }
+
+      // Auto-fit to isolated State
+      const bbox = STATE_BOUNDS[targetUf];
+      if (bbox) {
+        map.fitBounds(bbox, {
+          padding: 50,
+          duration: 700
+        });
+      }
+
+    } else if (currentRegiao !== 'todas') {
+      // 3. ISOLATE REGIÃO: Show ONLY the selected Region!
+      const ufs = REGION_STATES[currentRegiao] || [];
+
+      if (map.getLayer('estados-fill')) {
+        map.setFilter('estados-fill', ['in', 'uf', ...ufs]);
+      }
+      if (map.getLayer('estados-line')) {
+        map.setFilter('estados-line', ['in', 'uf', ...ufs]);
+      }
+      if (map.getLayer('estado-highlight')) {
+        map.setFilter('estado-highlight', ['==', 'uf', '']);
+      }
+
+      if (map.getLayer('municipios-fill')) {
+        map.setFilter('municipios-fill', ['in', 'uf', ...ufs]);
+      }
+      if (map.getLayer('municipios-line')) {
+        map.setFilter('municipios-line', ['in', 'uf', ...ufs]);
+      }
+      if (map.getLayer('municipio-highlight')) {
+        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+      }
+
+      // Auto-fit to isolated Region
+      const bbox = REGION_BOUNDS[currentRegiao];
+      if (bbox) {
+        map.fitBounds(bbox, {
+          padding: 45,
+          duration: 700
+        });
+      }
+
+    } else {
+      // 4. BRASIL (NO ISOLATION): Show ALL States & Municípios!
+      if (map.getLayer('estados-fill')) {
+        map.setFilter('estados-fill', null);
+      }
+      if (map.getLayer('estados-line')) {
+        map.setFilter('estados-line', null);
+      }
+      if (map.getLayer('estado-highlight')) {
+        map.setFilter('estado-highlight', ['==', 'uf', '']);
+      }
+
+      if (map.getLayer('municipios-fill')) {
+        map.setFilter('municipios-fill', null);
+      }
+      if (map.getLayer('municipios-line')) {
+        map.setFilter('municipios-line', null);
+      }
+      if (map.getLayer('municipio-highlight')) {
+        map.setFilter('municipio-highlight', ['==', ['to-number', ['get', 'id']], -1]);
+      }
+
+      // Reframe Brazil
+      map.fitBounds(BRAZIL_BOUNDS, {
+        padding: BRAZIL_FIT_PADDING,
+        duration: 700,
+        maxZoom: 4.2
+      });
     }
   }, [currentScope, currentRegiao, mapLoaded]);
 
@@ -272,27 +625,27 @@ export default function MapWorkspace({
       const map = mapInstanceRef.current;
       if (!map || !mapLoaded) return;
       map.resize();
-      if (currentScope.type === 'brasil' && currentRegiao === 'todas') {
-        map.fitBounds(BRAZIL_BOUNDS, {
-          padding: BRAZIL_FIT_PADDING,
-          duration: 200,
-          maxZoom: 4.2
-        });
-      }
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [currentScope, currentRegiao, mapLoaded]);
+  }, [mapLoaded]);
 
-  // Pill Title Text
-  let pillText = 'Brasil · 5.564 Municípios em Polígonos';
+  // Pill Title Text in Legend Bar
+  let pillText = viewMode === 'estados'
+    ? 'Brasil · 27 Estados (UFs)'
+    : 'Brasil · 5.564 Municípios em Polígonos';
+
   if (currentScope.type === 'uf' && currentScope.item) {
-    pillText = `📍 ${currentScope.item.nome} (${currentScope.id}) · Todos os Municípios`;
+    pillText = viewMode === 'estados'
+      ? `📍 ${currentScope.item.nome} (${currentScope.id}) · Estado Isolado`
+      : `📍 ${currentScope.item.nome} (${currentScope.id}) · Municípios Isolados`;
   } else if (currentScope.type === 'municipio' && currentScope.item) {
     const m = currentScope.item;
-    pillText = `📍 ${m.nome} (${m.uf}) · ${formatNumber(m.abstencao || 0)} ausentes (${formatPercent(m.taxa_abstencao ?? m.taxa ?? 0)})`;
+    pillText = `📍 ${m.nome} (${m.uf}) · ${formatNumber(m.abstencao || 0)} ausentes (${formatPercent(m.taxa_abstencao ?? m.taxa ?? 0)}) · Isolado`;
   } else if (currentRegiao !== 'todas') {
-    pillText = `📍 Região ${currentRegiao} · Todos os Municípios`;
+    pillText = viewMode === 'estados'
+      ? `📍 Região ${currentRegiao} · Estados Isolados`
+      : `📍 Região ${currentRegiao} · Municípios Isolados`;
   }
 
   // Search input button text
@@ -309,16 +662,49 @@ export default function MapWorkspace({
         <div className="map-title-block">
           <div className="map-header-top">
             <span className="map-badge-icon">🗺️</span>
-            <h3 className="panel-title">Mapa Eleitoral Municipal do Brasil</h3>
+            <h3 className="panel-title">
+              {viewMode === 'estados' ? 'Mapa Eleitoral por Estados (27 UFs)' : 'Mapa Eleitoral Municipal do Brasil'}
+            </h3>
           </div>
           <p className="panel-subtitle" id="mapModeSubtitle">
-            Todos os 5.564 municípios em polígonos com simulação da Abstenção
+            {viewMode === 'estados'
+              ? 'Todas as 27 Unidades da Federação com simulação da Abstenção'
+              : 'Todos os 5.564 municípios em polígonos com simulação da Abstenção'}
           </p>
         </div>
       </div>
 
-      {/* Filter Controls Toolbar: Região, Estado & Busca de Município */}
+      {/* Filter Controls Toolbar: Visualização (Radio), Região, Estado & Busca de Município */}
       <div className="map-controls-toolbar">
+        {/* Visualização: Seleção Radio "Municípios" e "Estados" (Default: Estados) */}
+        <div className="control-group view-mode-group">
+          <label className="control-label">Visualização</label>
+          <div className="radio-group-container" role="radiogroup" aria-label="Visualização do mapa">
+            <label className={`custom-radio-item ${viewMode === 'municipios' ? 'is-selected' : ''}`}>
+              <input
+                type="radio"
+                name="mapViewMode"
+                value="municipios"
+                checked={viewMode === 'municipios'}
+                onChange={() => setViewMode('municipios')}
+                className="custom-radio-input"
+              />
+              <span className="radio-text">Municípios</span>
+            </label>
+            <label className={`custom-radio-item ${viewMode === 'estados' ? 'is-selected' : ''}`}>
+              <input
+                type="radio"
+                name="mapViewMode"
+                value="estados"
+                checked={viewMode === 'estados'}
+                onChange={() => setViewMode('estados')}
+                className="custom-radio-input"
+              />
+              <span className="radio-text">Estados</span>
+            </label>
+          </div>
+        </div>
+
         <div className="control-group">
           <label htmlFor="selectRegiao" className="control-label">Região</label>
           <select
@@ -394,7 +780,6 @@ export default function MapWorkspace({
                 <span className="search-btn-text">{searchButtonText}</span>
               </div>
               <div className="search-btn-right">
-                <kbd className="kbd-shortcut">⌘K</kbd>
                 {isFiltered && (
                   <button
                     className="btn-clear-search"
@@ -471,7 +856,9 @@ export default function MapWorkspace({
           🇧🇷 Reenquadrar Todo o Brasil
         </button>
         <span className="map-footer-hint">
-          Clique em qualquer município no mapa para carregar o veredito eleitoral à esquerda
+          {viewMode === 'estados'
+            ? 'Passe o mouse para destacar ou clique em qualquer estado para isolá-lo e ver o veredito'
+            : 'Passe o mouse para destacar ou clique em qualquer município para isolá-lo e ver o veredito'}
         </span>
       </div>
     </section>
