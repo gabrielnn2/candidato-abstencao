@@ -67,7 +67,16 @@ export function getRankBadge(pos) {
 }
 
 export function getFillColorExpression(cargo) {
-  const prop = cargo === 'Presidente' ? 'pos_pres' : (cargo === 'Governador' ? 'pos_gov' : 'pos_sen');
+  if (cargo === 'Governador') {
+    return [
+      'match',
+      ['get', 'status_gov'],
+      'foi_2t', '#10b981',      // Verde Esmeralda (Foi para segundo turno)
+      'forcou_2t', '#f59e0b',   // Âmbar / Laranja (Forçou segundo turno)
+      /* default */ '#262d3d'   // Dark Slate (Não alterou)
+    ];
+  }
+  const prop = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
   return [
     'match',
     ['get', prop],

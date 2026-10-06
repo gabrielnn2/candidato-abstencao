@@ -71,12 +71,32 @@ export default function MapWorkspace({
         container: mapContainerRef.current,
         style: {
           version: 8,
-          sources: {},
+          sources: {
+            'carto-dark': {
+              type: 'raster',
+              tiles: [
+                'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+                'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+                'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+                'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png'
+              ],
+              tileSize: 256,
+              attribution: '&copy; CARTO &copy; OpenStreetMap'
+            }
+          },
           layers: [
             {
               id: 'background',
               type: 'background',
               paint: { 'background-color': '#0d1117' }
+            },
+            {
+              id: 'carto-dark-layer',
+              type: 'raster',
+              source: 'carto-dark',
+              paint: {
+                'raster-opacity': 0.85
+              }
             }
           ]
         },
@@ -100,15 +120,28 @@ export default function MapWorkspace({
             const ufMap = new Map(estadosData.map(u => [u.uf, u]));
             window.ESTADOS_GEO.features?.forEach(feat => {
               const u = ufMap.get(feat.properties?.uf);
-              if (u && (!feat.properties.pos_pres || !feat.properties.taxa)) {
-                feat.properties.nome = u.nome;
-                feat.properties.aptos = u.aptos;
-                feat.properties.abstencao = u.abstencao;
-                feat.properties.abstencoes = u.abstencao;
-                feat.properties.taxa = u.taxa_abstencao;
-                feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
-                feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
-                feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+              if (u) {
+                if (!feat.properties.pos_pres || !feat.properties.taxa) {
+                  feat.properties.nome = u.nome;
+                  feat.properties.aptos = u.aptos;
+                  feat.properties.abstencao = u.abstencao;
+                  feat.properties.abstencoes = u.abstencao;
+                  feat.properties.taxa = u.taxa_abstencao;
+                  feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
+                  feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
+                  feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+                }
+                if (!feat.properties.status_gov) {
+                  const pos = u.cargos?.Governador?.posicao || 3;
+                  const d1t = u.dados_1t_governador;
+                  if (pos <= 2) {
+                    feat.properties.status_gov = 'foi_2t';
+                  } else if (d1t && !d1t.sobrevive_1t) {
+                    feat.properties.status_gov = 'forcou_2t';
+                  } else {
+                    feat.properties.status_gov = 'nao_alterou';
+                  }
+                }
               }
             });
           }
@@ -118,7 +151,7 @@ export default function MapWorkspace({
             data: window.ESTADOS_GEO
           });
 
-          // Estados Fill Layer (Visible by default)
+          // Estados Fill Layer (Visible by default in Estados mode)
           map.addLayer({
             id: 'estados-fill',
             type: 'fill',
@@ -245,16 +278,16 @@ export default function MapWorkspace({
               'line-color': '#ffffff',
               'line-width': [
                 'interpolate', ['linear'], ['zoom'],
-                3, 0.18,
-                6, 0.30,
-                9, 0.50,
-                12, 0.80
+                3, 0.22,
+                6, 0.35,
+                9, 0.55,
+                12, 0.85
               ],
               'line-opacity': [
                 'interpolate', ['linear'], ['zoom'],
-                3, 0.20,
-                6, 0.35,
-                9, 0.55
+                3, 0.25,
+                6, 0.40,
+                9, 0.60
               ]
             },
             layout: {
@@ -319,12 +352,23 @@ export default function MapWorkspace({
           }
 
           const cargo = currentCargoRef.current;
-          const posProp = cargo === 'Presidente' ? 'pos_pres' : (cargo === 'Governador' ? 'pos_gov' : 'pos_sen');
-          const pos = p[posProp] || 3;
-
-          let posDesc = '🥉 3º Lugar ou abaixo';
-          if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-          else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+          let posDesc = '';
+          if (cargo === 'Governador') {
+            const status = p.status_gov || 'nao_alterou';
+            if (status === 'foi_2t') {
+              posDesc = '🟢 Foi para o 2º Turno (Abstenção em 1º ou 2º)';
+            } else if (status === 'forcou_2t') {
+              posDesc = '⚡ Forçou o 2º Turno (Derrubou vitória em 1º T)';
+            } else {
+              posDesc = '🛡️ Não alterou (Sem alteração no 1º turno)';
+            }
+          } else {
+            const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
+            const pos = p[posProp] || 3;
+            if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
+            else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+            else posDesc = '🥉 3º Lugar ou abaixo';
+          }
 
           setTooltip({
             visible: true,
@@ -373,12 +417,23 @@ export default function MapWorkspace({
           }
 
           const cargo = currentCargoRef.current;
-          const posProp = cargo === 'Presidente' ? 'pos_pres' : (cargo === 'Governador' ? 'pos_gov' : 'pos_sen');
-          const pos = p[posProp] || 3;
-
-          let posDesc = '🥉 3º Lugar ou abaixo';
-          if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-          else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+          let posDesc = '';
+          if (cargo === 'Governador') {
+            const status = p.status_gov || 'nao_alterou';
+            if (status === 'foi_2t') {
+              posDesc = '🟢 Foi para o 2º Turno (Abstenção em 1º ou 2º)';
+            } else if (status === 'forcou_2t') {
+              posDesc = '⚡ Forçou o 2º Turno (Derrubou vitória em 1º T)';
+            } else {
+              posDesc = '🛡️ Não alterou (Sem alteração no 1º turno)';
+            }
+          } else {
+            const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
+            const pos = p[posProp] || 3;
+            if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
+            else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
+            else posDesc = '🥉 3º Lugar ou abaixo';
+          }
 
           setTooltip({
             visible: true,
@@ -821,11 +876,21 @@ export default function MapWorkspace({
             </button>
           )}
         </div>
-        <div className="legend-pills">
-          <span className="legend-item"><i className="legend-color gold"></i> 1º Lugar</span>
-          <span className="legend-item"><i className="legend-color silver"></i> 2º Lugar (2º Turno / Vaga)</span>
-          <span className="legend-item"><i className="legend-color bronze"></i> 3º ou abaixo</span>
-        </div>
+
+        {/* Dynamic Legend based on cargo (Governador vs Presidente/Senador) */}
+        {currentCargo === 'Governador' ? (
+          <div className="legend-pills">
+            <span className="legend-item"><i className="legend-color green"></i> Foi para segundo turno</span>
+            <span className="legend-item"><i className="legend-color gold"></i> Forçou segundo turno</span>
+            <span className="legend-item"><i className="legend-color slate"></i> Não alterou</span>
+          </div>
+        ) : (
+          <div className="legend-pills">
+            <span className="legend-item"><i className="legend-color gold"></i> 1º Lugar</span>
+            <span className="legend-item"><i className="legend-color silver"></i> {currentCargo === 'Senador' ? '2º Lugar · Eleita Senadora (2ª Vaga)' : '2º Lugar · Iria para o 2º Turno'}</span>
+            <span className="legend-item"><i className="legend-color bronze"></i> 3º ou abaixo</span>
+          </div>
+        )}
       </div>
 
       {/* MapLibre WebGL Canvas Container */}

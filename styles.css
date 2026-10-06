@@ -1128,9 +1128,11 @@ a {
   display: inline-block;
 }
 
-.legend-color.gold { background: #f59e0b; }
-.legend-color.silver { background: #38bdf8; }
+.legend-color.green { background: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.4); }
+.legend-color.gold { background: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); }
+.legend-color.silver { background: #38bdf8; box-shadow: 0 0 6px rgba(56, 189, 248, 0.4); }
 .legend-color.bronze { background: #334155; }
+.legend-color.slate { background: #262d3d; border: 1px solid #475569; }
 
 /* MapLibre WebGL Container */
 .maplibre-container-wrap {
