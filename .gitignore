@@ -11,9 +11,15 @@ venv/
 # Scratch & diagnostic scripts
 scratch/
 
+# Node & Vite build outputs
+node_modules/
+dist/
+.vite/
+
 # OS / Editor files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 *.log
+
