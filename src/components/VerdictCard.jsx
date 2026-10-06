@@ -94,7 +94,7 @@ export default function VerdictCard({
         <span className="highlight-white">33,4 milhões</span> de eleitores ausentes.
       </>
     );
-    subtext = 'O volume de eleitores ausentes (21,08%) supera com folga a soma de todas as terceiras vias e confirma o Segundo Turno entre Flávio Bolsonaro (PL) e Lula (PT).';
+    subtext = 'O volume de eleitores ausentes (21,08%) supera com folga a soma de todas as terceiras vias e confirma o 2º Turno entre Flávio Bolsonaro (PL) e Lula (PT).';
     badge1 = { icon: '🗳️', text: <>Iria para o 2º Turno? <strong>Não (Ficaria em 3º Lugar)</strong></> };
     badge2 = { icon: '📉', text: <>Superou <strong>5 candidatos</strong> na apuração</> };
     badge3 = { icon: '📊', text: <>Distância do 2º colocado: <strong>20.413.066 votos</strong></> };
@@ -142,29 +142,29 @@ export default function VerdictCard({
         headline = (
           <>
             Em <em>{locationTitle}</em>, a Abstenção{' '}
-            <span className="highlight-amber">FORÇARIA E IRIA PARA O SEGUNDO TURNO</span> contra o líder!
+            <span className="highlight-amber">FORÇARIA E IRIA PARA O 2º TURNO</span> contra o líder!
           </>
         );
         subtext = `O governador oficial venceu no 1º turno, mas a presença de ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)}) dilui os votos do líder para menos de 50% e supera o 2º colocado real, levando a Abstenção diretamente para o 2º Turno!`;
-        badge1 = { icon: '🟢', text: <>Indicador: <strong>Forçaria e iria para o segundo turno</strong></>, highlight: true };
+        badge1 = { icon: '🟢', text: <>Indicador: <strong>Forçaria e iria para o 2º turno</strong></>, highlight: true };
       } else if (govStatus === 'forcou_2t_entre_dois') {
         headline = (
           <>
             Em <em>{locationTitle}</em>, a presença da Abstenção{' '}
-            <span className="highlight-amber">FORÇARIA UM SEGUNDO TURNO ENTRE OS DOIS PRIMEIROS COLOCADOS!</span>
+            <span className="highlight-amber">FORÇARIA UM 2º TURNO ENTRE OS DOIS PRIMEIROS COLOCADOS!</span>
           </>
         );
         subtext = `Oficialmente a disputa encerrou no 1º turno. Porém, a presença massiva de ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)}) dilui os votos do líder para menos de 50%, forçando um 2º Turno entre os dois primeiros candidatos reais.`;
-        badge1 = { icon: '🟠', text: <>Indicador: <strong>Forçaria um segundo turno entre os dois primeiros colocados</strong></>, highlight: true };
+        badge1 = { icon: '🟠', text: <>Indicador: <strong>Forçaria um 2º turno entre os dois primeiros colocados</strong></>, highlight: true };
       } else if (govStatus === 'iria_2t_no_lugar') {
         headline = (
           <>
             Em <em>{locationTitle}</em>, a Abstenção{' '}
-            <span className="highlight-amber">IRIA PARA O SEGUNDO TURNO NO LUGAR DE UM DOS DOIS PRIMEIROS CANDIDATOS!</span>
+            <span className="highlight-amber">IRIA PARA O 2º TURNO NO LUGAR DE UM DOS DOIS PRIMEIROS CANDIDATOS!</span>
           </>
         );
         subtext = `A disputa já iria para o 2º turno, mas o volume de ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(taxa)}) supera a votação do 2º colocado real, tomando a sua vaga na disputa final!`;
-        badge1 = { icon: '🔵', text: <>Indicador: <strong>Iria para o segundo turno no lugar de um dos dois primeiros candidatos</strong></>, highlight: true };
+        badge1 = { icon: '🔵', text: <>Indicador: <strong>Iria para o 2º turno no lugar de um dos dois primeiros candidatos</strong></>, highlight: true };
       } else {
         headline = (
           <>
@@ -193,7 +193,7 @@ export default function VerdictCard({
           <>
             Em <em>{locationTitle}</em>, a Abstenção ficaria em{' '}
             <span className="highlight-amber">2º LUGAR</span> para Presidente e{' '}
-            <span className="highlight-white">IRIA PARA O SEGUNDO TURNO!</span>
+            <span className="highlight-white">IRIA PARA O 2º TURNO!</span>
           </>
         );
         subtext = `Com ${formatNumber(votosAbst)} ausentes (${formatPercent(taxa)} do eleitorado), a Abstenção ultrapassou todos os demais concorrentes exceto o líder e disputaria diretamente o 2º Turno!`;
@@ -340,15 +340,15 @@ export default function VerdictCard({
                 if (govSt === 'forcou_e_iria_2t') {
                   rankIndicator = '🟢 2ºT';
                   subClass = 'green';
-                  tooltipText = `${ufSigla}: Forçaria e iria para o segundo turno`;
+                  tooltipText = `${ufSigla}: Forçaria e iria para o 2º turno`;
                 } else if (govSt === 'forcou_2t_entre_dois') {
                   rankIndicator = '🟠 2ºT';
                   subClass = 'gold';
-                  tooltipText = `${ufSigla}: Forçaria um segundo turno entre os dois primeiros colocados`;
+                  tooltipText = `${ufSigla}: Forçaria um 2º turno entre os dois primeiros colocados`;
                 } else if (govSt === 'iria_2t_no_lugar') {
                   rankIndicator = '🔵 2ºT';
                   subClass = 'cyan';
-                  tooltipText = `${ufSigla}: Iria para o segundo turno no lugar de um dos dois primeiros candidatos`;
+                  tooltipText = `${ufSigla}: Iria para o 2º turno no lugar de um dos dois primeiros candidatos`;
                 } else {
                   rankIndicator = '—';
                   subClass = 'slate';

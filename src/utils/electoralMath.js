@@ -75,9 +75,9 @@ export function getGovStatus(item) {
     // Teve vitória em 1º turno na eleição oficial
     if (!d1t.sobrevive_1t) {
       if (pos <= 2) {
-        return 'forcou_e_iria_2t'; // Forçaria e iria para o segundo turno
+        return 'forcou_e_iria_2t'; // Forçaria e iria para o 2º turno
       } else {
-        return 'forcou_2t_entre_dois'; // Forçaria um segundo turno entre os dois primeiros colocados
+        return 'forcou_2t_entre_dois'; // Forçaria um 2º turno entre os dois primeiros colocados
       }
     } else {
       return 'nao_alterou'; // Não alteraria (governador resistiu com > 50%)
@@ -85,7 +85,7 @@ export function getGovStatus(item) {
   } else {
     // Disputa já iria para o 2º turno originalmente
     if (pos <= 2) {
-      return 'iria_2t_no_lugar'; // Iria para o segundo turno no lugar de um dos dois primeiros candidatos
+      return 'iria_2t_no_lugar'; // Iria para o 2º turno no lugar de um dos dois primeiros candidatos
     } else {
       return 'nao_alterou'; // Não alteraria
     }
@@ -95,11 +95,11 @@ export function getGovStatus(item) {
 export function getGovStatusLabel(status) {
   switch (status) {
     case 'forcou_e_iria_2t':
-      return 'Forçaria e iria para o segundo turno';
+      return 'Forçaria e iria para o 2º turno';
     case 'forcou_2t_entre_dois':
-      return 'Forçaria um segundo turno entre os dois primeiros colocados';
+      return 'Forçaria um 2º turno entre os dois primeiros colocados';
     case 'iria_2t_no_lugar':
-      return 'Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
+      return 'Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
     case 'nao_alterou':
     default:
       return 'Não alteraria';
@@ -111,9 +111,9 @@ export function getFillColorExpression(cargo) {
     return [
       'match',
       ['get', 'status_gov'],
-      'forcou_e_iria_2t', '#10b981',       // Verde Esmeralda (Forçaria e iria para o segundo turno)
-      'forcou_2t_entre_dois', '#f59e0b',    // Âmbar / Ouro (Forçaria um segundo turno entre os dois primeiros colocados)
-      'iria_2t_no_lugar', '#38bdf8',        // Ciano / Azul (Iria para o segundo turno no lugar de um dos dois primeiros candidatos)
+      'forcou_e_iria_2t', '#10b981',       // Verde Esmeralda (Forçaria e iria para o 2º turno)
+      'forcou_2t_entre_dois', '#f59e0b',    // Âmbar / Ouro (Forçaria um 2º turno entre os dois primeiros colocados)
+      'iria_2t_no_lugar', '#38bdf8',        // Ciano / Azul (Iria para o 2º turno no lugar de um dos dois primeiros candidatos)
       /* default nao_alterou */ '#262d3d'  // Dark Slate (Não alteraria)
     ];
   }

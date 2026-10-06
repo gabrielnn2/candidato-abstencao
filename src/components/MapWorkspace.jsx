@@ -361,11 +361,11 @@ export default function MapWorkspace({
           if (cargo === 'Governador') {
             const status = p.status_gov || 'nao_alterou';
             if (status === 'forcou_e_iria_2t') {
-              posDesc = '🟢 Forçaria e iria para o segundo turno';
+              posDesc = '🟢 Forçaria e iria para o 2º turno';
             } else if (status === 'forcou_2t_entre_dois') {
-              posDesc = '🟠 Forçaria um segundo turno entre os dois primeiros colocados';
+              posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
             } else if (status === 'iria_2t_no_lugar') {
-              posDesc = '🔵 Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
+              posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
             } else {
               posDesc = '🛡️ Não alteraria';
             }
@@ -428,11 +428,11 @@ export default function MapWorkspace({
           if (cargo === 'Governador') {
             const status = p.status_gov || 'nao_alterou';
             if (status === 'forcou_e_iria_2t') {
-              posDesc = '🟢 Forçaria e iria para o segundo turno';
+              posDesc = '🟢 Forçaria e iria para o 2º turno';
             } else if (status === 'forcou_2t_entre_dois') {
-              posDesc = '🟠 Forçaria um segundo turno entre os dois primeiros colocados';
+              posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
             } else if (status === 'iria_2t_no_lugar') {
-              posDesc = '🔵 Iria para o segundo turno no lugar de um dos dois primeiros candidatos';
+              posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
             } else {
               posDesc = '🛡️ Não alteraria';
             }
@@ -914,9 +914,9 @@ export default function MapWorkspace({
         {/* Dynamic Legend based on cargo (Governador vs Presidente/Senador) */}
         {currentCargo === 'Governador' ? (
           <div className="legend-pills">
-            <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o segundo turno</span>
-            <span className="legend-item"><i className="legend-color gold"></i> Forçaria um segundo turno entre os dois primeiros colocados</span>
-            <span className="legend-item"><i className="legend-color cyan"></i> Iria para o segundo turno no lugar de um dos dois primeiros candidatos</span>
+            <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o 2º turno</span>
+            <span className="legend-item"><i className="legend-color gold"></i> Forçaria um 2º turno entre os dois primeiros colocados</span>
+            <span className="legend-item"><i className="legend-color cyan"></i> Iria para o 2º turno no lugar de um dos dois primeiros candidatos</span>
             <span className="legend-item"><i className="legend-color slate"></i> Não alteraria</span>
           </div>
         ) : (

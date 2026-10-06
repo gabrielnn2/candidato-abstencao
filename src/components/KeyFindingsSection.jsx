@@ -100,7 +100,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </h3>
 
           <p className="finding-narrative">
-            O total de abstenções <strong>não alteraria a disputa para o segundo turno</strong>, porém supera em{' '}
+            O total de abstenções <strong>não alteraria a disputa para o 2º turno</strong>, porém supera em{' '}
             <span className="finding-highlight">{findings.mult3aVia} vezes</span> a soma de todos os candidatos de terceira via, é{' '}
             <span className="finding-highlight">{findings.multDiff1e2} vezes</span> a diferença entre os dois primeiros candidatos e em{' '}
             <span className="finding-highlight">{findings.estadosPres2} estados</span> brasileiros ficaria em segundo lugar na disputa.
@@ -137,8 +137,8 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </h3>
 
           <p className="finding-narrative">
-            O total de abstenções <strong>forçaria e iria para o segundo turno em {findings.govForcouEIria2t} estados</strong>,{' '}
-            <strong>forçaria um segundo turno entre os dois primeiros colocados</strong> em{' '}
+            O total de abstenções <strong>forçaria e iria para o 2º turno em {findings.govForcouEIria2t} estados</strong>,{' '}
+            <strong>forçaria um 2º turno entre os dois primeiros colocados</strong> em{' '}
             <span className="finding-highlight">{findings.govForcou2tEntreDois} estados</span> em que a disputa se encerrou no 1º turno,{' '}
             {findings.govIriaNoLugar > 0 ? (
               <>iria para o 2º turno no lugar de um dos dois primeiros candidatos em <strong>{findings.govIriaNoLugar} estados</strong> e </>
@@ -146,7 +146,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
             em <strong>{findings.govNaoAlterou} estados não alteraria</strong> o andamento das eleições.
           </p>
 
-          <div className="finding-stats-row four-cols">
+          <div className="finding-stats-row">
             <div className="finding-stat-item highlight-green">
               <span className="finding-stat-val">{findings.govForcouEIria2t}</span>
               <span className="finding-stat-label">Forçaria e Iria ao 2ºT</span>
@@ -154,10 +154,6 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
             <div className="finding-stat-item highlight-gold">
               <span className="finding-stat-val">{findings.govForcou2tEntreDois}</span>
               <span className="finding-stat-label">Forçaria Entre os 2</span>
-            </div>
-            <div className="finding-stat-item highlight-cyan">
-              <span className="finding-stat-val">{findings.govIriaNoLugar}</span>
-              <span className="finding-stat-label">Iria no Lugar de 1</span>
             </div>
             <div className="finding-stat-item">
               <span className="finding-stat-val">{findings.govNaoAlterou}</span>

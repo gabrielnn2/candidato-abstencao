@@ -38,7 +38,7 @@ export default function Gov1TSection({ brasilData, estadosData, onSelectUf }) {
           <div className="gov-1t-badge">⚡ Teste de Resistência Eleitoral</div>
           <h3 className="panel-title">Os Governadores Eleitos em 1º Turno Continuariam Eleitos?</h3>
           <p className="panel-subtitle">
-            Pela Constituição Federal (Art. 77, § 2º c/c Art. 28), vencer no primeiro turno exige <strong>mais de 50% dos votos</strong>.
+            Pela Constituição Federal (Art. 77, § 2º c/c Art. 28), vencer no 1º turno exige <strong>mais de 50% dos votos</strong>.
             Se as abstenções fossem consideradas votos válidos, <strong>12 de 16 governadores eleitos em 1º turno perderiam a vitória imediata e seriam forçados a disputar o 2º Turno!</strong>
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function Gov1TSection({ brasilData, estadosData, onSelectUf }) {
         <span className="highlight-callout-icon">💡</span>
         <div className="highlight-callout-text">
           <strong>O Grande Achado: O Efeito Fiel da Balança da Abstenção</strong><br />
-          Mesmo terminando em <strong>3º lugar</strong> (atrás dos dois principais concorrentes), a presença dos eleitores ausentes <strong>forçaria Segundo Turno em 75% dos estados</strong> onde governadores foram eleitos de primeira! A abstenção é tão massiva que <strong>derruba a votação dos líderes para bem abaixo dos 50% constitucionais</strong>, transformando eleições decididas em disputas abertas de 2º Turno.
+          Mesmo terminando em <strong>3º lugar</strong> (atrás dos dois principais concorrentes), a presença dos eleitores ausentes <strong>forçaria 2º Turno em 75% dos estados</strong> onde governadores foram eleitos de primeira! A abstenção é tão massiva que <strong>derruba a votação dos líderes para bem abaixo dos 50% constitucionais</strong>, transformando eleições decididas em disputas abertas de 2º Turno.
         </div>
       </div>
 
