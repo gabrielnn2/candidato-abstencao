@@ -96,11 +96,11 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            O Terceiro Colocado que Esmaga a Terceira Via
+            A Terceira Colocada que Esmaga a Terceira Via
           </h3>
 
           <p className="finding-narrative">
-            O total de abstenções <strong>não alteraria a disputa para o 2º turno</strong>, porém supera em{' '}
+            A Candidata Abstenção <strong>não alteraria a disputa para o 2º turno</strong>, porém supera em{' '}
             <span className="finding-highlight">{findings.mult3aVia} vezes</span> a soma de todos os candidatos de terceira via, é{' '}
             <span className="finding-highlight">{findings.multDiff1e2} vezes</span> a diferença entre os dois primeiros candidatos e em{' '}
             <span className="finding-highlight">{findings.estadosPres2} estados</span> brasileiros ficaria em segundo lugar na disputa.
@@ -137,7 +137,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </h3>
 
           <p className="finding-narrative">
-            O total de abstenções <strong>forçaria e iria para o 2º turno em {findings.govForcouEIria2t} estados</strong>,{' '}
+            A Candidata Abstenção <strong>forçaria e iria para o 2º turno em {findings.govForcouEIria2t} estados</strong>,{' '}
             <strong>forçaria um 2º turno entre os dois primeiros colocados</strong> em{' '}
             <span className="finding-highlight">{findings.govForcou2tEntreDois} estados</span> em que a disputa se encerrou no 1º turno,{' '}
             {findings.govIriaNoLugar > 0 ? (
@@ -177,10 +177,10 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </h3>
 
           <p className="finding-narrative">
-            No Senado, as abstenções <strong>ganhariam uma cadeira em {findings.senCadeiras} estados</strong>, sendo que em{' '}
+            No Senado, o Partido Abstenção <strong>ganharia uma cadeira em {findings.senCadeiras} estados</strong>, sendo que em{' '}
             <span className="finding-highlight">{findings.sen1o} deles</span> ficaria em primeiro lugar na disputa e apenas em{' '}
             <strong>{findings.senSemCadeira} estados não conquistaria</strong> uma cadeira. Com {findings.senCadeiras} eleitos, seria a{' '}
-            <strong>2ª maior bancada da Casa</strong>, atrás apenas do PL (17 eleitos) e à frente de MDB (7) e PT (6).
+            <strong>2ª maior bancada da Casa</strong>, atrás apenas do PL (15 eleitos) e à frente de MDB (7) e PT (6).
           </p>
 
           <div className="finding-stats-row">

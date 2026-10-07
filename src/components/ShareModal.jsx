@@ -17,7 +17,7 @@ export default function ShareModal({
     return '';
   };
 
-  const shareText = `E se a Abstenção fosse candidato a ${currentCargo} ${getScopeName()}? Descubra o ranking real dos eleitores ausentes com dados do TSE nas Eleições 2026!`;
+  const shareText = `E se a Candidata Abstenção fosse candidata a ${currentCargo} ${getScopeName()}? Descubra o ranking real dos eleitores ausentes com dados do TSE nas Eleições 2026!`;
   const shareUrl = window.location.href;
 
   const handleCopy = () => {
@@ -42,7 +42,7 @@ export default function ShareModal({
         </div>
 
         <div className="share-card-preview">
-          <div className="share-preview-badge">E SE A ABSTENÇÃO FOSSE CANDIDATO? · 2026</div>
+          <div className="share-preview-badge">E SE A CANDIDATA ABSTENÇÃO FOSSE CANDIDATA? · 2026</div>
           <p className="share-preview-text">"{shareText}"</p>
           <span className="share-preview-url">{shareUrl}</span>
         </div>

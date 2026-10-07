@@ -9,6 +9,7 @@ import {
   formatPercent,
   getFillColorExpression,
   getGovStatus,
+  getMunicipalGovStatus,
   getGovStatusLabel
 } from '../utils/electoralMath';
 
@@ -260,7 +261,7 @@ export default function MapWorkspace({
           );
 
           window.MUNICIPIOS_GEO.features?.forEach(feat => {
-            feat.properties.status_gov = getGovStatus(feat.properties.uf);
+            feat.properties.status_gov = getMunicipalGovStatus(feat.properties);
           });
 
           map.addSource('municipios', {
@@ -483,18 +484,18 @@ export default function MapWorkspace({
                 posDesc = '🟢 Forçaria e iria para o 2º turno';
               } else if (status === 'forcou_2t_entre_dois') {
                 posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
-              } else if (status === 'iria_2t_no_lugar') {
-                posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
               } else {
                 posDesc = '🛡️ Não alteraria';
               }
+            } else if (cargo === 'Presidente') {
+              const pos = p.pos_pres || 3;
+              if (pos === 2) posDesc = '🥈 2º Lugar · Iria para o 2º Turno';
+              else posDesc = '🥉 Não iria para o 2º Turno';
             } else {
-              const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
-              const pos = p[posProp] || 3;
-              if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-              else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-              else if (pos === 3) posDesc = '🥉 3º Lugar';
-              else posDesc = `${pos}º Lugar`;
+              const pos = p.pos_sen || 3;
+              if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
+              else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
+              else posDesc = '🥉 Sem Vaga no Senado';
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome || p.name} (${p.uf})`;
@@ -551,23 +552,23 @@ export default function MapWorkspace({
             const cargo = currentCargoRef.current;
             let posDesc = '';
             if (cargo === 'Governador') {
-              const status = getGovStatus(p.uf || p);
+              const status = p.status_gov || getMunicipalGovStatus(p);
               if (status === 'forcou_e_iria_2t') {
                 posDesc = '🟢 Forçaria e iria para o 2º turno';
               } else if (status === 'forcou_2t_entre_dois') {
                 posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
-              } else if (status === 'iria_2t_no_lugar') {
-                posDesc = '🔵 Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
               } else {
                 posDesc = '🛡️ Não alteraria';
               }
+            } else if (cargo === 'Presidente') {
+              const pos = p.pos_pres || 3;
+              if (pos === 2) posDesc = '🥈 2º Lugar · Iria para o 2º Turno';
+              else posDesc = '🥉 Não iria para o 2º Turno';
             } else {
-              const posProp = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
-              const pos = p[posProp] || 3;
-              if (pos === 1) posDesc = '🥇 1º Lugar (Mais Votado)';
-              else if (pos === 2) posDesc = cargo === 'Senador' ? '🥈 2º Lugar · Eleita Senadora (2ª Vaga)' : '🥈 2º Lugar · Iria para o 2º Turno';
-              else if (pos === 3) posDesc = '🥉 3º Lugar';
-              else posDesc = `${pos}º Lugar`;
+              const pos = p.pos_sen || 3;
+              if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
+              else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
+              else posDesc = '🥉 Sem Vaga no Senado';
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome} (${p.uf})`;
@@ -1110,18 +1111,23 @@ export default function MapWorkspace({
           )}
         </div>
 
-        {/* Dynamic Legend based on cargo (Governador vs Presidente/Senador) */}
+        {/* Dynamic Legend based on cargo */}
         {currentCargo === 'Governador' ? (
           <div className="legend-pills">
             <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o 2º turno</span>
             <span className="legend-item"><i className="legend-color gold"></i> Forçaria um 2º turno entre os dois primeiros colocados</span>
             <span className="legend-item"><i className="legend-color slate"></i> Não alteraria</span>
           </div>
+        ) : currentCargo === 'Presidente' ? (
+          <div className="legend-pills">
+            <span className="legend-item"><i className="legend-color cyan"></i> Iria para o 2º Turno</span>
+            <span className="legend-item"><i className="legend-color slate"></i> Não iria para o 2º Turno</span>
+          </div>
         ) : (
           <div className="legend-pills">
-            <span className="legend-item"><i className="legend-color gold"></i> 1º Lugar</span>
-            <span className="legend-item"><i className="legend-color silver"></i> {currentCargo === 'Senador' ? '2º Lugar · Eleita Senadora (2ª Vaga)' : '2º Lugar · Iria para o 2º Turno'}</span>
-            <span className="legend-item"><i className="legend-color bronze"></i> 3º ou abaixo</span>
+            <span className="legend-item"><i className="legend-color gold"></i> 1º Lugar · Eleita Senadora (1ª Vaga)</span>
+            <span className="legend-item"><i className="legend-color cyan"></i> 2º Lugar · Eleita Senadora (2ª Vaga)</span>
+            <span className="legend-item"><i className="legend-color slate"></i> 3º ou abaixo</span>
           </div>
         )}
       </div>

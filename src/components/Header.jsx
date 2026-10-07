@@ -15,7 +15,7 @@ export default function Header({ currentCargo, onSelectCargo, onOpenSearch }) {
           <span className="pulse-dot"></span>
         </div>
         <div className="brand-text">
-          <h1 className="brand-title">Candidato 00: <em>Abstenção</em></h1>
+          <h1 className="brand-title">Candidata 00: <em>Candidata Abstenção</em></h1>
           <span className="brand-sub">Eleições Gerais 2026 · Fonte: TSE</span>
         </div>
       </div>

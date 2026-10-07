@@ -75,8 +75,8 @@ export function formatVotosAmigavel(votos) {
 
 export function cleanCandidateName(nome) {
   if (!nome) return '';
-  // Se for abstenção com sufixo tipo (ELEITORES AUSENTES), limpa
-  if (/^Absten[çc][ãa]o/i.test(nome)) return 'Abstenção';
+  // Se for abstenção com qualquer sufixo, padroniza como Candidata Abstenção
+  if (/^Absten[çc][ãa]o/i.test(nome) || /Candidata Absten[çc][ãa]o/i.test(nome)) return 'Candidata Abstenção';
   // Remove sufixo de partido entre parênteses, ex: "Lula (PT)" -> "Lula"
   return nome.replace(/\s*\([A-Z0-9\s/+-]+\)$/i, '').trim();
 }
@@ -120,6 +120,26 @@ export function getGovStatus(item) {
   return 'nao_alterou';
 }
 
+export function getMunicipalGovStatus(props, ufItem) {
+  if (!props) return 'nao_alterou';
+  const posGov = Number(props.pos_gov || props.cargos?.Governador?.posicao || 3);
+  
+  // Se no município a Candidata Abstenção ficou em 2º lugar,
+  // caso apenas o município contasse ela iria para o 2º turno!
+  if (posGov === 2) {
+    return 'forcou_e_iria_2t';
+  }
+
+  // Se ficou em 3º lugar, verifica se no estado haveria 2º turno forçado pela abstenção local
+  const ufSigla = (props.uf || ufItem?.uf || '').toUpperCase();
+  const ufStatus = getGovStatus(ufSigla);
+  if (ufStatus === 'forcou_2t_entre_dois' || ufStatus === 'forcou_e_iria_2t') {
+    return 'forcou_2t_entre_dois';
+  }
+
+  return 'nao_alterou';
+}
+
 export function getGovStatusLabel(status) {
   switch (status) {
     case 'forcou_e_iria_2t':
@@ -140,22 +160,26 @@ export function getFillColorExpression(cargo) {
       ['forcou_e_iria_2t', 'foi_2t'], '#10b981',       // Verde Esmeralda (Forçaria e iria para o 2º turno)
       ['forcou_2t_entre_dois', 'forcou_2t'], '#f59e0b', // Âmbar / Ouro (Forçaria um 2º turno entre os dois primeiros colocados)
       'nao_alterou', '#262d3d',                         // Dark Slate (Não alteraria)
-      // Fallback matching directly by UF so it NEVER fails:
-      [
-        'match',
-        ['get', 'uf'],
-        ['GO', 'MG', 'MT', 'RO'], '#10b981',
-        ['AL', 'AP', 'BA', 'CE', 'MA', 'PA', 'PR', 'PE', 'RN', 'RS', 'SP', 'SE'], '#f59e0b',
-        '#262d3d'
-      ]
+      /* default */ '#262d3d'
     ];
   }
-  const prop = cargo === 'Presidente' ? 'pos_pres' : 'pos_sen';
+  if (cargo === 'Presidente') {
+    // Para presidente não há 1º lugar da abstenção em nenhuma agregação:
+    // 2º lugar: Iria para o 2º Turno (#38bdf8 - Ciano)
+    // 3º ou abaixo: Não iria para o 2º Turno (#262d3d - Dark Slate)
+    return [
+      'match',
+      ['get', 'pos_pres'],
+      2, '#38bdf8', // Iria para o 2º Turno (Ciano)
+      /* default */ '#262d3d' // Não iria para o 2º Turno (Dark Slate)
+    ];
+  }
+  // Cargo Senador
   return [
     'match',
-    ['get', prop],
+    ['get', 'pos_sen'],
     1, '#f59e0b', // 1º Lugar (Gold)
-    2, '#38bdf8', // 2º Lugar / 2º Turno / Vaga (Cyan)
+    2, '#38bdf8', // 2º Lugar · Eleita Senadora (Cyan)
     /* default */ '#262d3d' // 3º ou abaixo (Dark Slate)
   ];
 }
@@ -191,11 +215,11 @@ export function synthesizeMunicipalCargos(props, ufItem) {
       };
     });
 
-    // Add Abstenção
+    // Add Candidata Abstenção
     competitors.push({
-      nome: 'Abstenção',
-      partido: 'ELEITORES AUSENTES',
-      nome_exibicao: 'Abstenção (ELEITORES AUSENTES)',
+      nome: 'Candidata Abstenção',
+      partido: 'Partido Abstenção',
+      nome_exibicao: 'Candidata Abstenção',
       numero: '00',
       votos: abstencao,
       is_abstencao: true,
