@@ -187,13 +187,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 488330
       },
       "Governador": {
         "posicao": 3,
-        "votos": 125412,
-        "total_aptos": 613742,
-        "taxa_abstencao": 20.43,
+        "votos": 125345,
+        "total_aptos": 613316,
+        "taxa_abstencao": 20.44,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -282,13 +283,14 @@
             "posicao": 7,
             "percentual_simulado": 0.07
           }
-        ]
+        ],
+        "comparecimento": 487971
       },
       "Senador": {
         "posicao": 2,
-        "votos": 125412,
-        "total_aptos": 613742,
-        "taxa_abstencao": 20.43,
+        "votos": 125345,
+        "total_aptos": 613316,
+        "taxa_abstencao": 20.44,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -372,7 +374,8 @@
             "percentual_simulado": 1.73,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 487971
       }
     }
   },
@@ -571,13 +574,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1938428
       },
       "Governador": {
         "posicao": 3,
-        "votos": 503698,
-        "total_aptos": 2442126,
-        "taxa_abstencao": 20.63,
+        "votos": 503370,
+        "total_aptos": 2439190,
+        "taxa_abstencao": 20.64,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -642,13 +646,14 @@
             "posicao": 5,
             "percentual_simulado": 0.04
           }
-        ]
+        ],
+        "comparecimento": 1935820
       },
       "Senador": {
         "posicao": 2,
-        "votos": 503698,
-        "total_aptos": 2442126,
-        "taxa_abstencao": 20.63,
+        "votos": 503370,
+        "total_aptos": 2439190,
+        "taxa_abstencao": 20.64,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -732,7 +737,8 @@
             "percentual_simulado": 4.33,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 1935820
       }
     }
   },
@@ -924,12 +930,13 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2234549
       },
       "Governador": {
         "posicao": 2,
-        "votos": 564062,
-        "total_aptos": 2798611,
+        "votos": 563782,
+        "total_aptos": 2796053,
         "taxa_abstencao": 20.16,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
@@ -1032,12 +1039,13 @@
             "posicao": 8,
             "percentual_simulado": 0.11
           }
-        ]
+        ],
+        "comparecimento": 2232271
       },
       "Senador": {
         "posicao": 3,
-        "votos": 564062,
-        "total_aptos": 2798611,
+        "votos": 563782,
+        "total_aptos": 2796053,
         "taxa_abstencao": 20.16,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -1121,7 +1129,8 @@
             "percentual_simulado": 3.14,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2232271
       }
     }
   },
@@ -1320,12 +1329,13 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 476562
       },
       "Governador": {
         "posicao": 3,
-        "votos": 100426,
-        "total_aptos": 576988,
+        "votos": 100340,
+        "total_aptos": 576359,
         "taxa_abstencao": 17.41,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -1403,12 +1413,13 @@
             "posicao": 6,
             "percentual_simulado": 0.06
           }
-        ]
+        ],
+        "comparecimento": 476019
       },
       "Senador": {
         "posicao": 3,
-        "votos": 100426,
-        "total_aptos": 576988,
+        "votos": 100340,
+        "total_aptos": 576359,
         "taxa_abstencao": 17.41,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -1492,7 +1503,8 @@
             "percentual_simulado": 3.5,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 476019
       }
     }
   },
@@ -1691,13 +1703,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 9053601
       },
       "Governador": {
         "posicao": 3,
-        "votos": 2259151,
-        "total_aptos": 11312752,
-        "taxa_abstencao": 19.97,
+        "votos": 2258135,
+        "total_aptos": 11304314,
+        "taxa_abstencao": 19.98,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -1786,13 +1799,14 @@
             "posicao": 7,
             "percentual_simulado": 0.03
           }
-        ]
+        ],
+        "comparecimento": 9046179
       },
       "Senador": {
         "posicao": 3,
-        "votos": 2259151,
-        "total_aptos": 11312752,
-        "taxa_abstencao": 19.97,
+        "votos": 2258135,
+        "total_aptos": 11304314,
+        "taxa_abstencao": 19.98,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -1875,7 +1889,8 @@
             "percentual_simulado": 2.6,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 9046179
       }
     }
   },
@@ -2074,13 +2089,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 5910471
       },
       "Governador": {
         "posicao": 3,
-        "votos": 1086074,
-        "total_aptos": 6996545,
-        "taxa_abstencao": 15.52,
+        "votos": 1085522,
+        "total_aptos": 6991044,
+        "taxa_abstencao": 15.53,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -2193,13 +2209,14 @@
             "posicao": 9,
             "percentual_simulado": 0.01
           }
-        ]
+        ],
+        "comparecimento": 5905522
       },
       "Senador": {
         "posicao": 4,
-        "votos": 1086074,
-        "total_aptos": 6996545,
-        "taxa_abstencao": 15.52,
+        "votos": 1085522,
+        "total_aptos": 6991044,
+        "taxa_abstencao": 15.53,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -2281,7 +2298,8 @@
             "percentual_simulado": 3.33,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 5905522
       }
     }
   },
@@ -2473,7 +2491,8 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1831396
       },
       "Governador": {
         "posicao": 3,
@@ -2620,9 +2639,9 @@
       },
       "Senador": {
         "posicao": 3,
-        "votos": 426924,
-        "total_aptos": 2258320,
-        "taxa_abstencao": 18.9,
+        "votos": 426067,
+        "total_aptos": 2243988,
+        "taxa_abstencao": 18.99,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -2705,7 +2724,8 @@
             "percentual_simulado": 3.19,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 1817921
       }
     }
   },
@@ -2897,13 +2917,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2352282
       },
       "Governador": {
         "posicao": 3,
-        "votos": 639368,
-        "total_aptos": 2991650,
-        "taxa_abstencao": 21.37,
+        "votos": 638972,
+        "total_aptos": 2987584,
+        "taxa_abstencao": 21.39,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -2980,13 +3001,14 @@
             "posicao": 6,
             "percentual_simulado": 0.1
           }
-        ]
+        ],
+        "comparecimento": 2348612
       },
       "Senador": {
         "posicao": 2,
-        "votos": 639368,
-        "total_aptos": 2991650,
-        "taxa_abstencao": 21.37,
+        "votos": 638972,
+        "total_aptos": 2987584,
+        "taxa_abstencao": 21.39,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -3070,7 +3092,8 @@
             "percentual_simulado": 2.78,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2348612
       }
     }
   },
@@ -3269,13 +3292,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 3971587
       },
       "Governador": {
         "posicao": 2,
-        "votos": 1109003,
-        "total_aptos": 5080590,
-        "taxa_abstencao": 21.83,
+        "votos": 1108382,
+        "total_aptos": 5074870,
+        "taxa_abstencao": 21.84,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
         "eleito_senado": false,
@@ -3365,13 +3389,14 @@
             "posicao": 7,
             "percentual_simulado": 0.03
           }
-        ]
+        ],
+        "comparecimento": 3966488
       },
       "Senador": {
         "posicao": 3,
-        "votos": 1109003,
-        "total_aptos": 5080590,
-        "taxa_abstencao": 21.83,
+        "votos": 1108382,
+        "total_aptos": 5074870,
+        "taxa_abstencao": 21.84,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -3454,7 +3479,8 @@
             "percentual_simulado": 3.07,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 3966488
       }
     }
   },
@@ -3653,13 +3679,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 4160343
       },
       "Governador": {
         "posicao": 3,
-        "votos": 1022772,
-        "total_aptos": 5183115,
-        "taxa_abstencao": 19.73,
+        "votos": 1022456,
+        "total_aptos": 5180851,
+        "taxa_abstencao": 19.74,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -3772,13 +3799,14 @@
             "posicao": 9,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 4158395
       },
       "Senador": {
         "posicao": 2,
-        "votos": 1022772,
-        "total_aptos": 5183115,
-        "taxa_abstencao": 19.73,
+        "votos": 1022456,
+        "total_aptos": 5180851,
+        "taxa_abstencao": 19.74,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -3862,7 +3890,8 @@
             "percentual_simulado": 1.2,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 4158395
       }
     }
   },
@@ -4061,13 +4090,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 12637274
       },
       "Governador": {
         "posicao": 2,
-        "votos": 3735098,
-        "total_aptos": 16372372,
-        "taxa_abstencao": 22.81,
+        "votos": 3734021,
+        "total_aptos": 16361188,
+        "taxa_abstencao": 22.82,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
         "eleito_senado": false,
@@ -4217,13 +4247,14 @@
             "posicao": 12,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 12627167
       },
       "Senador": {
         "posicao": 2,
-        "votos": 3735098,
-        "total_aptos": 16372372,
-        "taxa_abstencao": 22.81,
+        "votos": 3734021,
+        "total_aptos": 16361188,
+        "taxa_abstencao": 22.82,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -4307,7 +4338,8 @@
             "percentual_simulado": 4.54,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 12627167
       }
     }
   },
@@ -4506,13 +4538,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1541220
       },
       "Governador": {
         "posicao": 2,
-        "votos": 483210,
-        "total_aptos": 2024430,
-        "taxa_abstencao": 23.87,
+        "votos": 482860,
+        "total_aptos": 2021869,
+        "taxa_abstencao": 23.88,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
         "eleito_senado": false,
@@ -4626,13 +4659,14 @@
             "posicao": 9,
             "percentual_simulado": 0.05
           }
-        ]
+        ],
+        "comparecimento": 1539009
       },
       "Senador": {
         "posicao": 3,
-        "votos": 483210,
-        "total_aptos": 2024430,
-        "taxa_abstencao": 23.87,
+        "votos": 482860,
+        "total_aptos": 2021869,
+        "taxa_abstencao": 23.88,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -4715,7 +4749,8 @@
             "percentual_simulado": 2.87,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 1539009
       }
     }
   },
@@ -4915,13 +4950,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2052133
       },
       "Governador": {
         "posicao": 2,
-        "votos": 585668,
-        "total_aptos": 2637801,
-        "taxa_abstencao": 22.2,
+        "votos": 585274,
+        "total_aptos": 2634992,
+        "taxa_abstencao": 22.21,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
         "eleito_senado": false,
@@ -5011,13 +5047,14 @@
             "posicao": 7,
             "percentual_simulado": 0.11
           }
-        ]
+        ],
+        "comparecimento": 2049718
       },
       "Senador": {
         "posicao": 2,
-        "votos": 585668,
-        "total_aptos": 2637801,
-        "taxa_abstencao": 22.2,
+        "votos": 585274,
+        "total_aptos": 2634992,
+        "taxa_abstencao": 22.21,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -5101,7 +5138,8 @@
             "percentual_simulado": 2.29,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2049718
       }
     }
   },
@@ -5300,12 +5338,13 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 5066504
       },
       "Governador": {
         "posicao": 3,
-        "votos": 1195893,
-        "total_aptos": 6262397,
+        "votos": 1195412,
+        "total_aptos": 6258162,
         "taxa_abstencao": 19.1,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -5395,12 +5434,13 @@
             "posicao": 7,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 5062750
       },
       "Senador": {
         "posicao": 2,
-        "votos": 1195893,
-        "total_aptos": 6262397,
+        "votos": 1195412,
+        "total_aptos": 6258162,
         "taxa_abstencao": 19.1,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -5485,7 +5525,8 @@
             "percentual_simulado": 3.18,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 5062750
       }
     }
   },
@@ -5684,13 +5725,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2683988
       },
       "Governador": {
         "posicao": 2,
-        "votos": 564543,
-        "total_aptos": 3248531,
-        "taxa_abstencao": 17.38,
+        "votos": 564062,
+        "total_aptos": 3241966,
+        "taxa_abstencao": 17.4,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -5768,13 +5810,14 @@
             "posicao": 6,
             "percentual_simulado": 0.08
           }
-        ]
+        ],
+        "comparecimento": 2677904
       },
       "Senador": {
         "posicao": 3,
-        "votos": 564543,
-        "total_aptos": 3248531,
-        "taxa_abstencao": 17.38,
+        "votos": 564062,
+        "total_aptos": 3241966,
+        "taxa_abstencao": 17.4,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -5857,7 +5900,8 @@
             "percentual_simulado": 3.5,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2677904
       }
     }
   },
@@ -6056,13 +6100,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 5911062
       },
       "Governador": {
         "posicao": 3,
-        "votos": 1312388,
-        "total_aptos": 7223450,
-        "taxa_abstencao": 18.17,
+        "votos": 1311753,
+        "total_aptos": 7216989,
+        "taxa_abstencao": 18.18,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -6163,13 +6208,14 @@
             "posicao": 8,
             "percentual_simulado": 0.01
           }
-        ]
+        ],
+        "comparecimento": 5905236
       },
       "Senador": {
         "posicao": 3,
-        "votos": 1312388,
-        "total_aptos": 7223450,
-        "taxa_abstencao": 18.17,
+        "votos": 1311753,
+        "total_aptos": 7216989,
+        "taxa_abstencao": 18.18,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -6252,7 +6298,8 @@
             "percentual_simulado": 4.03,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 5905236
       }
     }
   },
@@ -6451,12 +6498,13 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2240883
       },
       "Governador": {
         "posicao": 3,
-        "votos": 463875,
-        "total_aptos": 2704758,
+        "votos": 463678,
+        "total_aptos": 2703064,
         "taxa_abstencao": 17.15,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -6594,12 +6642,13 @@
             "posicao": 11,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2239386
       },
       "Senador": {
         "posicao": 3,
-        "votos": 463875,
-        "total_aptos": 2704758,
+        "votos": 463678,
+        "total_aptos": 2703064,
         "taxa_abstencao": 17.15,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -6683,7 +6732,8 @@
             "percentual_simulado": 2.45,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2239386
       }
     }
   },
@@ -6882,13 +6932,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 6841457
       },
       "Governador": {
         "posicao": 2,
-        "votos": 1772200,
-        "total_aptos": 8613657,
-        "taxa_abstencao": 20.57,
+        "votos": 1771009,
+        "total_aptos": 8600624,
+        "taxa_abstencao": 20.59,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
         "eleito_senado": false,
@@ -7002,13 +7053,14 @@
             "posicao": 9,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 6829615
       },
       "Senador": {
         "posicao": 3,
-        "votos": 1772200,
-        "total_aptos": 8613657,
-        "taxa_abstencao": 20.57,
+        "votos": 1771009,
+        "total_aptos": 8600624,
+        "taxa_abstencao": 20.59,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -7091,7 +7143,8 @@
             "percentual_simulado": 3.9,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 6829615
       }
     }
   },
@@ -7283,13 +7336,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 9859802
       },
       "Governador": {
         "posicao": 3,
-        "votos": 2997846,
-        "total_aptos": 12857648,
-        "taxa_abstencao": 23.32,
+        "votos": 2996650,
+        "total_aptos": 12842517,
+        "taxa_abstencao": 23.33,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -7414,13 +7468,14 @@
             "posicao": 10,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 9845867
       },
       "Senador": {
         "posicao": 2,
-        "votos": 2997846,
-        "total_aptos": 12857648,
-        "taxa_abstencao": 23.32,
+        "votos": 2996650,
+        "total_aptos": 12842517,
+        "taxa_abstencao": 23.33,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -7504,7 +7559,8 @@
             "percentual_simulado": 3.53,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 9845867
       }
     }
   },
@@ -7696,13 +7752,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2171013
       },
       "Governador": {
         "posicao": 4,
-        "votos": 488812,
-        "total_aptos": 2659825,
-        "taxa_abstencao": 18.38,
+        "votos": 488493,
+        "total_aptos": 2656207,
+        "taxa_abstencao": 18.39,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -7814,13 +7871,14 @@
             "posicao": 9,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 2167714
       },
       "Senador": {
         "posicao": 3,
-        "votos": 488812,
-        "total_aptos": 2659825,
-        "taxa_abstencao": 18.38,
+        "votos": 488493,
+        "total_aptos": 2656207,
+        "taxa_abstencao": 18.39,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -7903,7 +7961,8 @@
             "percentual_simulado": 3.21,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 2167714
       }
     }
   },
@@ -8103,12 +8162,13 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 991080
       },
       "Governador": {
         "posicao": 2,
-        "votos": 274813,
-        "total_aptos": 1265893,
+        "votos": 274695,
+        "total_aptos": 1265008,
         "taxa_abstencao": 21.71,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": true,
@@ -8199,12 +8259,13 @@
             "posicao": 7,
             "percentual_simulado": 0.36
           }
-        ]
+        ],
+        "comparecimento": 990313
       },
       "Senador": {
         "posicao": 1,
-        "votos": 274813,
-        "total_aptos": 1265893,
+        "votos": 274695,
+        "total_aptos": 1265008,
         "taxa_abstencao": 21.71,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
@@ -8290,7 +8351,8 @@
             "percentual_simulado": 0.0,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 990313
       }
     }
   },
@@ -8489,13 +8551,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 332772
       },
       "Governador": {
         "posicao": 3,
-        "votos": 68749,
-        "total_aptos": 401521,
-        "taxa_abstencao": 17.12,
+        "votos": 68644,
+        "total_aptos": 400603,
+        "taxa_abstencao": 17.14,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -8572,13 +8635,14 @@
             "posicao": 6,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 331959
       },
       "Senador": {
         "posicao": 3,
-        "votos": 68749,
-        "total_aptos": 401521,
-        "taxa_abstencao": 17.12,
+        "votos": 68644,
+        "total_aptos": 400603,
+        "taxa_abstencao": 17.14,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -8661,7 +8725,8 @@
             "percentual_simulado": 3.27,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 331959
       }
     }
   },
@@ -8860,13 +8925,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 6702903
       },
       "Governador": {
         "posicao": 3,
-        "votos": 1819642,
-        "total_aptos": 8522545,
-        "taxa_abstencao": 21.35,
+        "votos": 1819041,
+        "total_aptos": 8516465,
+        "taxa_abstencao": 21.36,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -8967,13 +9033,14 @@
             "posicao": 8,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 6697424
       },
       "Senador": {
         "posicao": 3,
-        "votos": 1819642,
-        "total_aptos": 8522545,
-        "taxa_abstencao": 21.35,
+        "votos": 1819041,
+        "total_aptos": 8516465,
+        "taxa_abstencao": 21.36,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -9056,7 +9123,8 @@
             "percentual_simulado": 3.08,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 6697424
       }
     }
   },
@@ -9255,13 +9323,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 4648159
       },
       "Governador": {
         "posicao": 2,
-        "votos": 1086492,
-        "total_aptos": 5734651,
-        "taxa_abstencao": 18.95,
+        "votos": 1084991,
+        "total_aptos": 5719541,
+        "taxa_abstencao": 18.97,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -9375,13 +9444,14 @@
             "posicao": 9,
             "percentual_simulado": 0.05
           }
-        ]
+        ],
+        "comparecimento": 4634550
       },
       "Senador": {
         "posicao": 3,
-        "votos": 1086492,
-        "total_aptos": 5734651,
-        "taxa_abstencao": 18.95,
+        "votos": 1084991,
+        "total_aptos": 5719541,
+        "taxa_abstencao": 18.97,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -9464,7 +9534,8 @@
             "percentual_simulado": 3.19,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 4634550
       }
     }
   },
@@ -9663,13 +9734,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1439082
       },
       "Governador": {
         "posicao": 3,
-        "votos": 301053,
-        "total_aptos": 1740135,
-        "taxa_abstencao": 17.3,
+        "votos": 300851,
+        "total_aptos": 1737460,
+        "taxa_abstencao": 17.32,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -9734,13 +9806,14 @@
             "posicao": 5,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1436609
       },
       "Senador": {
         "posicao": 3,
-        "votos": 301053,
-        "total_aptos": 1740135,
-        "taxa_abstencao": 17.3,
+        "votos": 300851,
+        "total_aptos": 1737460,
+        "taxa_abstencao": 17.32,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -9823,7 +9896,8 @@
             "percentual_simulado": 3.26,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 1436609
       }
     }
   },
@@ -10022,13 +10096,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 26431992
       },
       "Governador": {
         "posicao": 3,
-        "votos": 7690900,
-        "total_aptos": 34122892,
-        "taxa_abstencao": 22.54,
+        "votos": 7687443,
+        "total_aptos": 34081699,
+        "taxa_abstencao": 22.56,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -10105,13 +10180,14 @@
             "posicao": 6,
             "percentual_simulado": 0.19
           }
-        ]
+        ],
+        "comparecimento": 26394256
       },
       "Senador": {
         "posicao": 1,
-        "votos": 7690900,
-        "total_aptos": 34122892,
-        "taxa_abstencao": 22.54,
+        "votos": 7687443,
+        "total_aptos": 34081699,
+        "taxa_abstencao": 22.56,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": true,
@@ -10222,7 +10298,8 @@
             "percentual_simulado": 1.54,
             "posicao": 8
           }
-        ]
+        ],
+        "comparecimento": 26394256
       }
     }
   },
@@ -10414,13 +10491,14 @@
             "posicao": 14,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 965196
       },
       "Governador": {
         "posicao": 3,
-        "votos": 216827,
-        "total_aptos": 1182023,
-        "taxa_abstencao": 18.34,
+        "votos": 216623,
+        "total_aptos": 1180433,
+        "taxa_abstencao": 18.35,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -10509,13 +10587,14 @@
             "posicao": 7,
             "percentual_simulado": 0.12
           }
-        ]
+        ],
+        "comparecimento": 963810
       },
       "Senador": {
         "posicao": 3,
-        "votos": 216827,
-        "total_aptos": 1182023,
-        "taxa_abstencao": 18.34,
+        "votos": 216623,
+        "total_aptos": 1180433,
+        "taxa_abstencao": 18.35,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -10598,7 +10677,8 @@
             "percentual_simulado": 3.21,
             "posicao": 6
           }
-        ]
+        ],
+        "comparecimento": 963810
       }
     }
   }

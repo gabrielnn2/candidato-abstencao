@@ -95,7 +95,20 @@ export const GOV_NAO_ALTEROU = ['AC', 'AM', 'AP', 'DF', 'ES', 'PB', 'PI', 'RJ', 
 export function getGovStatus(item) {
   if (!item) return 'nao_alterou';
 
-  // 1. Direct match on item if it's a UF string
+  // 1. Prioridade absoluta para status_gov direto do item (município ou feature)
+  const rawStatus = item.status_gov || item.properties?.status_gov;
+  if (rawStatus === 'forcou_e_iria_2t' || rawStatus === 'foi_2t') return 'forcou_e_iria_2t';
+  if (rawStatus === 'forcou_2t_entre_dois' || rawStatus === 'forcou_2t') return 'forcou_2t_entre_dois';
+  if (rawStatus === 'nao_alterou') return 'nao_alterou';
+
+  // 2. Se o item for um município (tem id numérico > 1000 ou cargos.Presidente)
+  const itemId = item.id || item.properties?.id;
+  const isMun = (itemId && !isNaN(Number(itemId)) && Number(itemId) > 1000);
+  if (isMun) {
+    return getMunicipalGovStatus(item);
+  }
+
+  // 3. Correspondência direta se for string de UF (2 letras)
   if (typeof item === 'string') {
     const ufUpper = item.toUpperCase();
     if (GOV_FORCOU_E_IRIA_2T.includes(ufUpper)) return 'forcou_e_iria_2t';
@@ -103,38 +116,36 @@ export function getGovStatus(item) {
     if (GOV_NAO_ALTEROU.includes(ufUpper)) return 'nao_alterou';
   }
 
-  // 2. Match on item properties (uf or id)
+  // 4. Se for objeto de Estado (UF)
   const uf = item.uf || item.properties?.uf || item.id;
-  if (uf && typeof uf === 'string') {
+  if (uf && typeof uf === 'string' && uf.length === 2 && !isMun) {
     const ufUpper = uf.toUpperCase();
     if (GOV_FORCOU_E_IRIA_2T.includes(ufUpper)) return 'forcou_e_iria_2t';
     if (GOV_FORCOU_2T_ENTRE_DOIS.includes(ufUpper)) return 'forcou_2t_entre_dois';
     if (GOV_NAO_ALTEROU.includes(ufUpper)) return 'nao_alterou';
   }
 
-  // 3. Fallback on status_gov property
-  const rawStatus = item.status_gov || item.properties?.status_gov;
-  if (rawStatus === 'forcou_e_iria_2t' || rawStatus === 'foi_2t') return 'forcou_e_iria_2t';
-  if (rawStatus === 'forcou_2t_entre_dois' || rawStatus === 'forcou_2t') return 'forcou_2t_entre_dois';
-
   return 'nao_alterou';
 }
 
 export function getMunicipalGovStatus(props, ufItem) {
   if (!props) return 'nao_alterou';
+  if (props.status_gov) return props.status_gov;
   const posGov = Number(props.pos_gov || props.cargos?.Governador?.posicao || 3);
+  const iria2t = props.iria_2t_gov ?? props.cargos?.Governador?.iria_segundo_turno;
   
-  // Se no município a Candidata Abstenção ficou em 2º lugar,
-  // caso apenas o município contasse ela iria para o 2º turno!
-  if (posGov === 2) {
-    return 'forcou_e_iria_2t';
+  if (posGov === 1) {
+    return iria2t ? 'forcou_e_iria_2t' : 'nao_alterou';
   }
-
-  // Se ficou em 3º lugar, verifica se no estado haveria 2º turno forçado pela abstenção local
-  const ufSigla = (props.uf || ufItem?.uf || '').toUpperCase();
-  const ufStatus = getGovStatus(ufSigla);
-  if (ufStatus === 'forcou_2t_entre_dois' || ufStatus === 'forcou_e_iria_2t') {
-    return 'forcou_2t_entre_dois';
+  if (posGov === 2) {
+    return iria2t ? 'forcou_e_iria_2t' : 'nao_alterou';
+  }
+  if (posGov >= 3) {
+    const gov1votos = props.gov_votos_1o || props.cargos?.Governador?.ranking?.find(c => !c.is_abstencao)?.votos;
+    const totSim = (props.gov_total_validos || 0) + (props.abstencao || 0);
+    if (gov1votos && totSim > 0 && (gov1votos / totSim <= 0.5)) {
+      return 'forcou_2t_entre_dois';
+    }
   }
 
   return 'nao_alterou';
@@ -198,7 +209,7 @@ export function synthesizeMunicipalCargos(props, ufItem) {
     let competitors = [];
 
     if (cargo === 'Presidente' && props.cand_1o && props.votos_1o) {
-      // DADOS REAIS E EXATOS DO TSE (OPÇÃO 1)
+      // DADOS REAIS E EXATOS DO TSE - PRESIDENTE
       if (props.votos_1o > 0) {
         competitors.push({
           nome: props.cand_1o,
@@ -243,6 +254,98 @@ export function synthesizeMunicipalCargos(props, ufItem) {
           foto: ''
         });
       }
+    } else if (cargo === 'Governador' && props.gov_cand_1o && props.gov_votos_1o) {
+      // DADOS REAIS E EXATOS DO TSE - GOVERNADOR
+      if (props.gov_votos_1o > 0) {
+        competitors.push({
+          nome: props.gov_cand_1o,
+          partido: props.gov_partido_1o || 'PARTIDO',
+          nome_exibicao: `${props.gov_cand_1o} (${props.gov_partido_1o || ''})`,
+          numero: props.gov_numero_1o || '',
+          votos: props.gov_votos_1o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.gov_votos_2o > 0) {
+        competitors.push({
+          nome: props.gov_cand_2o,
+          partido: props.gov_partido_2o || 'PARTIDO',
+          nome_exibicao: `${props.gov_cand_2o} (${props.gov_partido_2o || ''})`,
+          numero: props.gov_numero_2o || '',
+          votos: props.gov_votos_2o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.gov_votos_3o > 0) {
+        competitors.push({
+          nome: props.gov_cand_3o,
+          partido: props.gov_partido_3o || 'PARTIDO',
+          nome_exibicao: `${props.gov_cand_3o} (${props.gov_partido_3o || ''})`,
+          numero: props.gov_numero_3o || '',
+          votos: props.gov_votos_3o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.gov_outros_votos > 0) {
+        competitors.push({
+          nome: 'Outros Candidatos',
+          partido: 'OUTROS',
+          nome_exibicao: 'Outros Candidatos (OUTROS)',
+          numero: '--',
+          votos: props.gov_outros_votos,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+    } else if (cargo === 'Senador' && props.sen_cand_1o && props.sen_votos_1o) {
+      // DADOS REAIS E EXATOS DO TSE - SENADOR
+      if (props.sen_votos_1o > 0) {
+        competitors.push({
+          nome: props.sen_cand_1o,
+          partido: props.sen_partido_1o || 'PARTIDO',
+          nome_exibicao: `${props.sen_cand_1o} (${props.sen_partido_1o || ''})`,
+          numero: props.sen_numero_1o || '',
+          votos: props.sen_votos_1o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.sen_votos_2o > 0) {
+        competitors.push({
+          nome: props.sen_cand_2o,
+          partido: props.sen_partido_2o || 'PARTIDO',
+          nome_exibicao: `${props.sen_cand_2o} (${props.sen_partido_2o || ''})`,
+          numero: props.sen_numero_2o || '',
+          votos: props.sen_votos_2o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.sen_votos_3o > 0) {
+        competitors.push({
+          nome: props.sen_cand_3o,
+          partido: props.sen_partido_3o || 'PARTIDO',
+          nome_exibicao: `${props.sen_cand_3o} (${props.sen_partido_3o || ''})`,
+          numero: props.sen_numero_3o || '',
+          votos: props.sen_votos_3o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.sen_outros_votos > 0) {
+        competitors.push({
+          nome: 'Outros Candidatos',
+          partido: 'OUTROS',
+          nome_exibicao: 'Outros Candidatos (OUTROS)',
+          numero: '--',
+          votos: props.sen_outros_votos,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
     } else {
       // Estimativa proporcional para cargos locais sem dados nominais no índice
       const ufCargo = ufItem?.cargos?.[cargo];
@@ -275,8 +378,12 @@ export function synthesizeMunicipalCargos(props, ufItem) {
       foto: 'assets/abstencao.svg'
     });
 
-    // Se NÃO for Presidente com dados reais, alinhar se houver alvo pré-computado
-    if (!(cargo === 'Presidente' && props.cand_1o && props.votos_1o)) {
+    const hasRealCargoData = (cargo === 'Presidente' && props.cand_1o && props.votos_1o) ||
+                             (cargo === 'Governador' && props.gov_cand_1o && props.gov_votos_1o) ||
+                             (cargo === 'Senador' && props.sen_cand_1o && props.sen_votos_1o);
+
+    // Se NÃO for cargo com dados nominais reais, alinhar se houver alvo pré-computado
+    if (!hasRealCargoData) {
       const targetProp = cargo === 'Presidente' ? props.pos_pres : (cargo === 'Governador' ? props.pos_gov : props.pos_sen);
       competitors.sort((a, b) => b.votos - a.votos);
 

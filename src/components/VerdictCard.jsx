@@ -52,9 +52,10 @@ export default function VerdictCard({
     const uf = currentScope.item;
     locationTitle = `${uf.nome.toUpperCase()} (${uf.uf})`;
     locationName = `${uf.nome} (${uf.uf})`;
-    aptos = uf.aptos;
-    abstencao = uf.abstencao;
-    taxa = uf.taxa_abstencao;
+    const cargoData = uf.cargos?.[currentCargo];
+    aptos = cargoData?.total_aptos || uf.aptos;
+    abstencao = cargoData?.votos || uf.abstencao;
+    taxa = cargoData?.taxa_abstencao || uf.taxa_abstencao;
   } else if (isMun && currentScope.item) {
     const mun = currentScope.item;
     locationTitle = `${mun.nome.toUpperCase()} (${mun.uf})`;
