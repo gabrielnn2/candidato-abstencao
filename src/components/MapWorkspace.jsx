@@ -1003,117 +1003,123 @@ export default function MapWorkspace({
         </div>
       </div>
 
-      {/* Filter Controls Toolbar: Visualização (Radio), Região, Estado & Busca de Município */}
+      {/* Filter Controls Toolbar: Linha superior (Visualização empilhada, Região, Estado) e Linha inferior (Busca de Município) */}
       <div className="map-controls-toolbar">
-        {/* Visualização: Seleção Radio "Municípios" e "Estados" (Default: Estados) */}
-        <div className="control-group view-mode-group">
-          <label className="control-label">Visualização</label>
-          <div className="radio-group-container" role="radiogroup" aria-label="Visualização do mapa">
-            <label className={`custom-radio-item ${viewMode === 'municipios' ? 'is-selected' : ''}`}>
-              <input
-                type="radio"
-                name="mapViewMode"
-                value="municipios"
-                checked={viewMode === 'municipios'}
-                onChange={() => setViewMode('municipios')}
-                className="custom-radio-input"
-              />
-              <span className="radio-text">Municípios</span>
-            </label>
-            <label className={`custom-radio-item ${viewMode === 'estados' ? 'is-selected' : ''}`}>
-              <input
-                type="radio"
-                name="mapViewMode"
-                value="estados"
-                checked={viewMode === 'estados'}
-                onChange={() => {
-                  setViewMode('estados');
-                  if (currentScope?.type === 'municipio') {
-                    if (currentScope.item?.uf) {
-                      onSelectUf(currentScope.item.uf);
-                    } else {
-                      onResetBrasil();
+        {/* Top Row: Visualização (Estados / Municípios empilhados) + Região + Estado (UF) */}
+        <div className="map-controls-top-row">
+          {/* Visualização: Seleção Radio empilhada "Estados" e "Municípios" */}
+          <div className="control-group view-mode-group">
+            <label className="control-label">Visualização</label>
+            <div className="radio-group-container stacked" role="radiogroup" aria-label="Visualização do mapa">
+              <label className={`custom-radio-item ${viewMode === 'estados' ? 'is-selected' : ''}`}>
+                <input
+                  type="radio"
+                  name="mapViewMode"
+                  value="estados"
+                  checked={viewMode === 'estados'}
+                  onChange={() => {
+                    setViewMode('estados');
+                    if (currentScope?.type === 'municipio') {
+                      if (currentScope.item?.uf) {
+                        onSelectUf(currentScope.item.uf);
+                      } else {
+                        onResetBrasil();
+                      }
                     }
-                  }
-                }}
-                className="custom-radio-input"
-              />
-              <span className="radio-text">Estados</span>
-            </label>
+                  }}
+                  className="custom-radio-input"
+                />
+                <span className="radio-text">Estados</span>
+              </label>
+              <label className={`custom-radio-item ${viewMode === 'municipios' ? 'is-selected' : ''}`}>
+                <input
+                  type="radio"
+                  name="mapViewMode"
+                  value="municipios"
+                  checked={viewMode === 'municipios'}
+                  onChange={() => setViewMode('municipios')}
+                  className="custom-radio-input"
+                />
+                <span className="radio-text">Municípios</span>
+              </label>
+            </div>
+          </div>
+
+          <div className="control-group">
+            <label htmlFor="selectRegiao" className="control-label">Região</label>
+            <select
+              id="selectRegiao"
+              className="custom-select"
+              value={currentRegiao}
+              onChange={(e) => onSelectRegiao(e.target.value)}
+            >
+              <option value="todas">Todas as Regiões</option>
+              <option value="Centro-Oeste">Centro-Oeste</option>
+              <option value="Nordeste">Nordeste</option>
+              <option value="Norte">Norte</option>
+              <option value="Sudeste">Sudeste</option>
+              <option value="Sul">Sul</option>
+            </select>
+          </div>
+
+          <div className="control-group">
+            <label htmlFor="selectEstado" className="control-label">Estado (UF)</label>
+            <select
+              id="selectEstado"
+              className="custom-select"
+              value={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : 'BR')}
+              onChange={(e) => {
+                if (e.target.value === 'BR') handleReframeBrasil();
+                else onSelectUf(e.target.value);
+              }}
+            >
+              <option value="BR">Todos os Estados (Brasil)</option>
+              <option value="AC">Acre (AC)</option>
+              <option value="AL">Alagoas (AL)</option>
+              <option value="AP">Amapá (AP)</option>
+              <option value="AM">Amazonas (AM)</option>
+              <option value="BA">Bahia (BA)</option>
+              <option value="CE">Ceará (CE)</option>
+              <option value="DF">Distrito Federal (DF)</option>
+              <option value="ES">Espírito Santo (ES)</option>
+              <option value="GO">Goiás (GO)</option>
+              <option value="MA">Maranhão (MA)</option>
+              <option value="MT">Mato Grosso (MT)</option>
+              <option value="MS">Mato Grosso do Sul (MS)</option>
+              <option value="MG">Minas Gerais (MG)</option>
+              <option value="PA">Pará (PA)</option>
+              <option value="PB">Paraíba (PB)</option>
+              <option value="PR">Paraná (PR)</option>
+              <option value="PE">Pernambuco (PE)</option>
+              <option value="PI">Piauí (PI)</option>
+              <option value="RJ">Rio de Janeiro (RJ)</option>
+              <option value="RN">Rio Grande do Norte (RN)</option>
+              <option value="RS">Rio Grande do Sul (RS)</option>
+              <option value="RO">Rondônia (RO)</option>
+              <option value="RR">Roraima (RR)</option>
+              <option value="SC">Santa Catarina (SC)</option>
+              <option value="SP">São Paulo (SP)</option>
+              <option value="SE">Sergipe (SE)</option>
+              <option value="TO">Tocantins (TO)</option>
+            </select>
           </div>
         </div>
 
-        <div className="control-group">
-          <label htmlFor="selectRegiao" className="control-label">Região</label>
-          <select
-            id="selectRegiao"
-            className="custom-select"
-            value={currentRegiao}
-            onChange={(e) => onSelectRegiao(e.target.value)}
-          >
-            <option value="todas">Todas as Regiões</option>
-            <option value="Centro-Oeste">Centro-Oeste</option>
-            <option value="Nordeste">Nordeste</option>
-            <option value="Norte">Norte</option>
-            <option value="Sudeste">Sudeste</option>
-            <option value="Sul">Sul</option>
-          </select>
-        </div>
-
-        <div className="control-group">
-          <label htmlFor="selectEstado" className="control-label">Estado (UF)</label>
-          <select
-            id="selectEstado"
-            className="custom-select"
-            value={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : 'BR')}
-            onChange={(e) => {
-              if (e.target.value === 'BR') handleReframeBrasil();
-              else onSelectUf(e.target.value);
+        {/* Bottom Row: Busca por Município com dropdown de largura total */}
+        <div className="map-controls-bottom-row">
+          <MunicipalityDropdown
+            currentScope={currentScope}
+            currentUf={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : '')}
+            onSelectMunicipio={onSelectMunicipio}
+            onClear={() => {
+              if (selectedMunUf) {
+                handleBackToUf();
+              } else {
+                handleReframeBrasil();
+              }
             }}
-          >
-            <option value="BR">Todos os Estados (Brasil)</option>
-            <option value="AC">Acre (AC)</option>
-            <option value="AL">Alagoas (AL)</option>
-            <option value="AP">Amapá (AP)</option>
-            <option value="AM">Amazonas (AM)</option>
-            <option value="BA">Bahia (BA)</option>
-            <option value="CE">Ceará (CE)</option>
-            <option value="DF">Distrito Federal (DF)</option>
-            <option value="ES">Espírito Santo (ES)</option>
-            <option value="GO">Goiás (GO)</option>
-            <option value="MA">Maranhão (MA)</option>
-            <option value="MT">Mato Grosso (MT)</option>
-            <option value="MS">Mato Grosso do Sul (MS)</option>
-            <option value="MG">Minas Gerais (MG)</option>
-            <option value="PA">Pará (PA)</option>
-            <option value="PB">Paraíba (PB)</option>
-            <option value="PR">Paraná (PR)</option>
-            <option value="PE">Pernambuco (PE)</option>
-            <option value="PI">Piauí (PI)</option>
-            <option value="RJ">Rio de Janeiro (RJ)</option>
-            <option value="RN">Rio Grande do Norte (RN)</option>
-            <option value="RS">Rio Grande do Sul (RS)</option>
-            <option value="RO">Rondônia (RO)</option>
-            <option value="RR">Roraima (RR)</option>
-            <option value="SC">Santa Catarina (SC)</option>
-            <option value="SP">São Paulo (SP)</option>
-            <option value="SE">Sergipe (SE)</option>
-            <option value="TO">Tocantins (TO)</option>
-          </select>
+          />
         </div>
-
-        <MunicipalityDropdown
-          currentScope={currentScope}
-          currentUf={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : '')}
-          onSelectMunicipio={onSelectMunicipio}
-          onClear={() => {
-            if (selectedMunUf) {
-              handleBackToUf();
-            } else {
-              handleReframeBrasil();
-            }
-          }}
-        />
       </div>
 
       {/* Map Legend Bar */}

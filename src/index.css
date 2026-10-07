@@ -830,61 +830,74 @@ a {
   color: var(--fg-3);
 }
 
-/* Map Controls Toolbar: Visualização (Radio), Região, Estado & Busca de Município */
+/* Map Controls Toolbar: Linha Superior (Visualização empilhada, Região, Estado) e Linha Inferior (Busca Município) */
 .map-controls-toolbar {
-  display: grid;
-  grid-template-columns: auto 130px 170px 1fr;
-  gap: 12px;
-  align-items: end;
-  background: rgba(18, 17, 14, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(18, 17, 14, 0.65);
   padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid var(--line);
 }
 
-/* Radio selection: Visualização (Municípios / Estados) */
-.view-mode-group {
-  min-width: 220px;
+.map-controls-top-row {
+  display: grid;
+  grid-template-columns: 135px 1fr 1fr;
+  gap: 12px;
+  align-items: end;
+  width: 100%;
 }
 
-.radio-group-container {
+.map-controls-bottom-row {
+  width: 100%;
+}
+
+/* Radio selection empilhada: Visualização (Estados / Municípios) */
+.view-mode-group {
+  min-width: 0;
+}
+
+.radio-group-container.stacked {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
   background: var(--bg-card, rgba(20, 24, 33, 0.75));
   border: 1px solid var(--line, rgba(255, 255, 255, 0.08));
   border-radius: 8px;
-  padding: 0 12px;
-  height: 40px;
+  padding: 4px 10px;
+  height: 42px;
   box-sizing: border-box;
 }
 
-.custom-radio-item {
+.radio-group-container.stacked .custom-radio-item {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   cursor: pointer;
   user-select: none;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--fg-2, #94a3b8);
   transition: all 0.15s ease;
+  line-height: 1;
 }
 
-.custom-radio-item:hover {
+.radio-group-container.stacked .custom-radio-item:hover {
   color: #ffffff;
 }
 
-.custom-radio-item.is-selected {
+.radio-group-container.stacked .custom-radio-item.is-selected {
   color: #38bdf8;
   font-weight: 600;
 }
 
-.custom-radio-input {
+.radio-group-container.stacked .custom-radio-input {
   appearance: none;
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border: 1.5px solid #64748b;
   border-radius: 50%;
   margin: 0;
@@ -896,20 +909,20 @@ a {
   background: transparent;
 }
 
-.custom-radio-input:hover {
+.radio-group-container.stacked .custom-radio-input:hover {
   border-color: #38bdf8;
 }
 
-.custom-radio-input:checked {
+.radio-group-container.stacked .custom-radio-input:checked {
   border-color: #38bdf8;
   background: #38bdf8;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.45);
 }
 
-.custom-radio-input:checked::before {
+.radio-group-container.stacked .custom-radio-input:checked::before {
   content: "";
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: #0d1117;
 }
@@ -964,25 +977,10 @@ a {
   line-height: 1.25;
 }
 
-@media (max-width: 1100px) {
-  .map-controls-toolbar {
-    grid-template-columns: 1fr 1fr;
-  }
-  .control-group.view-mode-group {
-    grid-column: span 1;
-  }
-  .control-group.search-group {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .map-controls-toolbar {
+@media (max-width: 768px) {
+  .map-controls-top-row {
     grid-template-columns: 1fr;
-  }
-  .control-group.view-mode-group,
-  .control-group.search-group {
-    grid-column: span 1;
+    gap: 10px;
   }
 }
 
@@ -1004,7 +1002,7 @@ a {
 
 .custom-select,
 .search-input {
-  height: 38px;
+  height: 42px;
   background: #141310;
   border: 1px solid rgba(250, 250, 249, 0.12);
   border-radius: 8px;
@@ -1136,10 +1134,13 @@ a {
 .mun-dropdown-container {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   position: relative;
-  min-width: 220px;
-  flex: 1 1 220px;
+  width: 100%;
+}
+
+.map-search-btn {
+  height: 42px;
 }
 
 .map-search-btn.is-open {
@@ -1154,7 +1155,7 @@ a {
   left: 0;
   width: 100%;
   min-width: 260px;
-  max-width: 380px;
+  max-width: 100%;
   background: rgba(18, 17, 14, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
