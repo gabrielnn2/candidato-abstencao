@@ -88,9 +88,9 @@ export function getRankBadge(pos) {
   return `${pos}º Lugar`;
 }
 
-export const GOV_FORCOU_E_IRIA_2T = ['GO', 'MG', 'MT', 'RO'];
-export const GOV_FORCOU_2T_ENTRE_DOIS = ['AL', 'AP', 'BA', 'CE', 'MA', 'PA', 'PR', 'PE', 'RN', 'RS', 'SP', 'SE'];
-export const GOV_NAO_ALTEROU = ['AC', 'AM', 'DF', 'ES', 'MS', 'PB', 'PI', 'RJ', 'RR', 'SC', 'TO'];
+export const GOV_FORCOU_E_IRIA_2T = ['GO', 'MG', 'MS', 'MT', 'PR', 'RO'];
+export const GOV_FORCOU_2T_ENTRE_DOIS = ['AL', 'BA', 'CE', 'MA', 'PA', 'PE', 'RS', 'SE', 'SP'];
+export const GOV_NAO_ALTEROU = ['AC', 'AM', 'AP', 'DF', 'ES', 'PB', 'PI', 'RJ', 'RN', 'RR', 'SC', 'TO'];
 
 export function getGovStatus(item) {
   if (!item) return 'nao_alterou';

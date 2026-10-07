@@ -26,10 +26,10 @@ Inspirado na precisão editorial e estética HUD escura de [seuimposto.com](http
    - Coloração dinâmica indicando liderança ou classificação para 2º turno da abstenção com tooltips flutuantes em tempo real.
 
 4. **Raio-X dos Governadores Eleitos em 1º Turno (Teste dos 50%)**:
-   - Avaliação constitucional (CF/88 Art. 77, § 2º c/c Art. 28): para vencer no 1º turno, o candidato deve obter mais de 50% dos votos.
-   - **Resultado do Estudo**: Dos 15 governadores eleitos em 1º turno no Brasil, **12 (80%) perderiam a vitória imediata e seriam forçados ao 2º Turno** se as abstenções fossem votos válidos!
-   - Apenas 3 governadores sobreviveriam acima da linha de 50%: Helder Barbalho (PA), Mauro Mendes (MT) e Ratinho Júnior (PR).
-   - Em **6 estados (AC, GO, MA, RJ, RN, TO)**, a própria **Abstenção ficaria em 2º lugar e iria disputar o 2º Turno contra o governador!**
+   - Avaliação constitucional (CF/88 Art. 77, § 2º c/c Art. 28): para vencer no 1º turno, o candidato deve obter mais de 50% dos votos válidos.
+   - **Resultado do Estudo**: Dos 20 governadores eleitos em 1º turno no Brasil, **15 (75%) perderiam a vitória imediata e seriam forçados ao 2º Turno** se as abstenções fossem votos válidos!
+   - Apenas 5 governadores sobreviveriam acima da linha de 50%: Dr. Furlan (AP - 76.88%), Lucas Ribeiro (PB - 54.34%), Jorginho Mello (SC - 53.64%), Arthur Henrique (RR - 51.52%) e Rafael Fonteles (PI - 51.48%).
+   - Em **6 estados (GO, MG, MS, MT, PR, RO)**, a própria **Abstenção ficaria em 2º lugar e iria disputar o 2º Turno contra o governador!**
    - Gráficos de barras comparativas com demarcação visual da linha dos 50% e filtros interativos.
 
 5. **Identificação Partidária Transparente**:
@@ -86,18 +86,24 @@ O servidor inicializará em `http://localhost:8080` (com detecção automática 
 
 ## 📊 Pipeline de Dados e Fontes do TSE
 
-O script [`scripts/ingest_tse_abstencoes.py`](file:///c:/Users/gabri/OneDrive/_PORTFOLIO/Eleições/scripts/ingest_tse_abstencoes.py) é responsável por:
-1. Estruturar a modelagem eleitoral segundo as regras do TSE:
-   - `aptos`: eleitores registrados.
-   - `comparecimento`: eleitores presentes na seção eleitoral.
-   - `abstencao`: eleitores ausentes (`aptos - comparecimento`).
-2. Inserir a entidade `Abstenção (Não Comparecimento) - Número 00` na contagem com os candidatos nominais.
-3. Calcular os indicadores de 1º turno, 2º turno e eleição proporcional ao Senado.
-4. Exportar os arquivos consolidados em formato JSON e JS em `data/`.
+O pipeline oficial em [`scripts/process_all_tse.py`](file:///c:/Users/gabri/OneDrive/_PORTFOLIO/Eleições/scripts/process_all_tse.py) processa os microdados brutos do TSE:
+1. **Boletins de Urna (`bases/bweb/`)**:
+   - 28 arquivos CSV cobrindo todas as seções eleitorais do país e exterior (ZZ).
+   - Extração do eleitorado apto, comparecimento real e abstenção por município e zona, além da votação nominal para Presidente da República (Cargo 1).
+2. **Totalização de Candidatos por Município e Zona (`bases/candidato_mun_zona/`)**:
+   - Votação nominal oficial e situação de totalização (`DS_SIT_TOT_TURNO`) para Governador (Cargo 3) e Senador (Cargo 5).
+3. **Consolidação dos Indicadores e Simulações**:
+   - Ranking simulado com `Candidato Abstenção (00)`.
+   - Teste constitucional dos 50% para Governadores eleitos em 1º Turno.
+   - Cruzamento de dados de todos os 5.570 municípios brasileiros.
+   - Sincronização automática para `data/` e `public/data/`.
+4. **GeoJSON**:
+   - O script [`scripts/update_geo_properties.py`](file:///c:/Users/gabri/OneDrive/_PORTFOLIO/Eleições/scripts/update_geo_properties.py) integra as taxas de abstenção diretamente aos mapas vetoriais dos estados e municípios.
 
-Para reprocessar os dados a qualquer momento:
+Para reprocessar os microdados a qualquer momento:
 ```bash
-python scripts/ingest_tse_abstencoes.py
+python scripts/process_all_tse.py
+python scripts/update_geo_properties.py
 ```
 
 ---

@@ -1119,51 +1119,39 @@
     const reg = props.reg || 'Sudeste';
     const taxa = props.taxa || Number((abstencao / aptos * 100).toFixed(2));
 
-    // 1. Presidential Candidates
-    const vPres = Math.round(comparecimento * 0.93);
-    let pFlavio = 0.49, pLula = 0.43;
-    if (reg === 'Nordeste') { pLula = 0.65; pFlavio = 0.27; }
-    else if (['Sul', 'Centro-Oeste'].includes(reg) || ['SP', 'RJ', 'RO', 'AC', 'RR', 'TO'].includes(uf)) { pFlavio = 0.55; pLula = 0.35; }
-    else if (['PA', 'AM', 'AP'].includes(uf)) { pLula = 0.51; pFlavio = 0.42; }
+    const ufData = state.estadosData.find(e => e.uf === uf);
+    const ufAptos = ufData?.aptos || 1;
+    const munRatio = aptos / ufAptos;
 
-    const candsPres = [
-      { nome: 'Flávio Bolsonaro', partido: 'PL', numero: '22', votos: Math.round(vPres * pFlavio) },
-      { nome: 'Luiz Inácio Lula da Silva', partido: 'PT', numero: '13', votos: Math.round(vPres * pLula) },
-      { nome: 'Augusto Cury', partido: 'AVANTE', numero: '70', votos: Math.round(vPres * 0.03) },
-      { nome: 'Renan Santos', partido: 'MISSÃO', numero: '88', votos: Math.round(vPres * 0.025) },
-      { nome: 'Ronaldo Caiado', partido: 'PSD', numero: '55', votos: Math.round(vPres * 0.02) },
-      { nome: 'Romeu Zema', partido: 'NOVO', numero: '30', votos: Math.round(vPres * 0.003) },
-      { nome: 'Outros Candidatos', partido: 'DIVERSOS', numero: '--', votos: Math.round(vPres * 0.002) }
-    ];
-
-    // 2. Gubernatorial Candidates
-    const vGov = Math.round(comparecimento * 0.90);
-    const govRealList = (window.ELECTION_DATA && window.ELECTION_DATA.candidatos_gov_real && window.ELECTION_DATA.candidatos_gov_real[uf]) || [];
-    let candsGov = [];
-    if (govRealList.length > 0) {
-      const totGovVotos = govRealList.reduce((acc, c) => acc + c.votos, 0);
-      candsGov = govRealList.map(c => ({
+    // 1. Presidential Candidates from Official State Data
+    const candsPres = (ufData?.cargos?.Presidente?.ranking || [])
+      .filter(c => !c.is_abstencao)
+      .map(c => ({
         nome: c.nome,
         partido: c.partido,
         numero: c.numero || '',
-        votos: Math.max(1, Math.round(vGov * (c.votos / totGovVotos)))
+        votos: Math.max(1, Math.round(c.votos * munRatio))
       }));
-    } else {
-      candsGov = [
-        { nome: `Líder Estadual (${uf})`, partido: 'GOVERNO', numero: '10', votos: Math.round(vGov * 0.52) },
-        { nome: `Oposição Estadual (${uf})`, partido: 'OPOSIÇÃO', numero: '20', votos: Math.round(vGov * 0.38) },
-        { nome: 'Demais Concorrentes', partido: 'DIVERSOS', numero: '--', votos: Math.round(vGov * 0.10) }
-      ];
-    }
 
-    // 3. Senatorial Candidates
-    const candsSen = [
-      { nome: `Candidato 1 ao Senado (${uf})`, partido: 'PL', numero: '222', votos: Math.round(comparecimento * 0.28) },
-      { nome: `Candidato 2 ao Senado (${uf})`, partido: 'PT', numero: '133', votos: Math.round(comparecimento * 0.20) },
-      { nome: `Candidato 3 ao Senado (${uf})`, partido: 'PSD', numero: '555', votos: Math.round(comparecimento * 0.13) },
-      { nome: `Candidato 4 ao Senado (${uf})`, partido: 'UNIÃO', numero: '444', votos: Math.round(comparecimento * 0.08) },
-      { nome: 'Demais Concorrentes', partido: 'DIVERSOS', numero: '--', votos: Math.round(comparecimento * 0.04) }
-    ];
+    // 2. Gubernatorial Candidates from Official State Data
+    const candsGov = (ufData?.cargos?.Governador?.ranking || [])
+      .filter(c => !c.is_abstencao)
+      .map(c => ({
+        nome: c.nome,
+        partido: c.partido,
+        numero: c.numero || '',
+        votos: Math.max(1, Math.round(c.votos * munRatio))
+      }));
+
+    // 3. Senatorial Candidates from Official State Data
+    const candsSen = (ufData?.cargos?.Senador?.ranking || [])
+      .filter(c => !c.is_abstencao)
+      .map(c => ({
+        nome: c.nome,
+        partido: c.partido,
+        numero: c.numero || '',
+        votos: Math.max(1, Math.round(c.votos * munRatio))
+      }));
 
     function calcRanking(abstVotes, list, cargoType) {
       const validos = list.reduce((a, b) => a + b.votos, 0);
