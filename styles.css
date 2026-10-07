@@ -263,7 +263,7 @@ a {
   background: rgba(18, 17, 14, 0.6);
   border-bottom: 1px solid var(--line);
   padding: 8px 24px;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .telemetry-inner {
@@ -273,7 +273,6 @@ a {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  white-space: nowrap;
 }
 
 .telemetry-item {
@@ -589,16 +588,20 @@ a {
 .cand-name-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 8px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .cand-name {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--fg);
+  line-height: 1.25;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .candidate-row.is-abstencao .cand-name {

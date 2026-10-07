@@ -203,13 +203,6 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
 
       {/* CARD HORIZONTAL CÍVICO DE CONSCIENTIZAÇÃO */}
       <div className="civic-callout-card glass-panel" id="civicCalloutCard">
-        <div className="civic-callout-icon-wrap" aria-hidden="true">
-          <svg className="civic-callout-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <path d="m9 15 2 2 4-4" />
-          </svg>
-        </div>
         <div className="civic-callout-content">
           <p className="civic-callout-text">
             Seu voto é importante e pode impactar o futuro do Brasil. Não deixe de exercer seus direitos. Compareça às urnas no dia <strong>25 de outubro de 2026</strong>.
