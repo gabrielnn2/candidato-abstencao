@@ -504,7 +504,6 @@ export default function MapWorkspace({
               else posDesc = '🥉 Não eleita';
             }
 
-            const cargo = currentCargoRef.current;
             let currentAbst = p.abstencao || p.abstencoes;
             let currentTaxa = p.taxa;
             if (cargo === 'Governador') {
