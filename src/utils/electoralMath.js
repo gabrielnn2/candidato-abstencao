@@ -195,27 +195,76 @@ export function synthesizeMunicipalCargos(props, ufItem) {
   const cargosList = ['Presidente', 'Governador', 'Senador'];
 
   for (const cargo of cargosList) {
-    const ufCargo = ufItem?.cargos?.[cargo];
-    const realCands = ufCargo?.ranking ? ufCargo.ranking.filter(c => !c.is_abstencao) : [];
-    
-    // Sum of shares from the parent state
-    const sumPct = realCands.reduce((acc, c) => acc + (c.percentual_simulado || 1), 0) || 1;
-    
-    const competitors = realCands.map(c => {
-      const share = (c.percentual_simulado || 1) / sumPct;
-      const candVotos = Math.max(1, Math.round(nominalVotesTotal * share));
-      return {
-        nome: c.nome,
-        partido: c.partido,
-        nome_exibicao: c.nome_exibicao || `${c.nome} (${c.partido})`,
-        numero: c.numero || '',
-        votos: candVotos,
-        is_abstencao: false,
-        foto: c.foto || ''
-      };
-    });
+    let competitors = [];
 
-    // Add Candidata Abstenção
+    if (cargo === 'Presidente' && props.cand_1o && props.votos_1o) {
+      // DADOS REAIS E EXATOS DO TSE (OPÇÃO 1)
+      if (props.votos_1o > 0) {
+        competitors.push({
+          nome: props.cand_1o,
+          partido: props.partido_1o || 'PARTIDO',
+          nome_exibicao: `${props.cand_1o} (${props.partido_1o || ''})`,
+          numero: props.numero_1o || '',
+          votos: props.votos_1o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.votos_2o > 0) {
+        competitors.push({
+          nome: props.cand_2o,
+          partido: props.partido_2o || 'PARTIDO',
+          nome_exibicao: `${props.cand_2o} (${props.partido_2o || ''})`,
+          numero: props.numero_2o || '',
+          votos: props.votos_2o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.votos_3o > 0) {
+        competitors.push({
+          nome: props.cand_3o,
+          partido: props.partido_3o || 'PARTIDO',
+          nome_exibicao: `${props.cand_3o} (${props.partido_3o || ''})`,
+          numero: props.numero_3o || '',
+          votos: props.votos_3o,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+      if (props.outros_votos > 0) {
+        competitors.push({
+          nome: 'Outros Candidatos',
+          partido: 'OUTROS',
+          nome_exibicao: 'Outros Candidatos (OUTROS)',
+          numero: '--',
+          votos: props.outros_votos,
+          is_abstencao: false,
+          foto: ''
+        });
+      }
+    } else {
+      // Estimativa proporcional para cargos locais sem dados nominais no índice
+      const ufCargo = ufItem?.cargos?.[cargo];
+      const realCands = ufCargo?.ranking ? ufCargo.ranking.filter(c => !c.is_abstencao) : [];
+      const sumPct = realCands.reduce((acc, c) => acc + (c.percentual_simulado || 1), 0) || 1;
+      
+      competitors = realCands.map(c => {
+        const share = (c.percentual_simulado || 1) / sumPct;
+        const candVotos = Math.max(1, Math.round(nominalVotesTotal * share));
+        return {
+          nome: c.nome,
+          partido: c.partido,
+          nome_exibicao: c.nome_exibicao || `${c.nome} (${c.partido})`,
+          numero: c.numero || '',
+          votos: candVotos,
+          is_abstencao: false,
+          foto: c.foto || ''
+        };
+      });
+    }
+
+    // Add Candidata Abstenção com os votos exatos da urna
     competitors.push({
       nome: 'Candidata Abstenção',
       partido: 'Partido Abstenção',
@@ -226,34 +275,33 @@ export function synthesizeMunicipalCargos(props, ufItem) {
       foto: 'assets/abstencao.svg'
     });
 
-    // Target rank from properties if explicitly stored in geojson
-    const targetProp = cargo === 'Presidente' ? props.pos_pres : (cargo === 'Governador' ? props.pos_gov : props.pos_sen);
+    // Se NÃO for Presidente com dados reais, alinhar se houver alvo pré-computado
+    if (!(cargo === 'Presidente' && props.cand_1o && props.votos_1o)) {
+      const targetProp = cargo === 'Presidente' ? props.pos_pres : (cargo === 'Governador' ? props.pos_gov : props.pos_sen);
+      competitors.sort((a, b) => b.votos - a.votos);
 
-    // Initial sort
-    competitors.sort((a, b) => b.votos - a.votos);
-
-    // If precomputed target position exists and differs, align abstencao votes slightly
-    if (targetProp === 1) {
-      const abst = competitors.find(c => c.is_abstencao);
-      const otherMax = Math.max(...competitors.filter(c => !c.is_abstencao).map(c => c.votos), 1);
-      if (abst && abst.votos <= otherMax) {
-        abst.votos = otherMax + Math.max(50, Math.round(otherMax * 0.05));
-      }
-    } else if (targetProp === 2) {
-      const abst = competitors.find(c => c.is_abstencao);
-      const nonAbst = competitors.filter(c => !c.is_abstencao).sort((a, b) => b.votos - a.votos);
-      if (abst && nonAbst.length >= 1) {
-        const top1 = nonAbst[0].votos;
-        const top2 = nonAbst.length > 1 ? nonAbst[1].votos : 0;
-        if (abst.votos >= top1) {
-          abst.votos = Math.round((top1 + top2) / 2);
-        } else if (abst.votos <= top2) {
-          abst.votos = top2 + Math.max(25, Math.round(top2 * 0.04));
+      if (targetProp === 1) {
+        const abst = competitors.find(c => c.is_abstencao);
+        const otherMax = Math.max(...competitors.filter(c => !c.is_abstencao).map(c => c.votos), 1);
+        if (abst && abst.votos <= otherMax) {
+          abst.votos = otherMax + Math.max(50, Math.round(otherMax * 0.05));
+        }
+      } else if (targetProp === 2) {
+        const abst = competitors.find(c => c.is_abstencao);
+        const nonAbst = competitors.filter(c => !c.is_abstencao).sort((a, b) => b.votos - a.votos);
+        if (abst && nonAbst.length >= 1) {
+          const top1 = nonAbst[0].votos;
+          const top2 = nonAbst.length > 1 ? nonAbst[1].votos : 0;
+          if (abst.votos >= top1) {
+            abst.votos = Math.round((top1 + top2) / 2);
+          } else if (abst.votos <= top2) {
+            abst.votos = top2 + Math.max(25, Math.round(top2 * 0.04));
+          }
         }
       }
     }
 
-    // Re-sort after alignment
+    // Ordenação final por votos
     competitors.sort((a, b) => b.votos - a.votos);
 
     const totalSimulado = competitors.reduce((acc, c) => acc + c.votos, 0);
@@ -273,13 +321,17 @@ export function synthesizeMunicipalCargos(props, ufItem) {
     const leader = competitors.find(c => !c.is_abstencao) || competitors[0];
     const difLider = abstencao - (leader?.votos || 0);
 
+    const vencedor1t = posAbst === 1 && competitors[0].percentual_simulado > 50;
+    // Constituição Federal Art. 77, § 2º: 2º turno apenas se o líder NÃO superou 50%
+    const iria2t = (cargo !== 'Senador') && (posAbst <= 2) && (competitors[0].percentual_simulado <= 50);
+
     cargos[cargo] = {
       posicao: posAbst,
       votos: abstencao,
       total_aptos: aptos,
       taxa_abstencao: taxa,
-      vencedor_primeiro_turno: posAbst === 1 && competitors[0].percentual_simulado > 50,
-      iria_segundo_turno: (cargo !== 'Senador') && (posAbst === 2 || (posAbst === 1 && competitors[0].percentual_simulado <= 50)),
+      vencedor_primeiro_turno: vencedor1t,
+      iria_segundo_turno: iria2t,
       eleito_senado: cargo === 'Senador' && posAbst <= 2,
       candidatos_superados: superados,
       diferenca_lider: difLider,

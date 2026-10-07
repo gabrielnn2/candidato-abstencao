@@ -171,8 +171,23 @@ export default function VerdictCard({
       );
 
       // Subtítulo adaptativo:
-      if (abstPos === 2) {
-        subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) levariam a Candidata Abstenção para o 2º Turno`;
+      const primeiroReal = cleanedRanking.find(c => !c.is_abstencao);
+      const winnerPct = primeiroReal?.percentual_simulado ?? primeiroReal?.percentual ?? 0;
+      const winnerName = primeiroReal?.nome || '';
+      const winnerParty = primeiroReal?.partido && primeiroReal.partido !== 'OUTROS' ? ` (${primeiroReal.partido})` : '';
+
+      if (abstPos === 1) {
+        if (abstPct > 50) {
+          subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) venceriam a eleição presidencial em 1º Turno`;
+        } else {
+          subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) liderariam a disputa e levariam a Candidata Abstenção para o 2º Turno em 1º lugar`;
+        }
+      } else if (abstPos === 2) {
+        if (winnerPct > 50) {
+          subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) não levariam a disputa para o 2º turno, pois ${winnerName}${winnerParty} venceu em 1º turno com ${formatPercent(winnerPct)}`;
+        } else {
+          subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) levariam a Candidata Abstenção para o 2º Turno`;
+        }
       } else if (abstPos === 3) {
         subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) superam com folga a soma de todas as terceiras vias, mas não a levariam para o 2º turno`;
       } else {
