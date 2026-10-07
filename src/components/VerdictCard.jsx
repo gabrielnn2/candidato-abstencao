@@ -157,7 +157,7 @@ export default function VerdictCard({
     if (isBrasil) {
       headline = (
         <>
-          Se a Candidata Abstenção fosse candidata a Presidente, chegaria em{' '}
+          Se a Abstenção concorresse a Presidente, chegaria em{' '}
           <span className="highlight-amber">3º lugar</span>
         </>
       );
@@ -165,7 +165,7 @@ export default function VerdictCard({
     } else {
       headline = (
         <>
-          Se a Candidata Abstenção fosse candidata a Presidente em {locationName}, chegaria em{' '}
+          Se a Abstenção concorresse a Presidente em {locationName}, chegaria em{' '}
           <span className="highlight-amber">{abstPos}º lugar</span>
         </>
       );
@@ -174,9 +174,9 @@ export default function VerdictCard({
       if (abstPos === 2) {
         subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) levariam a Candidata Abstenção para o 2º Turno`;
       } else if (abstPos === 3) {
-        subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) superam com folga a soma de todas as terceiras vias, mas não iria para 2º turno`;
+        subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) superam com folga a soma de todas as terceiras vias, mas não a levariam para o 2º turno`;
       } else {
-        subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) não levariam a Candidata Abstenção para o 2º turno`;
+        subtext = `Os ${formatVotosAmigavel(abstencao)} eleitores ausentes (${formatPercent(abstPct)}) não levariam a Abstenção para o 2º turno`;
       }
     }
   }
@@ -199,14 +199,17 @@ export default function VerdictCard({
       if (isBrasil) {
         headline = (
           <>
-            A Candidata Abstenção <span className="highlight-amber">forçaria o 2º Turno em 16 estados</span> e seria uma das candidatas de 2º turno em <span className="highlight-white">4 deles</span>
+            A Candidata Abstenção <span className="highlight-amber">forçaria o 2º Turno em 16 estados</span> e concorreria no 2º turno em <span className="highlight-white">4 estados</span>
           </>
         );
         subtext = 'Vencer no 1º turno exige mais de 50% dos votos válidos, dessa forma, com a computação dos votos dos ausentes em apenas 11 estados o andamento da eleição não seria alterado.';
       } else {
         headline = (
           <>
-            Na {locationName}, a Candidata Abstenção <span className="highlight-amber">forçaria o 2º Turno em ${countForcouTotal} estados</span> e seria uma das candidatas de 2º turno em <span className="highlight-white">${countIria} deles</span>
+            Na {locationName}, a Candidata Abstenção{' '}
+            <span className="highlight-amber">forçaria o 2º Turno em {countForcouTotal} {countForcouTotal === 1 ? 'estado' : 'estados'}</span>{' '}
+            e concorreria no 2º turno em{' '}
+            <span className="highlight-white">{countIria} {countIria === 1 ? 'estado' : 'estados'}</span>
           </>
         );
         subtext = `Vencer no 1º turno exige mais de 50% dos votos válidos, dessa forma, com a computação dos votos dos ausentes em apenas ${countNaoAlterou} ${countNaoAlterou === 1 ? 'estado' : 'estados'} o andamento da eleição não seria alterado.`;
@@ -266,7 +269,7 @@ export default function VerdictCard({
       } else if (govStatus === 'forcou_e_iria_2t') {
         headline = (
           <>
-            Em {locationName}, a Candidata Abstenção <span className="highlight-amber">forçaria e iria para o 2º turno</span>
+            Em {locationName}, a Candidata Abstenção <span className="highlight-amber">forçaria e concorreria no 2º turno</span>
           </>
         );
         subtext = `Os ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}) superariam o 2º colocado e disputariam o 2º turno contra o líder`;
@@ -376,7 +379,7 @@ export default function VerdictCard({
       if (isBrasil) {
         headline = (
           <>
-            Se a Candidata Abstenção fosse um partido, ela conquistaria <span className="highlight-amber">10 CADEIRAS NO SENADO</span> e formaria a <span className="highlight-white">2ª MAIOR BANCADA DO PAÍS!</span>
+            Se o Partido Abstenção concorresse ao Senado, conquistaria <span className="highlight-amber">10 CADEIRAS</span> e formaria a <span className="highlight-white">2ª MAIOR BANCADA DO PAÍS!</span>
           </>
         );
         subtext = 'Nas Eleições Gerais de 2026, cada estado renova duas vagas no Senado (54 vagas no total). Os eleitores ausentes conquistariam 10 cadeiras, superando bancadas tradicionais e ficando atrás apenas do PL (15 eleitos).';
@@ -384,7 +387,7 @@ export default function VerdictCard({
         const abstCadeiras = bancadasCount['Partido Abstenção'] || 0;
         headline = (
           <>
-            Se a Candidata Abstenção fosse um partido na {locationName}, conquistaria <span className="highlight-amber">{abstCadeiras} CADEIRAS NO SENADO!</span>
+            Se o Partido Abstenção concorresse ao Senado na {locationName}, conquistaria <span className="highlight-amber">{abstCadeiras} {abstCadeiras === 1 ? 'CADEIRA' : 'CADEIRAS'}</span>!
           </>
         );
         subtext = `Na ${locationName}, cada estado renova duas vagas no Senado (${totalVagas} vagas no total). Os eleitores ausentes conquistariam ${abstCadeiras} cadeiras pelo Partido Abstenção, superando bancadas tradicionais.`;
@@ -400,17 +403,17 @@ export default function VerdictCard({
       if (pos <= 2) {
         headline = (
           <>
-            Se a Candidata Abstenção fosse candidata ao Senado em {locationName}, <span className="highlight-amber">seria eleita Senadora</span>
+            Se a Abstenção concorresse ao Senado em {locationName}, <span className="highlight-amber">seria eleita Senadora ({pos}ª Vaga)</span>
           </>
         );
         subtext = `Com ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}), a Candidata Abstenção conquistaria a vaga em ${pos}º lugar e assumiria o mandato de 8 anos!`;
       } else {
         headline = (
           <>
-            Se a Candidata Abstenção fosse candidata ao Senado em {locationName}, chegaria em <span className="highlight-amber">${pos}º lugar</span>
+            Se a Abstenção concorresse ao Senado em {locationName}, chegaria em <span className="highlight-amber">{pos}º lugar</span>
           </>
         );
-        subtext = `Os ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}), não alcançariam a votação dos dois senadores eleitos.`;
+        subtext = `Os ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}) não alcançariam a votação dos dois senadores eleitos.`;
       }
 
       const cleanedSenRanking = (targetSen?.ranking || []).map(c => ({

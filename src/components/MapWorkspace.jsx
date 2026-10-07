@@ -495,7 +495,7 @@ export default function MapWorkspace({
               const pos = p.pos_sen || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
               else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
-              else posDesc = '🥉 Sem Vaga no Senado';
+              else posDesc = '🥉 Não eleita';
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome || p.name} (${p.uf})`;
@@ -568,7 +568,7 @@ export default function MapWorkspace({
               const pos = p.pos_sen || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
               else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
-              else posDesc = '🥉 Sem Vaga no Senado';
+              else posDesc = '🥉 Não eleita';
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome} (${p.uf})`;
@@ -1125,9 +1125,9 @@ export default function MapWorkspace({
           </div>
         ) : (
           <div className="legend-pills">
-            <span className="legend-item"><i className="legend-color gold"></i> 1º Lugar · Eleita Senadora (1ª Vaga)</span>
-            <span className="legend-item"><i className="legend-color cyan"></i> 2º Lugar · Eleita Senadora (2ª Vaga)</span>
-            <span className="legend-item"><i className="legend-color slate"></i> 3º ou abaixo</span>
+            <span className="legend-item"><i className="legend-color gold"></i> Eleita Senadora (1ª Vaga)</span>
+            <span className="legend-item"><i className="legend-color cyan"></i> Eleita Senadora (2ª Vaga)</span>
+            <span className="legend-item"><i className="legend-color slate"></i> Não eleita</span>
           </div>
         )}
       </div>

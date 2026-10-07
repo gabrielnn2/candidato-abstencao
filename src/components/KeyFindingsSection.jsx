@@ -11,7 +11,8 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
     const cand1 = rankingPres.find(c => !c.is_abstencao && c.posicao === 1);
     const cand2 = rankingPres.find(c => !c.is_abstencao && c.posicao === 2);
     const diff1e2 = cand1 && cand2 ? Math.abs(cand1.votos - cand2.votos) : 2227651;
-    const multDiff1e2 = diff1e2 > 0 ? (totalAbst / diff1e2).toFixed(1).replace('.', ',') : '15';
+    const multDiffVal = diff1e2 > 0 ? (totalAbst / diff1e2) : 15;
+    const multDiff1e2 = Math.abs(multDiffVal - 15) < 0.2 ? '15' : multDiffVal.toFixed(1).replace(',0', '').replace('.0', '').replace('.', ',');
 
     // Sum of 3rd way candidates (everyone except 1st, 2nd and abstencao)
     const sumTerceiraVia = rankingPres
@@ -80,7 +81,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
         <div className="findings-badge">💡 Análise Consolidada Nacional</div>
         <h2 className="findings-title">Achados principais</h2>
         <p className="findings-subtitle">
-          O peso decisivo do não-comparecimento nas urnas analisado cargo por cargo em todo o Brasil
+          O peso da abstenção nas urnas em cada cargo
         </p>
       </div>
 
@@ -96,7 +97,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            A Terceira Colocada que Esmaga a Terceira Via
+            A Abstenção supera a Terceira Via
           </h3>
 
           <p className="finding-narrative">
@@ -133,7 +134,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            O Grande Fiel da Balança dos Governos Estaduais
+            Alteraria a disputa de 16 Governos Estaduais
           </h3>
 
           <p className="finding-narrative">
@@ -173,7 +174,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            A 2ª Maior Bancada Eleita do Senado (Atrás Apenas do PL)
+            A 2ª Maior Bancada Eleita do Senado
           </h3>
 
           <p className="finding-narrative">
@@ -198,6 +199,22 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
             </div>
           </div>
         </article>
+      </div>
+
+      {/* CARD HORIZONTAL CÍVICO DE CONSCIENTIZAÇÃO */}
+      <div className="civic-callout-card glass-panel" id="civicCalloutCard">
+        <div className="civic-callout-icon-wrap" aria-hidden="true">
+          <svg className="civic-callout-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <path d="m9 15 2 2 4-4" />
+          </svg>
+        </div>
+        <div className="civic-callout-content">
+          <p className="civic-callout-text">
+            Seu voto é importante e pode impactar o futuro do Brasil. Não deixe de exercer seus direitos. Compareça às urnas no dia <strong>25 de outubro de 2026</strong>.
+          </p>
+        </div>
       </div>
     </section>
   );

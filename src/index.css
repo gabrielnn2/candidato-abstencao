@@ -265,6 +265,39 @@ a {
   color: var(--fg-3);
 }
 
+/* Header Right Action (LinkedIn Icon) */
+.header-right-action {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.header-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(250, 250, 249, 0.05);
+  border: 1px solid var(--line);
+  color: #FAFAF9;
+  transition: all var(--transition);
+}
+
+.header-linkedin-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.linkedin-icon {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
 /* ==========================================================================
    Telemetry Bar
    ========================================================================== */
@@ -3045,4 +3078,335 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   line-height: 1.2;
+}
+
+/* ==========================================================================
+   Card Horizontal Cívico de Conscientização
+   ========================================================================== */
+
+.civic-callout-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(28, 25, 20, 0.9) 0%, rgba(16, 15, 12, 0.96) 100%);
+  border: 1px solid rgba(217, 168, 78, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(217, 168, 78, 0.2);
+  margin-top: 4px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.civic-callout-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(217, 168, 78, 0.55);
+  box-shadow: 0 16px 44px -8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(217, 168, 78, 0.15);
+}
+
+.civic-callout-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(217, 168, 78, 0.14);
+  border: 1px solid rgba(217, 168, 78, 0.35);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--gold);
+  box-shadow: 0 0 14px rgba(217, 168, 78, 0.15);
+}
+
+.civic-callout-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.civic-callout-content {
+  flex: 1;
+}
+
+.civic-callout-text {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
+.civic-callout-text strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Mobile Standards Refinement (Viewports 375px - 430px e Tablets)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .hud-top {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+    gap: 10px !important;
+  }
+
+  .brand {
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .brand-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .brand-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-sub {
+    font-size: 0.68rem;
+  }
+
+  .header-right-action {
+    flex-shrink: 0;
+  }
+
+  .cargo-switch {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .cargo-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 6px;
+    font-size: 0.8rem;
+    min-height: 38px;
+  }
+
+  .telemetry-bar {
+    padding: 6px 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .telemetry-inner {
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .telemetry-label {
+    font-size: 0.7rem;
+  }
+
+  .telemetry-val {
+    font-size: 0.88rem;
+  }
+
+  .main-layout {
+    width: 100%;
+    padding: 10px 10px 36px;
+    gap: 18px;
+  }
+
+  .dashboard-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .verdict-card {
+    padding: 18px 14px;
+    border-radius: 14px;
+    min-height: auto;
+    height: auto;
+  }
+
+  .verdict-headline {
+    font-size: clamp(1.35rem, 5vw, 1.7rem);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .verdict-subtext {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .candidate-row {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 10px;
+  }
+
+  .cand-name {
+    font-size: 0.88rem;
+  }
+
+  .cand-party {
+    font-size: 0.68rem;
+  }
+
+  .cand-vote-number {
+    font-size: 0.92rem;
+  }
+
+  .cand-vote-pct {
+    font-size: 0.74rem;
+  }
+
+  .map-workspace {
+    padding: 16px 12px;
+    border-radius: 14px;
+    height: auto;
+  }
+
+  .map-controls-toolbar {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .view-mode-group {
+    grid-column: 1 / -1;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .radio-group-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .search-group {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .maplibre-container-wrap {
+    aspect-ratio: auto;
+    height: 380px;
+    max-height: 58vh;
+    border-radius: 12px;
+  }
+
+  .map-legend-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .map-active-pill-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .legend-pills {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .legend-item {
+    font-size: 0.72rem;
+  }
+
+  .map-footer-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .btn-reset-map-view {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .map-footer-hint {
+    text-align: center;
+  }
+
+  .findings-title {
+    font-size: 1.35rem;
+  }
+
+  .findings-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .finding-card {
+    padding: 18px 14px;
+  }
+
+  .finding-card-heading {
+    font-size: 1.1rem;
+  }
+
+  .finding-narrative {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .civic-callout-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .civic-callout-icon-wrap {
+    margin: 0 auto;
+  }
+
+  .civic-callout-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-controls-toolbar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .view-mode-group,
+  .search-group {
+    grid-column: 1;
+  }
+
+  .finding-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .finding-stat-item {
+    padding: 6px 4px;
+  }
+
+  .finding-stat-val {
+    font-size: 0.98rem;
+  }
+
+  .finding-stat-label {
+    font-size: 0.62rem;
+  }
 }

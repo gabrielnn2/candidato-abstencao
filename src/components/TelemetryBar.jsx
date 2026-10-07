@@ -28,8 +28,8 @@ export default function TelemetryBar({ brasilData }) {
         </div>
         <div className="telemetry-sep"></div>
         <div className="telemetry-item">
-          <span className="telemetry-label">Posição da Candidata Abstenção</span>
-          <strong className="telemetry-val badge-rank" id="telPosicao">{getRankBadge(presRank)}</strong>
+          <span className="telemetry-label">Candidata Abstenção na corrida presidencial</span>
+          <strong className="telemetry-val badge-rank" id="telPosicao">3º Lugar</strong>
         </div>
       </div>
     </section>
