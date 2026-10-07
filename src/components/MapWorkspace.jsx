@@ -1162,7 +1162,10 @@ export default function MapWorkspace({
               title={`Voltar para os municípios de ${selectedMunUf}`}
               onClick={handleBackToUf}
             >
-              ✕ Voltar à {selectedMunUf}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              <span>Voltar à {selectedMunUf}</span>
             </button>
           )}
           {isFiltered && (
@@ -1172,7 +1175,10 @@ export default function MapWorkspace({
               title="Voltar para a visão do Brasil"
               onClick={handleReframeBrasil}
             >
-              ✕ Voltar ao Brasil
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              <span>Voltar ao Brasil</span>
             </button>
           )}
         </div>
