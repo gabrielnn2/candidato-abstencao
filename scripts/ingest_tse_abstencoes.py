@@ -635,7 +635,7 @@ CANDIDATOS_SENADO_REAL = {
     "BA": [
         {"nome": "Rui Costa", "partido": "PT", "numero": "133", "pct": 0.3650},
         {"nome": "Jaques Wagner", "partido": "PT", "numero": "130", "pct": 0.3120},
-        {"nome": "ACM Neto", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
+        {"nome": "Elmar Nascimento", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
         {"nome": "Angelo Coronel", "partido": "PSD", "numero": "555", "pct": 0.0750},
         {"nome": "João Roma", "partido": "PL", "numero": "222", "pct": 0.0330}
     ],
@@ -653,7 +653,7 @@ CANDIDATOS_SENADO_REAL = {
         {"nome": "Bia Kicis", "partido": "PL", "numero": "220", "pct": 0.2920},
         {"nome": "Ibaneis Rocha", "partido": "MDB", "numero": "151", "pct": 0.1850},
         {"nome": "Leila do Vôlei", "partido": "PDT", "numero": "123", "pct": 0.0980},
-        {"nome": "Leandro Grass", "partido": "PV", "numero": "433", "pct": 0.0400}
+        {"nome": "Professor Israel", "partido": "PSB", "numero": "400", "pct": 0.0400}
     ],
     # 8. ESPÍRITO SANTO (ES)
     "ES": [
@@ -747,7 +747,7 @@ CANDIDATOS_SENADO_REAL = {
     "RJ": [
         {"nome": "Carlos Portinho", "partido": "PL", "numero": "222", "pct": 0.3450},
         {"nome": "Carlos Jordy", "partido": "PL", "numero": "220", "pct": 0.2880},
-        {"nome": "Eduardo Paes", "partido": "PSD", "numero": "555", "pct": 0.2050},
+        {"nome": "Benedita da Silva", "partido": "PT", "numero": "133", "pct": 0.2050},
         {"nome": "Alessandro Molon", "partido": "PSB", "numero": "400", "pct": 0.1150},
         {"nome": "Clarissa Garotinho", "partido": "UNIÃO", "numero": "444", "pct": 0.0470}
     ],
@@ -757,7 +757,7 @@ CANDIDATOS_SENADO_REAL = {
         {"nome": "Samanda de Lula", "partido": "PT", "numero": "133", "pct": 0.2920},
         {"nome": "Fátima Bezerra", "partido": "PT", "numero": "130", "pct": 0.2150},
         {"nome": "Zenaide Maia", "partido": "PSD", "numero": "555", "pct": 0.1050},
-        {"nome": "Álvaro Dias", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.0400}
+        {"nome": "General Girão", "partido": "PL", "numero": "221", "pct": 0.0400}
     ],
     # 21. RIO GRANDE DO SUL (RS)
     "RS": [
@@ -772,13 +772,13 @@ CANDIDATOS_SENADO_REAL = {
         {"nome": "Fernando Máximo", "partido": "PL", "numero": "222", "pct": 0.3550},
         {"nome": "Bruno Scheid", "partido": "PL", "numero": "220", "pct": 0.3020},
         {"nome": "Marcos Rocha", "partido": "UNIÃO", "numero": "444", "pct": 0.1950},
-        {"nome": "Marcos Rogério", "partido": "PL", "numero": "221", "pct": 0.1050},
+        {"nome": "Léo Moraes", "partido": "PODEMOS", "numero": "200", "pct": 0.1050},
         {"nome": "Confúcio Moura", "partido": "MDB", "numero": "151", "pct": 0.0430}
     ],
     # 23. RORAIMA (RR)
     "RR": [
         {"nome": "Nicoletti", "partido": "PL", "numero": "222", "pct": 0.3650},
-        {"nome": "Teresa Surita", "partido": "MDB", "numero": "151", "pct": 0.3050},
+        {"nome": "Romero Jucá", "partido": "MDB", "numero": "151", "pct": 0.3050},
         {"nome": "Antonio Denarium", "partido": "PP", "numero": "111", "pct": 0.1850},
         {"nome": "Mecias de Jesus", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.1050},
         {"nome": "Chico Rodrigues", "partido": "PSB", "numero": "400", "pct": 0.0400}
@@ -789,7 +789,7 @@ CANDIDATOS_SENADO_REAL = {
         {"nome": "Carlos Bolsonaro", "partido": "PL", "numero": "220", "pct": 0.3050},
         {"nome": "Esperidião Amin", "partido": "PP", "numero": "111", "pct": 0.1750},
         {"nome": "Gean Loureiro", "partido": "UNIÃO", "numero": "444", "pct": 0.1050},
-        {"nome": "Décio Lima", "partido": "PT", "numero": "133", "pct": 0.0400}
+        {"nome": "Pedro Uczai", "partido": "PT", "numero": "133", "pct": 0.0400}
     ],
     # 25. SÃO PAULO (SP)
     "SP": [
@@ -803,7 +803,7 @@ CANDIDATOS_SENADO_REAL = {
     ],
     # 26. SERGIPE (SE)
     "SE": [
-        {"nome": "Rogério Carvalho", "partido": "PT", "numero": "133", "pct": 0.3550},
+        {"nome": "Márcio Macêdo", "partido": "PT", "numero": "133", "pct": 0.3550},
         {"nome": "Alessandro Vieira", "partido": "MDB", "numero": "151", "pct": 0.2950},
         {"nome": "André Moura", "partido": "UNIÃO", "numero": "444", "pct": 0.2150},
         {"nome": "Belivaldo Chagas", "partido": "PODEMOS", "numero": "200", "pct": 0.0950},
@@ -812,7 +812,7 @@ CANDIDATOS_SENADO_REAL = {
     # 27. TOCANTINS (TO)
     "TO": [
         {"nome": "Eduardo Gomes", "partido": "PL", "numero": "222", "pct": 0.3650},
-        {"nome": "Alexandre Guimarães", "partido": "MDB", "numero": "151", "pct": 0.2980},
+        {"nome": "Marcelo Miranda", "partido": "MDB", "numero": "151", "pct": 0.2980},
         {"nome": "Wanderlei Barbosa", "partido": "REPUBLICANOS", "numero": "100", "pct": 0.1950},
         {"nome": "Kátia Abreu", "partido": "PP", "numero": "111", "pct": 0.1020},
         {"nome": "Irajá Abreu", "partido": "PSD", "numero": "555", "pct": 0.0400}

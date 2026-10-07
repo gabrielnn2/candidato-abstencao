@@ -1282,7 +1282,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -1322,9 +1322,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 1765291,
             "is_abstencao": false,
@@ -1827,7 +1827,7 @@
         "candidatos_superados": [
           "Ibaneis Rocha (MDB)",
           "Leila do Vôlei (PDT)",
-          "Leandro Grass (PV)"
+          "Professor Israel (PSB)"
         ],
         "diferenca_lider": -258591,
         "ranking": [
@@ -1887,10 +1887,10 @@
             "percentual_simulado": 7.96
           },
           {
-            "nome": "Leandro Grass",
-            "partido": "PV",
-            "nome_exibicao": "Leandro Grass (PV)",
-            "numero": "433",
+            "nome": "Professor Israel",
+            "partido": "PSB",
+            "nome_exibicao": "Professor Israel (PSB)",
+            "numero": "400",
             "votos": 66977,
             "is_abstencao": false,
             "foto": "",
@@ -5207,7 +5207,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -5247,10 +5247,10 @@
             "percentual_simulado": 21.74
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 1862762,
             "is_abstencao": false,
             "foto": "",
@@ -5478,7 +5478,7 @@
         "candidatos_superados": [
           "Fátima Bezerra (PT)",
           "Zenaide Maia (PSD)",
-          "Álvaro Dias (REPUBLICANOS)"
+          "General Girão (PL)"
         ],
         "diferenca_lider": -177067,
         "ranking": [
@@ -5538,10 +5538,10 @@
             "percentual_simulado": 8.37
           },
           {
-            "nome": "Álvaro Dias",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Álvaro Dias (REPUBLICANOS)",
-            "numero": "100",
+            "nome": "General Girão",
+            "partido": "PL",
+            "nome_exibicao": "General Girão (PL)",
+            "numero": "221",
             "votos": 76129,
             "is_abstencao": false,
             "foto": "",
@@ -5750,7 +5750,7 @@
           "Fernando Máximo (PL)",
           "Bruno Scheid (PL)",
           "Marcos Rocha (UNIÃO)",
-          "Marcos Rogério (PL)",
+          "Léo Moraes (PODEMOS)",
           "Confúcio Moura (MDB)"
         ],
         "diferenca_lider": 6212,
@@ -5800,10 +5800,10 @@
             "percentual_simulado": 14.31
           },
           {
-            "nome": "Marcos Rogério",
-            "partido": "PL",
-            "nome_exibicao": "Marcos Rogério (PL)",
-            "numero": "221",
+            "nome": "Léo Moraes",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Léo Moraes (PODEMOS)",
+            "numero": "200",
             "votos": 89113,
             "is_abstencao": false,
             "foto": "",
@@ -6036,9 +6036,9 @@
             "percentual_simulado": 29.85
           },
           {
-            "nome": "Teresa Surita",
+            "nome": "Romero Jucá",
             "partido": "MDB",
-            "nome_exibicao": "Teresa Surita (MDB)",
+            "nome_exibicao": "Romero Jucá (MDB)",
             "numero": "151",
             "votos": 90597,
             "is_abstencao": false,
@@ -6583,7 +6583,7 @@
         "candidatos_superados": [
           "Esperidião Amin (PP)",
           "Gean Loureiro (UNIÃO)",
-          "Décio Lima (PT)"
+          "Pedro Uczai (PT)"
         ],
         "diferenca_lider": -638645,
         "ranking": [
@@ -6643,9 +6643,9 @@
             "percentual_simulado": 8.59
           },
           {
-            "nome": "Décio Lima",
+            "nome": "Pedro Uczai",
             "partido": "PT",
-            "nome_exibicao": "Décio Lima (PT)",
+            "nome_exibicao": "Pedro Uczai (PT)",
             "numero": "133",
             "votos": 167656,
             "is_abstencao": false,
@@ -6857,9 +6857,9 @@
         "diferenca_lider": -146733,
         "ranking": [
           {
-            "nome": "Rogério Carvalho",
+            "nome": "Márcio Macêdo",
             "partido": "PT",
-            "nome_exibicao": "Rogério Carvalho (PT)",
+            "nome_exibicao": "Márcio Macêdo (PT)",
             "numero": "133",
             "votos": 447513,
             "is_abstencao": false,
@@ -7437,9 +7437,9 @@
             "percentual_simulado": 28.32
           },
           {
-            "nome": "Alexandre Guimarães",
+            "nome": "Marcelo Miranda",
             "partido": "MDB",
-            "nome_exibicao": "Alexandre Guimarães (MDB)",
+            "nome_exibicao": "Marcelo Miranda (MDB)",
             "numero": "151",
             "votos": 236728,
             "is_abstencao": false,

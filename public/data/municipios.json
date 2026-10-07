@@ -800,7 +800,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -840,10 +840,10 @@
             "percentual_simulado": 21.14
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 19590,
             "is_abstencao": false,
             "foto": "",
@@ -1634,9 +1634,9 @@
         "diferenca_lider": -42110,
         "ranking": [
           {
-            "nome": "Rogério Carvalho",
+            "nome": "Márcio Macêdo",
             "partido": "PT",
-            "nome_exibicao": "Rogério Carvalho (PT)",
+            "nome_exibicao": "Márcio Macêdo (PT)",
             "numero": "133",
             "votos": 112932,
             "is_abstencao": false,
@@ -1909,7 +1909,7 @@
         "candidatos_superados": [
           "Esperidião Amin (PP)",
           "Gean Loureiro (UNIÃO)",
-          "Décio Lima (PT)"
+          "Pedro Uczai (PT)"
         ],
         "diferenca_lider": -6717,
         "ranking": [
@@ -1969,9 +1969,9 @@
             "percentual_simulado": 8.15
           },
           {
-            "nome": "Décio Lima",
+            "nome": "Pedro Uczai",
             "partido": "PT",
-            "nome_exibicao": "Décio Lima (PT)",
+            "nome_exibicao": "Pedro Uczai (PT)",
             "numero": "133",
             "votos": 3122,
             "is_abstencao": false,
@@ -3396,7 +3396,7 @@
         "candidatos_superados": [
           "Esperidião Amin (PP)",
           "Gean Loureiro (UNIÃO)",
-          "Décio Lima (PT)"
+          "Pedro Uczai (PT)"
         ],
         "diferenca_lider": -34448,
         "ranking": [
@@ -3456,9 +3456,9 @@
             "percentual_simulado": 8.7
           },
           {
-            "nome": "Décio Lima",
+            "nome": "Pedro Uczai",
             "partido": "PT",
-            "nome_exibicao": "Décio Lima (PT)",
+            "nome_exibicao": "Pedro Uczai (PT)",
             "numero": "133",
             "votos": 8204,
             "is_abstencao": false,
@@ -3679,9 +3679,9 @@
             "percentual_simulado": 30.24
           },
           {
-            "nome": "Teresa Surita",
+            "nome": "Romero Jucá",
             "partido": "MDB",
-            "nome_exibicao": "Teresa Surita (MDB)",
+            "nome_exibicao": "Romero Jucá (MDB)",
             "numero": "151",
             "votos": 54724,
             "is_abstencao": false,
@@ -3942,7 +3942,7 @@
         "candidatos_superados": [
           "Ibaneis Rocha (MDB)",
           "Leila do Vôlei (PDT)",
-          "Leandro Grass (PV)"
+          "Professor Israel (PSB)"
         ],
         "diferenca_lider": -79766,
         "ranking": [
@@ -4002,10 +4002,10 @@
             "percentual_simulado": 8.12
           },
           {
-            "nome": "Leandro Grass",
-            "partido": "PV",
-            "nome_exibicao": "Leandro Grass (PV)",
-            "numero": "433",
+            "nome": "Professor Israel",
+            "partido": "PSB",
+            "nome_exibicao": "Professor Israel (PSB)",
+            "numero": "400",
             "votos": 17928,
             "is_abstencao": false,
             "foto": "",
@@ -4234,7 +4234,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -4274,10 +4274,10 @@
             "percentual_simulado": 20.84
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 24130,
             "is_abstencao": false,
             "foto": "",
@@ -4514,7 +4514,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -4554,9 +4554,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 32158,
             "is_abstencao": false,
@@ -5380,7 +5380,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -5420,10 +5420,10 @@
             "percentual_simulado": 21.74
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 54225,
             "is_abstencao": false,
             "foto": "",
@@ -7056,7 +7056,7 @@
         "candidatos_superados": [
           "Ibaneis Rocha (MDB)",
           "Leila do Vôlei (PDT)",
-          "Leandro Grass (PV)"
+          "Professor Israel (PSB)"
         ],
         "diferenca_lider": -40698,
         "ranking": [
@@ -7116,10 +7116,10 @@
             "percentual_simulado": 7.81
           },
           {
-            "nome": "Leandro Grass",
-            "partido": "PV",
-            "nome_exibicao": "Leandro Grass (PV)",
-            "numero": "433",
+            "nome": "Professor Israel",
+            "partido": "PSB",
+            "nome_exibicao": "Professor Israel (PSB)",
+            "numero": "400",
             "votos": 12519,
             "is_abstencao": false,
             "foto": "",
@@ -8200,7 +8200,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -8240,10 +8240,10 @@
             "percentual_simulado": 21.14
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 95451,
             "is_abstencao": false,
             "foto": "",
@@ -8480,7 +8480,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -8520,9 +8520,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 65754,
             "is_abstencao": false,
@@ -8762,7 +8762,7 @@
         "candidatos_superados": [
           "Esperidião Amin (PP)",
           "Gean Loureiro (UNIÃO)",
-          "Décio Lima (PT)"
+          "Pedro Uczai (PT)"
         ],
         "diferenca_lider": -48530,
         "ranking": [
@@ -8822,9 +8822,9 @@
             "percentual_simulado": 8.59
           },
           {
-            "nome": "Décio Lima",
+            "nome": "Pedro Uczai",
             "partido": "PT",
-            "nome_exibicao": "Décio Lima (PT)",
+            "nome_exibicao": "Pedro Uczai (PT)",
             "numero": "133",
             "votos": 12740,
             "is_abstencao": false,
@@ -11063,7 +11063,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -11103,9 +11103,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 24095,
             "is_abstencao": false,
@@ -11636,7 +11636,7 @@
         "candidatos_superados": [
           "Esperidião Amin (PP)",
           "Gean Loureiro (UNIÃO)",
-          "Décio Lima (PT)"
+          "Pedro Uczai (PT)"
         ],
         "diferenca_lider": -50588,
         "ranking": [
@@ -11696,9 +11696,9 @@
             "percentual_simulado": 8.59
           },
           {
-            "nome": "Décio Lima",
+            "nome": "Pedro Uczai",
             "partido": "PT",
-            "nome_exibicao": "Décio Lima (PT)",
+            "nome_exibicao": "Pedro Uczai (PT)",
             "numero": "133",
             "votos": 13280,
             "is_abstencao": false,
@@ -13325,7 +13325,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -13365,10 +13365,10 @@
             "percentual_simulado": 21.14
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 25630,
             "is_abstencao": false,
             "foto": "",
@@ -14726,7 +14726,7 @@
         "candidatos_superados": [
           "Fátima Bezerra (PT)",
           "Zenaide Maia (PSD)",
-          "Álvaro Dias (REPUBLICANOS)"
+          "General Girão (PL)"
         ],
         "diferenca_lider": -48122,
         "ranking": [
@@ -14786,10 +14786,10 @@
             "percentual_simulado": 8.48
           },
           {
-            "nome": "Álvaro Dias",
-            "partido": "REPUBLICANOS",
-            "nome_exibicao": "Álvaro Dias (REPUBLICANOS)",
-            "numero": "100",
+            "nome": "General Girão",
+            "partido": "PL",
+            "nome_exibicao": "General Girão (PL)",
+            "numero": "221",
             "votos": 17595,
             "is_abstencao": false,
             "foto": "",
@@ -15016,7 +15016,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -15056,10 +15056,10 @@
             "percentual_simulado": 21.74
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 59545,
             "is_abstencao": false,
             "foto": "",
@@ -15310,7 +15310,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -15350,10 +15350,10 @@
             "percentual_simulado": 20.84
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 85475,
             "is_abstencao": false,
             "foto": "",
@@ -16766,9 +16766,9 @@
             "percentual_simulado": 28.7
           },
           {
-            "nome": "Alexandre Guimarães",
+            "nome": "Marcelo Miranda",
             "partido": "MDB",
-            "nome_exibicao": "Alexandre Guimarães (MDB)",
+            "nome_exibicao": "Marcelo Miranda (MDB)",
             "numero": "151",
             "votos": 45954,
             "is_abstencao": false,
@@ -17042,7 +17042,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -17082,10 +17082,10 @@
             "percentual_simulado": 20.54
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 5066,
             "is_abstencao": false,
             "foto": "",
@@ -18183,7 +18183,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -18223,10 +18223,10 @@
             "percentual_simulado": 21.74
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 35593,
             "is_abstencao": false,
             "foto": "",
@@ -19327,7 +19327,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Jaques Wagner (PT)",
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -19367,9 +19367,9 @@
             "percentual_simulado": 23.55
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 17119,
             "is_abstencao": false,
@@ -19599,7 +19599,7 @@
           "Fernando Máximo (PL)",
           "Bruno Scheid (PL)",
           "Marcos Rocha (UNIÃO)",
-          "Marcos Rogério (PL)",
+          "Léo Moraes (PODEMOS)",
           "Confúcio Moura (MDB)"
         ],
         "diferenca_lider": 6639,
@@ -19649,10 +19649,10 @@
             "percentual_simulado": 14.11
           },
           {
-            "nome": "Marcos Rogério",
-            "partido": "PL",
-            "nome_exibicao": "Marcos Rogério (PL)",
-            "numero": "221",
+            "nome": "Léo Moraes",
+            "partido": "PODEMOS",
+            "nome_exibicao": "Léo Moraes (PODEMOS)",
+            "numero": "200",
             "votos": 25912,
             "is_abstencao": false,
             "foto": "",
@@ -21062,7 +21062,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -21102,10 +21102,10 @@
             "percentual_simulado": 20.54
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 689680,
             "is_abstencao": false,
             "foto": "",
@@ -21342,7 +21342,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -21382,9 +21382,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 310062,
             "is_abstencao": false,
@@ -24016,7 +24016,7 @@
         "candidatos_superados": [
           "Carlos Portinho (PL)",
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -24056,10 +24056,10 @@
             "percentual_simulado": 21.14
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 94089,
             "is_abstencao": false,
             "foto": "",
@@ -25186,7 +25186,7 @@
         "candidatos_superados": [
           "Ibaneis Rocha (MDB)",
           "Leila do Vôlei (PDT)",
-          "Leandro Grass (PV)"
+          "Professor Israel (PSB)"
         ],
         "diferenca_lider": -34716,
         "ranking": [
@@ -25246,10 +25246,10 @@
             "percentual_simulado": 8.02
           },
           {
-            "nome": "Leandro Grass",
-            "partido": "PV",
-            "nome_exibicao": "Leandro Grass (PV)",
-            "numero": "433",
+            "nome": "Professor Israel",
+            "partido": "PSB",
+            "nome_exibicao": "Professor Israel (PSB)",
+            "numero": "400",
             "votos": 8552,
             "is_abstencao": false,
             "foto": "",
@@ -26911,7 +26911,7 @@
         "iria_segundo_turno": false,
         "eleito_senado": false,
         "candidatos_superados": [
-          "ACM Neto (UNIÃO)",
+          "Elmar Nascimento (UNIÃO)",
           "Angelo Coronel (PSD)",
           "João Roma (PL)"
         ],
@@ -26951,9 +26951,9 @@
             "percentual_simulado": 22.42
           },
           {
-            "nome": "ACM Neto",
+            "nome": "Elmar Nascimento",
             "partido": "UNIÃO",
-            "nome_exibicao": "ACM Neto (UNIÃO)",
+            "nome_exibicao": "Elmar Nascimento (UNIÃO)",
             "numero": "444",
             "votos": 39737,
             "is_abstencao": false,
@@ -27203,7 +27203,7 @@
         "eleito_senado": true,
         "candidatos_superados": [
           "Carlos Jordy (PL)",
-          "Eduardo Paes (PSD)",
+          "Benedita da Silva (PT)",
           "Alessandro Molon (PSB)",
           "Clarissa Garotinho (UNIÃO)"
         ],
@@ -27243,10 +27243,10 @@
             "percentual_simulado": 21.74
           },
           {
-            "nome": "Eduardo Paes",
-            "partido": "PSD",
-            "nome_exibicao": "Eduardo Paes (PSD)",
-            "numero": "555",
+            "nome": "Benedita da Silva",
+            "partido": "PT",
+            "nome_exibicao": "Benedita da Silva (PT)",
+            "numero": "133",
             "votos": 32762,
             "is_abstencao": false,
             "foto": "",

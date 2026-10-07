@@ -1905,7 +1905,7 @@
             "candidatos_superados": [
               "Carlos Portinho (PL)",
               "Carlos Jordy (PL)",
-              "Eduardo Paes (PSD)",
+              "Benedita da Silva (PT)",
               "Alessandro Molon (PSB)",
               "Clarissa Garotinho (UNIÃO)"
             ],
@@ -1945,10 +1945,10 @@
                 "percentual_simulado": 20.54
               },
               {
-                "nome": "Eduardo Paes",
-                "partido": "PSD",
-                "nome_exibicao": "Eduardo Paes (PSD)",
-                "numero": "555",
+                "nome": "Benedita da Silva",
+                "partido": "PT",
+                "nome_exibicao": "Benedita da Silva (PT)",
+                "numero": "133",
                 "votos": 5066,
                 "is_abstencao": false,
                 "foto": "",
@@ -2199,7 +2199,7 @@
             "candidatos_superados": [
               "Carlos Portinho (PL)",
               "Carlos Jordy (PL)",
-              "Eduardo Paes (PSD)",
+              "Benedita da Silva (PT)",
               "Alessandro Molon (PSB)",
               "Clarissa Garotinho (UNIÃO)"
             ],
@@ -2239,10 +2239,10 @@
                 "percentual_simulado": 20.54
               },
               {
-                "nome": "Eduardo Paes",
-                "partido": "PSD",
-                "nome_exibicao": "Eduardo Paes (PSD)",
-                "numero": "555",
+                "nome": "Benedita da Silva",
+                "partido": "PT",
+                "nome_exibicao": "Benedita da Silva (PT)",
+                "numero": "133",
                 "votos": 689680,
                 "is_abstencao": false,
                 "foto": "",
@@ -2493,7 +2493,7 @@
             "candidatos_superados": [
               "Carlos Portinho (PL)",
               "Carlos Jordy (PL)",
-              "Eduardo Paes (PSD)",
+              "Benedita da Silva (PT)",
               "Alessandro Molon (PSB)",
               "Clarissa Garotinho (UNIÃO)"
             ],
@@ -2533,10 +2533,10 @@
                 "percentual_simulado": 20.84
               },
               {
-                "nome": "Eduardo Paes",
-                "partido": "PSD",
-                "nome_exibicao": "Eduardo Paes (PSD)",
-                "numero": "555",
+                "nome": "Benedita da Silva",
+                "partido": "PT",
+                "nome_exibicao": "Benedita da Silva (PT)",
+                "numero": "133",
                 "votos": 24130,
                 "is_abstencao": false,
                 "foto": "",
@@ -2787,7 +2787,7 @@
             "candidatos_superados": [
               "Carlos Portinho (PL)",
               "Carlos Jordy (PL)",
-              "Eduardo Paes (PSD)",
+              "Benedita da Silva (PT)",
               "Alessandro Molon (PSB)",
               "Clarissa Garotinho (UNIÃO)"
             ],
@@ -2827,10 +2827,10 @@
                 "percentual_simulado": 20.84
               },
               {
-                "nome": "Eduardo Paes",
-                "partido": "PSD",
-                "nome_exibicao": "Eduardo Paes (PSD)",
-                "numero": "555",
+                "nome": "Benedita da Silva",
+                "partido": "PT",
+                "nome_exibicao": "Benedita da Silva (PT)",
+                "numero": "133",
                 "votos": 85475,
                 "is_abstencao": false,
                 "foto": "",
@@ -3059,7 +3059,7 @@
               "Fernando Máximo (PL)",
               "Bruno Scheid (PL)",
               "Marcos Rocha (UNIÃO)",
-              "Marcos Rogério (PL)",
+              "Léo Moraes (PODEMOS)",
               "Confúcio Moura (MDB)"
             ],
             "diferenca_lider": 6639,
@@ -3109,10 +3109,10 @@
                 "percentual_simulado": 14.11
               },
               {
-                "nome": "Marcos Rogério",
-                "partido": "PL",
-                "nome_exibicao": "Marcos Rogério (PL)",
-                "numero": "221",
+                "nome": "Léo Moraes",
+                "partido": "PODEMOS",
+                "nome_exibicao": "Léo Moraes (PODEMOS)",
+                "numero": "200",
                 "votos": 25912,
                 "is_abstencao": false,
                 "foto": "",
@@ -3634,7 +3634,7 @@
             "candidatos_superados": [
               "Carlos Portinho (PL)",
               "Carlos Jordy (PL)",
-              "Eduardo Paes (PSD)",
+              "Benedita da Silva (PT)",
               "Alessandro Molon (PSB)",
               "Clarissa Garotinho (UNIÃO)"
             ],
@@ -3674,10 +3674,10 @@
                 "percentual_simulado": 21.14
               },
               {
-                "nome": "Eduardo Paes",
-                "partido": "PSD",
-                "nome_exibicao": "Eduardo Paes (PSD)",
-                "numero": "555",
+                "nome": "Benedita da Silva",
+                "partido": "PT",
+                "nome_exibicao": "Benedita da Silva (PT)",
+                "numero": "133",
                 "votos": 19590,
                 "is_abstencao": false,
                 "foto": "",
@@ -3918,7 +3918,7 @@
             "candidatos_superados": [
               "Esperidião Amin (PP)",
               "Gean Loureiro (UNIÃO)",
-              "Décio Lima (PT)"
+              "Pedro Uczai (PT)"
             ],
             "diferenca_lider": -34448,
             "ranking": [
@@ -3978,9 +3978,9 @@
                 "percentual_simulado": 8.7
               },
               {
-                "nome": "Décio Lima",
+                "nome": "Pedro Uczai",
                 "partido": "PT",
-                "nome_exibicao": "Décio Lima (PT)",
+                "nome_exibicao": "Pedro Uczai (PT)",
                 "numero": "133",
                 "votos": 8204,
                 "is_abstencao": false,
@@ -4201,9 +4201,9 @@
                 "percentual_simulado": 30.24
               },
               {
-                "nome": "Teresa Surita",
+                "nome": "Romero Jucá",
                 "partido": "MDB",
-                "nome_exibicao": "Teresa Surita (MDB)",
+                "nome_exibicao": "Romero Jucá (MDB)",
                 "numero": "151",
                 "votos": 54724,
                 "is_abstencao": false,
@@ -4464,7 +4464,7 @@
             "candidatos_superados": [
               "Ibaneis Rocha (MDB)",
               "Leila do Vôlei (PDT)",
-              "Leandro Grass (PV)"
+              "Professor Israel (PSB)"
             ],
             "diferenca_lider": -79766,
             "ranking": [
@@ -4524,10 +4524,10 @@
                 "percentual_simulado": 8.12
               },
               {
-                "nome": "Leandro Grass",
-                "partido": "PV",
-                "nome_exibicao": "Leandro Grass (PV)",
-                "numero": "433",
+                "nome": "Professor Israel",
+                "partido": "PSB",
+                "nome_exibicao": "Professor Israel (PSB)",
+                "numero": "400",
                 "votos": 17928,
                 "is_abstencao": false,
                 "foto": "",
