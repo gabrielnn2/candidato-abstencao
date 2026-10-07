@@ -635,8 +635,8 @@
         "votos": 3127911,
         "validos_oficiais": 6242274,
         "pct_oficial": 50.11,
-        "abstencao": 1772200,
-        "taxa_abstencao": 20.57,
+        "abstencao": 1771009,
+        "taxa_abstencao": 20.59,
         "pct_com_abstencao": 39.03,
         "diferenca_50": -10.97,
         "sobrevive_1t": false,
@@ -647,7 +647,7 @@
         "segundo_votos": 1583764,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 50.11% dos válidos. Com 1,772,200 ausentes, seu percentual despenca para 39.03%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 50.11% dos válidos. Com 1,771,009 ausentes, seu percentual despenca para 39.03%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "AL",
@@ -658,10 +658,10 @@
         "votos": 892484,
         "validos_oficiais": 1709614,
         "pct_oficial": 52.2,
-        "abstencao": 503698,
-        "taxa_abstencao": 20.63,
-        "pct_com_abstencao": 40.32,
-        "diferenca_50": -9.68,
+        "abstencao": 503370,
+        "taxa_abstencao": 20.64,
+        "pct_com_abstencao": 40.33,
+        "diferenca_50": -9.67,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -670,7 +670,7 @@
         "segundo_votos": 809796,
         "adversario_2t": "Renan Filho (MDB)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 52.2% dos válidos. Com 503,698 ausentes, seu percentual despenca para 40.32%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 52.2% dos válidos. Com 503,370 ausentes, seu percentual despenca para 40.33%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "PA",
@@ -681,7 +681,7 @@
         "votos": 2345721,
         "validos_oficiais": 4564841,
         "pct_oficial": 51.39,
-        "abstencao": 1195893,
+        "abstencao": 1195412,
         "taxa_abstencao": 19.1,
         "pct_com_abstencao": 40.72,
         "diferenca_50": -9.28,
@@ -693,7 +693,7 @@
         "segundo_votos": 2125084,
         "adversario_2t": "Hana Ghassan (MDB)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 51.39% dos válidos. Com 1,195,893 ausentes, seu percentual despenca para 40.72%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 51.39% dos válidos. Com 1,195,412 ausentes, seu percentual despenca para 40.72%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "MG",
@@ -704,8 +704,8 @@
         "votos": 6321590,
         "validos_oficiais": 11410371,
         "pct_oficial": 55.4,
-        "abstencao": 3735098,
-        "taxa_abstencao": 22.81,
+        "abstencao": 3734021,
+        "taxa_abstencao": 22.82,
         "pct_com_abstencao": 41.74,
         "diferenca_50": -8.26,
         "sobrevive_1t": false,
@@ -716,7 +716,7 @@
         "segundo_votos": 3006088,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 55.4% dos válidos. Com 3,735,098 ausentes, seu percentual despenca para 41.74%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 55.4% dos válidos. Com 3,734,021 ausentes, seu percentual despenca para 41.74%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "PE",
@@ -727,8 +727,8 @@
         "votos": 2805438,
         "validos_oficiais": 5266852,
         "pct_oficial": 53.27,
-        "abstencao": 1312388,
-        "taxa_abstencao": 18.17,
+        "abstencao": 1311753,
+        "taxa_abstencao": 18.18,
         "pct_com_abstencao": 42.64,
         "diferenca_50": -7.36,
         "sobrevive_1t": false,
@@ -739,7 +739,7 @@
         "segundo_votos": 2360469,
         "adversario_2t": "João Campos (PSB)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 53.27% dos válidos. Com 1,312,388 ausentes, seu percentual despenca para 42.64%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 53.27% dos válidos. Com 1,311,753 ausentes, seu percentual despenca para 42.64%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "MA",
@@ -750,8 +750,8 @@
         "votos": 2104122,
         "validos_oficiais": 3846156,
         "pct_oficial": 54.71,
-        "abstencao": 1022772,
-        "taxa_abstencao": 19.73,
+        "abstencao": 1022456,
+        "taxa_abstencao": 19.74,
         "pct_com_abstencao": 43.22,
         "diferenca_50": -6.78,
         "sobrevive_1t": false,
@@ -762,7 +762,7 @@
         "segundo_votos": 1354044,
         "adversario_2t": "Orleans Brandão (MDB)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 54.71% dos válidos. Com 1,022,772 ausentes, seu percentual despenca para 43.22%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 54.71% dos válidos. Com 1,022,456 ausentes, seu percentual despenca para 43.22%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "BA",
@@ -773,10 +773,10 @@
         "votos": 4626509,
         "validos_oficiais": 8291090,
         "pct_oficial": 55.8,
-        "abstencao": 2259151,
-        "taxa_abstencao": 19.97,
-        "pct_com_abstencao": 43.85,
-        "diferenca_50": -6.15,
+        "abstencao": 2258135,
+        "taxa_abstencao": 19.98,
+        "pct_com_abstencao": 43.86,
+        "diferenca_50": -6.14,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -785,7 +785,7 @@
         "segundo_votos": 3625227,
         "adversario_2t": "Acm Neto (UNIÃO)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 55.8% dos válidos. Com 2,259,151 ausentes, seu percentual despenca para 43.85%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 55.8% dos válidos. Com 2,258,135 ausentes, seu percentual despenca para 43.86%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "RO",
@@ -796,10 +796,10 @@
         "votos": 537370,
         "validos_oficiais": 945058,
         "pct_oficial": 56.86,
-        "abstencao": 274813,
+        "abstencao": 274695,
         "taxa_abstencao": 21.71,
-        "pct_com_abstencao": 44.05,
-        "diferenca_50": -5.95,
+        "pct_com_abstencao": 44.06,
+        "diferenca_50": -5.94,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -808,7 +808,7 @@
         "segundo_votos": 189547,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 56.86% dos válidos. Com 274,813 ausentes, seu percentual despenca para 44.05%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 56.86% dos válidos. Com 274,695 ausentes, seu percentual despenca para 44.06%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "CE",
@@ -819,10 +819,10 @@
         "votos": 2875573,
         "validos_oficiais": 5406095,
         "pct_oficial": 53.19,
-        "abstencao": 1086074,
-        "taxa_abstencao": 15.52,
-        "pct_com_abstencao": 44.29,
-        "diferenca_50": -5.71,
+        "abstencao": 1085522,
+        "taxa_abstencao": 15.53,
+        "pct_com_abstencao": 44.3,
+        "diferenca_50": -5.7,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -831,7 +831,7 @@
         "segundo_votos": 2498891,
         "adversario_2t": "Ciro Gomes (PSDB)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 53.19% dos válidos. Com 1,086,074 ausentes, seu percentual despenca para 44.29%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 53.19% dos válidos. Com 1,085,522 ausentes, seu percentual despenca para 44.3%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "RS",
@@ -842,8 +842,8 @@
         "votos": 3516048,
         "validos_oficiais": 6055306,
         "pct_oficial": 58.07,
-        "abstencao": 1819642,
-        "taxa_abstencao": 21.35,
+        "abstencao": 1819041,
+        "taxa_abstencao": 21.36,
         "pct_com_abstencao": 44.65,
         "diferenca_50": -5.35,
         "sobrevive_1t": false,
@@ -854,7 +854,7 @@
         "segundo_votos": 1917374,
         "adversario_2t": "Juliana Brizola (PDT)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 58.07% dos válidos. Com 1,819,642 ausentes, seu percentual despenca para 44.65%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 58.07% dos válidos. Com 1,819,041 ausentes, seu percentual despenca para 44.65%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "GO",
@@ -865,8 +865,8 @@
         "votos": 2148218,
         "validos_oficiais": 3630576,
         "pct_oficial": 59.17,
-        "abstencao": 1109003,
-        "taxa_abstencao": 21.83,
+        "abstencao": 1108382,
+        "taxa_abstencao": 21.84,
         "pct_com_abstencao": 45.33,
         "diferenca_50": -4.67,
         "sobrevive_1t": false,
@@ -877,7 +877,7 @@
         "segundo_votos": 797141,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 59.17% dos válidos. Com 1,109,003 ausentes, seu percentual despenca para 45.33%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 59.17% dos válidos. Com 1,108,382 ausentes, seu percentual despenca para 45.33%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "MT",
@@ -888,8 +888,8 @@
         "votos": 1128099,
         "validos_oficiais": 1856293,
         "pct_oficial": 60.77,
-        "abstencao": 585668,
-        "taxa_abstencao": 22.2,
+        "abstencao": 585274,
+        "taxa_abstencao": 22.21,
         "pct_com_abstencao": 46.2,
         "diferenca_50": -3.8,
         "sobrevive_1t": false,
@@ -900,7 +900,7 @@
         "segundo_votos": 430442,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 60.77% dos válidos. Com 585,668 ausentes, seu percentual despenca para 46.2%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 60.77% dos válidos. Com 585,274 ausentes, seu percentual despenca para 46.2%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "SP",
@@ -911,8 +911,8 @@
         "votos": 14491874,
         "validos_oficiais": 23130513,
         "pct_oficial": 62.65,
-        "abstencao": 7690900,
-        "taxa_abstencao": 22.54,
+        "abstencao": 7687443,
+        "taxa_abstencao": 22.56,
         "pct_com_abstencao": 47.02,
         "diferenca_50": -2.98,
         "sobrevive_1t": false,
@@ -923,7 +923,7 @@
         "segundo_votos": 8423656,
         "adversario_2t": "Fernando Haddad (PT)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 62.65% dos válidos. Com 7,690,900 ausentes, seu percentual despenca para 47.02%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 62.65% dos válidos. Com 7,687,443 ausentes, seu percentual despenca para 47.02%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "SE",
@@ -934,10 +934,10 @@
         "votos": 727291,
         "validos_oficiais": 1189927,
         "pct_oficial": 61.12,
-        "abstencao": 301053,
-        "taxa_abstencao": 17.3,
-        "pct_com_abstencao": 48.78,
-        "diferenca_50": -1.22,
+        "abstencao": 300851,
+        "taxa_abstencao": 17.32,
+        "pct_com_abstencao": 48.79,
+        "diferenca_50": -1.21,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -946,7 +946,7 @@
         "segundo_votos": 459908,
         "adversario_2t": "Valmir De Francisquinho (REPUBLICANOS)",
         "adversario_tipo": "CANDIDATO_REAL",
-        "detalhes": "Oficialmente obteve 61.12% dos válidos. Com 301,053 ausentes, seu percentual despenca para 48.78%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 61.12% dos válidos. Com 300,851 ausentes, seu percentual despenca para 48.79%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "MS",
@@ -957,10 +957,10 @@
         "votos": 914323,
         "validos_oficiais": 1363298,
         "pct_oficial": 67.07,
-        "abstencao": 483210,
-        "taxa_abstencao": 23.87,
-        "pct_com_abstencao": 49.52,
-        "diferenca_50": -0.48,
+        "abstencao": 482860,
+        "taxa_abstencao": 23.88,
+        "pct_com_abstencao": 49.53,
+        "diferenca_50": -0.47,
         "sobrevive_1t": false,
         "status_tag": "DERRUBADO_2T",
         "veredito": "Derrubado para o 2º Turno",
@@ -969,7 +969,7 @@
         "segundo_votos": 322807,
         "adversario_2t": "Abstenção (Eleitores Ausentes)",
         "adversario_tipo": "ABSTENCAO",
-        "detalhes": "Oficialmente obteve 67.07% dos válidos. Com 483,210 ausentes, seu percentual despenca para 49.52%, ficando abaixo da linha dos 50%."
+        "detalhes": "Oficialmente obteve 67.07% dos válidos. Com 482,860 ausentes, seu percentual despenca para 49.53%, ficando abaixo da linha dos 50%."
       },
       {
         "uf": "AP",
@@ -980,7 +980,7 @@
         "votos": 281595,
         "validos_oficiais": 448747,
         "pct_oficial": 62.75,
-        "abstencao": 100426,
+        "abstencao": 100340,
         "taxa_abstencao": 17.41,
         "pct_com_abstencao": 51.28,
         "diferenca_50": 1.28,
@@ -992,7 +992,7 @@
         "segundo_votos": 165900,
         "adversario_2t": "Sem 2º Turno (Eleito em 1º Turno)",
         "adversario_tipo": "NENHUM",
-        "detalhes": "Oficialmente obteve 62.75% dos válidos. Com 100,426 ausentes, seu percentual continua em 51.28%, ficando acima da linha dos 50%."
+        "detalhes": "Oficialmente obteve 62.75% dos válidos. Com 100,340 ausentes, seu percentual despenca para 51.28%, ficando acima da linha dos 50%."
       },
       {
         "uf": "PB",
@@ -1003,10 +1003,10 @@
         "votos": 1470252,
         "validos_oficiais": 2286622,
         "pct_oficial": 64.3,
-        "abstencao": 564543,
-        "taxa_abstencao": 17.38,
-        "pct_com_abstencao": 51.57,
-        "diferenca_50": 1.57,
+        "abstencao": 564062,
+        "taxa_abstencao": 17.4,
+        "pct_com_abstencao": 51.58,
+        "diferenca_50": 1.58,
         "sobrevive_1t": true,
         "status_tag": "SOBREVIVE_1T",
         "veredito": "Permanece Eleito em 1º Turno",
@@ -1015,7 +1015,7 @@
         "segundo_votos": 552836,
         "adversario_2t": "Sem 2º Turno (Eleito em 1º Turno)",
         "adversario_tipo": "NENHUM",
-        "detalhes": "Oficialmente obteve 64.3% dos válidos. Com 564,543 ausentes, seu percentual continua em 51.57%, ficando acima da linha dos 50%."
+        "detalhes": "Oficialmente obteve 64.3% dos válidos. Com 564,062 ausentes, seu percentual despenca para 51.58%, ficando acima da linha dos 50%."
       },
       {
         "uf": "SC",
@@ -1026,10 +1026,10 @@
         "votos": 2942386,
         "validos_oficiais": 4265641,
         "pct_oficial": 68.98,
-        "abstencao": 1086492,
-        "taxa_abstencao": 18.95,
-        "pct_com_abstencao": 54.98,
-        "diferenca_50": 4.98,
+        "abstencao": 1084991,
+        "taxa_abstencao": 18.97,
+        "pct_com_abstencao": 54.99,
+        "diferenca_50": 4.99,
         "sobrevive_1t": true,
         "status_tag": "SOBREVIVE_1T",
         "veredito": "Permanece Eleito em 1º Turno",
@@ -1038,7 +1038,7 @@
         "segundo_votos": 668021,
         "adversario_2t": "Sem 2º Turno (Eleito em 1º Turno)",
         "adversario_tipo": "NENHUM",
-        "detalhes": "Oficialmente obteve 68.98% dos válidos. Com 1,086,492 ausentes, seu percentual continua em 54.98%, ficando acima da linha dos 50%."
+        "detalhes": "Oficialmente obteve 68.98% dos válidos. Com 1,084,991 ausentes, seu percentual despenca para 54.99%, ficando acima da linha dos 50%."
       },
       {
         "uf": "RR",
@@ -1049,10 +1049,10 @@
         "votos": 220809,
         "validos_oficiais": 319336,
         "pct_oficial": 69.15,
-        "abstencao": 68749,
-        "taxa_abstencao": 17.12,
-        "pct_com_abstencao": 56.9,
-        "diferenca_50": 6.9,
+        "abstencao": 68644,
+        "taxa_abstencao": 17.14,
+        "pct_com_abstencao": 56.91,
+        "diferenca_50": 6.91,
         "sobrevive_1t": true,
         "status_tag": "SOBREVIVE_1T",
         "veredito": "Permanece Eleito em 1º Turno",
@@ -1061,7 +1061,7 @@
         "segundo_votos": 93434,
         "adversario_2t": "Sem 2º Turno (Eleito em 1º Turno)",
         "adversario_tipo": "NENHUM",
-        "detalhes": "Oficialmente obteve 69.15% dos válidos. Com 68,749 ausentes, seu percentual continua em 56.9%, ficando acima da linha dos 50%."
+        "detalhes": "Oficialmente obteve 69.15% dos válidos. Com 68,644 ausentes, seu percentual despenca para 56.91%, ficando acima da linha dos 50%."
       },
       {
         "uf": "PI",
@@ -1072,10 +1072,10 @@
         "votos": 1436697,
         "validos_oficiais": 2021200,
         "pct_oficial": 71.08,
-        "abstencao": 463875,
+        "abstencao": 463678,
         "taxa_abstencao": 17.15,
-        "pct_com_abstencao": 57.81,
-        "diferenca_50": 7.81,
+        "pct_com_abstencao": 57.82,
+        "diferenca_50": 7.82,
         "sobrevive_1t": true,
         "status_tag": "SOBREVIVE_1T",
         "veredito": "Permanece Eleito em 1º Turno",
@@ -1084,7 +1084,7 @@
         "segundo_votos": 557972,
         "adversario_2t": "Sem 2º Turno (Eleito em 1º Turno)",
         "adversario_tipo": "NENHUM",
-        "detalhes": "Oficialmente obteve 71.08% dos válidos. Com 463,875 ausentes, seu percentual continua em 57.81%, ficando acima da linha dos 50%."
+        "detalhes": "Oficialmente obteve 71.08% dos válidos. Com 463,678 ausentes, seu percentual despenca para 57.82%, ficando acima da linha dos 50%."
       }
     ]
   },

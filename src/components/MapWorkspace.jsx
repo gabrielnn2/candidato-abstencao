@@ -138,6 +138,12 @@ export default function MapWorkspace({
                   feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
                   feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
                   feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+                  feat.properties.abstencao_pres = u.cargos?.Presidente?.votos || u.abstencao;
+                  feat.properties.taxa_pres = u.cargos?.Presidente?.taxa_abstencao || u.taxa_abstencao;
+                  feat.properties.abstencao_gov = u.cargos?.Governador?.votos || u.abstencao;
+                  feat.properties.taxa_gov = u.cargos?.Governador?.taxa_abstencao || u.taxa_abstencao;
+                  feat.properties.abstencao_sen = u.cargos?.Senador?.votos || u.abstencao;
+                  feat.properties.taxa_sen = u.cargos?.Senador?.taxa_abstencao || u.taxa_abstencao;
                 }
               }
             }
@@ -498,8 +504,22 @@ export default function MapWorkspace({
               else posDesc = '🥉 Não eleita';
             }
 
+            const cargo = currentCargoRef.current;
+            let currentAbst = p.abstencao || p.abstencoes;
+            let currentTaxa = p.taxa;
+            if (cargo === 'Governador') {
+              currentAbst = p.abstencao_gov || currentAbst;
+              currentTaxa = p.taxa_gov ?? currentTaxa;
+            } else if (cargo === 'Senador') {
+              currentAbst = p.abstencao_sen || currentAbst;
+              currentTaxa = p.taxa_sen ?? currentTaxa;
+            } else if (cargo === 'Presidente') {
+              currentAbst = p.abstencao_pres || currentAbst;
+              currentTaxa = p.taxa_pres ?? currentTaxa;
+            }
+
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome || p.name} (${p.uf})`;
-            if (tooltipTaxaRef.current) tooltipTaxaRef.current.textContent = `Abstenção: ${formatPercent(p.taxa)} (${formatNumber(p.abstencao || p.abstencoes)} ausentes)`;
+            if (tooltipTaxaRef.current) tooltipTaxaRef.current.textContent = `Abstenção: ${formatPercent(currentTaxa)} (${formatNumber(currentAbst)} ausentes)`;
             if (tooltipPosRef.current) tooltipPosRef.current.textContent = posDesc;
           }
         });
@@ -655,6 +675,12 @@ export default function MapWorkspace({
           feat.properties.pos_pres = u.cargos?.Presidente?.posicao || 3;
           feat.properties.pos_gov = u.cargos?.Governador?.posicao || 3;
           feat.properties.pos_sen = u.cargos?.Senador?.posicao || 3;
+          feat.properties.abstencao_pres = u.cargos?.Presidente?.votos || u.abstencao;
+          feat.properties.taxa_pres = u.cargos?.Presidente?.taxa_abstencao || u.taxa_abstencao;
+          feat.properties.abstencao_gov = u.cargos?.Governador?.votos || u.abstencao;
+          feat.properties.taxa_gov = u.cargos?.Governador?.taxa_abstencao || u.taxa_abstencao;
+          feat.properties.abstencao_sen = u.cargos?.Senador?.votos || u.abstencao;
+          feat.properties.taxa_sen = u.cargos?.Senador?.taxa_abstencao || u.taxa_abstencao;
         }
       });
       const src = map.getSource('estados');
@@ -915,9 +941,13 @@ export default function MapWorkspace({
     : 'Brasil · 5.564 Municípios em Polígonos';
 
   if (currentScope.type === 'uf' && currentScope.item) {
+    const u = currentScope.item;
+    const cgData = u.cargos?.[currentCargo];
+    const ufAbst = cgData?.votos || cgData?.abstencao || u.abstencao || 0;
+    const ufTaxa = cgData?.taxa_abstencao || u.taxa_abstencao || 0;
     pillText = viewMode === 'estados'
-      ? `📍 ${currentScope.item.nome} (${currentScope.id}) · Estado Isolado`
-      : `📍 ${currentScope.item.nome} (${currentScope.id}) · Municípios Isolados`;
+      ? `📍 ${u.nome} (${currentScope.id}) · ${formatNumber(ufAbst)} ausentes (${formatPercent(ufTaxa)}) · Estado Isolado`
+      : `📍 ${u.nome} (${currentScope.id}) · ${formatNumber(ufAbst)} ausentes (${formatPercent(ufTaxa)}) · Municípios Isolados`;
   } else if (currentScope.type === 'municipio' && currentScope.item) {
     const m = currentScope.item;
     pillText = `📍 ${m.nome} (${m.uf}) · ${formatNumber(m.abstencao || 0)} ausentes (${formatPercent(m.taxa_abstencao ?? m.taxa ?? 0)}) · Isolado`;

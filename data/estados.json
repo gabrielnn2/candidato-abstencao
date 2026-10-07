@@ -64,7 +64,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 21.1
+            "percentual_simulado": 21.1,
+            "votos_simulados": 125412
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -188,7 +189,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 488330
+        "comparecimento": 488330,
+        "abstencao": 125412
       },
       "Governador": {
         "posicao": 3,
@@ -215,7 +217,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 38.71
+            "percentual_simulado": 38.72
           },
           {
             "nome": "Alan Rick",
@@ -233,11 +235,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 125412,
+            "votos": 125345,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 22.19
+            "percentual_simulado": 22.19,
+            "votos_simulados": 125345
           },
           {
             "nome": "Tião Bocalom",
@@ -248,7 +251,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 7.95
+            "percentual_simulado": 7.96
           },
           {
             "nome": "Thor Dantas",
@@ -284,7 +287,8 @@
             "percentual_simulado": 0.07
           }
         ],
-        "comparecimento": 487971
+        "comparecimento": 487971,
+        "abstencao": 125345
       },
       "Senador": {
         "posicao": 2,
@@ -311,7 +315,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 153648,
-            "percentual_simulado": 29.5,
+            "percentual_simulado": 29.51,
             "posicao": 1
           },
           {
@@ -319,10 +323,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 125412,
+            "votos": 125345,
             "is_abstencao": true,
-            "votos_simulados": 125412,
-            "percentual_simulado": 24.08,
+            "votos_simulados": 125345,
+            "percentual_simulado": 24.07,
             "foto": "",
             "posicao": 2
           },
@@ -375,7 +379,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 487971
+        "comparecimento": 487971,
+        "abstencao": 125345
       }
     }
   },
@@ -451,7 +456,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 21.69
+            "percentual_simulado": 21.69,
+            "votos_simulados": 503698
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -575,7 +581,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 1938428
+        "comparecimento": 1938428,
+        "abstencao": 503698
       },
       "Governador": {
         "posicao": 3,
@@ -600,7 +607,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 40.32
+            "percentual_simulado": 40.33
           },
           {
             "nome": "Renan Filho",
@@ -618,11 +625,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 503698,
+            "votos": 503370,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 22.76
+            "percentual_simulado": 22.75,
+            "votos_simulados": 503370
           },
           {
             "nome": "Lenilda Luna",
@@ -647,7 +655,8 @@
             "percentual_simulado": 0.04
           }
         ],
-        "comparecimento": 1935820
+        "comparecimento": 1935820,
+        "abstencao": 503370
       },
       "Senador": {
         "posicao": 2,
@@ -682,10 +691,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 503698,
+            "votos": 503370,
             "is_abstencao": true,
-            "votos_simulados": 503698,
-            "percentual_simulado": 22.4,
+            "votos_simulados": 503370,
+            "percentual_simulado": 22.39,
             "foto": "",
             "posicao": 2
           },
@@ -738,7 +747,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 1935820
+        "comparecimento": 1935820,
+        "abstencao": 503370
       }
     }
   },
@@ -807,7 +817,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.62
+            "percentual_simulado": 20.62,
+            "votos_simulados": 564062
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -931,7 +942,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2234549
+        "comparecimento": 2234549,
+        "abstencao": 564062
       },
       "Governador": {
         "posicao": 2,
@@ -967,11 +979,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 564062,
+            "votos": 563782,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 21.4
+            "percentual_simulado": 21.39,
+            "votos_simulados": 563782
           },
           {
             "nome": "Professora Maria Do Carmo",
@@ -1040,7 +1053,8 @@
             "percentual_simulado": 0.11
           }
         ],
-        "comparecimento": 2232271
+        "comparecimento": 2232271,
+        "abstencao": 563782
       },
       "Senador": {
         "posicao": 3,
@@ -1078,7 +1092,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 585898,
-            "percentual_simulado": 22.36,
+            "percentual_simulado": 22.37,
             "posicao": 2
           },
           {
@@ -1086,10 +1100,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 564062,
+            "votos": 563782,
             "is_abstencao": true,
-            "votos_simulados": 564062,
-            "percentual_simulado": 21.53,
+            "votos_simulados": 563782,
+            "percentual_simulado": 21.52,
             "foto": "",
             "posicao": 3
           },
@@ -1130,7 +1144,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2232271
+        "comparecimento": 2232271,
+        "abstencao": 563782
       }
     }
   },
@@ -1206,7 +1221,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 17.77
+            "percentual_simulado": 17.77,
+            "votos_simulados": 100426
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -1330,7 +1346,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 476562
+        "comparecimento": 476562,
+        "abstencao": 100426
       },
       "Governador": {
         "posicao": 3,
@@ -1374,11 +1391,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 100426,
+            "votos": 100340,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.29
+            "percentual_simulado": 18.27,
+            "votos_simulados": 100340
           },
           {
             "nome": "Carlos Cley",
@@ -1414,7 +1432,8 @@
             "percentual_simulado": 0.06
           }
         ],
-        "comparecimento": 476019
+        "comparecimento": 476019,
+        "abstencao": 100340
       },
       "Senador": {
         "posicao": 3,
@@ -1440,7 +1459,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 155645,
-            "percentual_simulado": 28.88,
+            "percentual_simulado": 28.89,
             "posicao": 1
           },
           {
@@ -1452,7 +1471,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 129339,
-            "percentual_simulado": 24.0,
+            "percentual_simulado": 24.01,
             "posicao": 2
           },
           {
@@ -1460,10 +1479,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 100426,
+            "votos": 100340,
             "is_abstencao": true,
-            "votos_simulados": 100426,
-            "percentual_simulado": 18.64,
+            "votos_simulados": 100340,
+            "percentual_simulado": 18.62,
             "foto": "",
             "posicao": 3
           },
@@ -1504,7 +1523,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 476019
+        "comparecimento": 476019,
+        "abstencao": 100340
       }
     }
   },
@@ -1580,7 +1600,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.88
+            "percentual_simulado": 20.88,
+            "votos_simulados": 2259151
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -1704,7 +1725,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 9053601
+        "comparecimento": 9053601,
+        "abstencao": 2259151
       },
       "Governador": {
         "posicao": 3,
@@ -1731,7 +1753,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 43.85
+            "percentual_simulado": 43.86
           },
           {
             "nome": "Acm Neto",
@@ -1749,11 +1771,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 2259151,
+            "votos": 2258135,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 21.41
+            "percentual_simulado": 21.41,
+            "votos_simulados": 2258135
           },
           {
             "nome": "Ronaldo Mansur",
@@ -1800,7 +1823,8 @@
             "percentual_simulado": 0.03
           }
         ],
-        "comparecimento": 9046179
+        "comparecimento": 9046179,
+        "abstencao": 2258135
       },
       "Senador": {
         "posicao": 3,
@@ -1826,7 +1850,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 3040199,
-            "percentual_simulado": 28.71,
+            "percentual_simulado": 28.72,
             "posicao": 1
           },
           {
@@ -1838,7 +1862,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 2598745,
-            "percentual_simulado": 24.54,
+            "percentual_simulado": 24.55,
             "posicao": 2
           },
           {
@@ -1846,10 +1870,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 2259151,
+            "votos": 2258135,
             "is_abstencao": true,
-            "votos_simulados": 2259151,
-            "percentual_simulado": 21.34,
+            "votos_simulados": 2258135,
+            "percentual_simulado": 21.33,
             "foto": "",
             "posicao": 3
           },
@@ -1890,7 +1914,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 9046179
+        "comparecimento": 9046179,
+        "abstencao": 2258135
       }
     }
   },
@@ -1966,7 +1991,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 16.2
+            "percentual_simulado": 16.2,
+            "votos_simulados": 1086074
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -2090,7 +2116,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 5910471
+        "comparecimento": 5910471,
+        "abstencao": 1086074
       },
       "Governador": {
         "posicao": 3,
@@ -2119,7 +2146,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 44.29
+            "percentual_simulado": 44.3
           },
           {
             "nome": "Ciro Gomes",
@@ -2137,11 +2164,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1086074,
+            "votos": 1085522,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 16.73
+            "percentual_simulado": 16.72,
+            "votos_simulados": 1085522
           },
           {
             "nome": "Delegado Huggo",
@@ -2210,7 +2238,8 @@
             "percentual_simulado": 0.01
           }
         ],
-        "comparecimento": 5905522
+        "comparecimento": 5905522,
+        "abstencao": 1085522
       },
       "Senador": {
         "posicao": 4,
@@ -2235,7 +2264,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1984736,
-            "percentual_simulado": 30.42,
+            "percentual_simulado": 30.43,
             "posicao": 1
           },
           {
@@ -2267,10 +2296,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1086074,
+            "votos": 1085522,
             "is_abstencao": true,
-            "votos_simulados": 1086074,
-            "percentual_simulado": 16.65,
+            "votos_simulados": 1085522,
+            "percentual_simulado": 16.64,
             "foto": "",
             "posicao": 4
           },
@@ -2299,7 +2328,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 5905522
+        "comparecimento": 5905522,
+        "abstencao": 1085522
       }
     }
   },
@@ -2368,7 +2398,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 19.41
+            "percentual_simulado": 19.41,
+            "votos_simulados": 426924
           },
           {
             "nome": "Ronaldo Caiado",
@@ -2492,13 +2523,14 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 1831396
+        "comparecimento": 1831396,
+        "abstencao": 426924
       },
       "Governador": {
         "posicao": 3,
-        "votos": 426924,
-        "total_aptos": 2258320,
-        "taxa_abstencao": 18.9,
+        "votos": 426067,
+        "total_aptos": 2243988,
+        "taxa_abstencao": 18.99,
         "vencedor_primeiro_turno": false,
         "iria_segundo_turno": false,
         "eleito_senado": false,
@@ -2523,7 +2555,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 39.72
+            "percentual_simulado": 39.74
           },
           {
             "nome": "Leandro Grass",
@@ -2534,18 +2566,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 27.42
+            "percentual_simulado": 27.43
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 426924,
+            "votos": 426067,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.54
+            "percentual_simulado": 20.51,
+            "votos_simulados": 426067
           },
           {
             "nome": "Paula Belmonte",
@@ -2556,7 +2589,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 4,
-            "percentual_simulado": 6.77
+            "percentual_simulado": 6.78
           },
           {
             "nome": "Kiko Caputo",
@@ -2635,7 +2668,9 @@
             "posicao": 11,
             "percentual_simulado": 0.0
           }
-        ]
+        ],
+        "comparecimento": 1817921,
+        "abstencao": 426067
       },
       "Senador": {
         "posicao": 3,
@@ -2661,7 +2696,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 648680,
-            "percentual_simulado": 30.72,
+            "percentual_simulado": 30.73,
             "posicao": 1
           },
           {
@@ -2673,7 +2708,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 491986,
-            "percentual_simulado": 23.3,
+            "percentual_simulado": 23.31,
             "posicao": 2
           },
           {
@@ -2681,10 +2716,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 426924,
+            "votos": 426067,
             "is_abstencao": true,
-            "votos_simulados": 426924,
-            "percentual_simulado": 20.22,
+            "votos_simulados": 426067,
+            "percentual_simulado": 20.18,
             "foto": "",
             "posicao": 3
           },
@@ -2697,7 +2732,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 311703,
-            "percentual_simulado": 14.76,
+            "percentual_simulado": 14.77,
             "posicao": 4
           },
           {
@@ -2725,7 +2760,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 1817921
+        "comparecimento": 1817921,
+        "abstencao": 426067
       }
     }
   },
@@ -2794,7 +2830,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 22.12
+            "percentual_simulado": 22.12,
+            "votos_simulados": 639368
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -2918,7 +2955,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2352282
+        "comparecimento": 2352282,
+        "abstencao": 639368
       },
       "Governador": {
         "posicao": 3,
@@ -2944,7 +2982,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 38.11
+            "percentual_simulado": 38.12
           },
           {
             "nome": "Ricardo Ferraço",
@@ -2962,11 +3000,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 639368,
+            "votos": 638972,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 23.24
+            "percentual_simulado": 23.23,
+            "votos_simulados": 638972
           },
           {
             "nome": "Helder Salomão",
@@ -3002,7 +3041,8 @@
             "percentual_simulado": 0.1
           }
         ],
-        "comparecimento": 2348612
+        "comparecimento": 2348612,
+        "abstencao": 638972
       },
       "Senador": {
         "posicao": 2,
@@ -3037,10 +3077,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 639368,
+            "votos": 638972,
             "is_abstencao": true,
-            "votos_simulados": 639368,
-            "percentual_simulado": 22.81,
+            "votos_simulados": 638972,
+            "percentual_simulado": 22.8,
             "foto": "",
             "posicao": 2
           },
@@ -3093,7 +3133,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2348612
+        "comparecimento": 2348612,
+        "abstencao": 638972
       }
     }
   },
@@ -3169,7 +3210,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 22.46
+            "percentual_simulado": 22.46,
+            "votos_simulados": 1109003
           },
           {
             "nome": "Ronaldo Caiado",
@@ -3293,7 +3335,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 3971587
+        "comparecimento": 3971587,
+        "abstencao": 1109003
       },
       "Governador": {
         "posicao": 2,
@@ -3328,11 +3371,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1109003,
+            "votos": 1108382,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 23.4
+            "percentual_simulado": 23.39,
+            "votos_simulados": 1108382
           },
           {
             "nome": "Wilder Morais",
@@ -3390,7 +3434,8 @@
             "percentual_simulado": 0.03
           }
         ],
-        "comparecimento": 3966488
+        "comparecimento": 3966488,
+        "abstencao": 1108382
       },
       "Senador": {
         "posicao": 3,
@@ -3416,7 +3461,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1297121,
-            "percentual_simulado": 27.23,
+            "percentual_simulado": 27.24,
             "posicao": 1
           },
           {
@@ -3436,10 +3481,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1109003,
+            "votos": 1108382,
             "is_abstencao": true,
-            "votos_simulados": 1109003,
-            "percentual_simulado": 23.28,
+            "votos_simulados": 1108382,
+            "percentual_simulado": 23.27,
             "foto": "",
             "posicao": 3
           },
@@ -3480,7 +3525,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 3966488
+        "comparecimento": 3966488,
+        "abstencao": 1108382
       }
     }
   },
@@ -3556,7 +3602,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.32
+            "percentual_simulado": 20.32,
+            "votos_simulados": 1022772
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -3680,7 +3727,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 4160343
+        "comparecimento": 4160343,
+        "abstencao": 1022772
       },
       "Governador": {
         "posicao": 3,
@@ -3727,11 +3775,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1022772,
+            "votos": 1022456,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 21.01
+            "percentual_simulado": 21.0,
+            "votos_simulados": 1022456
           },
           {
             "nome": "Felipe Camarão",
@@ -3800,7 +3849,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 4158395
+        "comparecimento": 4158395,
+        "abstencao": 1022456
       },
       "Senador": {
         "posicao": 2,
@@ -3835,10 +3885,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1022772,
+            "votos": 1022456,
             "is_abstencao": true,
-            "votos_simulados": 1022772,
-            "percentual_simulado": 22.98,
+            "votos_simulados": 1022456,
+            "percentual_simulado": 22.97,
             "foto": "",
             "posicao": 2
           },
@@ -3891,7 +3941,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 4158395
+        "comparecimento": 4158395,
+        "abstencao": 1022456
       }
     }
   },
@@ -3967,7 +4018,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 23.77
+            "percentual_simulado": 23.77,
+            "votos_simulados": 3735098
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -4091,7 +4143,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 12637274
+        "comparecimento": 12637274,
+        "abstencao": 3735098
       },
       "Governador": {
         "posicao": 2,
@@ -4131,11 +4184,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 3735098,
+            "votos": 3734021,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 24.66
+            "percentual_simulado": 24.66,
+            "votos_simulados": 3734021
           },
           {
             "nome": "Patrus Ananias",
@@ -4248,7 +4302,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 12627167
+        "comparecimento": 12627167,
+        "abstencao": 3734021
       },
       "Senador": {
         "posicao": 2,
@@ -4283,9 +4338,9 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 3735098,
+            "votos": 3734021,
             "is_abstencao": true,
-            "votos_simulados": 3735098,
+            "votos_simulados": 3734021,
             "percentual_simulado": 24.31,
             "foto": "",
             "posicao": 2
@@ -4339,7 +4394,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 12627167
+        "comparecimento": 12627167,
+        "abstencao": 3734021
       }
     }
   },
@@ -4415,7 +4471,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 24.48
+            "percentual_simulado": 24.48,
+            "votos_simulados": 483210
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -4539,7 +4596,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 1541220
+        "comparecimento": 1541220,
+        "abstencao": 483210
       },
       "Governador": {
         "posicao": 2,
@@ -4569,18 +4627,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 49.52
+            "percentual_simulado": 49.53
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 483210,
+            "votos": 482860,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 26.17
+            "percentual_simulado": 26.15,
+            "votos_simulados": 482860
           },
           {
             "nome": "Fábio Trad",
@@ -4591,7 +4650,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 3,
-            "percentual_simulado": 17.48
+            "percentual_simulado": 17.49
           },
           {
             "nome": "João Henrique Catan",
@@ -4660,7 +4719,8 @@
             "percentual_simulado": 0.05
           }
         ],
-        "comparecimento": 1539009
+        "comparecimento": 1539009,
+        "abstencao": 482860
       },
       "Senador": {
         "posicao": 3,
@@ -4706,10 +4766,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 483210,
+            "votos": 482860,
             "is_abstencao": true,
-            "votos_simulados": 483210,
-            "percentual_simulado": 24.46,
+            "votos_simulados": 482860,
+            "percentual_simulado": 24.45,
             "foto": "",
             "posicao": 3
           },
@@ -4734,7 +4794,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 138955,
-            "percentual_simulado": 7.03,
+            "percentual_simulado": 7.04,
             "posicao": 5
           },
           {
@@ -4750,7 +4810,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 1539009
+        "comparecimento": 1539009,
+        "abstencao": 482860
       }
     }
   },
@@ -4816,7 +4877,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 22.71
+            "percentual_simulado": 22.71,
+            "votos_simulados": 585668
           },
           {
             "nome": "Lula",
@@ -4951,7 +5013,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2052133
+        "comparecimento": 2052133,
+        "abstencao": 585668
       },
       "Governador": {
         "posicao": 2,
@@ -4986,11 +5049,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 585668,
+            "votos": 585274,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 23.98
+            "percentual_simulado": 23.97,
+            "votos_simulados": 585274
           },
           {
             "nome": "Wellington Fagundes",
@@ -5048,7 +5112,8 @@
             "percentual_simulado": 0.11
           }
         ],
-        "comparecimento": 2049718
+        "comparecimento": 2049718,
+        "abstencao": 585274
       },
       "Senador": {
         "posicao": 2,
@@ -5075,7 +5140,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 783504,
-            "percentual_simulado": 31.67,
+            "percentual_simulado": 31.68,
             "posicao": 1
           },
           {
@@ -5083,10 +5148,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 585668,
+            "votos": 585274,
             "is_abstencao": true,
-            "votos_simulados": 585668,
-            "percentual_simulado": 23.68,
+            "votos_simulados": 585274,
+            "percentual_simulado": 23.66,
             "foto": "",
             "posicao": 2
           },
@@ -5111,7 +5176,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 311513,
-            "percentual_simulado": 12.59,
+            "percentual_simulado": 12.6,
             "posicao": 4
           },
           {
@@ -5139,7 +5204,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2049718
+        "comparecimento": 2049718,
+        "abstencao": 585274
       }
     }
   },
@@ -5215,7 +5281,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 19.74
+            "percentual_simulado": 19.74,
+            "votos_simulados": 1195893
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -5339,7 +5406,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 5066504
+        "comparecimento": 5066504,
+        "abstencao": 1195893
       },
       "Governador": {
         "posicao": 3,
@@ -5384,11 +5452,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1195893,
+            "votos": 1195412,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.76
+            "percentual_simulado": 20.75,
+            "votos_simulados": 1195412
           },
           {
             "nome": "Araceli",
@@ -5435,7 +5504,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 5062750
+        "comparecimento": 5062750,
+        "abstencao": 1195412
       },
       "Senador": {
         "posicao": 2,
@@ -5470,10 +5540,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1195893,
+            "votos": 1195412,
             "is_abstencao": true,
-            "votos_simulados": 1195893,
-            "percentual_simulado": 20.42,
+            "votos_simulados": 1195412,
+            "percentual_simulado": 20.41,
             "foto": "",
             "posicao": 2
           },
@@ -5486,7 +5556,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1188601,
-            "percentual_simulado": 20.29,
+            "percentual_simulado": 20.3,
             "posicao": 3
           },
           {
@@ -5510,7 +5580,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 396200,
-            "percentual_simulado": 6.76,
+            "percentual_simulado": 6.77,
             "posicao": 5
           },
           {
@@ -5526,7 +5596,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 5062750
+        "comparecimento": 5062750,
+        "abstencao": 1195412
       }
     }
   },
@@ -5602,7 +5673,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.34
+            "percentual_simulado": 18.34,
+            "votos_simulados": 564543
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -5726,7 +5798,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2683988
+        "comparecimento": 2683988,
+        "abstencao": 564543
       },
       "Governador": {
         "posicao": 2,
@@ -5753,18 +5826,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 51.57
+            "percentual_simulado": 51.58
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 564543,
+            "votos": 564062,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 19.8
+            "percentual_simulado": 19.79,
+            "votos_simulados": 564062
           },
           {
             "nome": "Efraim Filho",
@@ -5811,7 +5885,8 @@
             "percentual_simulado": 0.08
           }
         ],
-        "comparecimento": 2677904
+        "comparecimento": 2677904,
+        "abstencao": 564062
       },
       "Senador": {
         "posicao": 3,
@@ -5837,7 +5912,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 925975,
-            "percentual_simulado": 30.52,
+            "percentual_simulado": 30.53,
             "posicao": 1
           },
           {
@@ -5857,10 +5932,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 564543,
+            "votos": 564062,
             "is_abstencao": true,
-            "votos_simulados": 564543,
-            "percentual_simulado": 18.61,
+            "votos_simulados": 564062,
+            "percentual_simulado": 18.6,
             "foto": "",
             "posicao": 3
           },
@@ -5901,7 +5976,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2677904
+        "comparecimento": 2677904,
+        "abstencao": 564062
       }
     }
   },
@@ -5977,7 +6053,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.98
+            "percentual_simulado": 18.98,
+            "votos_simulados": 1312388
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -6101,7 +6178,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 5911062
+        "comparecimento": 5911062,
+        "abstencao": 1312388
       },
       "Governador": {
         "posicao": 3,
@@ -6147,11 +6225,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1312388,
+            "votos": 1311753,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 19.95
+            "percentual_simulado": 19.94,
+            "votos_simulados": 1311753
           },
           {
             "nome": "Ivan Moraes",
@@ -6209,7 +6288,8 @@
             "percentual_simulado": 0.01
           }
         ],
-        "comparecimento": 5905236
+        "comparecimento": 5905236,
+        "abstencao": 1311753
       },
       "Senador": {
         "posicao": 3,
@@ -6255,10 +6335,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1312388,
+            "votos": 1311753,
             "is_abstencao": true,
-            "votos_simulados": 1312388,
-            "percentual_simulado": 19.44,
+            "votos_simulados": 1311753,
+            "percentual_simulado": 19.43,
             "foto": "",
             "posicao": 3
           },
@@ -6271,7 +6351,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1114826,
-            "percentual_simulado": 16.51,
+            "percentual_simulado": 16.52,
             "posicao": 4
           },
           {
@@ -6299,7 +6379,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 5905236
+        "comparecimento": 5905236,
+        "abstencao": 1311753
       }
     }
   },
@@ -6375,7 +6456,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 17.77
+            "percentual_simulado": 17.77,
+            "votos_simulados": 463875
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -6499,7 +6581,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2240883
+        "comparecimento": 2240883,
+        "abstencao": 463875
       },
       "Governador": {
         "posicao": 3,
@@ -6530,7 +6613,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 57.81
+            "percentual_simulado": 57.82
           },
           {
             "nome": "Joel Rodrigues",
@@ -6548,11 +6631,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 463875,
+            "votos": 463678,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.67
+            "percentual_simulado": 18.66,
+            "votos_simulados": 463678
           },
           {
             "nome": "Professor Gisvaldo",
@@ -6643,7 +6727,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2239386
+        "comparecimento": 2239386,
+        "abstencao": 463678
       },
       "Senador": {
         "posicao": 3,
@@ -6689,10 +6774,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 463875,
+            "votos": 463678,
             "is_abstencao": true,
-            "votos_simulados": 463875,
-            "percentual_simulado": 18.37,
+            "votos_simulados": 463678,
+            "percentual_simulado": 18.36,
             "foto": "",
             "posicao": 3
           },
@@ -6733,7 +6818,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2239386
+        "comparecimento": 2239386,
+        "abstencao": 463678
       }
     }
   },
@@ -6809,7 +6895,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 21.2
+            "percentual_simulado": 21.2,
+            "votos_simulados": 1772200
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -6933,7 +7020,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 6841457
+        "comparecimento": 6841457,
+        "abstencao": 1772200
       },
       "Governador": {
         "posicao": 2,
@@ -6970,11 +7058,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1772200,
+            "votos": 1771009,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 22.11
+            "percentual_simulado": 22.1,
+            "votos_simulados": 1771009
           },
           {
             "nome": "Sandro Alex",
@@ -7054,7 +7143,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 6829615
+        "comparecimento": 6829615,
+        "abstencao": 1771009
       },
       "Senador": {
         "posicao": 3,
@@ -7100,10 +7190,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1772200,
+            "votos": 1771009,
             "is_abstencao": true,
-            "votos_simulados": 1772200,
-            "percentual_simulado": 21.97,
+            "votos_simulados": 1771009,
+            "percentual_simulado": 21.96,
             "foto": "",
             "posicao": 3
           },
@@ -7144,7 +7234,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 6829615
+        "comparecimento": 6829615,
+        "abstencao": 1771009
       }
     }
   },
@@ -7213,7 +7304,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 24.24
+            "percentual_simulado": 24.24,
+            "votos_simulados": 2997846
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -7337,7 +7429,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 9859802
+        "comparecimento": 9859802,
+        "abstencao": 2997846
       },
       "Governador": {
         "posicao": 3,
@@ -7367,7 +7460,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 37.49
+            "percentual_simulado": 37.5
           },
           {
             "nome": "Eduardo Paes",
@@ -7385,11 +7478,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 2997846,
+            "votos": 2996650,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 26.31
+            "percentual_simulado": 26.31,
+            "votos_simulados": 2996650
           },
           {
             "nome": "William Siri",
@@ -7469,7 +7563,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 9845867
+        "comparecimento": 9845867,
+        "abstencao": 2996650
       },
       "Senador": {
         "posicao": 2,
@@ -7504,10 +7599,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 2997846,
+            "votos": 2996650,
             "is_abstencao": true,
-            "votos_simulados": 2997846,
-            "percentual_simulado": 24.84,
+            "votos_simulados": 2996650,
+            "percentual_simulado": 24.83,
             "foto": "",
             "posicao": 2
           },
@@ -7560,7 +7655,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 9845867
+        "comparecimento": 9845867,
+        "abstencao": 2996650
       }
     }
   },
@@ -7629,7 +7725,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 19.09
+            "percentual_simulado": 19.09,
+            "votos_simulados": 488812
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -7753,7 +7850,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2171013
+        "comparecimento": 2171013,
+        "abstencao": 488812
       },
       "Governador": {
         "posicao": 4,
@@ -7810,11 +7908,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 488812,
+            "votos": 488493,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 4,
-            "percentual_simulado": 19.75
+            "percentual_simulado": 19.74,
+            "votos_simulados": 488493
           },
           {
             "nome": "Arinalda Do Mlb",
@@ -7872,7 +7971,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 2167714
+        "comparecimento": 2167714,
+        "abstencao": 488493
       },
       "Senador": {
         "posicao": 3,
@@ -7918,10 +8018,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 488812,
+            "votos": 488493,
             "is_abstencao": true,
-            "votos_simulados": 488812,
-            "percentual_simulado": 19.66,
+            "votos_simulados": 488493,
+            "percentual_simulado": 19.65,
             "foto": "",
             "posicao": 3
           },
@@ -7962,7 +8062,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 2167714
+        "comparecimento": 2167714,
+        "abstencao": 488493
       }
     }
   },
@@ -8028,7 +8129,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 22.11
+            "percentual_simulado": 22.11,
+            "votos_simulados": 274813
           },
           {
             "nome": "Lula",
@@ -8163,7 +8265,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 991080
+        "comparecimento": 991080,
+        "abstencao": 274813
       },
       "Governador": {
         "posicao": 2,
@@ -8191,18 +8294,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 44.05
+            "percentual_simulado": 44.06
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 274813,
+            "votos": 274695,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 22.53
+            "percentual_simulado": 22.52,
+            "votos_simulados": 274695
           },
           {
             "nome": "Adailton Furia",
@@ -8260,7 +8364,8 @@
             "percentual_simulado": 0.36
           }
         ],
-        "comparecimento": 990313
+        "comparecimento": 990313,
+        "abstencao": 274695
       },
       "Senador": {
         "posicao": 1,
@@ -8284,10 +8389,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 274813,
+            "votos": 274695,
             "is_abstencao": true,
-            "votos_simulados": 274813,
-            "percentual_simulado": 29.49,
+            "votos_simulados": 274695,
+            "percentual_simulado": 29.48,
             "foto": "",
             "posicao": 1
           },
@@ -8300,7 +8405,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 269813,
-            "percentual_simulado": 28.95,
+            "percentual_simulado": 28.96,
             "posicao": 2
           },
           {
@@ -8352,7 +8457,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 990313
+        "comparecimento": 990313,
+        "abstencao": 274695
       }
     }
   },
@@ -8428,7 +8534,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 17.44
+            "percentual_simulado": 17.44,
+            "votos_simulados": 68749
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -8552,7 +8659,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 332772
+        "comparecimento": 332772,
+        "abstencao": 68749
       },
       "Governador": {
         "posicao": 3,
@@ -8578,7 +8686,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 56.9
+            "percentual_simulado": 56.91
           },
           {
             "nome": "Soldado Sampaio",
@@ -8596,11 +8704,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 68749,
+            "votos": 68644,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 17.71
+            "percentual_simulado": 17.69,
+            "votos_simulados": 68644
           },
           {
             "nome": "Rosi Aires",
@@ -8636,7 +8745,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 331959
+        "comparecimento": 331959,
+        "abstencao": 68644
       },
       "Senador": {
         "posicao": 3,
@@ -8662,7 +8772,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 111744,
-            "percentual_simulado": 29.81,
+            "percentual_simulado": 29.82,
             "posicao": 1
           },
           {
@@ -8682,10 +8792,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 68749,
+            "votos": 68644,
             "is_abstencao": true,
-            "votos_simulados": 68749,
-            "percentual_simulado": 18.34,
+            "votos_simulados": 68644,
+            "percentual_simulado": 18.32,
             "foto": "",
             "posicao": 3
           },
@@ -8710,7 +8820,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 32145,
-            "percentual_simulado": 8.57,
+            "percentual_simulado": 8.58,
             "posicao": 5
           },
           {
@@ -8726,7 +8836,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 331959
+        "comparecimento": 331959,
+        "abstencao": 68644
       }
     }
   },
@@ -8802,7 +8913,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 22.08
+            "percentual_simulado": 22.08,
+            "votos_simulados": 1819642
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -8926,7 +9038,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 6702903
+        "comparecimento": 6702903,
+        "abstencao": 1819642
       },
       "Governador": {
         "posicao": 3,
@@ -8972,11 +9085,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1819642,
+            "votos": 1819041,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 23.11
+            "percentual_simulado": 23.1,
+            "votos_simulados": 1819041
           },
           {
             "nome": "Gabriel Souza",
@@ -8998,7 +9112,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 5,
-            "percentual_simulado": 1.29
+            "percentual_simulado": 1.3
           },
           {
             "nome": "Priscila Voigt",
@@ -9034,7 +9148,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 6697424
+        "comparecimento": 6697424,
+        "abstencao": 1819041
       },
       "Senador": {
         "posicao": 3,
@@ -9080,10 +9195,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1819642,
+            "votos": 1819041,
             "is_abstencao": true,
-            "votos_simulados": 1819642,
-            "percentual_simulado": 22.72,
+            "votos_simulados": 1819041,
+            "percentual_simulado": 22.71,
             "foto": "",
             "posicao": 3
           },
@@ -9124,7 +9239,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 6697424
+        "comparecimento": 6697424,
+        "abstencao": 1819041
       }
     }
   },
@@ -9200,7 +9316,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 19.44
+            "percentual_simulado": 19.44,
+            "votos_simulados": 1086492
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -9324,7 +9441,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 4648159
+        "comparecimento": 4648159,
+        "abstencao": 1086492
       },
       "Governador": {
         "posicao": 2,
@@ -9354,18 +9472,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 54.98
+            "percentual_simulado": 54.99
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1086492,
+            "votos": 1084991,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 2,
-            "percentual_simulado": 20.3
+            "percentual_simulado": 20.28,
+            "votos_simulados": 1084991
           },
           {
             "nome": "Gelson Merísio",
@@ -9445,7 +9564,8 @@
             "percentual_simulado": 0.05
           }
         ],
-        "comparecimento": 4634550
+        "comparecimento": 4634550,
+        "abstencao": 1084991
       },
       "Senador": {
         "posicao": 3,
@@ -9471,7 +9591,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1603614,
-            "percentual_simulado": 29.9,
+            "percentual_simulado": 29.91,
             "posicao": 1
           },
           {
@@ -9483,7 +9603,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 1304273,
-            "percentual_simulado": 24.32,
+            "percentual_simulado": 24.33,
             "posicao": 2
           },
           {
@@ -9491,10 +9611,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 1086492,
+            "votos": 1084991,
             "is_abstencao": true,
-            "votos_simulados": 1086492,
-            "percentual_simulado": 20.26,
+            "votos_simulados": 1084991,
+            "percentual_simulado": 20.24,
             "foto": "",
             "posicao": 3
           },
@@ -9507,7 +9627,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 748353,
-            "percentual_simulado": 13.95,
+            "percentual_simulado": 13.96,
             "posicao": 4
           },
           {
@@ -9519,7 +9639,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 449012,
-            "percentual_simulado": 8.37,
+            "percentual_simulado": 8.38,
             "posicao": 5
           },
           {
@@ -9535,7 +9655,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 4634550
+        "comparecimento": 4634550,
+        "abstencao": 1084991
       }
     }
   },
@@ -9611,7 +9732,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.08
+            "percentual_simulado": 18.08,
+            "votos_simulados": 301053
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -9735,7 +9857,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 1439082
+        "comparecimento": 1439082,
+        "abstencao": 301053
       },
       "Governador": {
         "posicao": 3,
@@ -9760,7 +9883,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 48.78
+            "percentual_simulado": 48.79
           },
           {
             "nome": "Valmir De Francisquinho",
@@ -9778,11 +9901,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 301053,
+            "votos": 300851,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.19
+            "percentual_simulado": 20.18,
+            "votos_simulados": 300851
           },
           {
             "nome": "Taty  Cristina De Jesus",
@@ -9807,7 +9931,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 1436609
+        "comparecimento": 1436609,
+        "abstencao": 300851
       },
       "Senador": {
         "posicao": 3,
@@ -9833,7 +9958,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 470004,
-            "percentual_simulado": 28.92,
+            "percentual_simulado": 28.93,
             "posicao": 1
           },
           {
@@ -9845,7 +9970,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 390566,
-            "percentual_simulado": 24.03,
+            "percentual_simulado": 24.04,
             "posicao": 2
           },
           {
@@ -9853,10 +9978,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 301053,
+            "votos": 300851,
             "is_abstencao": true,
-            "votos_simulados": 301053,
-            "percentual_simulado": 18.53,
+            "votos_simulados": 300851,
+            "percentual_simulado": 18.52,
             "foto": "",
             "posicao": 3
           },
@@ -9897,7 +10022,8 @@
             "posicao": 6
           }
         ],
-        "comparecimento": 1436609
+        "comparecimento": 1436609,
+        "abstencao": 300851
       }
     }
   },
@@ -9973,7 +10099,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 23.61
+            "percentual_simulado": 23.61,
+            "votos_simulados": 7690900
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -10097,7 +10224,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 26431992
+        "comparecimento": 26431992,
+        "abstencao": 7690900
       },
       "Governador": {
         "posicao": 3,
@@ -10141,11 +10269,12 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 7690900,
+            "votos": 7687443,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 24.95
+            "percentual_simulado": 24.94,
+            "votos_simulados": 7687443
           },
           {
             "nome": "Vivian Mendes",
@@ -10181,7 +10310,8 @@
             "percentual_simulado": 0.19
           }
         ],
-        "comparecimento": 26394256
+        "comparecimento": 26394256,
+        "abstencao": 7687443
       },
       "Senador": {
         "posicao": 1,
@@ -10207,10 +10337,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 7690900,
+            "votos": 7687443,
             "is_abstencao": true,
-            "votos_simulados": 7690900,
-            "percentual_simulado": 24.03,
+            "votos_simulados": 7687443,
+            "percentual_simulado": 24.02,
             "foto": "",
             "posicao": 1
           },
@@ -10235,7 +10365,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 7120144,
-            "percentual_simulado": 22.24,
+            "percentual_simulado": 22.25,
             "posicao": 3
           },
           {
@@ -10247,7 +10377,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 4498724,
-            "percentual_simulado": 14.05,
+            "percentual_simulado": 14.06,
             "posicao": 4
           },
           {
@@ -10299,7 +10429,8 @@
             "posicao": 8
           }
         ],
-        "comparecimento": 26394256
+        "comparecimento": 26394256,
+        "abstencao": 7687443
       }
     }
   },
@@ -10368,7 +10499,8 @@
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 18.9
+            "percentual_simulado": 18.9,
+            "votos_simulados": 216827
           },
           {
             "nome": "Escritor Augusto Cury",
@@ -10492,7 +10624,8 @@
             "percentual_simulado": 0.0
           }
         ],
-        "comparecimento": 965196
+        "comparecimento": 965196,
+        "abstencao": 216827
       },
       "Governador": {
         "posicao": 3,
@@ -10519,7 +10652,7 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 1,
-            "percentual_simulado": 36.25
+            "percentual_simulado": 36.26
           },
           {
             "nome": "Vicentinho Júnior",
@@ -10530,18 +10663,19 @@
             "is_abstencao": false,
             "foto": "",
             "posicao": 2,
-            "percentual_simulado": 34.99
+            "percentual_simulado": 35.0
           },
           {
             "nome": "Abstenção",
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 216827,
+            "votos": 216623,
             "is_abstencao": true,
             "foto": "assets/abstencao.svg",
             "posicao": 3,
-            "percentual_simulado": 20.35
+            "percentual_simulado": 20.34,
+            "votos_simulados": 216623
           },
           {
             "nome": "Laurez Moreira",
@@ -10588,7 +10722,8 @@
             "percentual_simulado": 0.12
           }
         ],
-        "comparecimento": 963810
+        "comparecimento": 963810,
+        "abstencao": 216623
       },
       "Senador": {
         "posicao": 3,
@@ -10626,7 +10761,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 264618,
-            "percentual_simulado": 23.95,
+            "percentual_simulado": 23.96,
             "posicao": 2
           },
           {
@@ -10634,10 +10769,10 @@
             "partido": "ELEITORES AUSENTES",
             "nome_exibicao": "Abstenção (ELEITORES AUSENTES)",
             "numero": "00",
-            "votos": 216827,
+            "votos": 216623,
             "is_abstencao": true,
-            "votos_simulados": 216827,
-            "percentual_simulado": 19.63,
+            "votos_simulados": 216623,
+            "percentual_simulado": 19.61,
             "foto": "",
             "posicao": 3
           },
@@ -10650,7 +10785,7 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 173156,
-            "percentual_simulado": 15.67,
+            "percentual_simulado": 15.68,
             "posicao": 4
           },
           {
@@ -10674,11 +10809,12 @@
             "is_abstencao": false,
             "foto": "",
             "votos_simulados": 35518,
-            "percentual_simulado": 3.21,
+            "percentual_simulado": 3.22,
             "posicao": 6
           }
         ],
-        "comparecimento": 963810
+        "comparecimento": 963810,
+        "abstencao": 216623
       }
     }
   }

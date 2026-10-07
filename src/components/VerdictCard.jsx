@@ -54,7 +54,7 @@ export default function VerdictCard({
     locationName = `${uf.nome} (${uf.uf})`;
     const cargoData = uf.cargos?.[currentCargo];
     aptos = cargoData?.total_aptos || uf.aptos;
-    abstencao = cargoData?.votos || uf.abstencao;
+    abstencao = cargoData?.votos || cargoData?.abstencao || uf.abstencao;
     taxa = cargoData?.taxa_abstencao || uf.taxa_abstencao;
   } else if (isMun && currentScope.item) {
     const mun = currentScope.item;
@@ -301,7 +301,10 @@ export default function VerdictCard({
       listItems = (targetGov?.ranking || []).map(c => ({
         ...c,
         nome: c.is_abstencao ? 'Candidata Abstenção' : cleanCandidateName(c.nome_exibicao || c.nome),
-        partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || '')
+        partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || ''),
+        votos: c.is_abstencao ? votosAbst : c.votos,
+        votos_simulados: c.is_abstencao ? votosAbst : (c.votos_simulados || c.votos),
+        percentual_simulado: c.is_abstencao ? abstPct : (c.percentual_simulado ?? c.percentual)
       }));
     }
   }
@@ -435,7 +438,10 @@ export default function VerdictCard({
       const cleanedSenRanking = (targetSen?.ranking || []).map(c => ({
         ...c,
         nome: c.is_abstencao ? 'Candidata Abstenção' : cleanCandidateName(c.nome_exibicao || c.nome),
-        partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || '')
+        partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || ''),
+        votos: c.is_abstencao ? votosAbst : c.votos,
+        votos_simulados: c.is_abstencao ? votosAbst : (c.votos_simulados || c.votos),
+        percentual_simulado: c.is_abstencao ? abstPct : (c.percentual_simulado ?? c.percentual)
       }));
 
       // Agrega candidatos do 5º lugar em diante no nível local
