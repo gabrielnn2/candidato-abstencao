@@ -134,7 +134,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            Alteraria a disputa de 16 Governos Estaduais
+            Alteraria a disputa de {findings.govForcouEIria2t + findings.govForcou2tEntreDois} Governos Estaduais
           </h3>
 
           <p className="finding-narrative">
@@ -205,7 +205,7 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
       <div className="civic-callout-card glass-panel" id="civicCalloutCard">
         <div className="civic-callout-content">
           <p className="civic-callout-text">
-            Seu voto é importante e pode impactar o futuro do Brasil. Não deixe de exercer seus direitos. Compareça às urnas no dia <strong>25 de outubro de 2026</strong>.
+            Seu voto é importante e pode impactar o futuro do Brasil. Não deixe de exercer seus direitos, quando você não vota, outra pessoa vota por você. Compareça às urnas no dia <strong>25 de outubro de 2026</strong>.
           </p>
         </div>
       </div>

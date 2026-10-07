@@ -555,7 +555,7 @@
             mas o líder <span class="highlight-white">${primeiroComp.nome_exibicao} RESISTIRIA EM 1º TURNO!</span>
           `;
           el.verdictSubtext.textContent = `A Abstenção superou todos os candidatos de oposição (como ${(targetData.candidatos_superados && targetData.candidatos_superados[0]) || 'os demais concorrentes'}), tornando-se a 2ª força política do estado. Mesmo assim, ${primeiroComp.nome_exibicao} obteve uma votação tão expressiva (${formatPercent(primeiroComp.percentual_simulado)} dos votos totais simulados) que venceria a eleição diretamente no 1º Turno sem necessidade de 2ª etapa!`;
-          el.badgeSegundoTurnoText.innerHTML = `Forçaria 2º Turno? <strong>🛡️ Não (Líder resiste com ${formatPercent(primeiroComp.percentual_simulado)})</strong>`;
+          el.badgeSegundoTurnoText.innerHTML = `Forçaria 2º Turno? <strong>🔵 Não (Líder resiste com ${formatPercent(primeiroComp.percentual_simulado)})</strong>`;
           el.badgeSegundoTurno.classList.add('highlight');
         } else {
           el.verdictHeadline.innerHTML = `
@@ -583,7 +583,7 @@
               mas o líder <span class="highlight-white">RESISTIRIA EM 1º TURNO!</span>
             `;
             el.verdictSubtext.textContent = `Mesmo com ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(taxa)}) contados como válidos, ${g1t.governador} (${g1t.partido}) manteria ${formatPercent(g1t.pct_com_abstencao)} dos votos (> 50%) — um dos raros 3 casos no país a resistir ao teste da abstenção!`;
-            el.badgeSegundoTurnoText.innerHTML = `Forçaria 2º Turno? <strong>🛡️ Não (Líder resiste com ${formatPercent(g1t.pct_com_abstencao)})</strong>`;
+            el.badgeSegundoTurnoText.innerHTML = `Forçaria 2º Turno? <strong>🔵 Não (Líder resiste com ${formatPercent(g1t.pct_com_abstencao)})</strong>`;
             el.badgeSegundoTurno.classList.add('highlight');
           } else {
             // Estado que já teve 2º turno ou município
@@ -633,7 +633,7 @@
       } else {
         alertHtml = `
           <div class="gov-1t-state-alert success">
-            <span class="gov-1t-state-alert-icon">🛡️</span>
+            <span class="gov-1t-state-alert-icon">🔵</span>
             <div>
               <strong>Teste de Resistência Eleitoral (1º Turno):</strong> Mesmo se todos os ${formatNumber(abstencao)} eleitores ausentes fossem contados como válidos, ${g1t.governador} (${g1t.partido}) manteria <strong>${formatPercent(g1t.pct_com_abstencao)}</strong> (> 50%) e <strong>CONTINUARIA ELEITO EM 1º TURNO!</strong>
             </div>

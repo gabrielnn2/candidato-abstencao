@@ -199,10 +199,10 @@ export default function VerdictCard({
       if (isBrasil) {
         headline = (
           <>
-            A Candidata Abstenção <span className="highlight-amber">forçaria o 2º Turno em 16 estados</span> e concorreria no 2º turno em <span className="highlight-white">4 estados</span>
+            A Candidata Abstenção <span className="highlight-amber">forçaria o 2º Turno em {countForcouTotal} estados</span> e concorreria no 2º turno em <span className="highlight-white">{countIria} estados</span>
           </>
         );
-        subtext = 'Vencer no 1º turno exige mais de 50% dos votos válidos, dessa forma, com a computação dos votos dos ausentes em apenas 11 estados o andamento da eleição não seria alterado.';
+        subtext = `Vencer no 1º turno exige mais de 50% dos votos válidos, dessa forma, com a computação dos votos dos ausentes em apenas ${countNaoAlterou} estados o andamento da eleição não seria alterado.`;
       } else {
         headline = (
           <>
@@ -239,10 +239,10 @@ export default function VerdictCard({
         },
         {
           isCustomCategory: true,
-          posicao: '🛡️',
+          posicao: '🔵',
           nome: 'Não alteraria',
           badgeText: `${countNaoAlterou} Estados`,
-          corBarra: '#64748b',
+          corBarra: '#3b82f6',
           total: countNaoAlterou,
           pct: totalUfs > 0 ? Number(((countNaoAlterou / totalUfs) * 100).toFixed(1)) : 0,
           isHighlight: false

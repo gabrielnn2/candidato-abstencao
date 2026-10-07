@@ -1889,5 +1889,17 @@
     "criterio": "A abstenção absoluta de cada localidade é inserida como um concorrente nominal ao lado dos votos válidos de cada candidato.",
     "regras_segundo_turno": "Constituição Federal (Art. 77, § 2º c/c Art. 28): Presidente e Governadores exigem mais de 50% dos votos válidos para vitória em 1º turno.",
     "regras_senado": "Constituição Federal (Art. 46, § 1º): Nas Eleições Gerais de 2026 são renovadas duas vagas de Senador por Estado."
-  }
+  },
+  "estados_eleito_senador": [
+    "AC",
+    "AL",
+    "ES",
+    "MA",
+    "MG",
+    "MT",
+    "PA",
+    "RJ",
+    "RO",
+    "SP"
+  ]
 }

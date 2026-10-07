@@ -485,7 +485,7 @@ export default function MapWorkspace({
               } else if (status === 'forcou_2t_entre_dois') {
                 posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
               } else {
-                posDesc = '🛡️ Não alteraria';
+                posDesc = '🔵 Não alteraria';
               }
             } else if (cargo === 'Presidente') {
               const pos = p.pos_pres || 3;
@@ -558,7 +558,7 @@ export default function MapWorkspace({
               } else if (status === 'forcou_2t_entre_dois') {
                 posDesc = '🟠 Forçaria um 2º turno entre os dois primeiros colocados';
               } else {
-                posDesc = '🛡️ Não alteraria';
+                posDesc = '🔵 Não alteraria';
               }
             } else if (cargo === 'Presidente') {
               const pos = p.pos_pres || 3;
@@ -668,8 +668,12 @@ export default function MapWorkspace({
     if (!map || !mapLoaded) return;
 
     if (viewMode === 'estados') {
-      // Show Estados layers
-      if (map.getLayer('estados-fill')) map.setLayoutProperty('estados-fill', 'visibility', 'visible');
+      // Show Estados layers and refresh fill-color
+      const colorExpr = getFillColorExpression(currentCargoRef.current || currentCargo);
+      if (map.getLayer('estados-fill')) {
+        map.setLayoutProperty('estados-fill', 'visibility', 'visible');
+        map.setPaintProperty('estados-fill', 'fill-color', colorExpr);
+      }
       if (map.getLayer('estados-line')) map.setLayoutProperty('estados-line', 'visibility', 'visible');
       if (map.getLayer('estados-uf-contour-overlay')) map.setLayoutProperty('estados-uf-contour-overlay', 'visibility', 'visible');
       if (map.getLayer('estado-hover-glow')) map.setLayoutProperty('estado-hover-glow', 'visibility', 'visible');
@@ -931,6 +935,17 @@ export default function MapWorkspace({
     searchButtonText = `${currentScope.item.nome} (${currentScope.item.uf})`;
   }
 
+  const selectedMunUf = currentScope.type === 'municipio' ? (currentScope.item?.uf || '') : '';
+  const handleBackToUf = () => {
+    if (!selectedMunUf) return;
+    const ufItem = estadosData?.find(e => e.uf === selectedMunUf);
+    onSelectScope({
+      type: 'uf',
+      id: selectedMunUf,
+      item: ufItem
+    });
+  };
+
   const handleReframeBrasil = () => {
     onResetBrasil();
     const map = mapInstanceRef.current;
@@ -985,7 +1000,17 @@ export default function MapWorkspace({
                 name="mapViewMode"
                 value="estados"
                 checked={viewMode === 'estados'}
-                onChange={() => setViewMode('estados')}
+                onChange={() => {
+                  setViewMode('estados');
+                  if (currentScope?.type === 'municipio') {
+                    if (currentScope.item?.uf) {
+                      const ufItem = estadosData?.find(e => e.uf === currentScope.item.uf);
+                      onSelectScope({ type: 'uf', id: currentScope.item.uf, item: ufItem });
+                    } else {
+                      onSelectScope({ type: 'brasil', id: 'BR', item: brasilData });
+                    }
+                  }
+                }}
                 className="custom-radio-input"
               />
               <span className="radio-text">Estados</span>
@@ -1099,6 +1124,16 @@ export default function MapWorkspace({
             <span className="pulse-dot"></span>
             <span>{pillText}</span>
           </div>
+          {selectedMunUf && (
+            <button
+              type="button"
+              className="pill-back-btn"
+              title={`Voltar para a visão de ${selectedMunUf}`}
+              onClick={handleBackToUf}
+            >
+              ✕ Voltar à {selectedMunUf}
+            </button>
+          )}
           {isFiltered && (
             <button
               type="button"
@@ -1116,7 +1151,7 @@ export default function MapWorkspace({
           <div className="legend-pills">
             <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o 2º turno</span>
             <span className="legend-item"><i className="legend-color gold"></i> Forçaria um 2º turno entre os dois primeiros colocados</span>
-            <span className="legend-item"><i className="legend-color slate"></i> Não alteraria</span>
+            <span className="legend-item"><i className="legend-color blue"></i> Não alteraria</span>
           </div>
         ) : currentCargo === 'Presidente' ? (
           <div className="legend-pills">
