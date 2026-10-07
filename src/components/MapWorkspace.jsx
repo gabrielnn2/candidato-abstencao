@@ -938,7 +938,7 @@ export default function MapWorkspace({
   const selectedMunUf = currentScope.type === 'municipio' ? (currentScope.item?.uf || '') : '';
   const handleBackToUf = () => {
     if (!selectedMunUf) return;
-    setViewMode('estados');
+    setViewMode('municipios');
     onSelectUf(selectedMunUf);
   };
 
@@ -1113,7 +1113,7 @@ export default function MapWorkspace({
           <div
             className={`map-active-pill ${isFiltered ? 'is-filtered' : ''}`}
             id="mapActivePill"
-            title={selectedMunUf ? `Clique para voltar ao estado ${selectedMunUf}` : "Clique para voltar à visão nacional do Brasil"}
+            title={selectedMunUf ? `Clique para voltar aos municípios de ${selectedMunUf}` : "Clique para voltar à visão nacional do Brasil"}
             onClick={selectedMunUf ? handleBackToUf : (isFiltered ? handleReframeBrasil : undefined)}
           >
             <span className="pulse-dot"></span>
@@ -1123,7 +1123,7 @@ export default function MapWorkspace({
             <button
               type="button"
               className="pill-back-btn"
-              title={`Voltar para a visão de ${selectedMunUf}`}
+              title={`Voltar para os municípios de ${selectedMunUf}`}
               onClick={handleBackToUf}
             >
               ✕ Voltar à {selectedMunUf}
