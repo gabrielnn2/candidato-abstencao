@@ -331,13 +331,6 @@ export default function VerdictCard({
         });
       });
 
-      // Se for visão Brasil, garantir que o PL tenha 15 eleitos na simulação conforme indicado pelo usuário
-      if (isBrasil) {
-        bancadasCount['PL'] = 15;
-        bancadasCount['Partido Abstenção'] = 10;
-        bancadasCount['MDB'] = 7;
-        bancadasCount['PT'] = 6;
-      }
 
       const maxCadeiras = Math.max(...Object.values(bancadasCount), 1);
       const sortedBancadas = Object.entries(bancadasCount)
