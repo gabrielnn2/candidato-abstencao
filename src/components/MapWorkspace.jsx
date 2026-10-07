@@ -938,12 +938,8 @@ export default function MapWorkspace({
   const selectedMunUf = currentScope.type === 'municipio' ? (currentScope.item?.uf || '') : '';
   const handleBackToUf = () => {
     if (!selectedMunUf) return;
-    const ufItem = estadosData?.find(e => e.uf === selectedMunUf);
-    onSelectScope({
-      type: 'uf',
-      id: selectedMunUf,
-      item: ufItem
-    });
+    setViewMode('estados');
+    onSelectUf(selectedMunUf);
   };
 
   const handleReframeBrasil = () => {
@@ -1004,10 +1000,9 @@ export default function MapWorkspace({
                   setViewMode('estados');
                   if (currentScope?.type === 'municipio') {
                     if (currentScope.item?.uf) {
-                      const ufItem = estadosData?.find(e => e.uf === currentScope.item.uf);
-                      onSelectScope({ type: 'uf', id: currentScope.item.uf, item: ufItem });
+                      onSelectUf(currentScope.item.uf);
                     } else {
-                      onSelectScope({ type: 'brasil', id: 'BR', item: brasilData });
+                      onResetBrasil();
                     }
                   }
                 }}
@@ -1118,8 +1113,8 @@ export default function MapWorkspace({
           <div
             className={`map-active-pill ${isFiltered ? 'is-filtered' : ''}`}
             id="mapActivePill"
-            title="Clique para voltar à visão nacional do Brasil"
-            onClick={isFiltered ? handleReframeBrasil : undefined}
+            title={selectedMunUf ? `Clique para voltar ao estado ${selectedMunUf}` : "Clique para voltar à visão nacional do Brasil"}
+            onClick={selectedMunUf ? handleBackToUf : (isFiltered ? handleReframeBrasil : undefined)}
           >
             <span className="pulse-dot"></span>
             <span>{pillText}</span>

@@ -262,27 +262,31 @@ a {
 .telemetry-bar {
   background: rgba(18, 17, 14, 0.6);
   border-bottom: 1px solid var(--line);
-  padding: 8px 24px;
+  padding: 8px 16px;
   overflow: hidden;
 }
 
 .telemetry-inner {
-  max-width: 1200px;
+  max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 8px 20px;
 }
 
 .telemetry-item {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .telemetry-label {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--fg-4);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -290,7 +294,7 @@ a {
 
 .telemetry-val {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   color: var(--fg-2);
@@ -313,7 +317,15 @@ a {
   width: 1px;
   height: 14px;
   background: var(--line);
+  flex-shrink: 0;
 }
+
+@media (max-width: 1024px) {
+  .telemetry-sep {
+    display: none;
+  }
+}
+
 
 /* ==========================================================================
    Main Layout Container
