@@ -1009,7 +1009,6 @@ export default function MapWorkspace({
         <div className="map-controls-top-row">
           {/* Visualização: Seleção Radio empilhada "Estados" e "Municípios" */}
           <div className="control-group view-mode-group">
-            <label className="control-label">Visualização</label>
             <div className="radio-group-container stacked" role="radiogroup" aria-label="Visualização do mapa">
               <label className={`custom-radio-item ${viewMode === 'estados' ? 'is-selected' : ''}`}>
                 <input
@@ -1046,10 +1045,10 @@ export default function MapWorkspace({
           </div>
 
           <div className="control-group">
-            <label htmlFor="selectRegiao" className="control-label">Região</label>
             <select
               id="selectRegiao"
               className="custom-select"
+              aria-label="Região"
               value={currentRegiao}
               onChange={(e) => onSelectRegiao(e.target.value)}
             >
@@ -1063,10 +1062,10 @@ export default function MapWorkspace({
           </div>
 
           <div className="control-group">
-            <label htmlFor="selectEstado" className="control-label">Estado (UF)</label>
             <select
               id="selectEstado"
               className="custom-select"
+              aria-label="Estado (UF)"
               value={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : 'BR')}
               onChange={(e) => {
                 if (e.target.value === 'BR') handleReframeBrasil();

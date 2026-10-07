@@ -154,8 +154,6 @@ export default function MunicipalityDropdown({
 
   return (
     <div className="mun-dropdown-container" ref={containerRef}>
-      <label className="control-label">Buscar Município</label>
-      
       <div className="search-trigger-wrap">
         <div
           className={`search-trigger-btn map-search-btn ${isMunSelected ? 'is-active' : ''} ${isOpen ? 'is-open' : ''}`}
