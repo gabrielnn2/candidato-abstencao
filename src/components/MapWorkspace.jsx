@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import MunicipalityDropdown from './MunicipalityDropdown';
 import {
   BRAZIL_BOUNDS,
   BRAZIL_FIT_PADDING,
@@ -1101,46 +1102,18 @@ export default function MapWorkspace({
           </select>
         </div>
 
-        <div className="control-group search-group">
-          <label className="control-label">Buscar Município</label>
-          <div className="search-trigger-wrap">
-            <div
-              className={`search-trigger-btn map-search-btn ${isFiltered ? 'is-active' : ''}`}
-              id="mapSearchTriggerBtn"
-              role="button"
-              tabIndex={0}
-              onClick={onOpenSearch}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  onOpenSearch();
-                }
-              }}
-            >
-              <div className="search-btn-left">
-                <svg className="search-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
-                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                </svg>
-                <span className="search-btn-text">{searchButtonText}</span>
-              </div>
-              <div className="search-btn-right">
-                {isFiltered && (
-                  <button
-                    className="btn-clear-search"
-                    title="Limpar seleção e voltar ao Brasil"
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleReframeBrasil();
-                    }}
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+        <MunicipalityDropdown
+          currentScope={currentScope}
+          currentUf={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : '')}
+          onSelectMunicipio={onSelectMunicipio}
+          onClear={() => {
+            if (selectedMunUf) {
+              handleBackToUf();
+            } else {
+              handleReframeBrasil();
+            }
+          }}
+        />
       </div>
 
       {/* Map Legend Bar */}

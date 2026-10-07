@@ -131,17 +131,18 @@ export default function VerdictCard({
     const abstPos = candAbst?.posicao || 3;
     const abstPct = candAbst?.percentual_simulado ?? candAbst?.percentual ?? taxa;
 
-    // Group candidates from 4th position onwards into "Outros Candidatos"
-    const top3 = cleanedRanking.slice(0, 3);
-    const resto = cleanedRanking.slice(3);
+    // Group candidates from (cutoff) onwards into "Outros Candidatos", expanding until reaching Candidata Abstenção
+    const cutoff = Math.max(3, abstPos);
+    const topCands = cleanedRanking.slice(0, cutoff);
+    const resto = cleanedRanking.slice(cutoff);
 
     if (resto.length > 0) {
       const sumVotos = resto.reduce((acc, c) => acc + (c.votos_simulados ?? c.votos ?? 0), 0);
       const sumPct = resto.reduce((acc, c) => acc + (c.percentual_simulado ?? c.percentual ?? 0), 0);
       listItems = [
-        ...top3,
+        ...topCands,
         {
-          posicao: 4,
+          posicao: topCands.length + 1,
           nome: 'Outros Candidatos',
           partido: 'OUTROS',
           votos: sumVotos,
@@ -151,7 +152,7 @@ export default function VerdictCard({
         }
       ];
     } else {
-      listItems = top3;
+      listItems = topCands;
     }
 
     // Adaptative Headings and Subtext
@@ -298,7 +299,7 @@ export default function VerdictCard({
         subtext = `Os ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}) impediriam a vitória em 1º turno, forçando um 2º turno entre os dois primeiros colocados`;
       }
 
-      listItems = (targetGov?.ranking || []).map(c => ({
+      const cleanedGovRanking = (targetGov?.ranking || []).map(c => ({
         ...c,
         nome: c.is_abstencao ? 'Candidata Abstenção' : cleanCandidateName(c.nome_exibicao || c.nome),
         partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || ''),
@@ -306,6 +307,30 @@ export default function VerdictCard({
         votos_simulados: c.is_abstencao ? votosAbst : (c.votos_simulados || c.votos),
         percentual_simulado: c.is_abstencao ? abstPct : (c.percentual_simulado ?? c.percentual)
       }));
+
+      const govAbstPos = candAbst?.posicao || 3;
+      const govCutoff = Math.max(3, govAbstPos);
+      const topGovCands = cleanedGovRanking.slice(0, govCutoff);
+      const restoGov = cleanedGovRanking.slice(govCutoff);
+
+      if (restoGov.length > 0) {
+        const sumVotos = restoGov.reduce((acc, c) => acc + (c.votos_simulados ?? c.votos ?? 0), 0);
+        const sumPct = restoGov.reduce((acc, c) => acc + (c.percentual_simulado ?? c.percentual ?? 0), 0);
+        listItems = [
+          ...topGovCands,
+          {
+            posicao: topGovCands.length + 1,
+            nome: 'Outros Candidatos',
+            partido: 'OUTROS',
+            votos: sumVotos,
+            votos_simulados: sumVotos,
+            percentual_simulado: Number(sumPct.toFixed(2)),
+            is_abstencao: false
+          }
+        ];
+      } else {
+        listItems = topGovCands;
+      }
     }
   }
 
@@ -344,15 +369,17 @@ export default function VerdictCard({
         .sort((a, b) => b.cadeiras - a.cadeiras)
         .map((item, idx) => ({ ...item, posicao: idx + 1 }));
 
-      // Agrega as demais cadeiras do 5º lugar em diante
-      const top4 = sortedBancadas.slice(0, 4);
-      const restoBancadas = sortedBancadas.slice(4);
+      // Agrega as demais cadeiras, garantindo que o Partido Abstenção fique SEMPRE visível
+      const abstBancadaPos = sortedBancadas.find(b => b.is_abstencao)?.posicao || 2;
+      const bancadaCutoff = Math.max(4, abstBancadaPos);
+      const topBancadas = sortedBancadas.slice(0, bancadaCutoff);
+      const restoBancadas = sortedBancadas.slice(bancadaCutoff);
 
       if (restoBancadas.length > 0) {
         const sumCadeiras = restoBancadas.reduce((acc, b) => acc + b.cadeiras, 0);
         const sumPct = restoBancadas.reduce((acc, b) => acc + b.pct, 0);
         listItems = [
-          ...top4.map(b => ({
+          ...topBancadas.map(b => ({
             isSeatRow: true,
             posicao: b.posicao,
             nome: b.nome,
@@ -364,17 +391,17 @@ export default function VerdictCard({
           })),
           {
             isSeatRow: true,
-            posicao: 5,
+            posicao: topBancadas.length + 1,
             nome: 'Demais Partidos',
             partido: 'OUTROS',
             cadeiras: sumCadeiras,
             pct: Number(sumPct.toFixed(1)),
-            barPct: Number(((sumCadeiras / top4[0].cadeiras) * 100).toFixed(1)),
+            barPct: Number(((sumCadeiras / topBancadas[0].cadeiras) * 100).toFixed(1)),
             is_abstencao: false
           }
         ];
       } else {
-        listItems = top4.map(b => ({
+        listItems = topBancadas.map(b => ({
           isSeatRow: true,
           posicao: b.posicao,
           nome: b.nome,
@@ -437,9 +464,11 @@ export default function VerdictCard({
         percentual_simulado: c.is_abstencao ? abstPct : (c.percentual_simulado ?? c.percentual)
       }));
 
-      // Agrega candidatos do 5º lugar em diante no nível local
-      const top4Cands = cleanedSenRanking.slice(0, 4);
-      const restoCands = cleanedSenRanking.slice(4);
+      // Agrega candidatos a partir do corte, garantindo SEMPRE que a Candidata Abstenção fique visível em seu lugar exato
+      const senAbstPos = candAbst?.posicao || pos;
+      const senCutoff = Math.max(4, senAbstPos);
+      const top4Cands = cleanedSenRanking.slice(0, senCutoff);
+      const restoCands = cleanedSenRanking.slice(senCutoff);
 
       if (restoCands.length > 0) {
         const sumVotos = restoCands.reduce((acc, c) => acc + (c.votos_simulados ?? c.votos ?? 0), 0);
@@ -447,7 +476,7 @@ export default function VerdictCard({
         listItems = [
           ...top4Cands,
           {
-            posicao: 5,
+            posicao: top4Cands.length + 1,
             nome: 'Outros Candidatos',
             partido: 'OUTROS',
             votos: sumVotos,

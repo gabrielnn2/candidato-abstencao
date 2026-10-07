@@ -196,6 +196,10 @@ export function getFillColorExpression(cargo) {
 }
 
 export function synthesizeMunicipalCargos(props, ufItem) {
+  if (props?.cargos?.Presidente && props?.cargos?.Governador && props?.cargos?.Senador) {
+    return props.cargos;
+  }
+
   const aptos = props.aptos || (props.pop ? Math.round(props.pop * 0.78) : 50000);
   const abstencao = props.abstencao || props.abstencoes || Math.round(aptos * ((props.taxa || 20) / 100));
   const taxa = props.taxa || (aptos > 0 ? Number(((abstencao / aptos) * 100).toFixed(2)) : 20.0);
@@ -207,6 +211,16 @@ export function synthesizeMunicipalCargos(props, ufItem) {
 
   for (const cargo of cargosList) {
     let competitors = [];
+    const cargoAbst = cargo === 'Senador'
+      ? (props.sen_abstencao ?? props.abstencao ?? abstencao)
+      : cargo === 'Governador'
+      ? (props.gov_abstencao ?? props.abstencao ?? abstencao)
+      : (props.pres_abstencao ?? props.abstencao ?? abstencao);
+    const cargoAptos = cargo === 'Senador'
+      ? (props.sen_aptos ?? props.aptos ?? aptos)
+      : cargo === 'Governador'
+      ? (props.gov_aptos ?? props.aptos ?? aptos)
+      : (props.pres_aptos ?? props.aptos ?? aptos);
 
     if (cargo === 'Presidente' && props.cand_1o && props.votos_1o) {
       // DADOS REAIS E EXATOS DO TSE - PRESIDENTE
@@ -367,13 +381,13 @@ export function synthesizeMunicipalCargos(props, ufItem) {
       });
     }
 
-    // Add Candidata Abstenção com os votos exatos da urna
+    // Add Candidata Abstenção com os votos exatos da urna para o cargo
     competitors.push({
       nome: 'Candidata Abstenção',
       partido: 'Partido Abstenção',
       nome_exibicao: 'Candidata Abstenção',
       numero: '00',
-      votos: abstencao,
+      votos: cargoAbst,
       is_abstencao: true,
       foto: 'assets/abstencao.svg'
     });
@@ -426,7 +440,7 @@ export function synthesizeMunicipalCargos(props, ufItem) {
     });
 
     const leader = competitors.find(c => !c.is_abstencao) || competitors[0];
-    const difLider = abstencao - (leader?.votos || 0);
+    const difLider = cargoAbst - (leader?.votos || 0);
 
     const vencedor1t = posAbst === 1 && competitors[0].percentual_simulado > 50;
     // Constituição Federal Art. 77, § 2º: 2º turno apenas se o líder NÃO superou 50%

@@ -4,7 +4,6 @@ import TelemetryBar from './components/TelemetryBar';
 import VerdictCard from './components/VerdictCard';
 import MapWorkspace from './components/MapWorkspace';
 import KeyFindingsSection from './components/KeyFindingsSection';
-import SearchModal from './components/SearchModal';
 import ShareModal from './components/ShareModal';
 import { REGION_STATES, synthesizeMunicipalCargos } from './utils/electoralMath';
 
@@ -17,7 +16,6 @@ export default function App() {
   const [currentScope, setCurrentScope] = useState({ type: 'brasil', id: 'BR', item: null });
   const [currentRegiao, setCurrentRegiao] = useState('todas');
 
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isShareOpen, setIsShareOpen] = useState(false);
 
   // Initialize data on mount
@@ -63,7 +61,8 @@ export default function App() {
     const handleKeyDown = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        setIsSearchOpen(prev => !prev);
+        const searchBtn = document.getElementById('mapSearchTriggerBtn');
+        searchBtn?.click();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -182,17 +181,6 @@ export default function App() {
     }
   }, [municipiosData, estadosData]);
 
-  // Select Scope from Search Modal
-  const handleSelectScope = useCallback((searchItem) => {
-    if (searchItem.type === 'brasil') {
-      handleResetBrasil();
-    } else if (searchItem.type === 'uf') {
-      handleSelectUf(searchItem.id);
-    } else if (searchItem.type === 'municipio') {
-      handleSelectMunicipio(searchItem.id);
-    }
-  }, [handleResetBrasil, handleSelectUf, handleSelectMunicipio]);
-
   return (
     <div className="dark-theme app-root">
       {/* Ambient background glow */}
@@ -202,7 +190,10 @@ export default function App() {
       <Header
         currentCargo={currentCargo}
         onSelectCargo={setCurrentCargo}
-        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenSearch={() => {
+          const btn = document.getElementById('mapSearchTriggerBtn');
+          btn?.click();
+        }}
       />
 
       {/* Telemetry Bar */}
@@ -231,7 +222,10 @@ export default function App() {
             onSelectUf={handleSelectUf}
             onSelectMunicipio={handleSelectMunicipio}
             onResetBrasil={handleResetBrasil}
-            onOpenSearch={() => setIsSearchOpen(true)}
+            onOpenSearch={() => {
+              const btn = document.getElementById('mapSearchTriggerBtn');
+              btn?.click();
+            }}
             estadosData={estadosData}
           />
         </div>
@@ -242,15 +236,6 @@ export default function App() {
           estadosData={estadosData}
         />
       </main>
-
-      {/* Instant Search Modal (Cmd+K) */}
-      <SearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        estadosData={estadosData}
-        municipiosData={municipiosData}
-        onSelectScope={handleSelectScope}
-      />
 
       {/* Share Modal Dialog */}
       <ShareModal
