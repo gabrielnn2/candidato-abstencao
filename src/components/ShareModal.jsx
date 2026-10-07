@@ -11,50 +11,65 @@ export default function ShareModal({
   if (!isOpen) return null;
 
   const getScopeName = () => {
-    if (currentScope.type === 'brasil') return 'no Brasil';
-    if (currentScope.type === 'uf') return `em ${currentScope.item?.nome || currentScope.id}`;
-    if (currentScope.type === 'municipio') return `em ${currentScope.item?.nome} (${currentScope.item?.uf})`;
+    if (currentScope?.type === 'brasil') return 'no Brasil';
+    if (currentScope?.type === 'uf') return `em ${currentScope.item?.nome || currentScope.id}`;
+    if (currentScope?.type === 'municipio') return `em ${currentScope.item?.nome} (${currentScope.item?.uf})`;
     return '';
   };
 
-  const shareText = `E se a Candidata Abstenção fosse candidata a ${currentCargo} ${getScopeName()}? Descubra o ranking real dos eleitores ausentes com dados do TSE nas Eleições 2026!`;
+  const shareHeadline = `E se a Candidata Abstenção fosse candidata a ${currentCargo} ${getScopeName()}?`;
+  const shareData = `Descubra o impacto real dos eleitores ausentes com dados oficiais do TSE nas Eleições 2026.`;
   const shareUrl = window.location.href;
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(`${shareText}\n${shareUrl}`).then(() => {
+    navigator.clipboard.writeText(`${shareHeadline}\n${shareData}\n${shareUrl}`).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     });
   };
 
   const handleTwitter = () => {
-    const text = encodeURIComponent(shareText);
+    const text = encodeURIComponent(`🚨 ${shareHeadline}\n\n${shareData}`);
     const url = encodeURIComponent(shareUrl);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
   };
 
+  const handleWhatsApp = () => {
+    const text = encodeURIComponent(`🚨 *${shareHeadline}*\n\n${shareData}\n\nConfira: ${shareUrl}`);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+  };
+
   return (
-    <div className="search-modal-backdrop" onClick={onClose}>
-      <div className="share-modal glass-panel" onClick={e => e.stopPropagation()}>
-        <div className="share-modal-header">
-          <h3 className="share-modal-title">Compartilhar Veredito Eleitoral</h3>
-          <button className="search-modal-close" onClick={onClose} title="Fechar">✕</button>
+    <div className="share-modal-backdrop open" onClick={onClose}>
+      <div className="share-modal-box glass-panel" onClick={e => e.stopPropagation()}>
+        <div className="share-header">
+          <h3 className="share-title">Compartilhar Veredito Eleitoral</h3>
+          <button className="btn-close-modal" onClick={onClose} title="Fechar (Esc)">✕</button>
         </div>
 
-        <div className="share-card-preview">
+        <div className="share-preview-card">
           <div className="share-preview-badge">E SE A CANDIDATA ABSTENÇÃO FOSSE CANDIDATA? · 2026</div>
-          <p className="share-preview-text">"{shareText}"</p>
-          <span className="share-preview-url">{shareUrl}</span>
+          <div className="share-preview-headline">"{shareHeadline}"</div>
+          <div className="share-preview-data">{shareData}</div>
         </div>
 
         <div className="share-buttons-grid">
-          <button className="share-action-btn btn-copy" onClick={handleCopy}>
-            📋 {copied ? 'Copiado para a Área de Transferência!' : 'Copiar Texto e Link'}
+          <button type="button" className="btn-share-channel whatsapp" onClick={handleWhatsApp}>
+            💬 WhatsApp
           </button>
-          <button className="share-action-btn btn-twitter" onClick={handleTwitter}>
-            𝕏 Compartilhar no X (Twitter)
+          <button type="button" className="btn-share-channel twitter" onClick={handleTwitter}>
+            𝕏 Twitter / X
+          </button>
+          <button type="button" className="btn-share-channel copy" onClick={handleCopy}>
+            📋 {copied ? 'Copiado!' : 'Copiar'}
           </button>
         </div>
+
+        {copied && (
+          <div style={{ textAlign: 'center', color: 'var(--gold)', fontSize: '0.82rem', fontWeight: 500 }}>
+            ✓ Link e texto copiados para a área de transferência!
+          </div>
+        )}
       </div>
     </div>
   );

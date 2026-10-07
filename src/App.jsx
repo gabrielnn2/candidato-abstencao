@@ -23,24 +23,36 @@ export default function App() {
   // Initialize data on mount
   useEffect(() => {
     // 1. If preloaded on window (fastest)
-    if (window.ELEICOES_DATA) {
-      setBrasilData(window.ELEICOES_DATA.brasil);
-      setEstadosData(window.ELEICOES_DATA.estados || []);
-      setMunicipiosData(window.ELEICOES_DATA.municipios || []);
-      setCurrentScope({ type: 'brasil', id: 'BR', item: window.ELEICOES_DATA.brasil });
-      return;
+    const winData = window.ELECTION_DATA || window.ELEICOES_DATA;
+    if (winData) {
+      setBrasilData(winData.brasil);
+      setEstadosData(winData.estados || []);
+      setMunicipiosData(winData.municipios || []);
+      setCurrentScope({ type: 'brasil', id: 'BR', item: winData.brasil });
     }
 
-    // 2. Fallback to fetch
+    if (!window.MUNICIPIOS_INDEX && window.MUNICIPIOS_GEO?.features?.length > 0) {
+      window.MUNICIPIOS_INDEX = window.MUNICIPIOS_GEO.features.map(f => f.properties);
+    }
+
+    // 2. Fetch full datasets and ensure municipios_index.json is loaded
     Promise.all([
-      fetch('/data/brasil.json').then(r => r.json()),
-      fetch('/data/estados.json').then(r => r.json()),
-      fetch('/data/municipios.json').then(r => r.json())
-    ]).then(([resBr, resUf, resMun]) => {
-      setBrasilData(resBr);
-      setEstadosData(resUf);
-      setMunicipiosData(resMun);
-      setCurrentScope({ type: 'brasil', id: 'BR', item: resBr });
+      fetch('/data/brasil.json').then(r => r.json()).catch(() => winData?.brasil),
+      fetch('/data/estados.json').then(r => r.json()).catch(() => winData?.estados || []),
+      fetch('/data/municipios.json').then(r => r.json()).catch(() => winData?.municipios || []),
+      fetch('/data/municipios_index.json').then(r => r.json()).catch(() => null)
+    ]).then(([resBr, resUf, resMun, resIndex]) => {
+      if (resBr) {
+        setBrasilData(resBr);
+        setCurrentScope(prev => prev.item ? prev : { type: 'brasil', id: 'BR', item: resBr });
+      }
+      if (resUf && resUf.length > 0) setEstadosData(resUf);
+      if (resIndex && resIndex.length > 0) {
+        window.MUNICIPIOS_INDEX = resIndex;
+        setMunicipiosData(resIndex);
+      } else if (resMun && resMun.length > 0) {
+        setMunicipiosData(resMun);
+      }
     }).catch(err => {
       console.error('Erro ao carregar dados oficiais do TSE:', err);
     });
@@ -99,41 +111,51 @@ export default function App() {
     const idNum = Number(munId);
     let munItem = municipiosData.find(m => (m.id && Number(m.id) === idNum) || m.slug === munId || (m.nome && m.nome.toLowerCase() === String(munId).toLowerCase()));
 
+    // Also check window.MUNICIPIOS_INDEX
+    if (!munItem && window.MUNICIPIOS_INDEX) {
+      munItem = window.MUNICIPIOS_INDEX.find(m => (m.id && Number(m.id) === idNum) || m.slug === munId || (m.nome && m.nome.toLowerCase() === String(munId).toLowerCase()));
+    }
+
     // Also check window.MUNICIPIOS_GEO
     const feat = window.MUNICIPIOS_GEO?.features?.find(f => Number(f.id) === idNum || Number(f.properties?.id) === idNum || (f.properties?.nome && f.properties.nome.toLowerCase() === String(munId).toLowerCase()));
 
     if (!munItem && feat) {
-      const p = feat.properties;
-      const aptos = p.aptos || (p.pop ? Math.round(p.pop * 0.78) : 50000);
-      const abstencao = p.abstencao || p.abstencoes || Math.round(aptos * ((p.taxa || 20) / 100));
-      const taxa = p.taxa || (aptos > 0 ? Number(((abstencao / aptos) * 100).toFixed(2)) : 20.0);
-      const ufSigla = p.uf;
-      const ufItem = estadosData.find(u => u.uf === ufSigla);
-      const cargos = synthesizeMunicipalCargos(p, ufItem);
+      munItem = feat.properties;
+    }
 
-      munItem = {
-        id: p.id,
-        nome: p.nome,
-        uf: p.uf,
-        aptos,
-        abstencao,
-        taxa_abstencao: taxa,
-        cargos
-      };
-    } else if (munItem) {
-      // If found in municipiosData, make sure cargos has real candidates for all 3 cargos
-      const ufItem = estadosData.find(u => u.uf === munItem.uf);
-      if (ufItem) {
+    if (munItem) {
+      const ufSigla = munItem.uf || feat?.properties?.uf || '';
+      const ufItem = estadosData.find(u => u.uf === ufSigla);
+      const hasCargos = munItem.cargos && munItem.cargos.Presidente && munItem.cargos.Governador;
+
+      if (!hasCargos && ufItem) {
+        const aptos = munItem.aptos || (munItem.pop ? Math.round(munItem.pop * 0.78) : 50000);
+        const abstencao = munItem.abstencao || munItem.abstencoes || Math.round(aptos * ((munItem.taxa || 20) / 100));
+        const taxa = munItem.taxa_abstencao ?? munItem.taxa ?? (aptos > 0 ? Number(((abstencao / aptos) * 100).toFixed(2)) : 20.0);
+        const cargos = synthesizeMunicipalCargos(munItem, ufItem);
+
+        munItem = {
+          ...munItem,
+          id: munItem.id || idNum,
+          nome: munItem.nome || feat?.properties?.nome,
+          uf: ufSigla,
+          aptos,
+          abstencao,
+          taxa_abstencao: taxa,
+          taxa,
+          cargos
+        };
+      } else if (hasCargos && ufItem) {
         const hasSenRanking = munItem.cargos?.Senador?.ranking?.length > 0;
         const hasGovRanking = munItem.cargos?.Governador?.ranking?.length > 0;
         if (!hasSenRanking || !hasGovRanking) {
           const synthesized = synthesizeMunicipalCargos({
             aptos: munItem.aptos,
             abstencao: munItem.abstencao,
-            taxa: munItem.taxa_abstencao,
-            pos_pres: munItem.cargos?.Presidente?.posicao,
-            pos_gov: munItem.cargos?.Governador?.posicao,
-            pos_sen: munItem.cargos?.Senador?.posicao
+            taxa: munItem.taxa_abstencao ?? munItem.taxa,
+            pos_pres: munItem.cargos?.Presidente?.posicao || munItem.pos_pres,
+            pos_gov: munItem.cargos?.Governador?.posicao || munItem.pos_gov,
+            pos_sen: munItem.cargos?.Senador?.posicao || munItem.pos_sen
           }, ufItem);
           munItem = {
             ...munItem,
@@ -146,9 +168,7 @@ export default function App() {
           };
         }
       }
-    }
 
-    if (munItem) {
       setCurrentScope({ type: 'municipio', id: munItem.id || munId, item: munItem });
       // Set region from UF
       if (munItem.uf) {
@@ -182,6 +202,7 @@ export default function App() {
       <Header
         currentCargo={currentCargo}
         onSelectCargo={setCurrentCargo}
+        onOpenSearch={() => setIsSearchOpen(true)}
       />
 
       {/* Telemetry Bar */}

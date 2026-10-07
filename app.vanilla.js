@@ -173,8 +173,8 @@
       });
     });
 
-    // Add all 5,564 municipalities from indexed source
-    const munSource = window.MUNICIPIOS_INDEX || state.municipiosData || [];
+    // Add all 5,564 municipalities from indexed source or MUNICIPIOS_GEO
+    const munSource = window.MUNICIPIOS_INDEX || (window.MUNICIPIOS_GEO?.features?.map(f => f.properties)) || state.municipiosData || [];
     munSource.forEach(m => {
       state.searchIndex.push({
         type: 'municipio',
@@ -1674,17 +1674,22 @@
     state.searchSelectedIdx = -1;
   }
 
+  function normalizeStr(str) {
+    return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  }
+
   function renderSearchResults(query) {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
+    const qNorm = normalizeStr(q);
     let matches = [];
 
-    if (!q) {
+    if (!qNorm) {
       // Default: show major capitals
       matches = state.searchIndex.slice(0, 10);
     } else {
       matches = state.searchIndex.filter(item => {
-        return item.name.toLowerCase().includes(q) || item.subtitle.toLowerCase().includes(q);
-      }).slice(0, 15);
+        return normalizeStr(item.name).includes(qNorm) || normalizeStr(item.subtitle).includes(qNorm);
+      }).slice(0, 25);
     }
 
     if (matches.length === 0) {

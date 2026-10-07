@@ -1075,11 +1075,18 @@ export default function MapWorkspace({
         <div className="control-group search-group">
           <label className="control-label">Buscar Município</label>
           <div className="search-trigger-wrap">
-            <button
+            <div
               className={`search-trigger-btn map-search-btn ${isFiltered ? 'is-active' : ''}`}
               id="mapSearchTriggerBtn"
-              type="button"
+              role="button"
+              tabIndex={0}
               onClick={onOpenSearch}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onOpenSearch();
+                }
+              }}
             >
               <div className="search-btn-left">
                 <svg className="search-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
@@ -1102,7 +1109,7 @@ export default function MapWorkspace({
                   </button>
                 )}
               </div>
-            </button>
+            </div>
           </div>
         </div>
       </div>
