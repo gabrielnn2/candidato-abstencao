@@ -194,6 +194,7 @@ export default function App() {
           <VerdictCard
             currentCargo={currentCargo}
             currentScope={currentScope}
+            currentRegiao={currentRegiao}
             brasilData={brasilData}
             estadosData={estadosData}
             onResetBrasil={handleResetBrasil}

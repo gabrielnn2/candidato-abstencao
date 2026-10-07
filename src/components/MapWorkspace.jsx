@@ -930,6 +930,19 @@ export default function MapWorkspace({
     searchButtonText = `${currentScope.item.nome} (${currentScope.item.uf})`;
   }
 
+  const handleReframeBrasil = () => {
+    onResetBrasil();
+    const map = mapInstanceRef.current;
+    if (map) {
+      prevScopeKeyRef.current = 'brasil_BR_todas';
+      map.fitBounds(BRAZIL_BOUNDS, {
+        padding: BRAZIL_FIT_PADDING,
+        duration: 700,
+        maxZoom: 4.2
+      });
+    }
+  };
+
   return (
     <section className="map-workspace glass-panel" id="mapWorkspace">
       <div className="map-header">
@@ -1003,38 +1016,38 @@ export default function MapWorkspace({
             className="custom-select"
             value={currentScope.type === 'uf' ? currentScope.id : (currentScope.type === 'municipio' ? currentScope.item?.uf : 'BR')}
             onChange={(e) => {
-              if (e.target.value === 'BR') onResetBrasil();
+              if (e.target.value === 'BR') handleReframeBrasil();
               else onSelectUf(e.target.value);
             }}
           >
             <option value="BR">Todos os Estados (Brasil)</option>
-            <option value="AC">AC · Acre</option>
-            <option value="AL">AL · Alagoas</option>
-            <option value="AP">AP · Amapá</option>
-            <option value="AM">AM · Amazonas</option>
-            <option value="BA">BA · Bahia</option>
-            <option value="CE">CE · Ceará</option>
-            <option value="DF">DF · Distrito Federal</option>
-            <option value="ES">ES · Espírito Santo</option>
-            <option value="GO">GO · Goiás</option>
-            <option value="MA">MA · Maranhão</option>
-            <option value="MT">MT · Mato Grosso</option>
-            <option value="MS">MS · Mato Grosso do Sul</option>
-            <option value="MG">MG · Minas Gerais</option>
-            <option value="PA">PA · Pará</option>
-            <option value="PB">PB · Paraíba</option>
-            <option value="PR">PR · Paraná</option>
-            <option value="PE">PE · Pernambuco</option>
-            <option value="PI">PI · Piauí</option>
-            <option value="RJ">RJ · Rio de Janeiro</option>
-            <option value="RN">RN · Rio Grande do Norte</option>
-            <option value="RS">RS · Rio Grande do Sul</option>
-            <option value="RO">RO · Rondônia</option>
-            <option value="RR">RR · Roraima</option>
-            <option value="SC">SC · Santa Catarina</option>
-            <option value="SP">SP · São Paulo</option>
-            <option value="SE">SE · Sergipe</option>
-            <option value="TO">TO · Tocantins</option>
+            <option value="AC">Acre (AC)</option>
+            <option value="AL">Alagoas (AL)</option>
+            <option value="AP">Amapá (AP)</option>
+            <option value="AM">Amazonas (AM)</option>
+            <option value="BA">Bahia (BA)</option>
+            <option value="CE">Ceará (CE)</option>
+            <option value="DF">Distrito Federal (DF)</option>
+            <option value="ES">Espírito Santo (ES)</option>
+            <option value="GO">Goiás (GO)</option>
+            <option value="MA">Maranhão (MA)</option>
+            <option value="MT">Mato Grosso (MT)</option>
+            <option value="MS">Mato Grosso do Sul (MS)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+            <option value="PA">Pará (PA)</option>
+            <option value="PB">Paraíba (PB)</option>
+            <option value="PR">Paraná (PR)</option>
+            <option value="PE">Pernambuco (PE)</option>
+            <option value="PI">Piauí (PI)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="RN">Rio Grande do Norte (RN)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="RO">Rondônia (RO)</option>
+            <option value="RR">Roraima (RR)</option>
+            <option value="SC">Santa Catarina (SC)</option>
+            <option value="SP">São Paulo (SP)</option>
+            <option value="SE">Sergipe (SE)</option>
+            <option value="TO">Tocantins (TO)</option>
           </select>
         </div>
 
@@ -1061,7 +1074,7 @@ export default function MapWorkspace({
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      onResetBrasil();
+                      handleReframeBrasil();
                     }}
                   >
                     ✕
@@ -1080,7 +1093,7 @@ export default function MapWorkspace({
             className={`map-active-pill ${isFiltered ? 'is-filtered' : ''}`}
             id="mapActivePill"
             title="Clique para voltar à visão nacional do Brasil"
-            onClick={isFiltered ? onResetBrasil : undefined}
+            onClick={isFiltered ? handleReframeBrasil : undefined}
           >
             <span className="pulse-dot"></span>
             <span>{pillText}</span>
@@ -1090,7 +1103,7 @@ export default function MapWorkspace({
               type="button"
               className="pill-back-btn"
               title="Voltar para a visão do Brasil"
-              onClick={onResetBrasil}
+              onClick={handleReframeBrasil}
             >
               ✕ Voltar ao Brasil
             </button>
@@ -1102,7 +1115,6 @@ export default function MapWorkspace({
           <div className="legend-pills">
             <span className="legend-item"><i className="legend-color green"></i> Forçaria e iria para o 2º turno</span>
             <span className="legend-item"><i className="legend-color gold"></i> Forçaria um 2º turno entre os dois primeiros colocados</span>
-            <span className="legend-item"><i className="legend-color cyan"></i> Iria para o 2º turno no lugar de um dos dois primeiros candidatos</span>
             <span className="legend-item"><i className="legend-color slate"></i> Não alteraria</span>
           </div>
         ) : (
@@ -1158,7 +1170,7 @@ export default function MapWorkspace({
 
       {/* Quick state reset button when zoomed in */}
       <div className="map-footer-bar">
-        <button type="button" className="btn-reset-map-view" id="btnResetMapView" onClick={onResetBrasil}>
+        <button type="button" className="btn-reset-map-view" id="btnResetMapView" onClick={handleReframeBrasil}>
           🇧🇷 Reenquadrar Todo o Brasil
         </button>
         <span className="map-footer-hint">

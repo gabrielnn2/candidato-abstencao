@@ -59,6 +59,28 @@ export function formatPercent(val) {
   return Number(val).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + '%';
 }
 
+export function formatVotosAmigavel(votos) {
+  if (!votos) return '0';
+  const num = Number(votos);
+  if (num >= 1000000) {
+    const milhoes = (num / 1000000).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    return `${milhoes} ${num >= 2000000 ? 'milhões' : 'milhão'}`;
+  }
+  if (num >= 10000) {
+    const mil = (num / 1000).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    return `${mil} mil`;
+  }
+  return Number(num).toLocaleString('pt-BR');
+}
+
+export function cleanCandidateName(nome) {
+  if (!nome) return '';
+  // Se for abstenção com sufixo tipo (ELEITORES AUSENTES), limpa
+  if (/^Absten[çc][ãa]o/i.test(nome)) return 'Abstenção';
+  // Remove sufixo de partido entre parênteses, ex: "Lula (PT)" -> "Lula"
+  return nome.replace(/\s*\([A-Z0-9\s/+-]+\)$/i, '').trim();
+}
+
 export function getRankBadge(pos) {
   if (pos === 1) return '🥇 1º Lugar';
   if (pos === 2) return '🥈 2º Lugar';
@@ -94,7 +116,6 @@ export function getGovStatus(item) {
   const rawStatus = item.status_gov || item.properties?.status_gov;
   if (rawStatus === 'forcou_e_iria_2t' || rawStatus === 'foi_2t') return 'forcou_e_iria_2t';
   if (rawStatus === 'forcou_2t_entre_dois' || rawStatus === 'forcou_2t') return 'forcou_2t_entre_dois';
-  if (rawStatus === 'iria_2t_no_lugar') return 'iria_2t_no_lugar';
 
   return 'nao_alterou';
 }
@@ -105,8 +126,6 @@ export function getGovStatusLabel(status) {
       return 'Forçaria e iria para o 2º turno';
     case 'forcou_2t_entre_dois':
       return 'Forçaria um 2º turno entre os dois primeiros colocados';
-    case 'iria_2t_no_lugar':
-      return 'Iria para o 2º turno no lugar de um dos dois primeiros candidatos';
     case 'nao_alterou':
     default:
       return 'Não alteraria';
@@ -120,7 +139,6 @@ export function getFillColorExpression(cargo) {
       ['get', 'status_gov'],
       ['forcou_e_iria_2t', 'foi_2t'], '#10b981',       // Verde Esmeralda (Forçaria e iria para o 2º turno)
       ['forcou_2t_entre_dois', 'forcou_2t'], '#f59e0b', // Âmbar / Ouro (Forçaria um 2º turno entre os dois primeiros colocados)
-      'iria_2t_no_lugar', '#38bdf8',                    // Ciano / Azul (Iria para o 2º turno no lugar de um dos dois primeiros candidatos)
       'nao_alterou', '#262d3d',                         // Dark Slate (Não alteraria)
       // Fallback matching directly by UF so it NEVER fails:
       [
