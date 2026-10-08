@@ -557,6 +557,48 @@ a {
   max-width: 880px;
 }
 
+/* Destaque Metodológico do Senado: Poder de Virada (2 votos por eleitor) */
+.senate-power-callout {
+  margin: 16px 0 24px 0;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(217, 168, 78, 0.08) 0%, rgba(56, 189, 248, 0.05) 100%);
+  border: 1px solid rgba(217, 168, 78, 0.3);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+}
+
+.senate-power-callout .callout-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.senate-power-callout .callout-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.senate-power-callout .callout-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+}
+
+.senate-power-callout .callout-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--fg-2);
+  margin: 0;
+}
+
+.senate-power-callout .callout-desc strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
 /* Badges Row */
 .badges-row {
   display: flex;

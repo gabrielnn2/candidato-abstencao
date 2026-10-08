@@ -60,9 +60,10 @@ export default function VerdictCard({
     const mun = currentScope.item;
     locationTitle = `${mun.nome.toUpperCase()} (${mun.uf})`;
     locationName = `${mun.nome} (${mun.uf})`;
-    aptos = mun.aptos;
-    abstencao = mun.abstencao;
-    taxa = mun.taxa_abstencao;
+    const cargoData = mun.cargos?.[currentCargo];
+    aptos = cargoData?.total_aptos || mun.aptos;
+    abstencao = cargoData?.votos || cargoData?.abstencao || mun.abstencao;
+    taxa = cargoData?.taxa_abstencao || mun.taxa_abstencao || mun.taxa;
   }
 
   // 3. Editorial content and ranking lists
@@ -418,18 +419,17 @@ export default function VerdictCard({
       if (isBrasil) {
         headline = (
           <>
-            Se o Partido Abstenção concorresse ao Senado, conquistaria <span className="highlight-amber">10 CADEIRAS</span> e formaria a <span className="highlight-white">2ª MAIOR BANCADA DO PAÍS!</span>
+            Se o Partido Abstenção concorresse ao Senado em 2026, seria a <span className="highlight-amber">3ª FORÇA ELEITORAL</span> no país!
           </>
         );
-        subtext = 'Nas Eleições Gerais de 2026, cada estado renova duas vagas no Senado (54 vagas no total). Os eleitores ausentes conquistariam 10 cadeiras, superando bancadas tradicionais e ficando atrás apenas do PL (15 eleitos).';
+        subtext = 'Nas Eleições Gerais de 2026, cada estado renova duas vagas no Senado (54 vagas no total). Os mais de 33,4 milhões de eleitores ausentes superariam partidos inteiros na maioria dos estados, mas não alcançariam a votação concentrada dos dois senadores eleitos em cada unidade da federação.';
       } else {
-        const abstCadeiras = bancadasCount['Partido Abstenção'] || 0;
         headline = (
           <>
-            Se o Partido Abstenção concorresse ao Senado na {locationName}, conquistaria <span className="highlight-amber">{abstCadeiras} {abstCadeiras === 1 ? 'CADEIRA' : 'CADEIRAS'}</span>!
+            Se o Partido Abstenção concorresse ao Senado na {locationName}, seria a <span className="highlight-amber">3ª Força Eleitoral</span>!
           </>
         );
-        subtext = `Na ${locationName}, cada estado renova duas vagas no Senado (${totalVagas} vagas no total). Os eleitores ausentes conquistariam ${abstCadeiras} cadeiras pelo Partido Abstenção, superando bancadas tradicionais.`;
+        subtext = `Na ${locationName}, cada estado renova duas vagas no Senado (${totalVagas} vagas no total). Os eleitores ausentes superariam bancadas tradicionais em votos nominais, mas ficariam atrás dos dois senadores eleitos.`;
       }
     } else {
       // Estado ou Município
@@ -437,7 +437,7 @@ export default function VerdictCard({
       const pos = targetSen?.posicao || 3;
       const votosAbst = targetSen?.votos || abstencao;
       const candAbst = targetSen?.ranking?.find(c => c.is_abstencao);
-      const abstPct = candAbst?.percentual_simulado ?? candAbst?.percentual ?? taxa;
+      const realTaxaAbst = targetSen?.taxa_abstencao ?? targetSen?.taxa ?? currentScope.item?.taxa_abstencao ?? taxa;
 
       if (pos <= 2) {
         headline = (
@@ -445,14 +445,14 @@ export default function VerdictCard({
             Se a Abstenção concorresse ao Senado em {locationName}, <span className="highlight-amber">seria eleita Senadora ({pos}ª Vaga)</span>
           </>
         );
-        subtext = `Com ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}), a Candidata Abstenção conquistaria a vaga em ${pos}º lugar e assumiria o mandato de 8 anos!`;
+        subtext = `Com ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(realTaxaAbst)} do eleitorado), a Candidata Abstenção conquistaria a vaga em ${pos}º lugar e assumiria o mandato de 8 anos!`;
       } else {
         headline = (
           <>
             Se a Abstenção concorresse ao Senado em {locationName}, chegaria em <span className="highlight-amber">{pos}º lugar</span>
           </>
         );
-        subtext = `Os ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(abstPct)}) não alcançariam a votação dos dois senadores eleitos.`;
+        subtext = `Com ${formatNumber(votosAbst)} eleitores ausentes (${formatPercent(realTaxaAbst)} do eleitorado), a Candidata Abstenção não alcançaria a votação individual dos dois senadores eleitos.`;
       }
 
       const cleanedSenRanking = (targetSen?.ranking || []).map(c => ({
@@ -461,7 +461,7 @@ export default function VerdictCard({
         partido: c.is_abstencao ? 'Partido Abstenção' : (c.partido || ''),
         votos: c.is_abstencao ? votosAbst : c.votos,
         votos_simulados: c.is_abstencao ? votosAbst : (c.votos_simulados || c.votos),
-        percentual_simulado: c.is_abstencao ? abstPct : (c.percentual_simulado ?? c.percentual)
+        percentual_simulado: c.is_abstencao ? realTaxaAbst : (c.percentual_simulado ?? c.percentual)
       }));
 
       // Agrega candidatos a partir do corte, garantindo SEMPRE que a Candidata Abstenção fique visível em seu lugar exato
@@ -504,6 +504,27 @@ export default function VerdictCard({
             {subtext}
           </p>
         </div>
+
+        {/* Destaque Metodológico: Poder de Virada (Senado - 2 votos por eleitor) */}
+        {currentCargo === 'Senador' && (
+          <div className="senate-power-callout" id="senatePowerCallout">
+            <div className="callout-header">
+              <span className="callout-icon">⚡</span>
+              <span className="callout-title">
+                {isBrasil || isRegiao ? 'Poder de Virada nas Urnas (2 votos por eleitor)' : 'Poder de Virada Local (2 votos por eleitor)'}
+              </span>
+            </div>
+            <p className="callout-desc">
+              {isBrasil ? (
+                <>Nas eleições para o Senado em 2026, cada cidadão vota em <strong>dois candidatos</strong>. Os mais de <strong>33,4 milhões de eleitores ausentes</strong> representam um potencial de <strong>66,8 milhões de votos</strong> nas urnas — um volume colossal com força matemática suficiente para reverter o resultado de ambas as vagas em disputa na quase totalidade dos estados brasileiros.</>
+              ) : isRegiao ? (
+                <>Na {locationName}, cada eleitor vota em <strong>dois senadores</strong>. Os eleitores ausentes detinham o dobro de votos em disputa nas urnas — margem com força matemática suficiente para alterar os eleitos de ambas as cadeiras em disputa.</>
+              ) : (
+                <>Como cada eleitor vota em <strong>dois senadores</strong>, os <strong>{formatNumber(abstencao)} eleitores ausentes</strong> detinham um potencial de <strong>{formatNumber(abstencao * 2)} votos</strong> nas urnas em {locationName}. Esse contingente supera a margem de vitória e tinha força matemática para reverter o resultado de ambas as cadeiras em disputa.</>
+              )}
+            </p>
+          </div>
+        )}
 
         {/* Electoral Podium and Comparison Bars */}
         <section className="podium-section">

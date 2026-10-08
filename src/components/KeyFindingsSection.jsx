@@ -174,28 +174,25 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
           </div>
 
           <h3 className="finding-card-heading">
-            A 2ª Maior Bancada Eleita do Senado
+            3ª Força Eleitoral e Poder de Virada
           </h3>
 
           <p className="finding-narrative">
-            No Senado, o Partido Abstenção <strong>ganharia uma cadeira em {findings.senCadeiras} estados</strong>, sendo que em{' '}
-            <span className="finding-highlight">{findings.sen1o} deles</span> ficaria em primeiro lugar na disputa e apenas em{' '}
-            <strong>{findings.senSemCadeira} estados não conquistaria</strong> uma cadeira. Com {findings.senCadeiras} eleitos, seria a{' '}
-            <strong>2ª maior bancada da Casa</strong>, atrás apenas do PL (15 eleitos) e à frente de MDB (7) e PT (6).
+            No Senado (onde cada eleitor vota em 2 candidatos), a Candidata Abstenção seria individualmente a <strong>3ª força eleitoral na quase totalidade dos estados</strong>, somando mais de <strong>33,4 milhões de votos nominais</strong>. Embora a concentração de votos não permita a eleição direta de cadeiras, os eleitores ausentes detinham um potencial de <strong>66,8 milhões de votos nas urnas</strong> (2 votos por eleitor), volume matematicamente suficiente para <strong>reverter o resultado de ambas as vagas</strong> em praticamente todos os estados brasileiros!
           </p>
 
           <div className="finding-stats-row">
-            <div className="finding-stat-item highlight-gold">
-              <span className="finding-stat-val">{findings.senCadeiras}</span>
-              <span className="finding-stat-label">Cadeiras Eleitas</span>
+            <div className="finding-stat-item highlight-amber">
+              <span className="finding-stat-val">33,4M</span>
+              <span className="finding-stat-label">Votos (1 voto/eleitor)</span>
             </div>
             <div className="finding-stat-item highlight-green">
-              <span className="finding-stat-val">{findings.sen1o}</span>
-              <span className="finding-stat-label">Mais Votada (1º)</span>
+              <span className="finding-stat-val">66,8M</span>
+              <span className="finding-stat-label">Potencial (2 votos)</span>
             </div>
             <div className="finding-stat-item">
-              <span className="finding-stat-val">{findings.senSemCadeira}</span>
-              <span className="finding-stat-label">Sem Cadeira</span>
+              <span className="finding-stat-val">27 UFs</span>
+              <span className="finding-stat-label">Poder de Virada</span>
             </div>
           </div>
         </article>
