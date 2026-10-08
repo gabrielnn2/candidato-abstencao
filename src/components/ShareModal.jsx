@@ -49,6 +49,9 @@ export default function ShareModal({
 
         <div className="share-preview-card">
           <div className="share-preview-badge">E SE A CANDIDATA ABSTENÇÃO FOSSE CANDIDATA? · 2026</div>
+          <div className="share-preview-thumb-wrap">
+            <img src="/assets/og-mapa.png" alt="Prévia do Mapa Eleitoral" className="share-preview-thumb" />
+          </div>
           <div className="share-preview-headline">"{shareHeadline}"</div>
           <div className="share-preview-data">{shareData}</div>
         </div>
