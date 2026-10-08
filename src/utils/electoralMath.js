@@ -189,9 +189,10 @@ export function getFillColorExpression(cargo) {
   return [
     'match',
     ['get', 'pos_sen'],
-    1, '#f59e0b', // 1º Lugar (Gold)
-    2, '#38bdf8', // 2º Lugar · Eleita Senadora (Cyan)
-    /* default */ '#262d3d' // 3º ou abaixo (Dark Slate)
+    1, '#f59e0b', // 1º Lugar · Eleita Senadora (1ª Vaga)
+    2, '#38bdf8', // 2º Lugar · Eleita Senadora (2ª Vaga)
+    3, '#a855f7', // 3º Lugar · Não eleita (3º lugar)
+    /* default */ '#262d3d' // Demais posições
   ];
 }
 

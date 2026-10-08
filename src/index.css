@@ -1454,6 +1454,7 @@ a {
 .legend-color.blue { background: #3b82f6; box-shadow: 0 0 6px rgba(59, 130, 246, 0.4); }
 .legend-color.cyan { background: #38bdf8; box-shadow: 0 0 6px rgba(56, 189, 248, 0.4); }
 .legend-color.silver { background: #38bdf8; box-shadow: 0 0 6px rgba(56, 189, 248, 0.4); }
+.legend-color.purple { background: #a855f7; box-shadow: 0 0 6px rgba(168, 85, 247, 0.4); }
 .legend-color.bronze { background: #334155; }
 .legend-color.slate { background: #262d3d; border: 1px solid #475569; }
 
@@ -3112,10 +3113,17 @@ a {
 
 .findings-header {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.findings-title-row {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 18px;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .findings-badge {

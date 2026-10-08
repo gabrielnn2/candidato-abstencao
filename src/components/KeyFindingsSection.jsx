@@ -78,11 +78,13 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
   return (
     <section className="key-findings-section" id="achadosPrincipais">
       <div className="findings-header">
-        <div className="findings-badge">💡 Análise Consolidada Nacional</div>
-        <h2 className="findings-title">Achados principais</h2>
-        <p className="findings-subtitle">
-          O peso da abstenção nas urnas em cada cargo
-        </p>
+        <div className="findings-badge">Análise Consolidada Nacional</div>
+        <div className="findings-title-row">
+          <h2 className="findings-title">Achados principais</h2>
+          <p className="findings-subtitle">
+            O peso da abstenção nas urnas em cada cargo
+          </p>
+        </div>
       </div>
 
       <div className="findings-grid">
@@ -90,7 +92,6 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
         <article className="finding-card glass-panel" id="cardFindingPres">
           <div className="finding-card-top">
             <div className="finding-cargo-badge pres">
-              <span className="finding-icon">🏛️</span>
               <span>Presidente</span>
             </div>
             <span className="finding-metric-tag">Nacional</span>
@@ -127,7 +128,6 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
         <article className="finding-card glass-panel" id="cardFindingGov">
           <div className="finding-card-top">
             <div className="finding-cargo-badge gov">
-              <span className="finding-icon">🏢</span>
               <span>Governador</span>
             </div>
             <span className="finding-metric-tag">27 Estados</span>
@@ -167,7 +167,6 @@ export default function KeyFindingsSection({ brasilData, estadosData = [] }) {
         <article className="finding-card glass-panel" id="cardFindingSen">
           <div className="finding-card-top">
             <div className="finding-cargo-badge sen">
-              <span className="finding-icon">⚖️</span>
               <span>Senado</span>
             </div>
             <span className="finding-metric-tag">2 Vagas / UF</span>

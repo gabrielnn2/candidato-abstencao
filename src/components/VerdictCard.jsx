@@ -422,7 +422,7 @@ export default function VerdictCard({
             Se o Partido Abstenção concorresse ao Senado em 2026, seria a <span className="highlight-amber">3ª FORÇA ELEITORAL</span> no país!
           </>
         );
-        subtext = 'Nas Eleições Gerais de 2026, cada estado renova duas vagas no Senado (54 vagas no total). Os mais de 33,4 milhões de eleitores ausentes superariam partidos inteiros na maioria dos estados, mas não alcançariam a votação concentrada dos dois senadores eleitos em cada unidade da federação.';
+        subtext = 'Em 2026, cada eleitor vota duas vezes para Senador, mas não no mesmo candidato. Dessa forma, os 33,4 milhões de votos para o Partido Abstenção não conseguiriam alcançar as vagas para senado, já que cada voto seria computado apenas uma vez. Entretanto, chegaria em 3º lugar em 5 estados.';
       } else {
         headline = (
           <>
@@ -509,18 +509,17 @@ export default function VerdictCard({
         {currentCargo === 'Senador' && (
           <div className="senate-power-callout" id="senatePowerCallout">
             <div className="callout-header">
-              <span className="callout-icon">⚡</span>
               <span className="callout-title">
-                {isBrasil || isRegiao ? 'Poder de Virada nas Urnas (2 votos por eleitor)' : 'Poder de Virada Local (2 votos por eleitor)'}
+                Poder de Virada nas Urnas (2 votos por eleitor)
               </span>
             </div>
             <p className="callout-desc">
               {isBrasil ? (
-                <>Nas eleições para o Senado em 2026, cada cidadão vota em <strong>dois candidatos</strong>. Os mais de <strong>33,4 milhões de eleitores ausentes</strong> representam um potencial de <strong>66,8 milhões de votos</strong> nas urnas — um volume colossal com força matemática suficiente para reverter o resultado de ambas as vagas em disputa na quase totalidade dos estados brasileiros.</>
+                <>Os eleitores ausentes representam um potencial de 66,8 milhões de votos nas urnas, um volume com força suficiente para reverter o resultado de ambas as vagas em disputa em todos os estados brasileiros.</>
               ) : isRegiao ? (
-                <>Na {locationName}, cada eleitor vota em <strong>dois senadores</strong>. Os eleitores ausentes detinham o dobro de votos em disputa nas urnas — margem com força matemática suficiente para alterar os eleitos de ambas as cadeiras em disputa.</>
+                <>Na {locationName}, cada eleitor vota em <strong>dois senadores</strong>. Os eleitores ausentes detinham o dobro de votos em disputa nas urnas — margem com força suficiente para reverter o resultado de ambas as vagas em disputa.</>
               ) : (
-                <>Como cada eleitor vota em <strong>dois senadores</strong>, os <strong>{formatNumber(abstencao)} eleitores ausentes</strong> detinham um potencial de <strong>{formatNumber(abstencao * 2)} votos</strong> nas urnas em {locationName}. Esse contingente supera a margem de vitória e tinha força matemática para reverter o resultado de ambas as cadeiras em disputa.</>
+                <>Como cada eleitor vota em <strong>dois senadores</strong>, os <strong>{formatNumber(abstencao)} eleitores ausentes</strong> detinham um potencial de <strong>{formatNumber(abstencao * 2)} votos</strong> nas urnas em {locationName}, volume com força suficiente para reverter o resultado de ambas as vagas em disputa.</>
               )}
             </p>
           </div>

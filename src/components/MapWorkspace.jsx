@@ -29,8 +29,8 @@ export default function MapWorkspace({
   const mapInstanceRef = useRef(null);
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  // View Mode: 'estados' (default) or 'municipios'
-  const [viewMode, setViewMode] = useState('estados');
+  // View Mode: 'municipios' (default) or 'estados'
+  const [viewMode, setViewMode] = useState('municipios');
 
   // Tooltip DOM refs & hover tracking for zero-latency mouseover without React re-renders
   const tooltipRef = useRef(null);
@@ -161,7 +161,7 @@ export default function MapWorkspace({
             data: { type: 'FeatureCollection', features: [] }
           });
 
-          // Estados Fill Layer (Visible by default in Estados mode)
+          // Estados Fill Layer (Hidden by default in Municípios mode)
           map.addLayer({
             id: 'estados-fill',
             type: 'fill',
@@ -171,7 +171,7 @@ export default function MapWorkspace({
               'fill-opacity': 0.88
             },
             layout: {
-              visibility: 'visible'
+              visibility: 'none'
             }
           });
 
@@ -195,7 +195,7 @@ export default function MapWorkspace({
             }
           });
 
-          // Estado Hover Glow (Luminous outer aura on hover)
+          // Estado Hover Glow
           map.addLayer({
             id: 'estado-hover-glow',
             type: 'line',
@@ -207,7 +207,7 @@ export default function MapWorkspace({
               'line-blur': 2.2
             },
             layout: {
-              visibility: 'visible',
+              visibility: 'none',
               'line-join': 'round',
               'line-cap': 'round'
             }
@@ -223,7 +223,7 @@ export default function MapWorkspace({
               'fill-opacity': 0.30
             },
             layout: {
-              visibility: 'visible'
+              visibility: 'none'
             }
           });
 
@@ -238,7 +238,7 @@ export default function MapWorkspace({
               'line-opacity': 1.0
             },
             layout: {
-              visibility: 'visible',
+              visibility: 'none',
               'line-join': 'round',
               'line-cap': 'round'
             }
@@ -256,7 +256,7 @@ export default function MapWorkspace({
             },
             filter: ['==', 'uf', ''],
             layout: {
-              visibility: 'visible'
+              visibility: 'none'
             }
           });
         }
@@ -283,7 +283,7 @@ export default function MapWorkspace({
             data: { type: 'FeatureCollection', features: [] }
           });
 
-          // Municípios Fill Layer (Hidden by default in Estados mode)
+          // Municípios Fill Layer (Visible by default in Municípios mode)
           map.addLayer({
             id: 'municipios-fill',
             type: 'fill',
@@ -293,7 +293,7 @@ export default function MapWorkspace({
               'fill-opacity': 0.86
             },
             layout: {
-              visibility: 'none'
+              visibility: 'visible'
             }
           });
 
@@ -319,7 +319,7 @@ export default function MapWorkspace({
               ]
             },
             layout: {
-              visibility: 'none'
+              visibility: 'visible'
             }
           });
 
@@ -366,7 +366,7 @@ export default function MapWorkspace({
               'line-blur': 1.8
             },
             layout: {
-              visibility: 'none',
+              visibility: 'visible',
               'line-join': 'round',
               'line-cap': 'round'
             }
@@ -382,7 +382,7 @@ export default function MapWorkspace({
               'fill-opacity': 0.38
             },
             layout: {
-              visibility: 'none'
+              visibility: 'visible'
             }
           });
 
@@ -403,7 +403,7 @@ export default function MapWorkspace({
               'line-opacity': 1.0
             },
             layout: {
-              visibility: 'none',
+              visibility: 'visible',
               'line-join': 'round',
               'line-cap': 'round'
             }
@@ -421,7 +421,7 @@ export default function MapWorkspace({
             },
             filter: ['==', 'id', -1],
             layout: {
-              visibility: 'none'
+              visibility: 'visible'
             }
           });
         }
@@ -502,7 +502,8 @@ export default function MapWorkspace({
               const pos = p.pos_sen || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
               else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
-              else posDesc = '🥉 Não eleita';
+              else if (pos === 3) posDesc = '🥉 3º Lugar · Não eleita (3º lugar)';
+              else posDesc = `${pos}º Lugar · Demais posições`;
             }
 
             let currentAbst = p.abstencao || p.abstencoes;
@@ -588,7 +589,8 @@ export default function MapWorkspace({
               const pos = p.pos_sen || 3;
               if (pos === 1) posDesc = '🥇 1º Lugar · Eleita Senadora (1ª Vaga)';
               else if (pos === 2) posDesc = '🥈 2º Lugar · Eleita Senadora (2ª Vaga)';
-              else posDesc = '🥉 Não eleita';
+              else if (pos === 3) posDesc = '🥉 3º Lugar · Não eleita (3º lugar)';
+              else posDesc = `${pos}º Lugar · Demais posições`;
             }
 
             if (tooltipTitleRef.current) tooltipTitleRef.current.textContent = `${p.nome} (${p.uf})`;
@@ -1177,7 +1179,8 @@ export default function MapWorkspace({
           <div className="legend-pills">
             <span className="legend-item"><i className="legend-color gold"></i> Eleita Senadora (1ª Vaga)</span>
             <span className="legend-item"><i className="legend-color cyan"></i> Eleita Senadora (2ª Vaga)</span>
-            <span className="legend-item"><i className="legend-color slate"></i> Não eleita</span>
+            <span className="legend-item"><i className="legend-color purple"></i> Não eleita (3º lugar)</span>
+            <span className="legend-item"><i className="legend-color slate"></i> Demais posições</span>
           </div>
         )}
       </div>
