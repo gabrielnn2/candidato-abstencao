@@ -23,8 +23,8 @@ from concurrent.futures import ProcessPoolExecutor
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BWEB_DIR = os.path.join(BASE_DIR, "bases", "bweb")
 CMZ_DIR = os.path.join(BASE_DIR, "bases", "candidato_mun_zona")
-DATA_DIR = os.path.join(BASE_DIR, "data")
 PUBLIC_DATA_DIR = os.path.join(BASE_DIR, "public", "data")
+DATA_DIR = PUBLIC_DATA_DIR
 
 UFS = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
 
@@ -730,29 +730,23 @@ def main():
     print("\nSalvando arquivos atualizados...")
     
     # 6.1 brasil.json
-    with open(os.path.join(DATA_DIR, "brasil.json"), "w", encoding="utf-8") as f:
-        json.dump(brasil_json, f, ensure_ascii=False, indent=2)
     with open(os.path.join(PUBLIC_DATA_DIR, "brasil.json"), "w", encoding="utf-8") as f:
         json.dump(brasil_json, f, ensure_ascii=False, indent=2)
     print("  brasil.json salvo com sucesso.")
     
     # 6.2 estados.json
-    with open(os.path.join(DATA_DIR, "estados.json"), "w", encoding="utf-8") as f:
-        json.dump(estados_list, f, ensure_ascii=False, indent=2)
     with open(os.path.join(PUBLIC_DATA_DIR, "estados.json"), "w", encoding="utf-8") as f:
         json.dump(estados_list, f, ensure_ascii=False, indent=2)
     print("  estados.json salvo com sucesso.")
     
     # 6.3 municipios_index.json
-    with open(os.path.join(DATA_DIR, "municipios_index.json"), "w", encoding="utf-8") as f:
-        json.dump(updated_mindex, f, ensure_ascii=False)
     with open(os.path.join(PUBLIC_DATA_DIR, "municipios_index.json"), "w", encoding="utf-8") as f:
         json.dump(updated_mindex, f, ensure_ascii=False)
     print("  municipios_index.json salvo com sucesso.")
     
     # 6.4 municipios_geo.json e municipios_geo.js
     # Atualizar propriedades do GeoJSON existente para manter as geometrias perfeitamente intactas
-    geo_path = os.path.join(DATA_DIR, "municipios_geo.json")
+    geo_path = os.path.join(PUBLIC_DATA_DIR, "municipios_geo.json")
     if os.path.exists(geo_path):
         print("  Atualizando propriedades em municipios_geo.json...")
         with open(geo_path, "r", encoding="utf-8") as f:
@@ -783,12 +777,9 @@ def main():
                 
         with open(geo_path, "w", encoding="utf-8") as f:
             json.dump(geo_data, f, ensure_ascii=False)
-        shutil.copy2(geo_path, os.path.join(PUBLIC_DATA_DIR, "municipios_geo.json"))
         
         # Salvar municipios_geo.js
         js_content = "window.MUNICIPIOS_GEO = " + json.dumps(geo_data, ensure_ascii=False) + ";"
-        with open(os.path.join(DATA_DIR, "municipios_geo.js"), "w", encoding="utf-8") as f:
-            f.write(js_content)
         with open(os.path.join(PUBLIC_DATA_DIR, "municipios_geo.js"), "w", encoding="utf-8") as f:
             f.write(js_content)
         print("  municipios_geo.json e municipios_geo.js salvos com sucesso.")
@@ -800,8 +791,6 @@ def main():
         "municipios": updated_mindex[:100] # Top 100 para bootstrap imediato
     }
     data_js_str = f"window.ELECTION_DATA = {json.dumps(data_js_obj, ensure_ascii=False)};"
-    with open(os.path.join(DATA_DIR, "data.js"), "w", encoding="utf-8") as f:
-        f.write(data_js_str)
     with open(os.path.join(PUBLIC_DATA_DIR, "data.js"), "w", encoding="utf-8") as f:
         f.write(data_js_str)
     print("  data.js salvo com sucesso.")
